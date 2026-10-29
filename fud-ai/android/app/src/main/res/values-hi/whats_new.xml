@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">नया: Live Voice</string>
+    <string name="whats_new_body">भोजन लॉग करने, बारकोड स्कैन करने और अपनी प्रगति देखने के लिए Fud AI से बात करें।</string>
+    <string name="whats_new_tap_orb">शुरू करने के लिए होम पर गोले को टैप करें।</string>
+    <string name="whats_new_access_line">Plus और Pro में शामिल है, या अपनी AI कुंजी इस्तेमाल करें।</string>
+    <string name="whats_new_video_cd">Live Voice का डेमो वीडियो</string>
+    <string name="whats_new_sound_on">आवाज़ चालू करें</string>
+    <string name="whats_new_sound_off">आवाज़ बंद करें</string>
+    <string name="whats_new_access_title_setup">Live Voice पाएँ</string>
+    <string name="whats_new_access_title_plans">Plus या Pro पर जाएँ</string>
+    <string name="whats_new_access_body_setup">Plus या Pro चुनें और AI हम आपके लिए चलाएँगे, या अपनी Gemini, OpenAI, xAI या Qwen API कुंजी जोड़ें।</string>
+    <string name="whats_new_access_body_key_only">Live Voice इस्तेमाल करना शुरू करने के लिए अपनी Gemini, OpenAI, xAI या Qwen API कुंजी जोड़ें।</string>
+    <string name="whats_new_access_body_plans">Plus और Pro आपके लिए AI चलाते हैं — Live Voice शामिल है और कोई API कुंजी संभालनी नहीं पड़ती। अपनी कुंजियों के साथ Fud AI मुफ़्त ही रहता है।</string>
+    <string name="whats_new_support_body">Fud AI मुफ़्त है और इसे एक ही डेवलपर बनाता है। एक रेटिंग, शेयर या छोटी-सी टिप इसे आगे बढ़ाने में मदद करती है।</string>
+    <string name="whats_new_community_title">Fud AI समुदाय से जुड़ें</string>
+    <string name="whats_new_community_body">Discord पर मदद पाएँ, अपने विचार साझा करें और Fud AI के दूसरे उपयोगकर्ताओं से मिलें।</string>
+    <string name="whats_new_next">आगे</string>
+    <string name="whats_new_previous">पिछला</string>
+    <string name="notif_whats_new_title">Fud AI में नया: Live Voice</string>
+    <string name="notif_whats_new_text">बोलकर भोजन लॉग करें, बारकोड स्कैन करें और अपनी प्रगति देखें। नया क्या है, देखने के लिए टैप करें।</string>
+</resources>

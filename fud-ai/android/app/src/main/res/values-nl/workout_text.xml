@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Training beschrijven</string>
+    <string name="workout_text_intro">Beschrijf wat je hebt gedaan. Controleer de details voordat je ze aan je trainingsdagboek toevoegt.</string>
+    <string name="workout_text_description">Beschrijving van training</string>
+    <string name="workout_text_example">20 minuten touwtjespringen, daarna 3 sets van 10 bankdrukken met 40 kg</string>
+    <string name="workout_text_voice">Spraak</string>
+    <string name="workout_text_preparing">Oefeningen zoeken…</string>
+    <string name="workout_text_preview">Analyseren</string>
+    <string name="workout_text_retry">Opnieuw proberen</string>
+    <string name="workout_text_review">Training controleren</string>
+    <string name="workout_text_date">Datum (JJJJ-MM-DD)</string>
+    <string name="workout_text_custom">Aangepaste activiteit op tijd · calorieschatting gebruikt een algemeen activiteitsniveau</string>
+    <string name="workout_text_minutes">Minuten</string>
+    <string name="workout_text_reps">Herhalingen</string>
+    <string name="workout_text_remove">Oefening verwijderen</string>
+    <string name="workout_text_calories_note">Calorieën zijn schattingen. Gebruik Berekenen in het dagboek nadat je je training hebt toegevoegd.</string>
+    <string name="workout_text_edit">Beschrijving bewerken</string>
+    <string name="workout_text_adding">Toevoegen…</string>
+    <string name="workout_text_add">Toevoegen aan dagboek</string>
+    <string name="workout_text_menu">Tekst</string>
+    <string name="workout_text_set_weight">Set %1$d · %2$s</string>
+    <string name="workout_text_estimate">Geschat verbruik: %1$d kcal</string>
+    <string name="workout_text_effort">Inspanning (gemiddeld indien niet opgegeven)</string>
+    <string name="workout_text_light">Licht</string>
+    <string name="workout_text_moderate">Gemiddeld</string>
+    <string name="workout_text_vigorous">Intensief</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

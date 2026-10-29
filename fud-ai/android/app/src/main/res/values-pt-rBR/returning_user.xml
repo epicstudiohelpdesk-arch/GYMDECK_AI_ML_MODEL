@@ -1,0 +1,46 @@
+<resources>
+    <string name="returning_entry">Já usou o Fud AI?</string>
+    <string name="returning_title">Olá de novo</string>
+    <string name="returning_subtitle">Traga de volta suas refeições, seu peso e seus treinos, ou comece do zero.</string>
+    <string name="returning_pick_hint">Escolha uma ou as duas.</string>
+    <string name="returning_drive_title">Restaurar do Google Drive</string>
+    <string name="returning_drive_detail">Seu backup completo: diário, fotos, treinos e ajustes, se você já tinha ativado o backup no Drive.</string>
+    <string name="returning_drive_note">O login serve só para encontrar seu backup. O Google pode mostrar um aviso extra até o app ser verificado.</string>
+    <string name="returning_health_title">Importar do Health Connect</string>
+    <string name="returning_health_detail">Refeições, peso, gordura corporal e calorias de treino que o Fud AI salvou no Health Connect. Com um backup, só é adicionado o que estiver faltando.</string>
+    <string name="returning_health_update">Primeiro instale ou atualize o Health Connect pela Play Store.</string>
+    <string name="returning_start_fresh">Começar do zero</string>
+    <string name="returning_continue_setup">Continuar configuração</string>
+    <string name="returning_step_waiting">A seguir</string>
+    <string name="returning_step_drive_done">Backup restaurado.</string>
+    <string name="returning_step_drive_cancelled">Restauração cancelada.</string>
+    <string name="returning_step_failed">Não concluído</string>
+    <string name="returning_drive_checking">Verificando o Google Drive…</string>
+    <string name="returning_drive_confirm_title">Restaurar seu backup?</string>
+    <string name="returning_drive_confirm_message_dated">Seu backup de %1$s substitui tudo o que estiver neste telefone. As chaves de API não ficam nos backups, então talvez você precise adicionar a sua de novo.</string>
+    <string name="returning_drive_confirm_message">Seu backup substitui tudo o que estiver neste telefone. As chaves de API não ficam nos backups, então talvez você precise adicionar a sua de novo.</string>
+    <string name="returning_drive_restoring">Restaurando…</string>
+    <string name="returning_drive_no_backup">Nenhum backup do Google Drive encontrado para esta conta.</string>
+    <string name="returning_drive_unreachable">Não foi possível acessar o Google Drive. Verifique sua conexão e tente de novo.</string>
+    <string name="returning_drive_not_a_backup">Este arquivo não é um backup do Fud AI.</string>
+    <string name="returning_drive_needs_update">Este backup é de uma versão mais nova do Fud AI. Atualize o app e tente de novo.</string>
+    <string name="returning_drive_setup_missing">Este backup não inclui uma configuração concluída, então vamos concluí-la agora.</string>
+    <string name="returning_health_importing">Importando do Health Connect…</string>
+    <string name="returning_health_nothing">Nada para importar do Health Connect ainda.</string>
+    <string name="returning_health_nothing_new">Seu backup já tinha tudo do Health Connect.</string>
+    <string name="returning_health_denied">O Health Connect não compartilhou nenhum dado. Você pode conectá-lo depois em Ajustes.</string>
+    <string name="returning_health_read_failed">Não foi possível ler tudo do Health Connect. Tente de novo.</string>
+    <string name="returning_health_imported_both">Importação concluída: %1$s e %2$s.</string>
+    <string name="returning_health_imported_one">Importação concluída: %1$s.</string>
+    <string name="returning_health_imported_other">Seus dados do Health Connect foram importados.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d refeição</item>
+        <item quantity="many">%1$d de refeições</item>
+        <item quantity="other">%1$d refeições</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d pesagem</item>
+        <item quantity="many">%1$d de pesagens</item>
+        <item quantity="other">%1$d pesagens</item>
+    </plurals>
+</resources>

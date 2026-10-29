@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher shortcut glyph (adaptive-icon foreground, 108 dp canvas, 66 dp safe zone). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M54,32a22,22 0 1,0 0,44a22,22 0 1,0 0,-44z"
+        android:strokeWidth="3"
+        android:strokeColor="#FFFF375F"
+        android:fillColor="#00000000" />
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="-28">
+        <path
+            android:pathData="M32,54a22,8 0 1,0 44,0a22,8 0 1,0 -44,0z"
+            android:strokeWidth="2.4"
+            android:strokeColor="#FFFF6B8A"
+            android:fillColor="#00000000" />
+    </group>
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="62">
+        <path
+            android:pathData="M32,54a22,6 0 1,0 44,0a22,6 0 1,0 -44,0z"
+            android:strokeWidth="2"
+            android:strokeAlpha="0.75"
+            android:strokeColor="#FFFF6B8A"
+            android:fillColor="#00000000" />
+    </group>
+    <path
+        android:pathData="M54,48a6,6 0 1,0 0,12a6,6 0 1,0 0,-12z"
+        android:fillColor="#FFFFF4E0" />
+</vector>

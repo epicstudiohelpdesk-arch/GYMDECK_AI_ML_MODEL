@@ -1,0 +1,74 @@
+{
+    "version": "v1.1.0",
+    "entity": {
+        "type": "individual",
+        "role": "owner",
+        "name": "Apoorv Darshan",
+        "email": "apoorv@fud-ai.app",
+        "phone": "",
+        "description": "Independent developer who builds and maintains Fud AI, an open-source AI nutrition tracker for iOS and Android, in the open on GitHub.",
+        "webpageUrl": {
+            "url": "https://github.com/apoorvdarshan/fud-ai"
+        }
+    },
+    "projects": [
+        {
+            "guid": "fud-ai",
+            "name": "Fud AI",
+            "description": "Fud AI is a free, open-source (MIT) AI calorie and nutrition tracker for iOS and Android. People log meals by photo, barcode, nutrition label, voice or text, and track calories, macros, micronutrients, water, fasting, weight, body fat and workouts, with an AI coach and a live voice assistant. It is privacy-first: no required account and no ads. The food diary is stored on the device, with optional iCloud or Google Drive backup, which needs sign-in to that service. Users bring their own key for providers such as Gemini, OpenAI, Claude, Grok, Mistral and DeepSeek, or run Gemma 4 on the phone for offline analysis; optional hosted AI plans exist for people without a key. The app is available in 19 languages. Website: https://fud-ai.app",
+            "webpageUrl": {
+                "url": "https://github.com/apoorvdarshan/fud-ai"
+            },
+            "repositoryUrl": {
+                "url": "https://github.com/apoorvdarshan/fud-ai"
+            },
+            "licenses": ["spdx:MIT"],
+            "tags": ["nutrition", "calorie-tracker", "health", "fitness", "ios", "android", "ai", "privacy", "on-device-ai", "mobile-app"]
+        }
+    ],
+    "funding": {
+        "channels": [
+            {
+                "guid": "bank",
+                "type": "bank",
+                "address": "",
+                "description": "Bank transfer to the maintainer in India. Email apoorv@fud-ai.app for details."
+            },
+            {
+                "guid": "github-sponsors",
+                "type": "payment-provider",
+                "address": "https://github.com/sponsors/apoorvdarshan",
+                "description": "Sponsor through GitHub Sponsors."
+            },
+            {
+                "guid": "ko-fi",
+                "type": "payment-provider",
+                "address": "https://ko-fi.com/apoorvdarshan",
+                "description": "Support through Ko-fi."
+            }
+        ],
+        "plans": [
+            {
+                "guid": "development",
+                "status": "active",
+                "name": "Development and running costs",
+                "description": "Covers part-time development of the iOS and Android apps, macOS CI for tests and releases, and the infrastructure that keeps the bring-your-own-key and on-device features free.",
+                "amount": 10000,
+                "currency": "USD",
+                "frequency": "yearly",
+                "channels": ["bank", "github-sponsors"]
+            },
+            {
+                "guid": "support",
+                "status": "active",
+                "name": "Support Fud AI",
+                "description": "Give any amount to support the project.",
+                "amount": 0,
+                "currency": "USD",
+                "frequency": "one-time",
+                "channels": ["github-sponsors", "ko-fi"]
+            }
+        ],
+        "history": []
+    }
+}

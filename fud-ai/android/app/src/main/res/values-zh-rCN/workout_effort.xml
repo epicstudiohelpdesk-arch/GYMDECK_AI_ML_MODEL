@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">强度</string>
+    <string name="workout_effort_value">强度：%1$s</string>
+    <string name="workout_effort_light">轻度</string>
+    <string name="workout_effort_moderate">中等</string>
+    <string name="workout_effort_vigorous">高强度</string>
+</resources>

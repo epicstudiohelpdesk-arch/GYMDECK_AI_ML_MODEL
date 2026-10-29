@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">البدء من روتين</string>
+    <string name="workout_routine_save">حفظ كروتين</string>
+    <string name="workout_routine_save_title">حفظ الروتين</string>
+    <string name="workout_routine_name">اسم الروتين</string>
+    <string name="workout_routine_save_message">يحفظ تمارين هذا اليوم مع المجموعات والتكرارات والأوزان المخطط لها.</string>
+    <string name="workout_routines_title">الروتينات</string>
+    <string name="workout_routines_empty_title">لا توجد روتينات بعد</string>
+    <string name="workout_routines_empty_message">سجّل تمرينًا، ثم اختر «حفظ كروتين» من قائمة +.</string>
+    <string name="workout_routines_footer">يضيف تمارين الروتين إلى اليوم المحدد. تبقى المجموعات التي سجّلتها كما هي.</string>
+    <string name="workout_routine_rename">إعادة تسمية</string>
+    <string name="workout_routine_rename_title">إعادة تسمية الروتين</string>
+    <string name="workout_routine_delete_title">حذف الروتين؟</string>
+    <string name="workout_routine_delete_message">تبقى التمارين التي سجّلتها محفوظة.</string>
+</resources>

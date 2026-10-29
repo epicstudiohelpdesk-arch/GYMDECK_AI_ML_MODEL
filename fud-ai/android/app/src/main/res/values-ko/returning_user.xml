@@ -1,0 +1,42 @@
+<resources>
+    <string name="returning_entry">전에 Fud AI를 사용하셨나요?</string>
+    <string name="returning_title">다시 오신 것을 환영합니다</string>
+    <string name="returning_subtitle">식사, 체중, 운동 기록을 다시 가져오거나 처음부터 시작하세요.</string>
+    <string name="returning_pick_hint">하나 또는 둘 다 선택하세요.</string>
+    <string name="returning_drive_title">Google 드라이브에서 복원</string>
+    <string name="returning_drive_detail">일기, 사진, 운동, 설정이 모두 담긴 전체 백업입니다. 이전에 드라이브 백업을 켜 둔 경우에 사용할 수 있습니다.</string>
+    <string name="returning_drive_note">로그인은 백업을 찾는 데만 사용됩니다. 앱 인증이 완료될 때까지 Google에서 추가 경고를 표시할 수 있습니다.</string>
+    <string name="returning_health_title">Health Connect에서 가져오기</string>
+    <string name="returning_health_detail">Fud AI가 Health Connect에 저장한 식사, 체중, 체지방, 운동 칼로리입니다. 백업과 함께 선택하면 백업에 없는 항목만 추가됩니다.</string>
+    <string name="returning_health_update">먼저 Play 스토어에서 Health Connect를 설치하거나 업데이트하세요.</string>
+    <string name="returning_start_fresh">처음부터 시작</string>
+    <string name="returning_continue_setup">설정 계속하기</string>
+    <string name="returning_step_waiting">다음 순서</string>
+    <string name="returning_step_drive_done">백업을 복원했습니다.</string>
+    <string name="returning_step_drive_cancelled">복원을 취소했습니다.</string>
+    <string name="returning_step_failed">완료되지 않음</string>
+    <string name="returning_drive_checking">Google 드라이브 확인 중…</string>
+    <string name="returning_drive_confirm_title">백업을 복원할까요?</string>
+    <string name="returning_drive_confirm_message_dated">%1$s 백업이 이 휴대폰의 모든 내용을 대체합니다. API 키는 백업에 포함되지 않으므로 다시 추가해야 할 수 있습니다.</string>
+    <string name="returning_drive_confirm_message">백업이 이 휴대폰의 모든 내용을 대체합니다. API 키는 백업에 포함되지 않으므로 다시 추가해야 할 수 있습니다.</string>
+    <string name="returning_drive_restoring">복원 중…</string>
+    <string name="returning_drive_no_backup">이 계정의 Google 드라이브 백업을 찾을 수 없습니다.</string>
+    <string name="returning_drive_unreachable">Google 드라이브에 연결할 수 없습니다. 연결 상태를 확인하고 다시 시도하세요.</string>
+    <string name="returning_drive_not_a_backup">이 파일은 Fud AI 백업이 아닙니다.</string>
+    <string name="returning_drive_needs_update">이 백업은 최신 버전의 Fud AI에서 만들어졌습니다. 앱을 업데이트한 후 다시 시도하세요.</string>
+    <string name="returning_drive_setup_missing">이 백업에는 완료된 설정이 없으므로 지금 설정을 마치겠습니다.</string>
+    <string name="returning_health_importing">Health Connect에서 가져오는 중…</string>
+    <string name="returning_health_nothing">아직 Health Connect에서 가져올 데이터가 없습니다.</string>
+    <string name="returning_health_nothing_new">백업에 Health Connect의 모든 데이터가 이미 있었습니다.</string>
+    <string name="returning_health_denied">Health Connect에서 공유된 데이터가 없습니다. 나중에 설정에서 연결할 수 있습니다.</string>
+    <string name="returning_health_read_failed">Health Connect에서 모든 데이터를 읽지 못했어요. 다시 시도하세요.</string>
+    <string name="returning_health_imported_both">가져온 항목: %1$s, %2$s</string>
+    <string name="returning_health_imported_one">가져온 항목: %1$s</string>
+    <string name="returning_health_imported_other">Health Connect 데이터를 가져왔습니다.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="other">식사 %1$d건</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="other">체중 기록 %1$d건</item>
+    </plurals>
+</resources>

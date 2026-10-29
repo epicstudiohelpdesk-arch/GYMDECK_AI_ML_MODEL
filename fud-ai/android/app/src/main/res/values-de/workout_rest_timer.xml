@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Pausentimer</string>
+    <string name="settings_rest_timer_footer">Startet einen Countdown, sobald du heute einen Satz einträgst. Mit aktivierten Mitteilungen meldet sich Fud AI, wenn die Pause im Hintergrund endet.</string>
+    <string name="workout_rest_off">Aus</string>
+    <string name="workout_rest_label">Pause</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">15 Sekunden hinzufügen</string>
+    <string name="workout_rest_skip">Überspringen</string>
+    <string name="workout_rest_skip_description">Pause überspringen</string>
+    <string name="workout_rest_start_after_set">Pause nach Satz %1$d starten</string>
+    <string name="notif_channel_workout_rest">Pausentimer</string>
+    <string name="notif_channel_workout_rest_desc">Meldet, wenn eine Trainingspause endet.</string>
+    <string name="notif_workout_rest_title">Pause vorbei</string>
+    <string name="notif_workout_rest_text">Zeit für den nächsten Satz: %1$s.</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Dinlenme zamanlayıcısı</string>
+    <string name="settings_rest_timer_footer">Bugün bir set kaydettiğinizde geri sayım başlar. Bildirimler açıksa, uygulama arka plandayken dinlenme bittiğinde Fud AI sizi uyarır.</string>
+    <string name="workout_rest_off">Kapalı</string>
+    <string name="workout_rest_label">Dinlenme</string>
+    <string name="workout_rest_add_15">+15 sn</string>
+    <string name="workout_rest_add_15_description">15 saniye ekle</string>
+    <string name="workout_rest_skip">Atla</string>
+    <string name="workout_rest_skip_description">Dinlenmeyi atla</string>
+    <string name="workout_rest_start_after_set">%1$d. setten sonra dinlenmeyi başlat</string>
+    <string name="notif_channel_workout_rest">Dinlenme zamanlayıcısı</string>
+    <string name="notif_channel_workout_rest_desc">Antrenmandaki dinlenme süresi bittiğinde uyarır.</string>
+    <string name="notif_workout_rest_title">Dinlenme bitti</string>
+    <string name="notif_workout_rest_text">%1$s için sıradaki setin zamanı.</string>
+</resources>

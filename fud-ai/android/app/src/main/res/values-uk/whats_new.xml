@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Нове: Live Voice</string>
+    <string name="whats_new_body">Говоріть із Fud AI, щоб записувати прийоми їжі, сканувати штрихкоди й стежити за прогресом.</string>
+    <string name="whats_new_tap_orb">Торкніться кулі на головному екрані, щоб почати.</string>
+    <string name="whats_new_access_line">Входить до Plus і Pro — або використовуйте власний ключ ШІ.</string>
+    <string name="whats_new_video_cd">Демовідео Live Voice</string>
+    <string name="whats_new_sound_on">Увімкнути звук</string>
+    <string name="whats_new_sound_off">Вимкнути звук</string>
+    <string name="whats_new_access_title_setup">Отримайте Live Voice</string>
+    <string name="whats_new_access_title_plans">Перейдіть на Plus або Pro</string>
+    <string name="whats_new_access_body_setup">Оберіть Plus або Pro, і ми запускатимемо ШІ за вас, або додайте власний ключ API Gemini, OpenAI, xAI чи Qwen.</string>
+    <string name="whats_new_access_body_key_only">Додайте власний ключ API Gemini, OpenAI, xAI чи Qwen, щоб почати користуватися Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus і Pro запускають ШІ за вас: Live Voice включено, а ключі API не потрібні. Із власними ключами Fud AI залишається безкоштовним.</string>
+    <string name="whats_new_support_body">Fud AI безкоштовний, і його створює один розробник. Оцінка, поширення чи невеликі чайові допомагають йому розвиватися.</string>
+    <string name="whats_new_community_title">Приєднуйтеся до спільноти Fud AI</string>
+    <string name="whats_new_community_body">Отримуйте допомогу, діліться ідеями та знайомтеся з іншими користувачами Fud AI у Discord.</string>
+    <string name="whats_new_next">Далі</string>
+    <string name="whats_new_previous">Назад</string>
+    <string name="notif_whats_new_title">Нове у Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Говоріть, щоб записувати їжу, сканувати штрихкоди й стежити за прогресом. Торкніться, щоб побачити нове.</string>
+</resources>

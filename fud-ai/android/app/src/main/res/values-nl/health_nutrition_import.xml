@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Voedingsgeschiedenis importeren</string>
+    <string name="health_import_action">Importeren</string>
+    <string name="health_import_description">Haal voedingsgegevens uit een andere app naar je dagboek. Bekijk eerst de beschikbare gegevens en kies dan één bronapp, zodat gedeelde gegevens niet dubbel worden geteld.</string>
+    <string name="health_import_from">Van (JJJJ-MM-DD)</string>
+    <string name="health_import_to">Tot en met (JJJJ-MM-DD)</string>
+    <string name="health_import_history_hint">Kies zonder toegang tot de geschiedenis datums binnen de afgelopen 30 dagen. Oudere gegevens vereisen toegang tot de geschiedenis op een ondersteund apparaat.</string>
+    <string name="health_import_grant">Toegang tot voeding en geschiedenis verlenen</string>
+    <string name="health_import_access_result">Toegangsinstellingen bijgewerkt. Bekijk opnieuw een voorbeeld om de beschikbare gegevens te controleren.</string>
+    <string name="health_import_access_needed">Sta leestoegang tot voeding toe in Health Connect en bekijk dan opnieuw een voorbeeld.</string>
+    <string name="health_import_invalid_dates">Voer geldige datums in als JJJJ-MM-DD. De einddatum moet op of na de begindatum liggen en mag niet later zijn dan vandaag.</string>
+    <string name="health_import_history_needed">Voor dit bereik is toegang tot de geschiedenis nodig. Verleen toegang op een ondersteund apparaat of kies datums binnen de afgelopen 30 dagen.</string>
+    <string name="health_import_preview">Beschikbare gegevens bekijken</string>
+    <string name="health_import_failed">Importeren kon niet worden voltooid. Controleer de toegang tot Health Connect en probeer het opnieuw.</string>
+    <string name="health_import_empty">Er zijn in dit bereik geen nieuwe voedingsgegevens van andere apps gevonden. Controleer of je bronapp voeding deelt met Health Connect. Eerder geïmporteerde gegevens worden overgeslagen, ook als je ze uit je dagboek hebt verwijderd.</string>
+    <string name="health_import_count">%1$d nieuwe gegevens · %2$d kcal</string>
+    <string name="health_import_unnamed">Geïmporteerde maaltijd</string>
+    <string name="health_import_local_only">Dit zijn lokale kopieën. Bewerkingen en verwijderingen blijven in Fud AI. Opnieuw importeren slaat eerder geïmporteerde gegevens over; ze worden niet bijgewerkt.</string>
+    <string name="health_import_done">%1$d gegevens geïmporteerd in je dagboek.</string>
+    <string name="health_import_close">Sluiten</string>
+</resources>

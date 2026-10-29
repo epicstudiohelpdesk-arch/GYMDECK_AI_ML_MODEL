@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Workout log + menu item that fills the selected day from a saved routine. -->
+    <string name="workout_routine_start">Start from routine</string>
+    <!-- Workout log + menu item that saves the selected day's exercises as a routine. -->
+    <string name="workout_routine_save">Save as routine</string>
+    <!-- Title of the dialog that names a new routine. -->
+    <string name="workout_routine_save_title">Save Routine</string>
+    <!-- Text field for a routine's name. -->
+    <string name="workout_routine_name">Routine name</string>
+    <!-- Explains what Save Routine stores. -->
+    <string name="workout_routine_save_message">Saves this day\'s exercises with their planned sets, reps and weights.</string>
+    <!-- Title of the saved routines list. -->
+    <string name="workout_routines_title">Routines</string>
+    <!-- Empty state of the routines list. -->
+    <string name="workout_routines_empty_title">No Routines Yet</string>
+    <!-- Empty routines list hint. Save as routine is the + menu item of the same name. -->
+    <string name="workout_routines_empty_message">Log a workout, then choose Save as routine from the + menu.</string>
+    <!-- Explains how starting a day from a routine merges with what is already logged. -->
+    <string name="workout_routines_footer">Adds the routine\'s exercises to the selected day. Sets you already logged stay as they are.</string>
+    <!-- Action that renames a saved routine. -->
+    <string name="workout_routine_rename">Rename</string>
+    <!-- Title of the dialog that renames a routine. -->
+    <string name="workout_routine_rename_title">Rename Routine</string>
+    <!-- Confirmation title before deleting a routine. -->
+    <string name="workout_routine_delete_title">Delete Routine?</string>
+    <!-- Confirmation message before deleting a routine. -->
+    <string name="workout_routine_delete_message">Workouts you already logged are kept.</string>
+</resources>

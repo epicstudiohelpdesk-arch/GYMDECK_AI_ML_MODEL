@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">New: Live Voice</string>
+    <string name="whats_new_body">Talk to Fud AI to log meals, scan barcodes and check your progress.</string>
+    <string name="whats_new_tap_orb">Tap the orb on Home to start.</string>
+    <string name="whats_new_access_line">Included with Plus and Pro, or use your own AI key.</string>
+    <string name="whats_new_video_cd">Live Voice demo video</string>
+    <string name="whats_new_sound_on">Turn sound on</string>
+    <string name="whats_new_sound_off">Turn sound off</string>
+    <string name="whats_new_access_title_setup">Get Live Voice</string>
+    <string name="whats_new_access_title_plans">Switch to Plus or Pro</string>
+    <string name="whats_new_access_body_setup">Pick Plus or Pro and we run the AI for you, or add your own Gemini, OpenAI, xAI or Qwen API key.</string>
+    <string name="whats_new_access_body_key_only">Add your own Gemini, OpenAI, xAI or Qwen API key to start using Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus and Pro run the AI for you, with Live Voice included and no API keys to manage. Fud AI stays free with your own keys.</string>
+    <string name="whats_new_support_body">Fud AI is free and built by one developer. A rating, a share or a small tip helps keep it going.</string>
+    <string name="whats_new_community_title">Join the Fud AI community</string>
+    <string name="whats_new_community_body">Get help, share ideas and meet other Fud AI users on Discord.</string>
+    <string name="whats_new_next">Next</string>
+    <string name="whats_new_previous">Previous</string>
+    <string name="notif_whats_new_title">New in Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Talk to log meals, scan barcodes and check your progress. Tap to see what’s new.</string>
+</resources>

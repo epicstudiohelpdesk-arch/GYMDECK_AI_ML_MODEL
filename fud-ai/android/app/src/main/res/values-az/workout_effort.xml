@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">Səy</string>
+    <string name="workout_effort_value">Səy: %1$s</string>
+    <string name="workout_effort_light">Yüngül</string>
+    <string name="workout_effort_moderate">Orta</string>
+    <string name="workout_effort_vigorous">İntensiv</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">순서 변경</string>
+    <string name="workout_move_up">위로 이동</string>
+    <string name="workout_move_down">아래로 이동</string>
+    <string name="workout_move_up_named">%1$s 위로 이동</string>
+    <string name="workout_move_down_named">%1$s 아래로 이동</string>
+</resources>

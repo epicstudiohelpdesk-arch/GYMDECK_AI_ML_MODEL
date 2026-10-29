@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Antrenmanı tarif et</string>
+    <string name="workout_text_intro">Ne yaptığınızı açıklayın. Antrenman günlüğünüze eklemeden önce ayrıntıları gözden geçirin.</string>
+    <string name="workout_text_description">Antrenman açıklaması</string>
+    <string name="workout_text_example">20 dakika ip atlama, ardından 40 kg ile 3 set 10 tekrar bench press</string>
+    <string name="workout_text_voice">Ses</string>
+    <string name="workout_text_preparing">Egzersizler bulunuyor…</string>
+    <string name="workout_text_preview">Analiz Et</string>
+    <string name="workout_text_retry">Tekrar Dene</string>
+    <string name="workout_text_review">Antrenmanı Gözden Geçir</string>
+    <string name="workout_text_date">Tarih (YYYY-AA-GG)</string>
+    <string name="workout_text_custom">Özel süreli etkinlik · kalori tahmini genel bir etkinlik yakım oranını kullanır</string>
+    <string name="workout_text_minutes">Dakika</string>
+    <string name="workout_text_reps">Tekrar</string>
+    <string name="workout_text_remove">Egzersizi kaldır</string>
+    <string name="workout_text_calories_note">Kalori değerleri tahminidir. Antrenmanınızı ekledikten sonra günlüğünüzdeki Hesapla\'yı kullanın.</string>
+    <string name="workout_text_edit">Açıklamayı düzenle</string>
+    <string name="workout_text_adding">Ekleniyor…</string>
+    <string name="workout_text_add">Günlüğe ekle</string>
+    <string name="workout_text_menu">Metin</string>
+    <string name="workout_text_set_weight">Set %1$d · %2$s</string>
+    <string name="workout_text_estimate">Tahmini yakım: %1$d kcal</string>
+    <string name="workout_text_effort">Efor (belirtilmezse orta)</string>
+    <string name="workout_text_light">Hafif</string>
+    <string name="workout_text_moderate">Orta</string>
+    <string name="workout_text_vigorous">Yoğun</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

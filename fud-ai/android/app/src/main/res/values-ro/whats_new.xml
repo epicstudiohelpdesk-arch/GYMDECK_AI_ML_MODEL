@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Nou: Live Voice</string>
+    <string name="whats_new_body">Vorbește cu Fud AI ca să înregistrezi mese, să scanezi coduri de bare și să-ți verifici progresul.</string>
+    <string name="whats_new_tap_orb">Atinge sfera de pe pagina principală ca să începi.</string>
+    <string name="whats_new_access_line">Inclus în Plus și Pro sau folosește propria cheie AI.</string>
+    <string name="whats_new_video_cd">Videoclip demonstrativ Live Voice</string>
+    <string name="whats_new_sound_on">Pornește sunetul</string>
+    <string name="whats_new_sound_off">Oprește sunetul</string>
+    <string name="whats_new_access_title_setup">Obține Live Voice</string>
+    <string name="whats_new_access_title_plans">Treci la Plus sau Pro</string>
+    <string name="whats_new_access_body_setup">Alege Plus sau Pro și rulăm noi AI-ul pentru tine sau adaugă propria cheie API Gemini, OpenAI, xAI ori Qwen.</string>
+    <string name="whats_new_access_body_key_only">Adaugă propria cheie API Gemini, OpenAI, xAI ori Qwen ca să începi să folosești Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus și Pro rulează AI-ul pentru tine, cu Live Voice inclus și fără chei API de gestionat. Cu propriile chei, Fud AI rămâne gratuit.</string>
+    <string name="whats_new_support_body">Fud AI este gratuit și e creat de un singur dezvoltator. O evaluare, o distribuire sau un mic bacșiș îl ajută să continue.</string>
+    <string name="whats_new_community_title">Alătură-te comunității Fud AI</string>
+    <string name="whats_new_community_body">Primește ajutor, împărtășește idei și cunoaște alți utilizatori Fud AI pe Discord.</string>
+    <string name="whats_new_next">Înainte</string>
+    <string name="whats_new_previous">Înapoi</string>
+    <string name="notif_whats_new_title">Nou în Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Vorbește ca să înregistrezi mese, să scanezi coduri de bare și să-ți verifici progresul. Atinge ca să vezi noutățile.</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Workouts setting: how long the rest countdown after a logged set runs. -->
+    <string name="settings_rest_timer">Rest Timer</string>
+    <!-- Footnote under the Rest Timer setting. Fud AI is the app name. -->
+    <string name="settings_rest_timer_footer">Counts down after you log a set today. With notifications on, Fud AI alerts you when rest ends in the background.</string>
+    <!-- Rest Timer setting value when the countdown is turned off. -->
+    <string name="workout_rest_off">Off</string>
+    <!-- Label beside the rest countdown in the workout log. -->
+    <string name="workout_rest_label">Rest</string>
+    <!-- Short button that adds 15 seconds to the rest countdown. -->
+    <string name="workout_rest_add_15">+15s</string>
+    <!-- Accessibility label of the +15s rest button. -->
+    <string name="workout_rest_add_15_description">Add 15 seconds</string>
+    <!-- Button that ends the rest countdown early. -->
+    <string name="workout_rest_skip">Skip</string>
+    <!-- Accessibility label of the rest Skip button. -->
+    <string name="workout_rest_skip_description">Skip rest</string>
+    <!-- Accessibility label of the per-set rest button. The argument is the set number. -->
+    <string name="workout_rest_start_after_set">Start rest after set %1$d</string>
+    <!-- Android notification channel for rest timer alerts. -->
+    <string name="notif_channel_workout_rest">Rest timer</string>
+    <!-- Description of the rest timer notification channel. -->
+    <string name="notif_channel_workout_rest_desc">Alerts when a workout rest period ends.</string>
+    <!-- Title of the notification sent when a workout rest countdown ends. -->
+    <string name="notif_workout_rest_title">Rest Complete</string>
+    <!-- Body of the rest timer notification. The argument is the exercise name, such as Bench Press. -->
+    <string name="notif_workout_rest_text">Time for your next set of %1$s.</string>
+</resources>

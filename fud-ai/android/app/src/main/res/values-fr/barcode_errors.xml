@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_barcode_invalid">Ce code-barres n’a pas pu être lu. Essaie de le scanner à nouveau.</string>
+    <string name="error_barcode_product_not_found">Produit introuvable dans Open Food Facts. Scanne plutôt l’étiquette nutritionnelle.</string>
+    <string name="error_barcode_missing_nutrition">Ce code-barres a été trouvé, mais les données nutritionnelles sont incomplètes. Scanne plutôt l’étiquette nutritionnelle.</string>
+    <string name="error_barcode_usda_key_rejected">USDA FoodData Central a refusé votre clé API. Vérifiez-la dans Réglages > Informations sur le produit, ou scannez plutôt l’étiquette nutritionnelle.</string>
+    <string name="barcode_saved_label_title">Utilisation de votre étiquette nutritionnelle enregistrée pour ce code-barres</string>
+    <string name="barcode_saved_label_footer">Open Food Facts n\'a pas de valeurs nutritionnelles pour ce produit. Pour oublier cette étiquette, supprimez les entrées de repas qui l\'ont utilisée.</string>
+    <string name="error_barcode_rate_limited">Trop de recherches de codes-barres ont été effectuées. Attends un moment, puis réessaie.</string>
+    <string name="error_barcode_service_unavailable">Open Food Facts est temporairement indisponible. Réessaie plus tard.</string>
+    <string name="error_barcode_unexpected_response">Open Food Facts a renvoyé une réponse inattendue.</string>
+    <string name="error_barcode_network">Impossible de se connecter à Open Food Facts. Vérifie ta connexion et réessaie.</string>
+    <string name="error_barcode_offline">Vous semblez hors ligne. Vérifiez votre connexion et réessayez de scanner.</string>
+    <string name="error_barcode_timeout">Open Food Facts a mis trop de temps à répondre. Réessayez de scanner.</string>
+</resources>

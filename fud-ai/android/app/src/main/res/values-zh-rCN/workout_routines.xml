@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">从训练模板开始</string>
+    <string name="workout_routine_save">保存为训练模板</string>
+    <string name="workout_routine_save_title">保存训练模板</string>
+    <string name="workout_routine_name">模板名称</string>
+    <string name="workout_routine_save_message">保存这一天的动作及其计划组数、次数和重量。</string>
+    <string name="workout_routines_title">训练模板</string>
+    <string name="workout_routines_empty_title">还没有训练模板</string>
+    <string name="workout_routines_empty_message">先记录一次训练，然后在 + 菜单中选择“保存为训练模板”。</string>
+    <string name="workout_routines_footer">将模板中的动作添加到所选日期。已记录的组保持不变。</string>
+    <string name="workout_routine_rename">重命名</string>
+    <string name="workout_routine_rename_title">重命名训练模板</string>
+    <string name="workout_routine_delete_title">删除训练模板？</string>
+    <string name="workout_routine_delete_message">已记录的训练会保留。</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Імпорт історії харчування</string>
+    <string name="health_import_action">Імпортувати</string>
+    <string name="health_import_description">Перенесіть записи про їжу з іншого застосунку до щоденника. Перегляньте доступні записи, а потім виберіть один застосунок-джерело, щоб спільні записи не враховувалися двічі.</string>
+    <string name="health_import_from">З (РРРР-ММ-ДД)</string>
+    <string name="health_import_to">По (РРРР-ММ-ДД)</string>
+    <string name="health_import_history_hint">Без доступу до історії вибирайте дати за останні 30 днів. Для старіших записів потрібен доступ до історії на підтримуваному пристрої.</string>
+    <string name="health_import_grant">Надати доступ до харчування та історії</string>
+    <string name="health_import_access_result">Налаштування доступу оновлено. Знову відкрийте попередній перегляд, щоб перевірити доступні записи.</string>
+    <string name="health_import_access_needed">Дозвольте читання даних про харчування в Health Connect, а потім знову відкрийте попередній перегляд.</string>
+    <string name="health_import_invalid_dates">Введіть коректні дати у форматі РРРР-ММ-ДД. Дата завершення має бути не раніше дати початку й не пізніше сьогодні.</string>
+    <string name="health_import_history_needed">Для цього діапазону потрібен доступ до історії. Надайте його на підтримуваному пристрої або виберіть дати за останні 30 днів.</string>
+    <string name="health_import_preview">Переглянути доступні записи</string>
+    <string name="health_import_failed">Не вдалося завершити імпорт. Перевірте доступ до Health Connect і спробуйте ще раз.</string>
+    <string name="health_import_empty">У цьому діапазоні не знайдено нових записів про харчування з інших застосунків. Переконайтеся, що застосунок-джерело передає дані про харчування в Health Connect. Раніше імпортовані записи пропускаються, зокрема видалені зі щоденника.</string>
+    <string name="health_import_count">Нових записів: %1$d · %2$d ккал</string>
+    <string name="health_import_unnamed">Імпортований прийом їжі</string>
+    <string name="health_import_local_only">Це локальні копії. Зміни та видалення залишаються у Fud AI. Повторний імпорт пропускає раніше імпортовані записи й не оновлює їх.</string>
+    <string name="health_import_done">Імпортовано записів до щоденника: %1$d.</string>
+    <string name="health_import_close">Закрити</string>
+</resources>

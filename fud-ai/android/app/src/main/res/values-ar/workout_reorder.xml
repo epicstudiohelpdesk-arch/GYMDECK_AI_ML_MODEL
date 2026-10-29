@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">إعادة الترتيب</string>
+    <string name="workout_move_up">نقل لأعلى</string>
+    <string name="workout_move_down">نقل لأسفل</string>
+    <string name="workout_move_up_named">نقل %1$s لأعلى</string>
+    <string name="workout_move_down_named">نقل %1$s لأسفل</string>
+</resources>

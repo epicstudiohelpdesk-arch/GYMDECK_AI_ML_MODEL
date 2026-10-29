@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">प्रयास</string>
+    <string name="workout_effort_value">प्रयास: %1$s</string>
+    <string name="workout_effort_light">हल्का</string>
+    <string name="workout_effort_moderate">मध्यम</string>
+    <string name="workout_effort_vigorous">तीव्र</string>
+</resources>

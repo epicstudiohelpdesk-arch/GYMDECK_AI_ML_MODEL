@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Nowość: Live Voice</string>
+    <string name="whats_new_body">Rozmawiaj z Fud AI, aby zapisywać posiłki, skanować kody kreskowe i sprawdzać postępy.</string>
+    <string name="whats_new_tap_orb">Dotknij kuli na ekranie głównym, aby zacząć.</string>
+    <string name="whats_new_access_line">W ramach Plus i Pro albo z własnym kluczem AI.</string>
+    <string name="whats_new_video_cd">Film demonstracyjny Live Voice</string>
+    <string name="whats_new_sound_on">Włącz dźwięk</string>
+    <string name="whats_new_sound_off">Wyłącz dźwięk</string>
+    <string name="whats_new_access_title_setup">Włącz Live Voice</string>
+    <string name="whats_new_access_title_plans">Przejdź na Plus lub Pro</string>
+    <string name="whats_new_access_body_setup">Wybierz Plus lub Pro, a my uruchomimy AI za Ciebie, albo dodaj własny klucz API Gemini, OpenAI, xAI lub Qwen.</string>
+    <string name="whats_new_access_body_key_only">Dodaj własny klucz API Gemini, OpenAI, xAI lub Qwen, aby zacząć korzystać z Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus i Pro uruchamiają AI za Ciebie — z Live Voice i bez kluczy API do zarządzania. Z własnymi kluczami Fud AI pozostaje darmowe.</string>
+    <string name="whats_new_support_body">Fud AI jest darmowe i tworzy je jeden programista. Ocena, udostępnienie albo mały napiwek pomagają je rozwijać.</string>
+    <string name="whats_new_community_title">Dołącz do społeczności Fud AI</string>
+    <string name="whats_new_community_body">Uzyskaj pomoc, dziel się pomysłami i poznaj innych użytkowników Fud AI na Discordzie.</string>
+    <string name="whats_new_next">Dalej</string>
+    <string name="whats_new_previous">Wstecz</string>
+    <string name="notif_whats_new_title">Nowość w Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Mów, aby zapisywać posiłki, skanować kody kreskowe i sprawdzać postępy. Dotknij, aby zobaczyć nowości.</string>
+</resources>

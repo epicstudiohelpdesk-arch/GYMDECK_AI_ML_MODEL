@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_error_no_key">No hay ninguna clave API configurada. Añade tu clave en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_image_conversion">No se pudo procesar la imagen. Prueba con otra foto.</string>
+    <string name="ai_error_invalid_response">No se pudo entender la respuesta de la IA. Inténtalo de nuevo.</string>
+    <string name="ai_error_invalid_url">URL de la API no válida. Revisa los ajustes de tu proveedor.</string>
+    <string name="ai_error_offline">Parece que no tienes conexión. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="ai_error_connection">No se pudo conectar con el proveedor de IA. Revisa tu conexión y la URL del proveedor, e inténtalo de nuevo.</string>
+    <string name="ai_error_timeout">La IA tardó demasiado en responder. Inténtalo de nuevo o aumenta el tiempo de espera de la solicitud en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_credits">Tu cuenta de IA se quedó sin créditos. Recarga saldo o cambia de proveedor en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_daily_quota">Se agotó la cuota diaria de tu cuenta de IA. Inténtalo de nuevo mañana o cambia de proveedor en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_quota">Se superó la cuota de uso de tu cuenta de IA. Revisa los límites de tu proveedor o cambia de proveedor en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_model">El modelo o el endpoint de la API seleccionado no está disponible. Revisa el modelo y la URL de la API en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_rate_limit">Se alcanzó el límite de solicitudes de tu clave API. Espera un minuto o cambia de proveedor en Ajustes → Proveedor de IA. Si usas un plan gratuito, comprueba si se agotó su cuota diaria.</string>
+    <string name="ai_error_key_rejected">Tu clave API fue rechazada. Abre Ajustes → Proveedor de IA y vuelve a pegar una clave válida.</string>
+    <string name="ai_error_overloaded">El proveedor de IA está saturado en este momento. Lo reintentamos varias veces; inténtalo de nuevo en un minuto o cambia de proveedor o modelo en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_generic">La solicitud a la IA falló. Inténtalo de nuevo o cambia de proveedor en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_local_unavailable">El motor de IA en el dispositivo no está disponible. Revisa el modelo descargado en Ajustes → Proveedor de IA.</string>
+    <string name="ai_error_truncated">La respuesta de la IA se cortó dos veces. Prueba con un texto más corto o con otro modelo.</string>
+    <string name="ai_error_both_failed">Fallaron %1$s y el respaldo %2$s. %3$s</string>
+</resources>

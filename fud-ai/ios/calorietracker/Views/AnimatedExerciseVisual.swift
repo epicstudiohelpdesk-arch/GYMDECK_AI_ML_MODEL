@@ -1,0 +1,365 @@
+import ImageIO
+import SwiftUI
+import UIKit
+
+struct AnimatedExerciseVisual: View {
+    var muscleGroup: MuscleGroup? = nil
+    var assetName: String?
+    var exerciseName: String?
+    var imagePaths: [String] = []
+    var equipment: Equipment?
+    var height: CGFloat = 170
+    var fillsWidth = true
+    var allowsDerivedImageLookup = true
+    var animatesFrames = true
+    /// When set, decoded frames are capped at this pixel dimension. Nil keeps full resolution.
+    var maxPixelSize: Int? = nil
+    var fallbackSystemImage = "figure.strengthtraining.traditional"
+    var fallbackTitle = String(localized: "Exercise")
+    @Environment(ProfileStore.self) private var profileStore
+    @State private var animate = false
+
+    var body: some View {
+        let visualAsset = resolvedVisualAsset
+
+        ZStack {
+            if !visualAsset.frames.isEmpty {
+                ExerciseImageView(
+                    asset: visualAsset,
+                    animatesFrames: animatesFrames,
+                    maxPixelSize: effectiveMaxPixelSize,
+                    placeholder: AnyView(fallbackVisual)
+                )
+            } else {
+                fallbackVisual
+            }
+        }
+        .frame(maxWidth: fillsWidth ? .infinity : nil)
+        .frame(height: height)
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .stroke(Color(uiColor: .separator).opacity(0.35), lineWidth: 0.5)
+        )
+    }
+
+    private var effectiveMaxPixelSize: Int? {
+        if let maxPixelSize {
+            return maxPixelSize
+        }
+        // Detail heroes keep full quality; list/diary cells downsample to cell size.
+        if height >= 200 {
+            return nil
+        }
+        let scale = UIScreen.main.scale
+        return max(Int(ceil(height * scale)), 1)
+    }
+
+    private var resolvedVisualAsset: ExerciseVisualAsset {
+        let directAsset = FreeExerciseDBAssetResolver.preferredVisualAsset(
+            for: imagePaths,
+            gender: profileStore.profile.gender
+        )
+        if !directAsset.frames.isEmpty {
+            return directAsset
+        }
+
+        guard allowsDerivedImageLookup else {
+            return .jpeg(urls: [])
+        }
+
+        let namedURLs = FreeExerciseDBAssetResolver.imageURLs(
+            forExerciseName: exerciseName,
+            muscleGroup: muscleGroup,
+            equipment: equipment
+        )
+        if !namedURLs.isEmpty {
+            return .jpeg(urls: namedURLs)
+        }
+
+        guard allowsDerivedImageLookup, let muscleGroup else {
+            return .jpeg(urls: [])
+        }
+
+        return .jpeg(
+            urls: FreeExerciseDBAssetResolver.imageURLs(forMuscleGroup: muscleGroup, equipment: equipment)
+        )
+    }
+
+    private var fallbackVisual: some View {
+        ZStack {
+            LinearGradient(
+                colors: [
+                    Color.workoutPanel,
+                    Color.workoutCard,
+                    Color.workoutAccent.opacity(animate ? 0.20 : 0.10)
+                ],
+                startPoint: animate ? .topLeading : .bottomLeading,
+                endPoint: animate ? .bottomTrailing : .topTrailing
+            )
+            .animation(.easeInOut(duration: 2.6).repeatForever(autoreverses: true), value: animate)
+
+            VStack(spacing: 12) {
+                Image(systemName: muscleGroup?.icon ?? fallbackSystemImage)
+                    .font(.system(size: 36, weight: .semibold))
+                    .symbolEffect(.pulse, options: .repeating, value: animate)
+                Text((muscleGroup?.title ?? fallbackTitle).uppercased())
+                    .font(.caption.weight(.bold))
+                    .tracking(1.2)
+                if let equipment {
+                    Text(equipment.title)
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(Color.workoutMutedText)
+                }
+            }
+            .foregroundStyle(Color.workoutCharcoal)
+        }
+        .onAppear { animate = true }
+    }
+}
+
+private struct ExerciseImageView: View {
+    let asset: ExerciseVisualAsset
+    let animatesFrames: Bool
+    let maxPixelSize: Int?
+    /// Shown while no frame could be produced (authored frames are fetched on demand and
+    /// may be unavailable offline before their first download).
+    let placeholder: AnyView
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var frameIndex = 0
+    @State private var displayedImage: UIImage?
+    @State private var frameUnavailable = false
+
+    private var taskID: ExerciseImageTaskID {
+        ExerciseImageTaskID(
+            asset: asset,
+            animatesFrames: animatesFrames,
+            reduceMotion: reduceMotion,
+            maxPixelSize: maxPixelSize
+        )
+    }
+
+    var body: some View {
+        ZStack {
+            // Opaque in light and dark so transparent PNG cutouts never
+            // composite over scrolling content behind a sticky hero.
+            Color.workoutBackground
+
+            if let displayedImage {
+                exerciseFrame(displayedImage)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .clipped()
+            } else if frameUnavailable {
+                placeholder
+            }
+        }
+        .task(id: taskID) {
+            displayedImage = nil
+            frameUnavailable = false
+            frameIndex = initialFrameIndex
+            if let firstFrame = await loadFrame(at: frameIndex) {
+                guard !Task.isCancelled else { return }
+                displayedImage = firstFrame
+            } else {
+                guard !Task.isCancelled else { return }
+                frameUnavailable = true
+            }
+            guard animatesFrames, asset.frames.count > 1, !reduceMotion else {
+                // Static thumbnails (animation off, Reduce Motion) load once, so a transient
+                // CDN/offline failure would otherwise pin them to the placeholder until
+                // SwiftUI recreates the view. Keep retrying with backoff while visible.
+                if displayedImage == nil {
+                    await retryStaticFrame()
+                }
+                return
+            }
+
+            var prefetchedIndex = (frameIndex + 1) % asset.frames.count
+            var prefetchedImage = await loadFrame(at: prefetchedIndex)
+
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: 850_000_000)
+                guard !Task.isCancelled else { return }
+
+                if let prefetchedImage {
+                    guard !Task.isCancelled else { return }
+                    displayedImage = prefetchedImage
+                    frameIndex = prefetchedIndex
+                    frameUnavailable = false
+                } else {
+                    frameIndex = (frameIndex + 1) % asset.frames.count
+                    // Each tick is another attempt; WorkoutFrameStore memoizes failures for
+                    // 60 s so an offline animation never hammers the CDN, and the first frame
+                    // that arrives after reconnecting replaces the placeholder.
+                    if let loaded = await loadFrame(at: frameIndex) {
+                        guard !Task.isCancelled else { return }
+                        displayedImage = loaded
+                        frameUnavailable = false
+                    }
+                }
+
+                prefetchedIndex = (frameIndex + 1) % asset.frames.count
+                prefetchedImage = await loadFrame(at: prefetchedIndex)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func exerciseFrame(_ image: UIImage) -> some View {
+        if asset.format != .jpeg {
+            // Authored SVG/PNG frames keep their full-color transparent canvas uncropped.
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+        } else {
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFill()
+                .saturation(0.30)
+                .grayscale(0.36)
+                .contrast(1.10)
+                .brightness(-0.05)
+        }
+    }
+
+    private var initialFrameIndex: Int {
+        guard !asset.frames.isEmpty else { return 0 }
+        if animatesFrames, !reduceMotion {
+            return 0
+        }
+        if asset.format == .jpeg {
+            return 0
+        }
+        return min(asset.representativeFrameIndex, asset.frames.count - 1)
+    }
+
+    private func loadFrame(at index: Int) async -> UIImage? {
+        guard asset.frames.indices.contains(index) else { return nil }
+        let frame = asset.frames[index]
+        let maxPixelSize = maxPixelSize
+        return await Task.detached(priority: .userInitiated) {
+            await ExerciseImageCache.shared.image(for: frame, maxPixelSize: maxPixelSize)
+        }.value
+    }
+
+    /// Re-attempts the representative frame of a non-animating card until it loads or the
+    /// view goes away. Only authored frames can appear later (a `.file` frame that failed
+    /// once is simply missing), and the store's 60 s failure memoization means early
+    /// attempts mostly pick up a frame another card already downloaded.
+    private func retryStaticFrame() async {
+        guard asset.frames.indices.contains(frameIndex), case .authored = asset.frames[frameIndex] else { return }
+        var attempt = 0
+        while !Task.isCancelled {
+            try? await Task.sleep(for: ExerciseFrameRetryPolicy.delay(attempt: attempt))
+            guard !Task.isCancelled else { return }
+            if let image = await loadFrame(at: frameIndex) {
+                guard !Task.isCancelled else { return }
+                displayedImage = image
+                frameUnavailable = false
+                return
+            }
+            attempt += 1
+        }
+    }
+}
+
+/// Backoff between UI-driven retries of an unavailable authored frame (matches Android's
+/// `frameRetryDelayMillis`): 15 s, 30 s, then 60 s — the store's own failure-retry window —
+/// for as long as the card stays on screen.
+nonisolated enum ExerciseFrameRetryPolicy {
+    static let baseDelay: Duration = .seconds(15)
+    static let maximumDelay: Duration = .seconds(60)
+
+    static func delay(attempt: Int) -> Duration {
+        let exponent = min(max(attempt, 0), 2)
+        return min(baseDelay * (1 << exponent), maximumDelay)
+    }
+}
+
+private struct ExerciseImageTaskID: Equatable {
+    let asset: ExerciseVisualAsset
+    let animatesFrames: Bool
+    let reduceMotion: Bool
+    let maxPixelSize: Int?
+}
+
+/// Decoded-frame memory cache. NSCache is thread-safe, so this stays off the main actor.
+nonisolated private final class ExerciseImageCache: @unchecked Sendable {
+    static let shared = ExerciseImageCache()
+
+    private let imagesByFrame: NSCache<NSString, UIImage> = {
+        let cache = NSCache<NSString, UIImage>()
+        cache.countLimit = 96
+        cache.totalCostLimit = 48 * 1_024 * 1_024
+        return cache
+    }()
+
+    private init() {}
+
+    func image(for frame: ExerciseVisualFrame, maxPixelSize: Int?) async -> UIImage? {
+        let cacheKey = frame.cacheKey(maxPixelSize: maxPixelSize)
+        if let image = imagesByFrame.object(forKey: cacheKey) {
+            return image
+        }
+
+        let image: UIImage?
+        switch frame {
+        case .file(let url):
+            image = Self.decodeImage(fromFileURL: url, maxPixelSize: maxPixelSize)
+        case .authored(let authored):
+            // Cache → bundled debug sample → CDN download; nil keeps the placeholder visible.
+            guard let url = await WorkoutFrameStore.shared.localURL(for: authored) else { return nil }
+            image = Self.decodeImage(fromFileURL: url, maxPixelSize: maxPixelSize)
+        }
+
+        guard let image else {
+            return nil
+        }
+
+        imagesByFrame.setObject(image, forKey: cacheKey, cost: image.estimatedMemoryCost)
+        return image
+    }
+
+    private static func decodeImage(fromFileURL url: URL, maxPixelSize: Int?) -> UIImage? {
+        guard let maxPixelSize, maxPixelSize > 0 else {
+            return UIImage(contentsOfFile: url.path)
+        }
+
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else {
+            return UIImage(contentsOfFile: url.path)
+        }
+        return thumbnail(from: source, maxPixelSize: maxPixelSize)
+    }
+
+    private static func thumbnail(from source: CGImageSource, maxPixelSize: Int) -> UIImage? {
+        let options: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixelSize,
+            kCGImageSourceCreateThumbnailWithTransform: true
+        ]
+        guard let cgImage = CGImageSourceCreateThumbnailAtIndex(source, 0, options as CFDictionary) else {
+            return nil
+        }
+        return UIImage(cgImage: cgImage)
+    }
+}
+
+nonisolated private extension ExerciseVisualFrame {
+    func cacheKey(maxPixelSize: Int?) -> NSString {
+        let pixelKey = maxPixelSize.map(String.init) ?? "full"
+        switch self {
+        case .file(let url):
+            return "file:\(url.standardizedFileURL.absoluteString):\(pixelKey)" as NSString
+        case .authored(let frame):
+            return "authored:\(frame.name):\(frame.digest ?? "nodigest"):\(pixelKey)" as NSString
+        }
+    }
+}
+
+nonisolated private extension UIImage {
+    var estimatedMemoryCost: Int {
+        let pixelWidth = max(Int(size.width * scale), 1)
+        let pixelHeight = max(Int(size.height * scale), 1)
+        return pixelWidth * pixelHeight * 4
+    }
+}

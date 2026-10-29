@@ -1,0 +1,363 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSCameraUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Fud AI الكاميرا لمسح الطعام والرموز الشريطية ولالتقاط صور لتمارينك المخصصة."
+          }
+        },
+        "az": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI qida və ştrix-kodları skan etmək, həmçinin fərdi məşqlərinizin şəklini çəkmək üçün kameradan istifadə edir."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI používá fotoaparát ke skenování jídla a čárových kódů a k focení tvých vlastních cviků."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI verwendet die Kamera, um Lebensmittel und Barcodes zu scannen und Fotos deiner eigenen Übungen aufzunehmen."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI uses the camera to scan food and barcodes and to take photos of your custom exercises."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI usa la cámara para escanear alimentos y códigos de barras, y para tomar fotos de tus ejercicios personalizados."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI utilise l’appareil photo pour scanner les aliments et les codes-barres, et pour photographier vos exercices personnalisés."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI भोजन और बारकोड स्कैन करने और आपके कस्टम व्यायामों की फ़ोटो लेने के लिए कैमरे का उपयोग करता है।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI usa la fotocamera per scansionare alimenti e codici a barre e per fotografare i tuoi esercizi personalizzati."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AIは、食品やバーコードのスキャンと、自作の種目の写真撮影にカメラを使用します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI는 음식과 바코드를 스캔하고 직접 만든 운동의 사진을 찍기 위해 카메라를 사용합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI gebruikt de camera om voedsel en barcodes te scannen en om foto’s van je eigen oefeningen te maken."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI używa aparatu do skanowania żywności i kodów kreskowych oraz do robienia zdjęć Twoich własnych ćwiczeń."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Fud AI usa a câmera para escanear alimentos e códigos de barras e para tirar fotos dos seus exercícios personalizados."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI folosește camera pentru a scana alimente și coduri de bare și pentru a fotografia exercițiile tale personalizate."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI использует камеру для сканирования продуктов и штрихкодов, а также для съёмки ваших собственных упражнений."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI використовує камеру для сканування продуктів і штрихкодів, а також для фотографування ваших власних вправ."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI 使用相机扫描食物和条形码，并为你的自定义动作拍照。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI, yiyecek ve barkodları taramak ve özel egzersizlerinizin fotoğrafını çekmek için kamerayı kullanır."
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryAddUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يحفظ Fud AI صور الوجبات في مكتبة الصور عند النقر على حفظ."
+          }
+        },
+        "az": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI \"Yadda saxla\" düyməsinə toxunanda yemək şəkillərini foto kitabxananıza yadda saxlayır."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI speichert Mahlzeitfotos in deiner Fotomediathek, wenn du auf Speichern tippst."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI saves meal photos to your photo library when you tap Save."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI guarda fotos de comidas en tu biblioteca de fotos cuando tocas Guardar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI enregistre les photos de repas dans votre photothèque lorsque vous touchez Enregistrer."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जब आप सहेजें पर टैप करते हैं, तो Fud AI भोजन की तस्वीरें आपकी फोटो लाइब्रेरी में सहेजता है।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI salva le foto dei pasti nella libreria foto quando tocchi Salva."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AIは「保存」をタップすると、食事の写真をフォトライブラリに保存します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI는 저장을 탭하면 식사 사진을 사진 보관함에 저장합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI slaat maaltijdfoto's op in je fotobibliotheek wanneer je op Opslaan tikt."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI zapisuje zdjęcia posiłków w bibliotece zdjęć po dotknięciu Zapisz."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Fud AI salva fotos de refeições na sua biblioteca de fotos quando você toca em Salvar."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI salvează fotografiile meselor în biblioteca foto când atingi Salvează."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI сохраняет фото блюд в медиатеку, когда вы нажимаете «Сохранить»."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI зберігає фото страв у медіатеку, коли ви торкаєтеся «Зберегти»."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你点按“保存”时，Fud AI 会将餐食照片保存到照片图库。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydet'e dokunduğunuzda Fud AI, öğün fotoğraflarını foto galerinize kaydeder."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI po klepnutí na Uložit uloží fotky jídel do tvé knihovny fotek."
+          }
+        }
+      }
+    },
+    "NSMicrophoneUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Fud AI الميكروفون لتتمكن من تسجيل الطعام بصوتك والتحدث مع المساعد الصوتي."
+          }
+        },
+        "az": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI mikrofondan istifadə edir ki, qidanı səslə qeyd edə və səsli köməkçi ilə danışa biləsiniz."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI používá mikrofon, abys mohl zapisovat jídlo hlasem a mluvit s hlasovým asistentem."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI nutzt das Mikrofon, damit du Essen per Sprache eintragen und mit dem Sprachassistenten sprechen kannst."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI uses the microphone so you can log food by voice and talk with the voice assistant."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI usa el micrófono para que puedas registrar comida por voz y hablar con el asistente de voz."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI utilise le micro pour que vous puissiez enregistrer vos repas à la voix et parler à l’assistant vocal."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI माइक्रोफ़ोन का उपयोग करता है ताकि आप आवाज़ से खाना लॉग कर सकें और वॉइस असिस्टेंट से बात कर सकें।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI usa il microfono per permetterti di registrare il cibo con la voce e parlare con l’assistente vocale."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AIはマイクを使用して、音声で食事を記録したり、音声アシスタントと話したりできるようにします。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI는 음성으로 음식을 기록하고 음성 어시스턴트와 대화할 수 있도록 마이크를 사용합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI gebruikt de microfoon zodat je eten met je stem kunt loggen en met de spraakassistent kunt praten."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI używa mikrofonu, abyś mógł zapisywać jedzenie głosem i rozmawiać z asystentem głosowym."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Fud AI usa o microfone para você registrar alimentos por voz e falar com o assistente de voz."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI folosește microfonul ca să poți înregistra mâncarea prin voce și să vorbești cu asistentul vocal."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI использует микрофон, чтобы вы могли записывать еду голосом и говорить с голосовым ассистентом."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI, yiyecekleri sesinizle kaydedebilmeniz ve sesli asistanla konuşabilmeniz için mikrofonu kullanır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI використовує мікрофон, щоб ви могли записувати їжу голосом і говорити з голосовим асистентом."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fud AI 使用麦克风，以便你用语音记录食物并与语音助手对话。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">与 Fud AI 对话</string>
+    <string name="voice_shortcut_short">对话</string>
+    <string name="voice_shortcut_disabled">此快捷方式不可用。</string>
+    <string name="voice_widget_description">打开 Fud AI 并开始与助手语音对话。</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">自动</string>
+    <string name="voice_provider_hosted">Fud AI（Plus/Pro）</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">结束</string>
+    <string name="voice_status_preparing">正在载入…</string>
+    <string name="voice_status_connecting">正在连接…</string>
+    <string name="voice_status_listening">正在聆听…</string>
+    <string name="voice_status_thinking">正在思考…</string>
+    <string name="voice_status_speaking">正在说话…</string>
+    <string name="voice_listening_hint">请说，我在听。</string>
+    <string name="voice_time_left">剩余 %1$s</string>
+    <string name="voice_minutes_short">%1$d 分钟</string>
+    <string name="voice_less_than_a_minute">不足 1 分钟</string>
+    <string name="voice_minimize">最小化</string>
+    <string name="voice_expand">打开对话</string>
+    <string name="voice_close">关闭</string>
+    <string name="voice_end">结束对话</string>
+    <string name="voice_close_camera">关闭相机</string>
+    <string name="voice_take_photo">拍照</string>
+    <string name="voice_barcode_hint">将相机对准条形码</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">草稿</string>
+    <string name="voice_card_workout_draft">训练草稿</string>
+    <string name="voice_card_dismiss">关闭</string>
+    <string name="voice_card_totals">%1$d kcal · 蛋白质：%2$dg · 碳水：%3$dg · 脂肪：%4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · 蛋白质：%2$dg · 碳水：%3$dg · 脂肪：%4$dg</string>
+    <string name="voice_card_log">记录</string>
+    <string name="voice_card_logged">已记录</string>
+    <string name="voice_card_confirm_title">确认</string>
+    <string name="voice_card_delete_title">删除</string>
+    <string name="voice_card_confirm">保存</string>
+    <string name="voice_card_saved">已保存</string>
+    <string name="voice_card_undo">撤销</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">记录 %1$s · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">记录 %1$s · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">记录 %1$s 饮水</string>
+    <string name="voice_change_start_fast">开始 %1$d 小时的断食</string>
+    <string name="voice_change_end_fast">结束断食 · %1$s</string>
+    <string name="voice_change_weight">记录体重 · %1$s</string>
+    <string name="voice_change_body_fat">记录体脂率 · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="other">训练 · %d 个动作</item>
+    </plurals>
+    <string name="voice_change_cardio">记录 %1$s · %2$d 分钟</string>
+    <string name="voice_change_setting">将%1$s改为%2$s</string>
+    <string name="voice_setting_units">单位</string>
+    <string name="voice_units_metric">公制</string>
+    <string name="voice_units_imperial">英制</string>
+    <string name="voice_on">开启</string>
+    <string name="voice_off">关闭</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">重试</string>
+    <string name="voice_action_talk_again">与 Fud AI 对话</string>
+    <string name="voice_action_see_plans">查看 Plus 和 Pro 方案</string>
+    <string name="voice_action_buy_credits">购买点数</string>
+    <string name="voice_action_add_key">添加 API 密钥</string>
+    <string name="voice_action_open_ai_providers">AI 设置</string>
+    <string name="voice_action_voice_settings">语音助手</string>
+    <string name="voice_action_open_settings">打开设置</string>
+    <string name="voice_notice_setup_title">语音助手</string>
+    <string name="voice_notice_setup_body">开口即可记录餐食、扫描食物和条形码，并询问你的进展。语音助手需要 Fud AI Plus 或 Pro 订阅，或你自己的 Gemini、OpenAI、xAI 或 Qwen API 密钥。</string>
+    <string name="voice_notice_missing_key_title">添加你的 %1$s 密钥</string>
+    <string name="voice_notice_missing_key_body">语音助手已设为 %1$s，需要你的 API 密钥。请在“AI 提供商”中添加，或在语音助手设置中选择其他提供商。</string>
+    <string name="voice_notice_subscription_title">Fud AI 语音需要 Plus 或 Pro 订阅</string>
+    <string name="voice_notice_subscription_body">Fud AI 托管语音包含在 Plus（每月 20 分钟）和 Pro（每月 100 分钟）中。你也可以使用自己的 Gemini、OpenAI、xAI 或 Qwen 密钥。</string>
+    <string name="voice_notice_minutes_title">语音时长已用完</string>
+    <string name="voice_notice_minutes_body">本月订阅方案的语音时长已用完。购买点数即可继续对话（每分钟 4 点），或使用你自己的 Gemini、OpenAI、xAI 或 Qwen 密钥。</string>
+    <string name="voice_notice_limit_title">已达到对话时限</string>
+    <string name="voice_notice_limit_body">本次对话已达到 15 分钟上限。开始新的对话即可继续。</string>
+    <string name="voice_notice_mic_title">需要麦克风权限</string>
+    <string name="voice_notice_mic_body">请在系统设置中允许 Fud AI 使用麦克风，以便与助手对话。</string>
+    <string name="voice_notice_mic_busy_title">麦克风不可用。</string>
+    <string name="voice_notice_mic_busy_body">其他应用可能正在使用麦克风。请关闭该应用后重试。</string>
+    <string name="voice_notice_key_rejected_title">%1$s 拒绝了该密钥</string>
+    <string name="voice_notice_key_rejected_body">请在“AI 提供商”中检查你的 %1$s API 密钥、计费状态以及实时语音模型的访问权限。</string>
+    <string name="voice_notice_unauthorized_title">无法验证你的套餐</string>
+    <string name="voice_notice_unauthorized_body">Fud AI 无法验证你的订阅。请在“设置 → AI 访问”中尝试“恢复购买”。</string>
+    <string name="voice_notice_busy_title">请求过多</string>
+    <string name="voice_notice_busy_body">当前语音会话过多。请一分钟后再试。</string>
+    <string name="voice_notice_unavailable_title">语音暂时不可用。请稍后再试。</string>
+    <string name="voice_notice_unavailable_body">语音服务出现问题。请重试。</string>
+    <string name="voice_notice_connect_title">无法连接</string>
+    <string name="voice_notice_connect_body">无法连接语音服务。请检查网络连接后重试。</string>
+    <string name="voice_notice_lost_title">语音连接已结束。</string>
+    <string name="voice_notice_lost_body">语音连接已结束。请检查网络连接后重试。</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">语音助手</string>
+    <string name="voice_settings_provider">提供商</string>
+    <string name="voice_settings_model">模型</string>
+    <string name="voice_settings_voice">语音</string>
+    <string name="voice_settings_language">回复语言</string>
+    <string name="voice_settings_language_auto">自动</string>
+    <string name="voice_settings_language_app">App 语言</string>
+    <string name="voice_settings_using">正在使用 %1$s</string>
+    <string name="voice_settings_add_key">在“AI 提供商”中添加你的 %1$s 密钥</string>
+    <string name="voice_settings_key_missing">未保存 %1$s API 密钥</string>
+    <string name="voice_settings_needs_plan">Fud AI 语音需要 Plus 或 Pro 订阅</string>
+    <string name="voice_settings_needs_setup">订阅 Plus 或 Pro，或添加 Gemini、OpenAI、xAI 或 Qwen API 密钥</string>
+    <string name="voice_settings_automatic_footer">“自动”会在 AI 提供商中所选的提供商为 Gemini、OpenAI、xAI 或 Qwen 且已保存密钥时使用它；否则使用 Plus 或 Pro 订阅的 Fud AI。自己的密钥即保存在 AI 提供商中的密钥。</string>
+    <string name="voice_settings_auto_capture">自动拍照</string>
+    <string name="voice_settings_auto_capture_footer">相机打开时，助手一看到食物就会拍照。Gemini、Qwen 和 Fud AI 会持续看到相机画面；OpenAI 在你每次说话时看到；xAI 和 GPT-Live 看不到。</string>
+    <string name="voice_settings_confirm_saves">保存前确认</string>
+    <string name="voice_settings_confirm_saves_footer">显示卡片以确认每次记录或更改。关闭后，更改会立即保存，并可在 8 秒内撤销。</string>
+    <string name="voice_settings_save_to_coach">将对话保存到教练</string>
+    <string name="voice_settings_save_to_coach_footer">将你和助手说的话添加到教练聊天中。</string>
+    <string name="voice_settings_minutes_left">方案剩余时长</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + 积分可用 %2$s</string>
+    <string name="voice_settings_minutes_footer">Plus 每月包含 20 分钟，Pro 每月包含 100 分钟（UTC）。超出后，语音将使用点数：每 15 秒 1 点。</string>
+    <string name="voice_settings_open_title">更快打开</string>
+    <string name="voice_settings_open_body">点击首页的光球，将“与 Fud AI 对话”磁贴添加到快捷设置，长按应用图标并选择“与 Fud AI 对话”，或将小组件添加到主屏幕。每种方式都会立即开始聆听。</string>
+    <string name="voice_settings_add_tile">添加快捷设置磁贴</string>
+    <string name="voice_settings_add_widget">添加主屏幕小组件</string>
+    <string name="voice_settings_privacy_footer">你的语音、字幕、助手看到的相机画面及操作结果会发送给你使用的提供商（Fud AI Plus/Pro 使用 Google）。Fud AI 的服务器保留用量计数和计费凭证，不保存对话内容。</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">试听声音</string>
+    <string name="voice_preview_stop">停止试听</string>
+    <string name="voice_preview_preparing">正在准备试听…</string>
+    <string name="voice_preview_sample">你好，我是你的 Fud AI 助手。这就是我的声音。</string>
+    <string name="voice_preview_failed">无法播放此声音示例，请重试。</string>
+    <string name="voice_preview_busy">试听声音前，请先结束当前的语音对话。</string>
+    <string name="voice_preview_usage">播放一段简短的示例，不使用麦克风。会消耗 API 额度或 Fud AI 语音分钟数。</string>
+</resources>

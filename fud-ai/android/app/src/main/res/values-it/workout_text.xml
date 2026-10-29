@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Descrivi l’allenamento</string>
+    <string name="workout_text_intro">Descrivi cosa hai fatto. Controlla i dettagli prima di aggiungerli al diario degli allenamenti.</string>
+    <string name="workout_text_description">Descrizione dell’allenamento</string>
+    <string name="workout_text_example">20 minuti di salto della corda, poi 3 serie da 10 di panca piana con 40 kg</string>
+    <string name="workout_text_voice">Voce</string>
+    <string name="workout_text_preparing">Ricerca degli esercizi…</string>
+    <string name="workout_text_preview">Analizza</string>
+    <string name="workout_text_retry">Riprova</string>
+    <string name="workout_text_review">Rivedi allenamento</string>
+    <string name="workout_text_date">Data (AAAA-MM-GG)</string>
+    <string name="workout_text_custom">Attività a tempo personalizzata · la stima delle calorie usa un tasso di attività generico</string>
+    <string name="workout_text_minutes">Minuti</string>
+    <string name="workout_text_reps">Ripetizioni</string>
+    <string name="workout_text_remove">Rimuovi esercizio</string>
+    <string name="workout_text_calories_note">Le calorie sono stime. Usa Calcola nel diario dopo aver aggiunto l’allenamento.</string>
+    <string name="workout_text_edit">Modifica descrizione</string>
+    <string name="workout_text_adding">Aggiunta…</string>
+    <string name="workout_text_add">Aggiungi al diario</string>
+    <string name="workout_text_menu">Testo</string>
+    <string name="workout_text_set_weight">Serie %1$d · %2$s</string>
+    <string name="workout_text_estimate">Consumo stimato: %1$d kcal</string>
+    <string name="workout_text_effort">Sforzo (moderato se non specificato)</string>
+    <string name="workout_text_light">Leggero</string>
+    <string name="workout_text_moderate">Moderato</string>
+    <string name="workout_text_vigorous">Intenso</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

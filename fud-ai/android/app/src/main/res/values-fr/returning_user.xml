@@ -1,0 +1,46 @@
+<resources>
+    <string name="returning_entry">Vous avez déjà utilisé Fud AI ?</string>
+    <string name="returning_title">Bon retour parmi nous</string>
+    <string name="returning_subtitle">Récupérez vos repas, votre poids et vos entraînements, ou repartez de zéro.</string>
+    <string name="returning_pick_hint">Choisissez une option ou les deux.</string>
+    <string name="returning_drive_title">Restaurer depuis Google Drive</string>
+    <string name="returning_drive_detail">Votre sauvegarde complète : journal, photos, entraînements et réglages, si vous aviez activé la sauvegarde Drive.</string>
+    <string name="returning_drive_note">La connexion sert uniquement à trouver votre sauvegarde. Google peut afficher un avertissement supplémentaire tant que l’app n’est pas vérifiée.</string>
+    <string name="returning_health_title">Importer depuis Health Connect</string>
+    <string name="returning_health_detail">Repas, poids, masse grasse et calories d’entraînement que Fud AI a enregistrés dans Health Connect. Avec une sauvegarde, seul ce qui lui manque est ajouté.</string>
+    <string name="returning_health_update">Installez ou mettez d’abord à jour Health Connect depuis le Play Store.</string>
+    <string name="returning_start_fresh">Repartir de zéro</string>
+    <string name="returning_continue_setup">Continuer la configuration</string>
+    <string name="returning_step_waiting">À suivre</string>
+    <string name="returning_step_drive_done">Sauvegarde restaurée.</string>
+    <string name="returning_step_drive_cancelled">Restauration annulée.</string>
+    <string name="returning_step_failed">Non terminé</string>
+    <string name="returning_drive_checking">Vérification de Google Drive…</string>
+    <string name="returning_drive_confirm_title">Restaurer votre sauvegarde ?</string>
+    <string name="returning_drive_confirm_message_dated">Votre sauvegarde du %1$s remplace tout ce qui se trouve sur ce téléphone. Les clés API ne font pas partie des sauvegardes : vous devrez peut-être ajouter la vôtre à nouveau.</string>
+    <string name="returning_drive_confirm_message">Votre sauvegarde remplace tout ce qui se trouve sur ce téléphone. Les clés API ne font pas partie des sauvegardes : vous devrez peut-être ajouter la vôtre à nouveau.</string>
+    <string name="returning_drive_restoring">Restauration…</string>
+    <string name="returning_drive_no_backup">Aucune sauvegarde Google Drive trouvée pour ce compte.</string>
+    <string name="returning_drive_unreachable">Impossible de joindre Google Drive. Vérifiez votre connexion et réessayez.</string>
+    <string name="returning_drive_not_a_backup">Ce fichier n’est pas une sauvegarde Fud AI.</string>
+    <string name="returning_drive_needs_update">Cette sauvegarde provient d’une version plus récente de Fud AI. Mettez l’app à jour, puis réessayez.</string>
+    <string name="returning_drive_setup_missing">Cette sauvegarde ne contient pas de configuration terminée : terminons-la maintenant.</string>
+    <string name="returning_health_importing">Importation depuis Health Connect…</string>
+    <string name="returning_health_nothing">Rien à importer depuis Health Connect pour l’instant.</string>
+    <string name="returning_health_nothing_new">Votre sauvegarde contenait déjà tout ce qui était dans Health Connect.</string>
+    <string name="returning_health_denied">Health Connect n’a partagé aucune donnée. Vous pourrez le connecter plus tard dans Réglages.</string>
+    <string name="returning_health_read_failed">Impossible de tout lire depuis Health Connect. Réessaie.</string>
+    <string name="returning_health_imported_both">Importé : %1$s et %2$s.</string>
+    <string name="returning_health_imported_one">Importé : %1$s.</string>
+    <string name="returning_health_imported_other">Vos données Health Connect ont été importées.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d repas</item>
+        <item quantity="many">%1$d de repas</item>
+        <item quantity="other">%1$d repas</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d pesée</item>
+        <item quantity="many">%1$d de pesées</item>
+        <item quantity="other">%1$d pesées</item>
+    </plurals>
+</resources>

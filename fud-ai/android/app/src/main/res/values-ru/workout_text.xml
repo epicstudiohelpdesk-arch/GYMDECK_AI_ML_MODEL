@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Описать тренировку</string>
+    <string name="workout_text_intro">Опишите, что вы делали. Проверьте детали, прежде чем добавить их в дневник тренировок.</string>
+    <string name="workout_text_description">Описание тренировки</string>
+    <string name="workout_text_example">20 минут прыжков со скакалкой, затем 3 подхода по 10 жимов лёжа с 40 кг</string>
+    <string name="workout_text_voice">Голос</string>
+    <string name="workout_text_preparing">Поиск упражнений…</string>
+    <string name="workout_text_preview">Анализ</string>
+    <string name="workout_text_retry">Повторить</string>
+    <string name="workout_text_review">Проверить тренировку</string>
+    <string name="workout_text_date">Дата (ГГГГ-ММ-ДД)</string>
+    <string name="workout_text_custom">Своя активность по времени · оценка калорий использует общий уровень активности</string>
+    <string name="workout_text_minutes">Минуты</string>
+    <string name="workout_text_reps">Повторения</string>
+    <string name="workout_text_remove">Убрать упражнение</string>
+    <string name="workout_text_calories_note">Калории — это оценка. После добавления тренировки используйте «Рассчитать» в дневнике.</string>
+    <string name="workout_text_edit">Изменить описание</string>
+    <string name="workout_text_adding">Добавление…</string>
+    <string name="workout_text_add">Добавить в дневник</string>
+    <string name="workout_text_menu">Текст</string>
+    <string name="workout_text_set_weight">Подход %1$d · %2$s</string>
+    <string name="workout_text_estimate">Расчётный расход: %1$d ккал</string>
+    <string name="workout_text_effort">Усилие (умеренное, если не указано)</string>
+    <string name="workout_text_light">Лёгкий</string>
+    <string name="workout_text_moderate">Умеренный</string>
+    <string name="workout_text_vigorous">Высокая</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

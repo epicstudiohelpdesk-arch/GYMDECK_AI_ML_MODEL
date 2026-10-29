@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_error_no_key">API açarı təyin edilməyib. Açarınızı Ayarlar → AI Təminatçısı bölməsində əlavə edin.</string>
+    <string name="ai_error_image_conversion">Şəkli emal etmək mümkün olmadı. Başqa foto sınayın.</string>
+    <string name="ai_error_invalid_response">AI cavabını anlamaq mümkün olmadı. Yenidən cəhd edin.</string>
+    <string name="ai_error_invalid_url">Yanlış API URL-i. Təminatçı ayarlarınızı yoxlayın.</string>
+    <string name="ai_error_offline">Deyəsən, oflayn rejimdəsiniz. Bağlantınızı yoxlayıb yenidən cəhd edin.</string>
+    <string name="ai_error_connection">AI təminatçısına qoşulmaq mümkün olmadı. Bağlantınızı və təminatçı URL-ini yoxlayın, sonra yenidən cəhd edin.</string>
+    <string name="ai_error_timeout">AI cavab vermək üçün çox vaxt sərf etdi. Yenidən cəhd edin və ya Parametrlər → AI Təminatçısı bölməsində sorğu vaxt limitini artırın.</string>
+    <string name="ai_error_credits">AI hesabınızda kredit qalmayıb. Balansı artırın və ya Parametrlər → AI Təminatçısı bölməsində təminatçını dəyişin.</string>
+    <string name="ai_error_daily_quota">AI hesabınızın gündəlik limiti bitib. Sabah yenidən cəhd edin və ya Parametrlər → AI Təminatçısı bölməsində təminatçını dəyişin.</string>
+    <string name="ai_error_quota">AI hesabınızın istifadə limiti aşılıb. Təminatçının limitlərini yoxlayın və ya Parametrlər → AI Təminatçısı bölməsində təminatçını dəyişin.</string>
+    <string name="ai_error_model">Seçilmiş model və ya API son nöqtəsi əlçatan deyil. Parametrlər → AI Təminatçısı bölməsində modeli və API URL-ini yoxlayın.</string>
+    <string name="ai_error_rate_limit">API açarınız sorğu limitinə çatdı. Bir dəqiqə gözləyin və ya Parametrlər → AI Təminatçısı bölməsində təminatçını dəyişin. Pulsuz plandan istifadə edirsinizsə, gündəlik limitin bitib-bitmədiyini yoxlayın.</string>
+    <string name="ai_error_key_rejected">API açarınız rədd edildi. Parametrlər → AI Təminatçısı bölməsini açın və etibarlı açarı yenidən yapışdırın.</string>
+    <string name="ai_error_overloaded">AI təminatçısı hazırda həddən artıq yüklənib. Bir neçə dəfə yenidən cəhd etdik — bir dəqiqədən sonra yenidən cəhd edin və ya Parametrlər → AI Təminatçısı bölməsində təminatçını/modeli dəyişin.</string>
+    <string name="ai_error_generic">AI sorğusu uğursuz oldu. Yenidən cəhd edin və ya Parametrlər → AI Təminatçısı bölməsində təminatçını dəyişin.</string>
+    <string name="ai_error_local_unavailable">Cihazdaxili AI mühiti əlçatan deyil. Parametrlər → AI Təminatçısı bölməsində endirilmiş modeli yoxlayın.</string>
+    <string name="ai_error_truncated">AI cavabı iki dəfə kəsildi. Daha qısa məlumat və ya başqa model sınayın.</string>
+    <string name="ai_error_both_failed">%1$s və ehtiyat %2$s uğursuz oldu. %3$s</string>
+</resources>

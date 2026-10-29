@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Rutindən başla</string>
+    <string name="workout_routine_save">Rutin kimi saxla</string>
+    <string name="workout_routine_save_title">Rutini saxla</string>
+    <string name="workout_routine_name">Rutinin adı</string>
+    <string name="workout_routine_save_message">Bu günün məşqlərini planlaşdırılmış setləri, təkrarları və çəkiləri ilə saxlayır.</string>
+    <string name="workout_routines_title">Rutinlər</string>
+    <string name="workout_routines_empty_title">Hələ rutin yoxdur</string>
+    <string name="workout_routines_empty_message">Məşq qeyd edin, sonra + menyusundan «Rutin kimi saxla» seçin.</string>
+    <string name="workout_routines_footer">Rutinin məşqlərini seçilmiş günə əlavə edir. Artıq qeyd etdiyiniz setlər olduğu kimi qalır.</string>
+    <string name="workout_routine_rename">Adını dəyiş</string>
+    <string name="workout_routine_rename_title">Rutinin adını dəyiş</string>
+    <string name="workout_routine_delete_title">Rutin silinsin?</string>
+    <string name="workout_routine_delete_message">Artıq qeyd etdiyiniz məşqlər saxlanılır.</string>
+</resources>

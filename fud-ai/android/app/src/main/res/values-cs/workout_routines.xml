@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Začít z rutiny</string>
+    <string name="workout_routine_save">Uložit jako rutinu</string>
+    <string name="workout_routine_save_title">Uložit rutinu</string>
+    <string name="workout_routine_name">Název rutiny</string>
+    <string name="workout_routine_save_message">Uloží cviky tohoto dne s plánovanými sériemi, opakováními a váhami.</string>
+    <string name="workout_routines_title">Rutiny</string>
+    <string name="workout_routines_empty_title">Zatím žádné rutiny</string>
+    <string name="workout_routines_empty_message">Zapište trénink a pak v nabídce + zvolte Uložit jako rutinu.</string>
+    <string name="workout_routines_footer">Přidá cviky z rutiny do vybraného dne. Již zapsané série zůstanou beze změny.</string>
+    <string name="workout_routine_rename">Přejmenovat</string>
+    <string name="workout_routine_rename_title">Přejmenovat rutinu</string>
+    <string name="workout_routine_delete_title">Smazat rutinu?</string>
+    <string name="workout_routine_delete_message">Již zapsané tréninky zůstanou zachovány.</string>
+</resources>

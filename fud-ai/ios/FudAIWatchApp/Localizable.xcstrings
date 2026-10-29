@@ -1,0 +1,393 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ of %@%@" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ من %2$@%3$@" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ / %2$@%3$@" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ z %2$@%3$@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ von %2$@%3$@" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%@ of %@%@" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ de %2$@%3$@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ sur %2$@%3$@" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "%2$@%3$@ में से %1$@" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ di %2$@%3$@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%2$@%3$@中%1$@" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%2$@%3$@ 중 %1$@" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ van %2$@%3$@" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ z %2$@%3$@" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ de %2$@%3$@" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ din %2$@%3$@" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ из %2$@%3$@" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ / %@%@" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ з %2$@%3$@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%1$@ / %2$@%3$@" } }
+      },
+      "substitutions" : {
+        "currentValue" : { "argNum" : 1, "formatSpecifier" : "@", "variations" : { } },
+        "goalValue" : { "argNum" : 2, "formatSpecifier" : "@", "variations" : { } },
+        "unit" : { "argNum" : 3, "formatSpecifier" : "@", "variations" : { } }
+      }
+    },
+    "/%@%@" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "/%@%@" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "/%@%@" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "/%1$@%2$@" } }
+      },
+      "substitutions" : {
+        "goalValue" : { "argNum" : 1, "formatSpecifier" : "@", "variations" : { } },
+        "unit" : { "argNum" : 2, "formatSpecifier" : "@", "variations" : { } }
+      }
+    },
+    "~%@ %@" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "~%@ %@" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "~%@ %@" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "~%1$@ %2$@" } }
+      },
+      "substitutions" : {
+        "amount" : { "argNum" : 1, "formatSpecifier" : "@", "variations" : { } },
+        "unit" : { "argNum" : 2, "formatSpecifier" : "@", "variations" : { } }
+      }
+    },
+    "%lld left" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "%lld متبقية" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "%lld qaldı" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "zbývá %lld" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld übrig" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%lld left" } },
+        "es" : { "variations" : { "plural" : { "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld restante" } }, "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld restantes" } } } } },
+        "fr" : { "variations" : { "plural" : { "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld restante" } }, "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld restantes" } } } } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "%lld बाकी" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "%lld rimanenti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "残り%lld" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld 남음" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "%lld over" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Pozostało %lld" } },
+        "pt-BR" : { "variations" : { "plural" : { "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld restante" } }, "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld restantes" } } } } },
+        "ro" : { "variations" : { "plural" : { "few" : { "stringUnit" : { "state" : "translated", "value" : "%lld rămase" } }, "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld rămasă" } }, "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld rămase" } } } } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "%lld осталось" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "%lld kaldı" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "%lld залишилось" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "剩余 %lld" } }
+      },
+      "substitutions" : {
+        "remaining" : { "argNum" : 1, "formatSpecifier" : "lld", "variations" : { } }
+      }
+    },
+    "%lld kJ left" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ متبقية" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ qaldı" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Zbývá %lld kJ" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Noch %lld kJ" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ left" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ restantes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ restants" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ बाकी" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ rimanenti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "残り%lld kJ" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ 남음" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Nog %lld kJ" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Pozostało %lld kJ" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ restantes" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ rămași" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Осталось %lld кДж" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "%lld kJ kaldı" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Залишилось %lld кДж" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "剩余 %lld kJ" } }
+      }
+    },
+    "1 glass" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "كوب واحد" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "1 stəkan" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "1 sklenice" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "1 Glas" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "1 glass" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "1 vaso" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "1 verre" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "1 गिलास" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "1 bicchiere" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "コップ1杯" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "1잔" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "1 glas" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "1 szklanka" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "1 copo" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "1 pahar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "1 стакан" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "1 bardak" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "1 склянка" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "1 杯" } }
+      }
+    },
+    "2 glasses" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "كوبان" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "2 stəkan" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "2 sklenice" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "2 Gläser" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "2 glasses" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "2 vasos" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "2 verres" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "2 गिलास" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "2 bicchieri" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "コップ2杯" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "2잔" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "2 glazen" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "2 szklanki" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "2 copos" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "2 pahare" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "2 стакана" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "2 bardak" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "2 склянки" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "2 杯" } }
+      }
+    },
+    "3 glasses" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "3 أكواب" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "3 stəkan" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "3 sklenice" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "3 Gläser" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "3 glasses" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "3 vasos" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "3 verres" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "3 गिलास" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "3 bicchieri" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "コップ3杯" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "3잔" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "3 glazen" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "3 szklanki" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "3 copos" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "3 pahare" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "3 стакана" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "3 bardak" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "3 склянки" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "3 杯" } }
+      }
+    },
+    "Add water" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إضافة ماء" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Su əlavə et" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Přidat vodu" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wasser hinzufügen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add water" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Añadir agua" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter de l’eau" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पानी जोड़ें" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Aggiungi acqua" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "水を追加" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "물 추가" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Water toevoegen" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Dodaj wodę" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Adicionar água" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Adaugă apă" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Добавить воду" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Su ekle" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Додати воду" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加饮水" } }
+      }
+    },
+    "Add %@ of water" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إضافة %@ من الماء" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "%@ su əlavə et" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Přidat %@ vody" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ Wasser hinzufügen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add %@ of water" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Añadir %@ de agua" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter %@ d’eau" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "%@ पानी जोड़ें" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Aggiungi %@ d’acqua" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "水を%@追加" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "물 %@ 추가" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "%@ water toevoegen" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Dodaj %@ wody" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Adicionar %@ de água" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Adaugă %@ de apă" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Добавить %@ воды" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ su ekle" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Додати %@ води" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加 %@ 饮水" } }
+      },
+      "substitutions" : {
+        "presetLabel" : { "argNum" : 1, "formatSpecifier" : "@", "variations" : { } }
+      }
+    },
+    "Carbs" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الكربوهيدرات" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Karbohidratlar" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Sacharidy" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kohlenhydrate" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Carbs" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Carbohidratos" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Glucides" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "कार्ब्स" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Carboidrati" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "炭水化物" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "탄수화물" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Koolhydraten" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Węglowodany" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Carboidratos" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Carbohidrați" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Углеводы" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Karbonhidrat" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Вуглеводи" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "碳水" } }
+      }
+    },
+    "Fat" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الدهون" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Yağ" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Tuky" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Fett" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Fat" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Grasa" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Lipides" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "फैट" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Grassi" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "脂質" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "지방" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Vet" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Tłuszcz" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Gordura" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Grăsimi" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Жиры" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Yağ" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Жири" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "脂肪" } }
+      }
+    },
+    "Fiber" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الألياف" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Lif" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Vláknina" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Ballaststoffe" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Fiber" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Fibra" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fibres" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "फाइबर" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Fibre" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "食物繊維" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "식이섬유" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Vezels" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Błonnik" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Fibras" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Fibre" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Клетчатка" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Lif" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Клітковина" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "膳食纤维" } }
+      }
+    },
+    "Opens quick water amounts" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "يفتح كميات الماء السريعة" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Sürətli su miqdarlarını açır" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Otevře rychlou volbu množství vody" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Öffnet schnelle Wassermengen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Opens quick water amounts" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Abre cantidades rápidas de agua" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvre les quantités d’eau rapides" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पानी की झटपट मात्राएँ खोलता है" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Apre le quantità rapide d’acqua" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "クイック水分量を開きます" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "빠른 물 양 선택을 엽니다" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Opent snelle waterhoeveelheden" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Otwiera szybki wybór ilości wody" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Abre quantidades rápidas de água" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Deschide cantitățile rapide de apă" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Открывает быстрый выбор объёма воды" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Hızlı su miktarlarını açar" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Відкриває швидкий вибір об’єму води" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "打开快捷饮水量" } }
+      }
+    },
+    "Protein" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "البروتين" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Zülal" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Bílkoviny" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Protein" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Protein" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Proteína" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Protéines" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "प्रोटीन" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Proteine" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "たんぱく質" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "단백질" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Eiwit" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Białko" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Proteína" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Proteine" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Белки" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Protein" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Білок" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "蛋白质" } }
+      }
+    },
+    "Water" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الماء" } },
+        "az" : { "stringUnit" : { "state" : "translated", "value" : "Su" } },
+        "cs" : { "stringUnit" : { "state" : "translated", "value" : "Voda" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wasser" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Water" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Agua" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Eau" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पानी" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Acqua" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "水分" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "물" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Water" } },
+        "pl" : { "stringUnit" : { "state" : "translated", "value" : "Woda" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Água" } },
+        "ro" : { "stringUnit" : { "state" : "translated", "value" : "Apă" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Вода" } },
+        "tr" : { "stringUnit" : { "state" : "translated", "value" : "Su" } },
+        "uk" : { "stringUnit" : { "state" : "translated", "value" : "Вода" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "饮水" } }
+      }
+    }
+  },
+  "version" : "1.1"
+}

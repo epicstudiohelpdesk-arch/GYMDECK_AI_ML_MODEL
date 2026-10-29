@@ -1,0 +1,42 @@
+<resources>
+    <string name="returning_entry">以前用过 Fud AI？</string>
+    <string name="returning_title">欢迎回来</string>
+    <string name="returning_subtitle">找回你的饮食、体重和训练记录，或者重新开始。</string>
+    <string name="returning_pick_hint">可选择其一或两者。</string>
+    <string name="returning_drive_title">从 Google 云端硬盘恢复</string>
+    <string name="returning_drive_detail">完整备份：日记、照片、训练和设置（如果你之前开启了云端硬盘备份）。</string>
+    <string name="returning_drive_note">登录仅用于查找你的备份。在 App 通过验证前，Google 可能会显示额外警告。</string>
+    <string name="returning_health_title">从 Health Connect 导入</string>
+    <string name="returning_health_detail">Fud AI 保存到 Health Connect 的饮食、体重、体脂和训练消耗。与备份一起选择时，只会添加备份中缺少的内容。</string>
+    <string name="returning_health_update">请先从 Play Store 安装或更新 Health Connect。</string>
+    <string name="returning_start_fresh">重新开始</string>
+    <string name="returning_continue_setup">继续设置</string>
+    <string name="returning_step_waiting">下一步</string>
+    <string name="returning_step_drive_done">备份已恢复。</string>
+    <string name="returning_step_drive_cancelled">已取消恢复。</string>
+    <string name="returning_step_failed">未完成</string>
+    <string name="returning_drive_checking">正在检查 Google 云端硬盘…</string>
+    <string name="returning_drive_confirm_title">恢复你的备份？</string>
+    <string name="returning_drive_confirm_message_dated">你在 %1$s 的备份将替换此手机上的所有内容。备份不包含 API 密钥，你可能需要重新添加。</string>
+    <string name="returning_drive_confirm_message">你的备份将替换此手机上的所有内容。备份不包含 API 密钥，你可能需要重新添加。</string>
+    <string name="returning_drive_restoring">正在恢复…</string>
+    <string name="returning_drive_no_backup">未找到此账号的 Google 云端硬盘备份。</string>
+    <string name="returning_drive_unreachable">无法连接 Google 云端硬盘。请检查网络连接后重试。</string>
+    <string name="returning_drive_not_a_backup">此文件不是 Fud AI 备份。</string>
+    <string name="returning_drive_needs_update">此备份来自更新版本的 Fud AI。请更新 App 后重试。</string>
+    <string name="returning_drive_setup_missing">此备份不包含已完成的设置，现在来完成设置吧。</string>
+    <string name="returning_health_importing">正在从 Health Connect 导入…</string>
+    <string name="returning_health_nothing">Health Connect 中暂时没有可导入的数据。</string>
+    <string name="returning_health_nothing_new">你的备份已包含 Health Connect 中的所有数据。</string>
+    <string name="returning_health_denied">Health Connect 未共享任何数据。你可以稍后在设置中连接。</string>
+    <string name="returning_health_read_failed">无法从 Health Connect 读取全部数据。请重试。</string>
+    <string name="returning_health_imported_both">已导入 %1$s和%2$s。</string>
+    <string name="returning_health_imported_one">已导入 %1$s。</string>
+    <string name="returning_health_imported_other">已导入你的 Health Connect 数据。</string>
+    <plurals name="returning_health_meals">
+        <item quantity="other">%1$d 条饮食记录</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="other">%1$d 条体重记录</item>
+    </plurals>
+</resources>

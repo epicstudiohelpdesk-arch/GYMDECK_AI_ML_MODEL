@@ -1,0 +1,93 @@
+# Dependabot version updates. Security updates are enabled separately in the
+# repository settings; this file adds routine version bumps so pinned versions
+# (including the commit-SHA-pinned GitHub Actions) do not go stale.
+#
+# Every ecosystem is grouped into a single weekly PR so the Quality checks /
+# CodeQL runs on that one PR validate the whole batch at once. The one exception
+# is the store-release pins, which get a PR of their own (see below).
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Asia/Kolkata
+    groups:
+      # The release callers' pins (one SHA in all three files, with its "# vX.Y.Z"
+      # comment). Declared before the catch-all: a dependency joins the first group
+      # it matches, so a store-release bump always gets its own PR.
+      store-release:
+        patterns: ["apoorvdarshan/store-release*"]
+      github-actions:
+        patterns: ["*"]
+    # store-release pins run with the app's signing and store credentials: a new
+    # release waits seven days before Dependabot proposes it. Security updates are
+    # never delayed by a cooldown.
+    cooldown:
+      default-days: 7
+      include: ["apoorvdarshan/store-release*"]
+    commit-message:
+      prefix: "CI"
+
+  - package-ecosystem: npm
+    directory: /web
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Asia/Kolkata
+    groups:
+      web-dev-dependencies:
+        patterns: ["*"]
+    commit-message:
+      prefix: "Web"
+
+  - package-ecosystem: gradle
+    directory: /android
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Asia/Kolkata
+    groups:
+      android-dependencies:
+        patterns: ["*"]
+    ignore:
+      # AGP / Kotlin majors change build behaviour; bump them deliberately.
+      - dependency-name: com.android.application
+        update-types: ["version-update:semver-major"]
+      - dependency-name: org.jetbrains.kotlin.*
+        update-types: ["version-update:semver-major"]
+      # CodeQL java-kotlin extractor lags Kotlin; 2.4.20+ fails analysis
+      # ("supports versions below 2.4.20"). Revisit when CodeQL catches up.
+      - dependency-name: org.jetbrains.kotlin.*
+        versions: [">=2.4.20"]
+    commit-message:
+      prefix: "Android"
+
+  - package-ecosystem: pip
+    directory: /scripts
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Asia/Kolkata
+    groups:
+      workout-repair-tooling:
+        patterns: ["*"]
+    commit-message:
+      prefix: "Scripts"
+
+  # The store release tooling and its hash-locked Python dependencies live in
+  # apoorvdarshan/store-release, which keeps them up to date; the store-release
+  # group above moves this repository to each new release.
+
+  # Not covered: the iOS app's Swift packages (RevenueCat, argmax, swift-argument-
+  # parser) are pinned by the Xcode project's Package.resolved. Dependabot's swift
+  # ecosystem needs a Package.swift that declares them (the only one,
+  # ios/Packages/LiteRTLM, has checksum-pinned binaries and no dependencies), and
+  # the dependency graph does not list that Package.resolved (checked 2026-10-14),
+  # so they get neither alerts nor version updates: review their releases by hand.

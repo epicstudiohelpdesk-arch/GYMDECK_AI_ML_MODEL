@@ -1,0 +1,48 @@
+<resources>
+    <string name="returning_entry">Vracíš se k Fud AI?</string>
+    <string name="returning_title">Vítej zpět</string>
+    <string name="returning_subtitle">Vrať si jídla, hmotnost a tréninky, nebo začni znovu.</string>
+    <string name="returning_pick_hint">Vyber jedno nebo obojí.</string>
+    <string name="returning_drive_title">Obnovit z Disku Google</string>
+    <string name="returning_drive_detail">Tvoje úplná záloha: deník, fotky, tréninky a nastavení, pokud byla dřív zapnutá záloha na Disk Google.</string>
+    <string name="returning_drive_note">Přihlášení slouží jen k nalezení tvé zálohy. Dokud nebude aplikace ověřena, může Google zobrazit další upozornění.</string>
+    <string name="returning_health_title">Importovat z Health Connect</string>
+    <string name="returning_health_detail">Jídla, hmotnost, tělesný tuk a kalorie z tréninků uložené aplikací Fud AI v Health Connect. Spolu se zálohou se přidá jen to, co v ní chybí.</string>
+    <string name="returning_health_update">Nejdřív nainstaluj nebo aktualizuj Health Connect z Play Store.</string>
+    <string name="returning_start_fresh">Začít znovu</string>
+    <string name="returning_continue_setup">Pokračovat v nastavení</string>
+    <string name="returning_step_waiting">Na řadě</string>
+    <string name="returning_step_drive_done">Záloha obnovena.</string>
+    <string name="returning_step_drive_cancelled">Obnovení zrušeno.</string>
+    <string name="returning_step_failed">Nedokončeno</string>
+    <string name="returning_drive_checking">Kontroluji Disk Google…</string>
+    <string name="returning_drive_confirm_title">Obnovit zálohu?</string>
+    <string name="returning_drive_confirm_message_dated">Záloha z %1$s nahradí vše v tomto telefonu. Klíče API v zálohách nejsou, takže možná budeš muset přidat svůj klíč znovu.</string>
+    <string name="returning_drive_confirm_message">Záloha nahradí vše v tomto telefonu. Klíče API v zálohách nejsou, takže možná budeš muset přidat svůj klíč znovu.</string>
+    <string name="returning_drive_restoring">Obnovuji…</string>
+    <string name="returning_drive_no_backup">Pro tento účet nebyla na Disku Google nalezena žádná záloha.</string>
+    <string name="returning_drive_unreachable">Disk Google není dostupný. Zkontroluj připojení a zkus to znovu.</string>
+    <string name="returning_drive_not_a_backup">Tento soubor není záloha Fud AI.</string>
+    <string name="returning_drive_needs_update">Tato záloha pochází z novější verze Fud AI. Aktualizuj aplikaci a zkus to znovu.</string>
+    <string name="returning_drive_setup_missing">Tato záloha neobsahuje dokončené nastavení, tak ho teď dokončíme.</string>
+    <string name="returning_health_importing">Importuji z Health Connect…</string>
+    <string name="returning_health_nothing">V Health Connect zatím není co importovat.</string>
+    <string name="returning_health_nothing_new">Tvoje záloha už obsahovala vše z Health Connect.</string>
+    <string name="returning_health_denied">Health Connect nesdílel žádná data. Připojit ho můžeš později v Nastavení.</string>
+    <string name="returning_health_read_failed">Z Health Connect se nepodařilo načíst všechno. Zkus to znovu.</string>
+    <string name="returning_health_imported_both">Importováno: %1$s a %2$s.</string>
+    <string name="returning_health_imported_one">Importováno: %1$s.</string>
+    <string name="returning_health_imported_other">Data z Health Connect byla importována.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d jídlo</item>
+        <item quantity="few">%1$d jídla</item>
+        <item quantity="many">%1$d jídla</item>
+        <item quantity="other">%1$d jídel</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d vážení</item>
+        <item quantity="few">%1$d vážení</item>
+        <item quantity="many">%1$d vážení</item>
+        <item quantity="other">%1$d vážení</item>
+    </plurals>
+</resources>

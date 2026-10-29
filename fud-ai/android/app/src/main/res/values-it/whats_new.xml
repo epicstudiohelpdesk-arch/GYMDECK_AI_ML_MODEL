@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Novità: Live Voice</string>
+    <string name="whats_new_body">Parla con Fud AI per registrare i pasti, scansionare codici a barre e controllare i tuoi progressi.</string>
+    <string name="whats_new_tap_orb">Tocca la sfera nella Home per iniziare.</string>
+    <string name="whats_new_access_line">Incluso in Plus e Pro, oppure usa la tua chiave IA.</string>
+    <string name="whats_new_video_cd">Video dimostrativo di Live Voice</string>
+    <string name="whats_new_sound_on">Attiva audio</string>
+    <string name="whats_new_sound_off">Disattiva audio</string>
+    <string name="whats_new_access_title_setup">Ottieni Live Voice</string>
+    <string name="whats_new_access_title_plans">Passa a Plus o Pro</string>
+    <string name="whats_new_access_body_setup">Scegli Plus o Pro e gestiamo noi l’IA per te, oppure aggiungi la tua chiave API di Gemini, OpenAI, xAI o Qwen.</string>
+    <string name="whats_new_access_body_key_only">Aggiungi la tua chiave API di Gemini, OpenAI, xAI o Qwen per iniziare a usare Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus e Pro gestiscono l’IA per te, con Live Voice incluso e nessuna chiave API da configurare. Con le tue chiavi, Fud AI resta gratuito.</string>
+    <string name="whats_new_support_body">Fud AI è gratuito e lo sviluppa una sola persona. Una valutazione, una condivisione o una piccola mancia aiutano a portarlo avanti.</string>
+    <string name="whats_new_community_title">Unisciti alla community di Fud AI</string>
+    <string name="whats_new_community_body">Chiedi aiuto, condividi idee e conosci altri utenti di Fud AI su Discord.</string>
+    <string name="whats_new_next">Avanti</string>
+    <string name="whats_new_previous">Indietro</string>
+    <string name="notif_whats_new_title">Novità in Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Parla per registrare i pasti, scansionare codici a barre e controllare i progressi. Tocca per scoprire le novità.</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Rusttimer</string>
+    <string name="settings_rest_timer_footer">Telt af nadat je vandaag een set logt. Met meldingen aan waarschuwt Fud AI je wanneer de rust op de achtergrond afloopt.</string>
+    <string name="workout_rest_off">Uit</string>
+    <string name="workout_rest_label">Rust</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">15 seconden toevoegen</string>
+    <string name="workout_rest_skip">Overslaan</string>
+    <string name="workout_rest_skip_description">Rust overslaan</string>
+    <string name="workout_rest_start_after_set">Rust starten na set %1$d</string>
+    <string name="notif_channel_workout_rest">Rusttimer</string>
+    <string name="notif_channel_workout_rest_desc">Waarschuwt wanneer een rustperiode in je training afloopt.</string>
+    <string name="notif_workout_rest_title">Rust voorbij</string>
+    <string name="notif_workout_rest_text">Tijd voor je volgende set: %1$s.</string>
+</resources>

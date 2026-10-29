@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">ワークアウトを説明</string>
+    <string name="workout_text_intro">行ったことを説明してください。ワークアウト日記に追加する前に詳細を確認してください。</string>
+    <string name="workout_text_description">ワークアウトの説明</string>
+    <string name="workout_text_example">縄跳び20分、その後40kgでベンチプレス10回×3セット</string>
+    <string name="workout_text_voice">音声</string>
+    <string name="workout_text_preparing">種目を検索中…</string>
+    <string name="workout_text_preview">分析</string>
+    <string name="workout_text_retry">再試行</string>
+    <string name="workout_text_review">ワークアウトを確認</string>
+    <string name="workout_text_date">日付（YYYY-MM-DD）</string>
+    <string name="workout_text_custom">カスタムの時間制アクティビティ · カロリー推定は一般的な活動量を使用</string>
+    <string name="workout_text_minutes">分</string>
+    <string name="workout_text_reps">回数</string>
+    <string name="workout_text_remove">種目を削除</string>
+    <string name="workout_text_calories_note">カロリーは推定値です。ワークアウトを追加したら、日記で「計算」を使ってください。</string>
+    <string name="workout_text_edit">説明を編集</string>
+    <string name="workout_text_adding">追加中…</string>
+    <string name="workout_text_add">日記に追加</string>
+    <string name="workout_text_menu">テキスト</string>
+    <string name="workout_text_set_weight">セット%1$d · %2$s</string>
+    <string name="workout_text_estimate">推定消費：%1$d kcal</string>
+    <string name="workout_text_effort">強度（指定がなければ中程度）</string>
+    <string name="workout_text_light">軽い</string>
+    <string name="workout_text_moderate">中程度</string>
+    <string name="workout_text_vigorous">きつめ</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

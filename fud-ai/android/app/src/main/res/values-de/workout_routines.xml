@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Aus Routine starten</string>
+    <string name="workout_routine_save">Als Routine speichern</string>
+    <string name="workout_routine_save_title">Routine speichern</string>
+    <string name="workout_routine_name">Name der Routine</string>
+    <string name="workout_routine_save_message">Speichert die Übungen dieses Tages mit ihren geplanten Sätzen, Wiederholungen und Gewichten.</string>
+    <string name="workout_routines_title">Routinen</string>
+    <string name="workout_routines_empty_title">Noch keine Routinen</string>
+    <string name="workout_routines_empty_message">Trage ein Training ein und wähle dann im +-Menü „Als Routine speichern“.</string>
+    <string name="workout_routines_footer">Fügt die Übungen der Routine zum ausgewählten Tag hinzu. Bereits eingetragene Sätze bleiben unverändert.</string>
+    <string name="workout_routine_rename">Umbenennen</string>
+    <string name="workout_routine_rename_title">Routine umbenennen</string>
+    <string name="workout_routine_delete_title">Routine löschen?</string>
+    <string name="workout_routine_delete_message">Bereits eingetragene Trainings bleiben erhalten.</string>
+</resources>

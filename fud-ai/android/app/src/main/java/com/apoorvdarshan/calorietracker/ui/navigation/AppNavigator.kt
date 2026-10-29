@@ -1,0 +1,69 @@
+package com.apoorvdarshan.calorietracker.ui.navigation
+
+import com.apoorvdarshan.calorietracker.services.voice.VoiceSettingsSection
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import java.time.LocalDate
+import java.util.UUID
+
+/** A navigation the app performs for someone other than the user's own taps (the voice assistant). */
+sealed interface NavRequest {
+    /** Show a bottom tab. */
+    data class Tab(val route: String) : NavRequest
+
+    /** Show Settings, at its hub or straight in one section. */
+    data class Settings(val section: VoiceSettingsSection?) : NavRequest
+}
+
+/**
+ * App-wide navigation state shared by the screens and the voice assistant. Screens
+ * publish what they show; the assistant requests tabs, settings sections, Home's diary
+ * day and food entries, and the screens perform them like the user's own taps.
+ */
+class AppNavigator {
+    /** The NavHost route on screen, published by [FudAINavHost]. */
+    val currentRoute = MutableStateFlow<String?>(null)
+
+    /** Tab routes the user hid from the bottom bar, published by [FudAINavHost]. */
+    val hiddenTabs = MutableStateFlow<Set<String>>(emptySet())
+
+    /** The Settings section on screen (null at the hub), published by the Settings screen. */
+    val settingsSection = MutableStateFlow<VoiceSettingsSection?>(null)
+
+    /** Home's diary day. Home reads and writes it, so the assistant sees and sets the same day. */
+    val homeDiaryDate = MutableStateFlow(LocalDate.now())
+
+    /** The Workouts diary's selected day, published by the Workouts screen. */
+    val workoutDiaryDate = MutableStateFlow<LocalDate?>(null)
+
+    /** A Settings section waiting for the Settings screen to open it. */
+    val pendingSettingsSection = MutableStateFlow<VoiceSettingsSection?>(null)
+
+    /** A food entry waiting for Home to open its edit sheet. */
+    val pendingFoodEntry = MutableStateFlow<UUID?>(null)
+
+    private val _requests = MutableSharedFlow<NavRequest>(extraBufferCapacity = 8)
+    val requests: SharedFlow<NavRequest> = _requests.asSharedFlow()
+
+    fun showTab(route: String) {
+        _requests.tryEmit(NavRequest.Tab(route))
+    }
+
+    fun showSettings(section: VoiceSettingsSection?) {
+        pendingSettingsSection.value = section
+        _requests.tryEmit(NavRequest.Settings(section))
+    }
+
+    fun showHomeDate(date: LocalDate) {
+        homeDiaryDate.value = date
+        showTab(FudAIRoutes.HOME)
+    }
+
+    fun showFoodEntry(id: UUID, date: LocalDate) {
+        homeDiaryDate.value = date
+        pendingFoodEntry.value = id
+        showTab(FudAIRoutes.HOME)
+    }
+}

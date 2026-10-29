@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Таймер отдыха</string>
+    <string name="settings_rest_timer_footer">Запускает обратный отсчёт после записи подхода за сегодня. Если уведомления включены, Fud AI сообщит об окончании отдыха, даже когда приложение в фоне.</string>
+    <string name="workout_rest_off">Выкл.</string>
+    <string name="workout_rest_label">Отдых</string>
+    <string name="workout_rest_add_15">+15 с</string>
+    <string name="workout_rest_add_15_description">Добавить 15 секунд</string>
+    <string name="workout_rest_skip">Пропустить</string>
+    <string name="workout_rest_skip_description">Пропустить отдых</string>
+    <string name="workout_rest_start_after_set">Начать отдых после подхода %1$d</string>
+    <string name="notif_channel_workout_rest">Таймер отдыха</string>
+    <string name="notif_channel_workout_rest_desc">Сообщает об окончании отдыха между подходами.</string>
+    <string name="notif_workout_rest_title">Отдых окончен</string>
+    <string name="notif_workout_rest_text">Пора выполнить следующий подход: %1$s.</string>
+</resources>

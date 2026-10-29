@@ -1,0 +1,42 @@
+<resources>
+    <string name="returning_entry">以前Fud AIを使っていましたか？</string>
+    <string name="returning_title">おかえりなさい</string>
+    <string name="returning_subtitle">食事、体重、ワークアウトを取り戻すか、最初から始めましょう。</string>
+    <string name="returning_pick_hint">1つまたは両方を選んでください。</string>
+    <string name="returning_drive_title">Googleドライブから復元</string>
+    <string name="returning_drive_detail">日記、写真、ワークアウト、設定を含む完全なバックアップです（以前にドライブへのバックアップをオンにしていた場合）。</string>
+    <string name="returning_drive_note">サインインはバックアップを探すためだけに使われます。アプリの確認が完了するまで、Googleが追加の警告を表示する場合があります。</string>
+    <string name="returning_health_title">Health Connectからインポート</string>
+    <string name="returning_health_detail">Fud AIがHealth Connectに保存した食事、体重、体脂肪、ワークアウトのカロリーです。バックアップと一緒に選ぶと、バックアップにないものだけを追加します。</string>
+    <string name="returning_health_update">先にPlayストアからHealth Connectをインストールまたは更新してください。</string>
+    <string name="returning_start_fresh">最初から始める</string>
+    <string name="returning_continue_setup">設定を続ける</string>
+    <string name="returning_step_waiting">次に実行</string>
+    <string name="returning_step_drive_done">バックアップを復元しました。</string>
+    <string name="returning_step_drive_cancelled">復元をキャンセルしました。</string>
+    <string name="returning_step_failed">完了しませんでした</string>
+    <string name="returning_drive_checking">Googleドライブを確認しています…</string>
+    <string name="returning_drive_confirm_title">バックアップを復元しますか？</string>
+    <string name="returning_drive_confirm_message_dated">%1$sのバックアップで、この電話の内容がすべて置き換えられます。APIキーはバックアップに含まれないため、再度追加が必要になる場合があります。</string>
+    <string name="returning_drive_confirm_message">バックアップで、この電話の内容がすべて置き換えられます。APIキーはバックアップに含まれないため、再度追加が必要になる場合があります。</string>
+    <string name="returning_drive_restoring">復元しています…</string>
+    <string name="returning_drive_no_backup">このアカウントのGoogleドライブのバックアップが見つかりません。</string>
+    <string name="returning_drive_unreachable">Googleドライブに接続できませんでした。接続を確認して、もう一度お試しください。</string>
+    <string name="returning_drive_not_a_backup">このファイルはFud AIのバックアップではありません。</string>
+    <string name="returning_drive_needs_update">このバックアップは新しいバージョンのFud AIで作成されています。アプリを更新してから、もう一度お試しください。</string>
+    <string name="returning_drive_setup_missing">このバックアップには完了した設定が含まれていないため、今から設定を済ませましょう。</string>
+    <string name="returning_health_importing">Health Connectからインポートしています…</string>
+    <string name="returning_health_nothing">Health Connectにはまだインポートするデータがありません。</string>
+    <string name="returning_health_nothing_new">Health Connectのデータはすべてバックアップに含まれていました。</string>
+    <string name="returning_health_denied">Health Connectからデータが共有されませんでした。あとで設定から接続できます。</string>
+    <string name="returning_health_read_failed">Health Connectからすべてのデータを読み込めませんでした。もう一度お試しください。</string>
+    <string name="returning_health_imported_both">%1$sと%2$sをインポートしました。</string>
+    <string name="returning_health_imported_one">%1$sをインポートしました。</string>
+    <string name="returning_health_imported_other">Health Connectのデータをインポートしました。</string>
+    <plurals name="returning_health_meals">
+        <item quantity="other">食事%1$d件</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="other">体重記録%1$d件</item>
+    </plurals>
+</resources>

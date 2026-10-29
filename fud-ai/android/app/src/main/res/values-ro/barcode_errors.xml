@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_barcode_invalid">Acest cod de bare nu a putut fi citit. Încearcă să îl scanezi din nou.</string>
+    <string name="error_barcode_product_not_found">Produsul nu a fost găsit în Open Food Facts. Scanează în schimb eticheta nutrițională.</string>
+    <string name="error_barcode_missing_nutrition">Codul de bare a fost găsit, dar datele nutriționale sunt incomplete. Scanează în schimb eticheta nutrițională.</string>
+    <string name="error_barcode_usda_key_rejected">USDA FoodData Central a respins cheia ta API. Verific-o în Setări > Informații despre produs sau scanează în schimb eticheta nutrițională.</string>
+    <string name="barcode_saved_label_title">Se folosește eticheta nutrițională salvată pentru acest cod de bare</string>
+    <string name="barcode_saved_label_footer">Open Food Facts nu are valori nutriționale pentru acest produs. Ca să uiți această etichetă, șterge înregistrările de mâncare care au folosit-o.</string>
+    <string name="error_barcode_rate_limited">Au fost efectuate prea multe căutări de coduri de bare. Așteaptă puțin și încearcă din nou.</string>
+    <string name="error_barcode_service_unavailable">Open Food Facts este temporar indisponibil. Încearcă din nou mai târziu.</string>
+    <string name="error_barcode_unexpected_response">Open Food Facts a returnat un răspuns neașteptat.</string>
+    <string name="error_barcode_network">Conectarea la Open Food Facts a eșuat. Verifică conexiunea și încearcă din nou.</string>
+    <string name="error_barcode_offline">Se pare că ești offline. Verifică-ți conexiunea și scanează din nou.</string>
+    <string name="error_barcode_timeout">Open Food Facts a răspuns prea greu. Scanează din nou.</string>
+</resources>

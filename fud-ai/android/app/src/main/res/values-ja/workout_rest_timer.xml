@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">休憩タイマー</string>
+    <string name="settings_rest_timer_footer">今日のセットを記録するとカウントダウンが始まります。通知がオンなら、アプリがバックグラウンドにあっても休憩の終了をFud AIがお知らせします。</string>
+    <string name="workout_rest_off">オフ</string>
+    <string name="workout_rest_label">休憩</string>
+    <string name="workout_rest_add_15">+15秒</string>
+    <string name="workout_rest_add_15_description">15秒追加</string>
+    <string name="workout_rest_skip">スキップ</string>
+    <string name="workout_rest_skip_description">休憩をスキップ</string>
+    <string name="workout_rest_start_after_set">セット%1$dの後に休憩を開始</string>
+    <string name="notif_channel_workout_rest">休憩タイマー</string>
+    <string name="notif_channel_workout_rest_desc">ワークアウトの休憩が終わるとお知らせします。</string>
+    <string name="notif_workout_rest_title">休憩終了</string>
+    <string name="notif_workout_rest_text">%1$sの次のセットの時間です。</string>
+</resources>

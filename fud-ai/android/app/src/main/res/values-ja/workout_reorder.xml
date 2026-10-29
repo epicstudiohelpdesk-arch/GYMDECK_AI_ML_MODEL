@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">並べ替え</string>
+    <string name="workout_move_up">上へ移動</string>
+    <string name="workout_move_down">下へ移動</string>
+    <string name="workout_move_up_named">%1$sを上へ移動</string>
+    <string name="workout_move_down_named">%1$sを下へ移動</string>
+</resources>

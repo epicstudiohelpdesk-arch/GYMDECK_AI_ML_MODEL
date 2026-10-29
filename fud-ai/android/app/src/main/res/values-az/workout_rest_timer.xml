@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">İstirahət taymeri</string>
+    <string name="settings_rest_timer_footer">Bu gün bir set qeyd etdikdən sonra geri sayım başlayır. Bildirişlər aktiv olduqda, tətbiq arxa planda olarkən istirahət bitəndə Fud AI sizə xəbər verir.</string>
+    <string name="workout_rest_off">Deaktiv</string>
+    <string name="workout_rest_label">İstirahət</string>
+    <string name="workout_rest_add_15">+15 san</string>
+    <string name="workout_rest_add_15_description">15 saniyə əlavə et</string>
+    <string name="workout_rest_skip">Keç</string>
+    <string name="workout_rest_skip_description">İstirahəti keç</string>
+    <string name="workout_rest_start_after_set">Set %1$d üçün istirahəti başlat</string>
+    <string name="notif_channel_workout_rest">İstirahət taymeri</string>
+    <string name="notif_channel_workout_rest_desc">Məşqdə istirahət müddəti bitəndə xəbərdarlıq edir.</string>
+    <string name="notif_workout_rest_title">İstirahət bitdi</string>
+    <string name="notif_workout_rest_text">%1$s üçün növbəti setin vaxtıdır.</string>
+</resources>

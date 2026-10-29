@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Static launcher shortcuts. Attached to every launcher activity-alias in the manifest
+     (one per icon theme; only the enabled alias is shown). The target package comes from
+     a per-variant string so debug builds (.debug suffix) open themselves. -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="talk_to_fud_ai"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_voice"
+        android:shortcutShortLabel="@string/voice_shortcut_short"
+        android:shortcutLongLabel="@string/voice_talk_to_fud_ai"
+        android:shortcutDisabledMessage="@string/voice_shortcut_disabled">
+        <intent
+            android:action="com.apoorvdarshan.calorietracker.TALK"
+            android:targetClass="com.apoorvdarshan.calorietracker.MainActivity"
+            android:targetPackage="@string/voice_shortcut_package" />
+    </shortcut>
+</shortcuts>

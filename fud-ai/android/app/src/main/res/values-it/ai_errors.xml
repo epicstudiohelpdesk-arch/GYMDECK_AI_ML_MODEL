@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_error_no_key">Nessuna chiave API configurata. Aggiungi la tua chiave in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_image_conversion">Impossibile elaborare l’immagine. Prova un’altra foto.</string>
+    <string name="ai_error_invalid_response">Impossibile interpretare la risposta dell’IA. Riprova.</string>
+    <string name="ai_error_invalid_url">URL dell’API non valido. Controlla le impostazioni del fornitore.</string>
+    <string name="ai_error_offline">Sembra che tu sia offline. Controlla la connessione e riprova.</string>
+    <string name="ai_error_connection">Impossibile connettersi al fornitore IA. Controlla la connessione e l’URL del fornitore, poi riprova.</string>
+    <string name="ai_error_timeout">L’IA ha impiegato troppo a rispondere. Riprova oppure aumenta il timeout della richiesta in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_credits">Il tuo account IA ha esaurito i crediti. Ricarica oppure cambia fornitore in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_daily_quota">La quota giornaliera del tuo account IA è esaurita. Riprova domani oppure cambia fornitore in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_quota">La quota di utilizzo del tuo account IA è stata superata. Controlla i limiti del fornitore oppure cambialo in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_model">Il modello selezionato o l’endpoint dell’API non è disponibile. Controlla modello e URL dell’API in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_rate_limit">Limite di richieste raggiunto per la tua chiave API. Attendi un minuto oppure cambia fornitore in Impostazioni → Fornitore IA. Se usi un piano gratuito, verifica se la quota giornaliera è esaurita.</string>
+    <string name="ai_error_key_rejected">La tua chiave API è stata rifiutata. Apri Impostazioni → Fornitore IA e incolla di nuovo una chiave valida.</string>
+    <string name="ai_error_overloaded">Il fornitore IA è sovraccarico in questo momento. Abbiamo riprovato alcune volte: riprova tra un minuto oppure cambia fornitore/modello in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_generic">La richiesta all’IA non è riuscita. Riprova oppure cambia fornitore in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_local_unavailable">Il runtime IA sul dispositivo non è disponibile. Controlla il modello scaricato in Impostazioni → Fornitore IA.</string>
+    <string name="ai_error_truncated">La risposta dell’IA è stata troncata due volte. Prova un input più breve o un altro modello.</string>
+    <string name="ai_error_both_failed">Sia %1$s sia il fallback %2$s non sono riusciti. %3$s</string>
+</resources>

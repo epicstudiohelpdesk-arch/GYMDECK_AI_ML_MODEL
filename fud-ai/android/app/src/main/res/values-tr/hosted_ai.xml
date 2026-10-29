@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hosted AI (Plus/Pro), Google Play billing, and the tip jar. -->
+<resources>
+    <!-- Errors -->
+    <string name="hosted_error_subscription_required">Barındırılan yapay zekâyı kullanmak için Plus veya Pro\'ya abone olun ya da Ayarlar → Yapay Zekâ Erişimi\'nden BYOK\'a geçin.</string>
+    <string name="hosted_error_quota_exceeded">Bugünlük barındırılan yapay zekâ işlemleriniz bitti. Kredi satın alın, yükseltin veya BYOK\'a geçin.</string>
+    <string name="hosted_error_rate_limited">Barındırılan yapay zekâ meşgul. Lütfen biraz bekleyip tekrar deneyin.</string>
+    <string name="hosted_error_unavailable">Barındırılan Yapay Zekâ geçici olarak kullanılamıyor. Lütfen birazdan tekrar deneyin.</string>
+    <string name="hosted_error_unauthorized">Barındırılan Yapay Zekâ aboneliğinizi tanımlayamadı. Satın Alımları Geri Yükle\'yi deneyin.</string>
+    <string name="hosted_error_too_many_images">Barındırılan yapay zekâ istek başına en fazla 3 fotoğraf kabul eder.</string>
+    <string name="hosted_error_too_large">Bu istek barındırılan yapay zekâ için çok büyük. Daha küçük bir fotoğraf veya daha kısa bir metin deneyin.</string>
+    <string name="hosted_error_audio_too_long">Barındırılan yapay zekâ için kayıtlar en fazla 2 dakika olabilir. Daha kısa bir kayıt deneyin.</string>
+    <string name="hosted_error_rejected">Barındırılan yapay zekâ bu isteği reddetti. Lütfen Fud AI\'ı güncelleyip tekrar deneyin.</string>
+    <string name="hosted_error_failed">Barındırılan yapay zekâ isteği başarısız oldu. Lütfen tekrar deneyin.</string>
+
+    <!-- Settings → AI Access -->
+    <string name="settings_category_ai_access">Yapay Zekâ Erişimi</string>
+    <string name="hosted_mode_title">Yapay Zekâ Modu</string>
+    <string name="hosted_mode_byok">BYOK (kendi anahtarınız)</string>
+    <string name="hosted_mode_hosted">Barındırılan (Plus/Pro)</string>
+    <string name="hosted_mode_footer">BYOK, kendi sağlayıcı anahtarlarınızı sınırsız olarak kullanır. Barındırılan mod bir Fud AI Plus veya Pro planı kullanır: her yapay zekâ isteği önce günlük hakkınızı, ardından kredilerinizi kullanır.</string>
+    <string name="hosted_plan_label">Plan</string>
+    <string name="hosted_plan_none">Yok</string>
+    <string name="hosted_plan_plus">Plus</string>
+    <string name="hosted_plan_pro">Pro</string>
+    <string name="hosted_today_label">Bugün (UTC)</string>
+    <string name="hosted_today_value">%1$d / %2$d</string>
+    <string name="hosted_credits_label">Krediler</string>
+    <string name="hosted_usage_footer">Fud AI\'ın sunucusu her yapay zekâ isteğini ölçer ve günlük hak UTC gece yarısında sıfırlanır. Birden çok sorgu gerektiren Koç yanıtları birden çok işlem kullanır.</string>
+    <string name="hosted_view_plans">Planları Görüntüle</string>
+    <string name="hosted_change_plan">Planı Değiştir</string>
+    <string name="hosted_buy_credits">Kredi satın al</string>
+    <string name="hosted_restore">Satın Alımları Geri Yükle</string>
+    <string name="hosted_manage_subscription">Aboneliği Yönet</string>
+    <string name="hosted_restore_success">Satın alımlar geri yüklendi.</string>
+    <string name="hosted_restore_none">Bu Google hesabı için etkin bir Plus veya Pro aboneliği bulunamadı.</string>
+    <string name="hosted_restore_failed">Satın alımlar geri yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin.</string>
+
+    <!-- Paywall -->
+    <string name="hosted_paywall_title">Barındırılan Yapay Zeka</string>
+    <string name="hosted_paywall_subtitle">Modelleri Fud AI çalıştırır. API anahtarı gerekmez, kurulum yok.</string>
+    <string name="hosted_period_monthly">Aylık</string>
+    <string name="hosted_period_yearly">Yıllık</string>
+    <string name="hosted_save_percent">%%%d tasarruf edin</string>
+    <string name="hosted_plan_actions">Her gün %d yapay zekâ işlemi</string>
+    <string name="hosted_current_plan">Mevcut plan</string>
+    <string name="hosted_per_month">aylık</string>
+    <string name="hosted_per_year">yıllık</string>
+    <string name="hosted_included_title">Neler dahil</string>
+    <string name="hosted_feature_all_title">Tüm yapay zekâ özellikleri</string>
+    <string name="hosted_feature_all_body">Fotoğraf, ses ve metinle kayıt, Koç ve antrenman yapay zekâsı.</string>
+    <string name="hosted_feature_daily_title">Günlük hak</string>
+    <string name="hosted_feature_daily_body">Her gece UTC gece yarısında sıfırlanır. Yoğun günler için kredi paketleri vardır.</string>
+    <string name="hosted_feature_private_title">Yalnızca isteğiniz gönderilir</string>
+    <string name="hosted_feature_private_body">Günlüğünüz ve geçmişiniz bu cihazda kalır. Google Play\'den istediğiniz zaman iptal edin.</string>
+    <string name="hosted_cta_subscribe">%s planına abone ol</string>
+    <string name="hosted_cta_upgrade">Pro\'ya Yükselt</string>
+    <string name="hosted_cta_switch">Plana Geç</string>
+    <string name="hosted_cta_current">Mevcut Plan</string>
+    <string name="hosted_upgrade_note">Pro hemen başlar. Google Play, bu fatura döneminin kalanı için orantılı farkı tahsil eder.</string>
+    <string name="hosted_switch_note">Yeni plan bir sonraki yenilemenizde başlar. O zamana kadar mevcut planınız devam eder.</string>
+    <string name="hosted_disclosure">%1$s %2$s · Google Play\'den iptal edene kadar otomatik olarak yenilenir.</string>
+    <string name="hosted_optional_note">İsteğe bağlı — Fud AI kendi API anahtarınızla ücretsiz kalır.</string>
+    <string name="hosted_terms">Koşullar</string>
+    <string name="hosted_privacy">Gizlilik</string>
+    <string name="hosted_close">Kapat</string>
+    <string name="hosted_plans_loading">Planlar yükleniyor…</string>
+    <string name="hosted_plans_unavailable_title">Planlar şu anda kullanılamıyor.</string>
+    <string name="hosted_plans_unavailable_body">İnternet bağlantınızı kontrol edip yeniden deneyin.</string>
+    <string name="hosted_try_again">Tekrar dene</string>
+    <string name="hosted_purchase_success_title">Her şey hazır</string>
+    <string name="hosted_purchase_success_body">Barındırılan yapay zekâ açık. İstediğiniz zaman Ayarlar → Yapay Zekâ Erişimi\'nden BYOK\'a geri dönebilirsiniz.</string>
+    <string name="hosted_purchase_pending">Satın alımınız beklemede. Google Play ödemeyi onaylar onaylamaz barındırılan yapay zekâ açılır.</string>
+    <string name="hosted_purchase_failed">Satın alma tamamlanamadı. Lütfen tekrar deneyin.</string>
+    <string name="hosted_purchase_already_owned">Buna zaten sahipsiniz. Kilidini açmak için Satın Alımları Geri Yükle\'ye dokunun.</string>
+
+    <!-- Credits -->
+    <string name="hosted_credits_title">Kredi satın al</string>
+    <string name="hosted_credits_subtitle">Yoğun günler için tek seferlik yüklemeler. Krediler günlük hakkınızdan sonra, yalnızca bir Plus veya Pro planı etkinken kullanılır ve hiçbir zaman sona ermez.</string>
+    <string name="hosted_credits_amount">%d kredi</string>
+    <string name="hosted_credits_added">Krediler eklendi.</string>
+    <string name="hosted_credits_pending">Satın alma tamamlandı. Kredileriniz kısa süre içinde görünecek.</string>
+    <string name="hosted_credits_unavailable">Kredi paketleri şu anda kullanılamıyor.</string>
+
+    <!-- Out of quota -->
+    <string name="hosted_out_title">Hosted İşlem Kotası Tükendi</string>
+    <string name="hosted_out_body">Kredi satın alın, planınızı yükseltin veya kendi API anahtarınızla BYOK moduna geçin.</string>
+    <string name="hosted_out_buy">Kredi Satın Al veya Planı Yükselt</string>
+    <string name="hosted_out_byok">BYOK Moduna Geç</string>
+
+    <!-- One-time post-update upsell (existing users) -->
+    <string name="hosted_upsell_title">İsteğe bağlı: Yapay zekâ anahtarlarını biz yönetelim</string>
+    <string name="hosted_upsell_body">Fud AI kendi API anahtarlarınızla (BYOK) ücretsizdir ve her zaman öyle kalacak. Anahtarlarla uğraşmak kafa karıştırıcı geliyorsa Plus ve Pro planları, yönetmeniz gereken hiçbir anahtar olmadan yapay zekâyı sizin için çalıştırır. Tamamen isteğe bağlıdır; siz geçiş yapmadıkça hiçbir şey değişmez.</string>
+    <string name="hosted_upsell_cta">Plus ve Pro planlarını görün</string>
+    <string name="hosted_upsell_keep">BYOK ile devam et (ücretsiz)</string>
+
+    <!-- Onboarding: Hosted path -->
+    <string name="onboarding_ai_hosted_subtitle">Barındırılan yapay zekâ için Plus veya Pro\'ya abone olun — API anahtarı gerekmez. Ayarlar\'dan istediğiniz zaman kendi anahtarınızı (BYOK) kullanmaya geçebilirsiniz.</string>
+    <string name="onboarding_ai_hosted_active">Etkin plan: %s</string>
+    <string name="onboarding_ai_hosted_inactive">Kendi anahtarınızı eklemeden barındırılan yapay zekâyı kullanmak için Plus veya Pro\'ya abone olun.</string>
+    <string name="onboarding_ai_hosted_use_byok">Bunun yerine Kendi Anahtarını Kullan</string>
+    <string name="onboarding_ai_hosted_notice_analysis_body">Yemek fotoğrafları, ses dökümleri ve yazılan öğünler Fud AI\'ın barındırılan hizmeti üzerinden işlenir.</string>
+    <string name="onboarding_ai_hosted_notice_local_body">Yiyecek kaydınız, kilo geçmişiniz ve vücut yağı geçmişiniz bu cihazda kalır.</string>
+    <string name="onboarding_ai_hosted_cta_subscribe">Devam Etmek İçin Abone Olun</string>
+
+    <!-- Tip jar (Google Play) -->
+    <string name="tip_jar_title">Bahşiş Bırak</string>
+    <string name="tip_snack">Atıştırmalık</string>
+    <string name="tip_proteinshake">Protein Shake</string>
+    <string name="tip_lunch">Öğle Yemeği</string>
+    <string name="tip_feast">Ziyafet</string>
+    <string name="tip_thanks_title">Teşekkürler!</string>
+    <string name="tip_thanks_body">Desteğiniz Fud AI’ın herkes için ücretsiz kalmasına yardımcı olur.</string>
+    <string name="tip_unavailable">Bahşişler şu anda kullanılamıyor.</string>
+</resources>

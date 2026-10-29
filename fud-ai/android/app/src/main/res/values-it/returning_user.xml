@@ -1,0 +1,46 @@
+<resources>
+    <string name="returning_entry">Hai già usato Fud AI?</string>
+    <string name="returning_title">Eccoti di nuovo</string>
+    <string name="returning_subtitle">Recupera pasti, peso e allenamenti, oppure ricomincia da zero.</string>
+    <string name="returning_pick_hint">Scegline una o entrambe.</string>
+    <string name="returning_drive_title">Ripristina da Google Drive</string>
+    <string name="returning_drive_detail">Il tuo backup completo: diario, foto, allenamenti e impostazioni, se in passato avevi attivato il backup su Drive.</string>
+    <string name="returning_drive_note">L’accesso serve solo a trovare il tuo backup. Google potrebbe mostrare un avviso aggiuntivo finché l’app non sarà verificata.</string>
+    <string name="returning_health_title">Importa da Health Connect</string>
+    <string name="returning_health_detail">Pasti, peso, grasso corporeo e calorie degli allenamenti che Fud AI ha salvato in Health Connect. Con un backup, viene aggiunto solo ciò che manca.</string>
+    <string name="returning_health_update">Prima installa o aggiorna Health Connect dal Play Store.</string>
+    <string name="returning_start_fresh">Ricomincia da zero</string>
+    <string name="returning_continue_setup">Continua la configurazione</string>
+    <string name="returning_step_waiting">Prossimo passaggio</string>
+    <string name="returning_step_drive_done">Backup ripristinato.</string>
+    <string name="returning_step_drive_cancelled">Ripristino annullato.</string>
+    <string name="returning_step_failed">Non completato</string>
+    <string name="returning_drive_checking">Controllo di Google Drive…</string>
+    <string name="returning_drive_confirm_title">Ripristinare il tuo backup?</string>
+    <string name="returning_drive_confirm_message_dated">Il tuo backup del %1$s sostituisce tutto ciò che c’è su questo telefono. Le chiavi API non sono nei backup, quindi potresti dover aggiungere di nuovo la tua.</string>
+    <string name="returning_drive_confirm_message">Il tuo backup sostituisce tutto ciò che c’è su questo telefono. Le chiavi API non sono nei backup, quindi potresti dover aggiungere di nuovo la tua.</string>
+    <string name="returning_drive_restoring">Ripristino in corso…</string>
+    <string name="returning_drive_no_backup">Nessun backup di Google Drive trovato per questo account.</string>
+    <string name="returning_drive_unreachable">Impossibile raggiungere Google Drive. Controlla la connessione e riprova.</string>
+    <string name="returning_drive_not_a_backup">Questo file non è un backup di Fud AI.</string>
+    <string name="returning_drive_needs_update">Questo backup proviene da una versione più recente di Fud AI. Aggiorna l’app, poi riprova.</string>
+    <string name="returning_drive_setup_missing">Questo backup non contiene una configurazione completata, quindi completiamola ora.</string>
+    <string name="returning_health_importing">Importazione da Health Connect…</string>
+    <string name="returning_health_nothing">Ancora niente da importare da Health Connect.</string>
+    <string name="returning_health_nothing_new">Il tuo backup conteneva già tutto ciò che c’era in Health Connect.</string>
+    <string name="returning_health_denied">Health Connect non ha condiviso alcun dato. Puoi collegarlo più tardi nelle Impostazioni.</string>
+    <string name="returning_health_read_failed">Non è stato possibile leggere tutto da Health Connect. Riprova.</string>
+    <string name="returning_health_imported_both">Importazione completata: %1$s e %2$s.</string>
+    <string name="returning_health_imported_one">Importazione completata: %1$s.</string>
+    <string name="returning_health_imported_other">I tuoi dati di Health Connect sono stati importati.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d pasto</item>
+        <item quantity="many">%1$d di pasti</item>
+        <item quantity="other">%1$d pasti</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d pesata</item>
+        <item quantity="many">%1$d di pesate</item>
+        <item quantity="other">%1$d pesate</item>
+    </plurals>
+</resources>

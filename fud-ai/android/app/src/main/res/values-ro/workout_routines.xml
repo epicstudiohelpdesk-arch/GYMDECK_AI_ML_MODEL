@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Începe din rutină</string>
+    <string name="workout_routine_save">Salvează ca rutină</string>
+    <string name="workout_routine_save_title">Salvează rutina</string>
+    <string name="workout_routine_name">Numele rutinei</string>
+    <string name="workout_routine_save_message">Salvează exercițiile din această zi cu seriile, repetările și greutățile planificate.</string>
+    <string name="workout_routines_title">Rutine</string>
+    <string name="workout_routines_empty_title">Încă nu există rutine</string>
+    <string name="workout_routines_empty_message">Înregistrează un antrenament, apoi alege Salvează ca rutină din meniul +.</string>
+    <string name="workout_routines_footer">Adaugă exercițiile rutinei în ziua selectată. Seriile deja înregistrate rămân neschimbate.</string>
+    <string name="workout_routine_rename">Redenumește</string>
+    <string name="workout_routine_rename_title">Redenumește rutina</string>
+    <string name="workout_routine_delete_title">Ștergi rutina?</string>
+    <string name="workout_routine_delete_message">Antrenamentele deja înregistrate se păstrează.</string>
+</resources>

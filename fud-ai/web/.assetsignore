@@ -1,0 +1,17 @@
+# Do not publish Worker source / build tooling as static site assets.
+*.ts
+*.tsx
+*.map
+*.md
+package.json
+package-lock.json
+tsconfig.json
+vitest.config.*
+wrangler.toml
+worker-configuration.d.ts
+worker-secrets.d.ts
+node_modules/
+.wrangler/
+tests/
+scripts/
+migrations/

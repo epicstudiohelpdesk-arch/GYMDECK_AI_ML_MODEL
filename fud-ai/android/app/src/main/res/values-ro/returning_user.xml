@@ -1,0 +1,46 @@
+<resources>
+    <string name="returning_entry">Ai mai folosit Fud AI?</string>
+    <string name="returning_title">Bine ai revenit</string>
+    <string name="returning_subtitle">Recuperează-ți mesele, greutatea și antrenamentele sau începe de la zero.</string>
+    <string name="returning_pick_hint">Alege una sau ambele.</string>
+    <string name="returning_drive_title">Restaurează din Google Drive</string>
+    <string name="returning_drive_detail">Backupul tău complet: jurnal, fotografii, antrenamente și setări, dacă ai activat înainte backupul Drive.</string>
+    <string name="returning_drive_note">Conectarea este folosită doar pentru a-ți găsi backupul. Google poate afișa un avertisment suplimentar până când aplicația este verificată.</string>
+    <string name="returning_health_title">Importă din Health Connect</string>
+    <string name="returning_health_detail">Mese, greutate, grăsime corporală și calorii din antrenamente pe care Fud AI le-a salvat în Health Connect. Împreună cu un backup, se adaugă doar ce lipsește din el.</string>
+    <string name="returning_health_update">Mai întâi instalează sau actualizează Health Connect din Play Store.</string>
+    <string name="returning_start_fresh">Începe de la zero</string>
+    <string name="returning_continue_setup">Continuă configurarea</string>
+    <string name="returning_step_waiting">Urmează</string>
+    <string name="returning_step_drive_done">Backup restaurat.</string>
+    <string name="returning_step_drive_cancelled">Restaurare anulată.</string>
+    <string name="returning_step_failed">Nu s-a finalizat</string>
+    <string name="returning_drive_checking">Se verifică Google Drive…</string>
+    <string name="returning_drive_confirm_title">Restaurezi backupul tău?</string>
+    <string name="returning_drive_confirm_message_dated">Backupul tău din %1$s înlocuiește tot ce există pe acest telefon. Cheile API nu sunt incluse în backupuri, așa că poate va trebui să o adaugi din nou pe a ta.</string>
+    <string name="returning_drive_confirm_message">Backupul tău înlocuiește tot ce există pe acest telefon. Cheile API nu sunt incluse în backupuri, așa că poate va trebui să o adaugi din nou pe a ta.</string>
+    <string name="returning_drive_restoring">Se restaurează…</string>
+    <string name="returning_drive_no_backup">Nu s-a găsit niciun backup Google Drive pentru acest cont.</string>
+    <string name="returning_drive_unreachable">Nu se poate accesa Google Drive. Verifică-ți conexiunea și încearcă din nou.</string>
+    <string name="returning_drive_not_a_backup">Acest fișier nu este un backup Fud AI.</string>
+    <string name="returning_drive_needs_update">Acest backup provine dintr-o versiune mai nouă de Fud AI. Actualizează aplicația, apoi încearcă din nou.</string>
+    <string name="returning_drive_setup_missing">Acest backup nu include o configurare finalizată, așa că o finalizăm acum.</string>
+    <string name="returning_health_importing">Se importă din Health Connect…</string>
+    <string name="returning_health_nothing">Încă nu există nimic de importat din Health Connect.</string>
+    <string name="returning_health_nothing_new">Backupul tău avea deja tot ce era în Health Connect.</string>
+    <string name="returning_health_denied">Health Connect nu a partajat date. Îl poți conecta mai târziu din Setări.</string>
+    <string name="returning_health_read_failed">Nu s-a putut citi tot din Health Connect. Încearcă din nou.</string>
+    <string name="returning_health_imported_both">Importat: %1$s și %2$s.</string>
+    <string name="returning_health_imported_one">Importat: %1$s.</string>
+    <string name="returning_health_imported_other">Datele tale din Health Connect au fost importate.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d masă</item>
+        <item quantity="few">%1$d mese</item>
+        <item quantity="other">%1$d de mese</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d cântărire</item>
+        <item quantity="few">%1$d cântăriri</item>
+        <item quantity="other">%1$d de cântăriri</item>
+    </plurals>
+</resources>

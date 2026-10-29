@@ -1,0 +1,47 @@
+<resources>
+    <!-- Welcome back: the onboarding screen for people who used Fud AI before. -->
+    <string name="returning_entry">Used Fud AI before?</string>
+    <string name="returning_title">Welcome back</string>
+    <string name="returning_subtitle">Bring your meals, weight, and workouts back, or start fresh.</string>
+    <string name="returning_pick_hint">Choose one or both.</string>
+    <string name="returning_drive_title">Restore from Google Drive</string>
+    <string name="returning_drive_detail">Your full backup: diary, photos, workouts, and settings, if you turned on Drive backup before.</string>
+    <string name="returning_drive_note">Sign-in is only used to find your backup. Google may show an extra warning until the app is verified.</string>
+    <string name="returning_health_title">Import from Health Connect</string>
+    <string name="returning_health_detail">Meals, weight, body fat, and workout calories Fud AI saved to Health Connect. With a backup, only what it\'s missing is added.</string>
+    <string name="returning_health_update">Install or update Health Connect from the Play Store first.</string>
+    <string name="returning_start_fresh">Start fresh</string>
+    <string name="returning_continue_setup">Continue setup</string>
+    <!-- The progress list after Continue: one row per chosen source. -->
+    <string name="returning_step_waiting">Up next</string>
+    <string name="returning_step_drive_done">Backup restored.</string>
+    <string name="returning_step_drive_cancelled">Restore cancelled.</string>
+    <string name="returning_step_failed">Didn\'t finish</string>
+    <string name="returning_drive_checking">Checking Google Drive…</string>
+    <string name="returning_drive_confirm_title">Restore your backup?</string>
+    <string name="returning_drive_confirm_message_dated">Your backup from %1$s replaces anything on this phone. API keys aren\'t in backups, so you may need to add yours again.</string>
+    <string name="returning_drive_confirm_message">Your backup replaces anything on this phone. API keys aren\'t in backups, so you may need to add yours again.</string>
+    <string name="returning_drive_restoring">Restoring…</string>
+    <string name="returning_drive_no_backup">No Google Drive backup found for this account.</string>
+    <string name="returning_drive_unreachable">Couldn\'t reach Google Drive. Check your connection and try again.</string>
+    <string name="returning_drive_not_a_backup">This file isn\'t a Fud AI backup.</string>
+    <string name="returning_drive_needs_update">This backup is from a newer Fud AI. Update the app, then try again.</string>
+    <string name="returning_drive_setup_missing">This backup doesn\'t include a finished setup, so let\'s finish it now.</string>
+    <string name="returning_health_importing">Importing from Health Connect…</string>
+    <string name="returning_health_nothing">Nothing to import from Health Connect yet.</string>
+    <string name="returning_health_nothing_new">Your backup already had everything from Health Connect.</string>
+    <string name="returning_health_denied">Health Connect didn\'t share any data. You can connect it later in Settings.</string>
+    <string name="returning_health_read_failed">Couldn\'t read everything from Health Connect. Try again.</string>
+    <!-- %1$s and %2$s are returning_health_meals and returning_health_weigh_ins. -->
+    <string name="returning_health_imported_both">Imported %1$s and %2$s.</string>
+    <string name="returning_health_imported_one">Imported %1$s.</string>
+    <string name="returning_health_imported_other">Imported your Health Connect data.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d meal</item>
+        <item quantity="other">%1$d meals</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d weigh-in</item>
+        <item quantity="other">%1$d weigh-ins</item>
+    </plurals>
+</resources>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="returning_entry">Fud AI\'yı daha önce kullandınız mı?</string>
+    <string name="returning_title">Tekrar hoş geldiniz</string>
+    <string name="returning_subtitle">Öğünlerinizi, kilonuzu ve antrenmanlarınızı geri getirin ya da sıfırdan başlayın.</string>
+    <string name="returning_pick_hint">Birini ya da ikisini seçin.</string>
+    <string name="returning_drive_title">Google Drive\'dan geri yükle</string>
+    <string name="returning_drive_detail">Tam yedeğiniz: günlük, fotoğraflar, antrenmanlar ve ayarlar; daha önce Drive yedeklemeyi açtıysanız.</string>
+    <string name="returning_drive_note">Oturum açma yalnızca yedeğinizi bulmak için kullanılır. Uygulama doğrulanana kadar Google ekstra bir uyarı gösterebilir.</string>
+    <string name="returning_health_title">Health Connect\'ten içe aktar</string>
+    <string name="returning_health_detail">Fud AI\'nın Health Connect\'e kaydettiği öğünler, kilo, vücut yağı ve antrenman kalorileri. Bir yedekle birlikte yalnızca yedekte eksik olanlar eklenir.</string>
+    <string name="returning_health_update">Önce Play Store\'dan Health Connect\'i yükleyin veya güncelleyin.</string>
+    <string name="returning_start_fresh">Sıfırdan başla</string>
+    <string name="returning_continue_setup">Kuruluma devam et</string>
+    <string name="returning_step_waiting">Sırada</string>
+    <string name="returning_step_drive_done">Yedek geri yüklendi.</string>
+    <string name="returning_step_drive_cancelled">Geri yükleme iptal edildi.</string>
+    <string name="returning_step_failed">Tamamlanmadı</string>
+    <string name="returning_drive_checking">Google Drive kontrol ediliyor…</string>
+    <string name="returning_drive_confirm_title">Yedeğiniz geri yüklensin mi?</string>
+    <string name="returning_drive_confirm_message_dated">%1$s tarihli yedeğiniz bu telefondaki her şeyin yerini alır. API anahtarları yedeklere dahil değildir, bu yüzden anahtarınızı yeniden eklemeniz gerekebilir.</string>
+    <string name="returning_drive_confirm_message">Yedeğiniz bu telefondaki her şeyin yerini alır. API anahtarları yedeklere dahil değildir, bu yüzden anahtarınızı yeniden eklemeniz gerekebilir.</string>
+    <string name="returning_drive_restoring">Geri yükleniyor…</string>
+    <string name="returning_drive_no_backup">Bu hesap için Google Drive yedeği bulunamadı.</string>
+    <string name="returning_drive_unreachable">Google Drive\'a ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="returning_drive_not_a_backup">Bu dosya bir Fud AI yedeği değil.</string>
+    <string name="returning_drive_needs_update">Bu yedek, Fud AI\'nın daha yeni bir sürümünden. Uygulamayı güncelleyip tekrar deneyin.</string>
+    <string name="returning_drive_setup_missing">Bu yedekte tamamlanmış bir kurulum yok, o yüzden şimdi tamamlayalım.</string>
+    <string name="returning_health_importing">Health Connect\'ten içe aktarılıyor…</string>
+    <string name="returning_health_nothing">Health Connect\'te henüz içe aktarılacak bir şey yok.</string>
+    <string name="returning_health_nothing_new">Yedeğinizde Health Connect\'teki her şey zaten vardı.</string>
+    <string name="returning_health_denied">Health Connect hiçbir veri paylaşmadı. Daha sonra Ayarlar\'dan bağlayabilirsiniz.</string>
+    <string name="returning_health_read_failed">Health Connect\'teki verilerin tümü okunamadı. Tekrar deneyin.</string>
+    <string name="returning_health_imported_both">İçe aktarıldı: %1$s ve %2$s.</string>
+    <string name="returning_health_imported_one">İçe aktarıldı: %1$s.</string>
+    <string name="returning_health_imported_other">Health Connect verileriniz içe aktarıldı.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d öğün</item>
+        <item quantity="other">%1$d öğün</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d tartım</item>
+        <item quantity="other">%1$d tartım</item>
+    </plurals>
+</resources>

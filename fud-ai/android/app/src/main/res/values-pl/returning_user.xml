@@ -1,0 +1,48 @@
+<resources>
+    <string name="returning_entry">Korzystasz z Fud AI nie pierwszy raz?</string>
+    <string name="returning_title">Witaj ponownie</string>
+    <string name="returning_subtitle">Odzyskaj posiłki, wagę i treningi albo zacznij od nowa.</string>
+    <string name="returning_pick_hint">Wybierz jedno lub oba.</string>
+    <string name="returning_drive_title">Przywróć z Dysku Google</string>
+    <string name="returning_drive_detail">Pełna kopia zapasowa: dziennik, zdjęcia, treningi i ustawienia, jeśli wcześniej była włączona kopia na Dysku Google.</string>
+    <string name="returning_drive_note">Logowanie służy tylko do znalezienia kopii zapasowej. Do czasu weryfikacji aplikacji Google może wyświetlać dodatkowe ostrzeżenie.</string>
+    <string name="returning_health_title">Importuj z Health Connect</string>
+    <string name="returning_health_detail">Posiłki, waga, tkanka tłuszczowa i kalorie z treningów zapisane przez Fud AI w Health Connect. Razem z kopią zapasową dodawane jest tylko to, czego w niej brakuje.</string>
+    <string name="returning_health_update">Najpierw zainstaluj lub zaktualizuj Health Connect ze Sklepu Play.</string>
+    <string name="returning_start_fresh">Zacznij od nowa</string>
+    <string name="returning_continue_setup">Kontynuuj konfigurację</string>
+    <string name="returning_step_waiting">Następne</string>
+    <string name="returning_step_drive_done">Przywrócono kopię zapasową.</string>
+    <string name="returning_step_drive_cancelled">Anulowano przywracanie.</string>
+    <string name="returning_step_failed">Nie ukończono</string>
+    <string name="returning_drive_checking">Sprawdzanie Dysku Google…</string>
+    <string name="returning_drive_confirm_title">Przywrócić kopię zapasową?</string>
+    <string name="returning_drive_confirm_message_dated">Kopia zapasowa z %1$s zastąpi wszystko na tym telefonie. Klucze API nie trafiają do kopii, więc może być konieczne ponowne dodanie Twojego klucza.</string>
+    <string name="returning_drive_confirm_message">Kopia zapasowa zastąpi wszystko na tym telefonie. Klucze API nie trafiają do kopii, więc może być konieczne ponowne dodanie Twojego klucza.</string>
+    <string name="returning_drive_restoring">Przywracanie…</string>
+    <string name="returning_drive_no_backup">Nie znaleziono kopii zapasowej na Dysku Google dla tego konta.</string>
+    <string name="returning_drive_unreachable">Nie można połączyć się z Dyskiem Google. Sprawdź połączenie i spróbuj ponownie.</string>
+    <string name="returning_drive_not_a_backup">Ten plik nie jest kopią zapasową Fud AI.</string>
+    <string name="returning_drive_needs_update">Ta kopia pochodzi z nowszej wersji Fud AI. Zaktualizuj aplikację i spróbuj ponownie.</string>
+    <string name="returning_drive_setup_missing">Ta kopia nie zawiera ukończonej konfiguracji, więc dokończmy ją teraz.</string>
+    <string name="returning_health_importing">Importowanie z Health Connect…</string>
+    <string name="returning_health_nothing">W Health Connect nie ma jeszcze nic do zaimportowania.</string>
+    <string name="returning_health_nothing_new">Kopia zapasowa zawierała już wszystko z Health Connect.</string>
+    <string name="returning_health_denied">Health Connect nie udostępnił żadnych danych. Możesz połączyć go później w Ustawieniach.</string>
+    <string name="returning_health_read_failed">Nie udało się odczytać wszystkiego z Health Connect. Spróbuj ponownie.</string>
+    <string name="returning_health_imported_both">Zaimportowano: %1$s i %2$s.</string>
+    <string name="returning_health_imported_one">Zaimportowano: %1$s.</string>
+    <string name="returning_health_imported_other">Zaimportowano dane z Health Connect.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d posiłek</item>
+        <item quantity="few">%1$d posiłki</item>
+        <item quantity="many">%1$d posiłków</item>
+        <item quantity="other">%1$d posiłku</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d pomiar wagi</item>
+        <item quantity="few">%1$d pomiary wagi</item>
+        <item quantity="many">%1$d pomiarów wagi</item>
+        <item quantity="other">%1$d pomiaru wagi</item>
+    </plurals>
+</resources>

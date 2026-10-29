@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">रूटीन से शुरू करें</string>
+    <string name="workout_routine_save">रूटीन के रूप में सहेजें</string>
+    <string name="workout_routine_save_title">रूटीन सहेजें</string>
+    <string name="workout_routine_name">रूटीन का नाम</string>
+    <string name="workout_routine_save_message">इस दिन के व्यायाम उनके नियोजित सेट, रेप्स और वज़न के साथ सहेजता है।</string>
+    <string name="workout_routines_title">रूटीन</string>
+    <string name="workout_routines_empty_title">अभी कोई रूटीन नहीं</string>
+    <string name="workout_routines_empty_message">कोई वर्कआउट लॉग करें, फिर + मेनू से “रूटीन के रूप में सहेजें” चुनें।</string>
+    <string name="workout_routines_footer">रूटीन के व्यायाम चुने गए दिन में जोड़ता है। आपके पहले से लॉग किए गए सेट वैसे ही रहते हैं।</string>
+    <string name="workout_routine_rename">नाम बदलें</string>
+    <string name="workout_routine_rename_title">रूटीन का नाम बदलें</string>
+    <string name="workout_routine_delete_title">रूटीन हटाएं?</string>
+    <string name="workout_routine_delete_message">आपके पहले से लॉग किए गए वर्कआउट बने रहते हैं।</string>
+</resources>

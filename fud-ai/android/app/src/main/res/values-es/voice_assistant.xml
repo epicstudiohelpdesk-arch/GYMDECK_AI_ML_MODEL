@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Hablar con Fud AI</string>
+    <string name="voice_shortcut_short">Hablar</string>
+    <string name="voice_shortcut_disabled">Este acceso directo no está disponible.</string>
+    <string name="voice_widget_description">Abre Fud AI e inicia una conversación de voz con el asistente.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">Automático</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">Finalizado</string>
+    <string name="voice_status_preparing">Cargando…</string>
+    <string name="voice_status_connecting">Conectando…</string>
+    <string name="voice_status_listening">Escuchando…</string>
+    <string name="voice_status_thinking">Pensando…</string>
+    <string name="voice_status_speaking">Hablando…</string>
+    <string name="voice_listening_hint">Adelante, te escucho.</string>
+    <string name="voice_time_left">Quedan %1$s</string>
+    <string name="voice_minutes_short">%1$d min</string>
+    <string name="voice_less_than_a_minute">Menos de 1 min</string>
+    <string name="voice_minimize">Minimizar</string>
+    <string name="voice_expand">Abrir conversación</string>
+    <string name="voice_close">Cerrar</string>
+    <string name="voice_end">Terminar conversación</string>
+    <string name="voice_close_camera">Cerrar cámara</string>
+    <string name="voice_take_photo">Hacer foto</string>
+    <string name="voice_barcode_hint">Apunta la cámara al código de barras</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">Borrador</string>
+    <string name="voice_card_workout_draft">Borrador de entrenamiento</string>
+    <string name="voice_card_dismiss">Descartar</string>
+    <string name="voice_card_totals">%1$d kcal · Proteína: %2$dg · Carbohidratos: %3$dg · Grasas: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · Proteína: %2$dg · Carbohidratos: %3$dg · Grasas: %4$dg</string>
+    <string name="voice_card_log">Registrar</string>
+    <string name="voice_card_logged">Registrado</string>
+    <string name="voice_card_confirm_title">Confirmar</string>
+    <string name="voice_card_delete_title">Eliminar</string>
+    <string name="voice_card_confirm">Guardar</string>
+    <string name="voice_card_saved">Guardado</string>
+    <string name="voice_card_undo">Deshacer</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">Registrar %1$s · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">Registrar %1$s · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">Registrar %1$s de agua</string>
+    <string name="voice_change_start_fast">Iniciar un ayuno de %1$d h</string>
+    <string name="voice_change_end_fast">Terminar tu ayuno · %1$s</string>
+    <string name="voice_change_weight">Registrar peso · %1$s</string>
+    <string name="voice_change_body_fat">Registrar grasa corporal · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">Entrenamiento · %d ejercicio</item>
+        <item quantity="many">Entrenamiento · %d ejercicios</item>
+        <item quantity="other">Entrenamiento · %d ejercicios</item>
+    </plurals>
+    <string name="voice_change_cardio">Registrar %1$s · %2$d min</string>
+    <string name="voice_change_setting">Cambiar %1$s a %2$s</string>
+    <string name="voice_setting_units">Unidades</string>
+    <string name="voice_units_metric">Métrico</string>
+    <string name="voice_units_imperial">Imperial</string>
+    <string name="voice_on">Activado</string>
+    <string name="voice_off">Desactivado</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">Reintentar</string>
+    <string name="voice_action_talk_again">Hablar con Fud AI</string>
+    <string name="voice_action_see_plans">Ver planes Plus y Pro</string>
+    <string name="voice_action_buy_credits">Comprar créditos</string>
+    <string name="voice_action_add_key">Añadir una clave API</string>
+    <string name="voice_action_open_ai_providers">Ajustes de IA</string>
+    <string name="voice_action_voice_settings">Asistente de voz</string>
+    <string name="voice_action_open_settings">Abrir Ajustes</string>
+    <string name="voice_notice_setup_title">Asistente de voz</string>
+    <string name="voice_notice_setup_body">Habla para registrar comidas, escanear alimentos y códigos de barras y preguntar por tu progreso. El asistente de voz funciona con un plan Fud AI Plus o Pro, o con tu propia clave API de Gemini, OpenAI, xAI o Qwen.</string>
+    <string name="voice_notice_missing_key_title">Añade tu clave de %1$s</string>
+    <string name="voice_notice_missing_key_body">El asistente de voz está configurado para usar %1$s, que necesita tu clave API. Añádela en Proveedores de IA o elige otro proveedor en los ajustes del asistente de voz.</string>
+    <string name="voice_notice_subscription_title">La voz de Fud AI necesita un plan Plus o Pro</string>
+    <string name="voice_notice_subscription_body">La voz alojada por Fud AI está incluida en Plus (20 minutos al mes) y Pro (100 minutos al mes). También puedes usar tu propia clave de Gemini, OpenAI, xAI o Qwen.</string>
+    <string name="voice_notice_minutes_title">Te quedaste sin minutos de voz</string>
+    <string name="voice_notice_minutes_body">Ya usaste los minutos de voz de tu plan este mes. Compra créditos para seguir hablando (4 créditos por minuto) o usa tu propia clave de Gemini, OpenAI, xAI o Qwen.</string>
+    <string name="voice_notice_limit_title">Se alcanzó el límite de la conversación</string>
+    <string name="voice_notice_limit_body">Esta conversación llegó al límite de 15 minutos. Empieza otra para continuar.</string>
+    <string name="voice_notice_mic_title">Se necesita acceso al micrófono</string>
+    <string name="voice_notice_mic_body">Permite que Fud AI use el micrófono en los ajustes del sistema para hablar con el asistente.</string>
+    <string name="voice_notice_mic_busy_title">El micrófono no está disponible.</string>
+    <string name="voice_notice_mic_busy_body">Puede que otra app esté usando el micrófono. Ciérrala e inténtalo de nuevo.</string>
+    <string name="voice_notice_key_rejected_title">%1$s rechazó la clave</string>
+    <string name="voice_notice_key_rejected_body">Comprueba tu clave API de %1$s, su facturación y su acceso a los modelos de voz en directo en Proveedores de IA.</string>
+    <string name="voice_notice_unauthorized_title">No se pudo verificar tu plan</string>
+    <string name="voice_notice_unauthorized_body">Fud AI no pudo verificar tu suscripción. Prueba Restaurar compras en Ajustes → Acceso a IA.</string>
+    <string name="voice_notice_busy_title">Demasiadas solicitudes</string>
+    <string name="voice_notice_busy_body">Hay demasiadas sesiones de voz ahora mismo. Inténtalo de nuevo en un minuto.</string>
+    <string name="voice_notice_unavailable_title">La voz no está disponible ahora. Inténtalo más tarde.</string>
+    <string name="voice_notice_unavailable_body">El servicio de voz tuvo un problema. Inténtalo de nuevo.</string>
+    <string name="voice_notice_connect_title">No se pudo conectar</string>
+    <string name="voice_notice_connect_body">No se pudo conectar con el servicio de voz. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="voice_notice_lost_title">La conexión de voz terminó.</string>
+    <string name="voice_notice_lost_body">La conexión de voz terminó. Revisa tu conexión a internet e inténtalo de nuevo.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">Asistente de voz</string>
+    <string name="voice_settings_provider">Proveedor</string>
+    <string name="voice_settings_model">Modelo</string>
+    <string name="voice_settings_voice">Voz</string>
+    <string name="voice_settings_language">Idioma de respuesta</string>
+    <string name="voice_settings_language_auto">Automático</string>
+    <string name="voice_settings_language_app">Idioma de la app</string>
+    <string name="voice_settings_using">Usando %1$s</string>
+    <string name="voice_settings_add_key">Añade tu clave de %1$s en Proveedores de IA</string>
+    <string name="voice_settings_key_missing">No hay clave API de %1$s guardada</string>
+    <string name="voice_settings_needs_plan">La voz de Fud AI necesita un plan Plus o Pro</string>
+    <string name="voice_settings_needs_setup">Suscríbete a Plus o Pro, o añade una clave API de Gemini, OpenAI, xAI o Qwen</string>
+    <string name="voice_settings_automatic_footer">Automático usa el proveedor elegido en Proveedores de IA si es Gemini, OpenAI, xAI o Qwen y su clave está guardada; si no, Fud AI con un plan Plus o Pro. Las claves propias son las guardadas en Proveedores de IA.</string>
+    <string name="voice_settings_auto_capture">Captura automática de fotos</string>
+    <string name="voice_settings_auto_capture_footer">Con la cámara abierta, el asistente hace la foto en cuanto ve la comida. Gemini, Qwen y Fud AI ven la cámara de forma continua; OpenAI, cada vez que hablas; xAI y GPT-Live no pueden verla.</string>
+    <string name="voice_settings_confirm_saves">Confirmar antes de guardar</string>
+    <string name="voice_settings_confirm_saves_footer">Muestra una tarjeta para aprobar cada registro o cambio. Si se desactiva, los cambios se guardan al instante y puedes deshacerlos durante 8 segundos.</string>
+    <string name="voice_settings_save_to_coach">Guardar conversaciones en Coach</string>
+    <string name="voice_settings_save_to_coach_footer">Añade lo que dices tú y lo que dice el asistente a tu chat de Coach.</string>
+    <string name="voice_settings_minutes_left">Minutos del plan restantes</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + %2$s de créditos</string>
+    <string name="voice_settings_minutes_footer">Plus incluye 20 minutos y Pro 100 minutos al mes (UTC). Después, la voz usa créditos: 1 crédito cada 15 segundos.</string>
+    <string name="voice_settings_open_title">Ábrelo más rápido</string>
+    <string name="voice_settings_open_body">Toca la esfera en Inicio, añade el botón Hablar con Fud AI a Ajustes rápidos, mantén pulsado el icono de la app y elige Hablar con Fud AI, o añade el widget a tu pantalla de inicio. Todas las opciones empiezan a escuchar al instante.</string>
+    <string name="voice_settings_add_tile">Añadir botón a Ajustes rápidos</string>
+    <string name="voice_settings_add_widget">Añadir widget a la pantalla de inicio</string>
+    <string name="voice_settings_privacy_footer">Tu voz, los subtítulos, las imágenes de la cámara que ve el asistente y los resultados de sus acciones se envían al proveedor que uses (Google para Fud AI Plus/Pro).  El servidor de Fud AI guarda contadores de uso y recibos de facturación, pero no el contenido de las conversaciones.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">Escuchar voz</string>
+    <string name="voice_preview_stop">Detener muestra</string>
+    <string name="voice_preview_preparing">Preparando muestra…</string>
+    <string name="voice_preview_sample">Hola, soy tu asistente de Fud AI. Así suena mi voz.</string>
+    <string name="voice_preview_failed">No se pudo reproducir esta muestra de voz. Inténtalo de nuevo.</string>
+    <string name="voice_preview_busy">Termina tu conversación de voz actual antes de escuchar una muestra.</string>
+    <string name="voice_preview_usage">Reproduce una muestra breve sin usar tu micrófono. Consume créditos de API o minutos de voz de Fud AI.</string>
+</resources>

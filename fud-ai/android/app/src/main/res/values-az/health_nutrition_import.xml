@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Qidalanma tarixçəsini idxal et</string>
+    <string name="health_import_action">İdxal et</string>
+    <string name="health_import_description">Başqa tətbiqdəki qida qeydlərini gündəliyinizə gətirin. Mövcud qeydlərə önbaxış edin, sonra paylaşılan qeydləri iki dəfə saymamaq üçün bir mənbə tətbiq seçin.</string>
+    <string name="health_import_from">Başlanğıc (YYYY-MM-DD)</string>
+    <string name="health_import_to">Son (YYYY-MM-DD)</string>
+    <string name="health_import_history_hint">Tarixçəyə giriş olmadan son 30 gün ərzində tarixlər seçin. Köhnə qeydlər dəstəklənən cihazda tarixçəyə giriş tələb edir.</string>
+    <string name="health_import_grant">Qidalanma və tarixçəyə giriş icazəsi ver</string>
+    <string name="health_import_access_result">Giriş ayarları yeniləndi. Mövcud qeydləri yoxlamaq üçün yenidən önbaxış edin.</string>
+    <string name="health_import_access_needed">Health Connect-də qidalanma məlumatlarını oxumağa icazə verin, sonra yenidən önbaxış edin.</string>
+    <string name="health_import_invalid_dates">Etibarlı tarixləri YYYY-MM-DD formatında daxil edin. Son tarix başlanğıc tarixi ilə eyni və ya ondan sonra olmalı və bu gündən gec olmamalıdır.</string>
+    <string name="health_import_history_needed">Bu aralıq tarixçəyə giriş tələb edir. Dəstəklənən cihazda icazə verin və ya son 30 gün ərzində tarixlər seçin.</string>
+    <string name="health_import_preview">Mövcud qeydlərə önbaxış et</string>
+    <string name="health_import_failed">İdxalı tamamlamaq mümkün olmadı. Health Connect girişini yoxlayıb yenidən cəhd edin.</string>
+    <string name="health_import_empty">Bu aralıqda digər tətbiqlərdən yeni qidalanma qeydi tapılmadı. Mənbə tətbiqin qidalanma məlumatlarını Health Connect ilə paylaşdığını yoxlayın. Əvvəllər idxal edilmiş qeydlər, o cümlədən gündəlikdən silinənlər, ötürülür.</string>
+    <string name="health_import_count">%1$d yeni qeyd · %2$d kkal</string>
+    <string name="health_import_unnamed">İdxal edilmiş yemək</string>
+    <string name="health_import_local_only">Bunlar yerli nüsxələrdir. Dəyişikliklər və silmələr Fud AI-da qalır. İdxalı təkrarlamaq əvvəllər idxal edilmiş qeydləri ötürür, onları yeniləmir.</string>
+    <string name="health_import_done">Gündəliyinizə %1$d qeyd idxal edildi.</string>
+    <string name="health_import_close">Bağla</string>
+</resources>

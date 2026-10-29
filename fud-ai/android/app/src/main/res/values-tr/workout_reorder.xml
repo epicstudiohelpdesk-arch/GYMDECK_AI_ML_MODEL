@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">Yeniden sırala</string>
+    <string name="workout_move_up">Yukarı taşı</string>
+    <string name="workout_move_down">Aşağı taşı</string>
+    <string name="workout_move_up_named">%1$s öğesini yukarı taşı</string>
+    <string name="workout_move_down_named">%1$s öğesini aşağı taşı</string>
+</resources>

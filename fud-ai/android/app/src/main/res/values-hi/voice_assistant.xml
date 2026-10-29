@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Fud AI से बात करें</string>
+    <string name="voice_shortcut_short">बात करें</string>
+    <string name="voice_shortcut_disabled">यह शॉर्टकट उपलब्ध नहीं है।</string>
+    <string name="voice_widget_description">Fud AI खोलता है और असिस्टेंट के साथ वॉइस बातचीत शुरू करता है।</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">स्वचालित</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">समाप्त हुआ</string>
+    <string name="voice_status_preparing">लोड हो रहा है…</string>
+    <string name="voice_status_connecting">कनेक्ट हो रहा है…</string>
+    <string name="voice_status_listening">सुन रहा है…</string>
+    <string name="voice_status_thinking">सोच रहा है…</string>
+    <string name="voice_status_speaking">बोल रहा है…</string>
+    <string name="voice_listening_hint">बोलिए, मैं सुन रहा हूँ।</string>
+    <string name="voice_time_left">%1$s बाकी</string>
+    <string name="voice_minutes_short">%1$d मिनट</string>
+    <string name="voice_less_than_a_minute">1 मिनट से कम</string>
+    <string name="voice_minimize">छोटा करें</string>
+    <string name="voice_expand">बातचीत खोलें</string>
+    <string name="voice_close">बंद करें</string>
+    <string name="voice_end">बातचीत समाप्त करें</string>
+    <string name="voice_close_camera">कैमरा बंद करें</string>
+    <string name="voice_take_photo">फ़ोटो लें</string>
+    <string name="voice_barcode_hint">कैमरे को बारकोड पर रखें</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">ड्राफ़्ट</string>
+    <string name="voice_card_workout_draft">वर्कआउट का ड्राफ़्ट</string>
+    <string name="voice_card_dismiss">हटाएँ</string>
+    <string name="voice_card_totals">%1$d kcal · प्रोटीन: %2$dg · कार्ब्स: %3$dg · फैट: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · प्रोटीन: %2$dg · कार्ब्स: %3$dg · फैट: %4$dg</string>
+    <string name="voice_card_log">लॉग करें</string>
+    <string name="voice_card_logged">लॉग किया गया</string>
+    <string name="voice_card_confirm_title">पुष्टि करें</string>
+    <string name="voice_card_delete_title">हटाएं</string>
+    <string name="voice_card_confirm">सहेजें</string>
+    <string name="voice_card_saved">सहेजा गया</string>
+    <string name="voice_card_undo">पूर्ववत करें</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">%1$s लॉग करें · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">%1$s लॉग करें · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">%1$s पानी लॉग करें</string>
+    <string name="voice_change_start_fast">%1$d घंटे का उपवास शुरू करें</string>
+    <string name="voice_change_end_fast">अपना उपवास समाप्त करें · %1$s</string>
+    <string name="voice_change_weight">वज़न लॉग करें · %1$s</string>
+    <string name="voice_change_body_fat">बॉडी फ़ैट लॉग करें · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">वर्कआउट · %d व्यायाम</item>
+        <item quantity="other">वर्कआउट · %d व्यायाम</item>
+    </plurals>
+    <string name="voice_change_cardio">%1$s लॉग करें · %2$d मिनट</string>
+    <string name="voice_change_setting">%1$s को %2$s करें</string>
+    <string name="voice_setting_units">इकाइयाँ</string>
+    <string name="voice_units_metric">मीट्रिक</string>
+    <string name="voice_units_imperial">इम्पीरियल</string>
+    <string name="voice_on">चालू</string>
+    <string name="voice_off">बंद</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">पुनः प्रयास करें</string>
+    <string name="voice_action_talk_again">Fud AI से बात करें</string>
+    <string name="voice_action_see_plans">Plus और Pro प्लान देखें</string>
+    <string name="voice_action_buy_credits">क्रेडिट खरीदें</string>
+    <string name="voice_action_add_key">API कुंजी जोड़ें</string>
+    <string name="voice_action_open_ai_providers">AI सेटिंग्स</string>
+    <string name="voice_action_voice_settings">वॉइस असिस्टेंट</string>
+    <string name="voice_action_open_settings">सेटिंग्स खोलें</string>
+    <string name="voice_notice_setup_title">वॉइस असिस्टेंट</string>
+    <string name="voice_notice_setup_body">बोलकर भोजन लॉग करें, खाना और बारकोड स्कैन करें और अपनी प्रगति के बारे में पूछें। वॉइस असिस्टेंट Fud AI Plus या Pro प्लान पर, या आपकी अपनी Gemini, OpenAI, xAI या Qwen API कुंजी पर चलता है।</string>
+    <string name="voice_notice_missing_key_title">अपनी %1$s कुंजी जोड़ें</string>
+    <string name="voice_notice_missing_key_body">वॉइस असिस्टेंट %1$s पर सेट है, जिसके लिए आपकी API कुंजी चाहिए। इसे AI प्रदाता में जोड़ें या वॉइस असिस्टेंट की सेटिंग में कोई दूसरा प्रदाता चुनें।</string>
+    <string name="voice_notice_subscription_title">Fud AI वॉइस के लिए Plus या Pro प्लान चाहिए</string>
+    <string name="voice_notice_subscription_body">Fud AI की होस्ट की गई वॉइस सेवा Plus (महीने में 20 मिनट) और Pro (महीने में 100 मिनट) में शामिल है। आप अपनी Gemini, OpenAI, xAI या Qwen कुंजी भी इस्तेमाल कर सकते हैं।</string>
+    <string name="voice_notice_minutes_title">आपके वॉइस मिनट खत्म हो गए हैं</string>
+    <string name="voice_notice_minutes_body">इस महीने आपके प्लान के वॉइस मिनट खत्म हो गए हैं। बात जारी रखने के लिए क्रेडिट खरीदें (प्रति मिनट 4 क्रेडिट), या अपनी Gemini, OpenAI, xAI या Qwen कुंजी इस्तेमाल करें।</string>
+    <string name="voice_notice_limit_title">बातचीत की सीमा पूरी हो गई</string>
+    <string name="voice_notice_limit_body">यह बातचीत 15 मिनट की सीमा तक पहुँच गई। जारी रखने के लिए नई बातचीत शुरू करें।</string>
+    <string name="voice_notice_mic_title">माइक्रोफ़ोन की अनुमति चाहिए</string>
+    <string name="voice_notice_mic_body">असिस्टेंट से बात करने के लिए सिस्टम सेटिंग में Fud AI को माइक्रोफ़ोन इस्तेमाल करने की अनुमति दें।</string>
+    <string name="voice_notice_mic_busy_title">माइक्रोफ़ोन उपलब्ध नहीं है।</string>
+    <string name="voice_notice_mic_busy_body">शायद कोई दूसरा ऐप माइक्रोफ़ोन इस्तेमाल कर रहा है। उसे बंद करके फिर कोशिश करें।</string>
+    <string name="voice_notice_key_rejected_title">%1$s ने कुंजी अस्वीकार कर दी</string>
+    <string name="voice_notice_key_rejected_body">AI प्रदाता में अपनी %1$s API कुंजी, उसकी बिलिंग और लाइव वॉइस मॉडल का ऐक्सेस जाँचें।</string>
+    <string name="voice_notice_unauthorized_title">आपका प्लान सत्यापित नहीं हो सका</string>
+    <string name="voice_notice_unauthorized_body">Fud AI आपकी सदस्यता सत्यापित नहीं कर सका। सेटिंग्स → AI एक्सेस में खरीदारी पुनर्स्थापित करें आज़माएँ।</string>
+    <string name="voice_notice_busy_title">बहुत ज़्यादा अनुरोध</string>
+    <string name="voice_notice_busy_body">अभी बहुत अधिक वॉइस सत्र चल रहे हैं। एक मिनट में फिर से कोशिश करें।</string>
+    <string name="voice_notice_unavailable_title">वॉइस अभी उपलब्ध नहीं है। बाद में फिर से कोशिश करें।</string>
+    <string name="voice_notice_unavailable_body">वॉइस सेवा में कोई समस्या आई। फिर से कोशिश करें।</string>
+    <string name="voice_notice_connect_title">कनेक्ट नहीं हो सका</string>
+    <string name="voice_notice_connect_body">वॉइस सेवा से कनेक्ट नहीं हो सका। अपना कनेक्शन जाँचें और फिर से कोशिश करें।</string>
+    <string name="voice_notice_lost_title">वॉइस कनेक्शन समाप्त हो गया।</string>
+    <string name="voice_notice_lost_body">वॉइस कनेक्शन समाप्त हो गया। अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें।</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">वॉइस असिस्टेंट</string>
+    <string name="voice_settings_provider">प्रदाता</string>
+    <string name="voice_settings_model">मॉडल</string>
+    <string name="voice_settings_voice">आवाज़</string>
+    <string name="voice_settings_language">जवाब की भाषा</string>
+    <string name="voice_settings_language_auto">स्वचालित</string>
+    <string name="voice_settings_language_app">ऐप की भाषा</string>
+    <string name="voice_settings_using">%1$s का इस्तेमाल हो रहा है</string>
+    <string name="voice_settings_add_key">AI प्रदाता में अपनी %1$s कुंजी जोड़ें</string>
+    <string name="voice_settings_key_missing">कोई %1$s API कुंजी सहेजी नहीं गई</string>
+    <string name="voice_settings_needs_plan">Fud AI वॉइस के लिए Plus या Pro प्लान चाहिए</string>
+    <string name="voice_settings_needs_setup">Plus या Pro की सदस्यता लें, या Gemini, OpenAI, xAI या Qwen API कुंजी जोड़ें</string>
+    <string name="voice_settings_automatic_footer">स्वचालित, AI प्रदाता में चुने गए प्रदाता का उपयोग करता है जब वह Gemini, OpenAI, xAI या Qwen हो और उसकी कुंजी सहेजी गई हो; वरना Plus या Pro प्लान के साथ Fud AI। आपकी अपनी कुंजियाँ वही हैं जो AI प्रदाता में सहेजी गई हैं।</string>
+    <string name="voice_settings_auto_capture">फ़ोटो अपने-आप लेना</string>
+    <string name="voice_settings_auto_capture_footer">कैमरा खुला होने पर असिस्टेंट खाना दिखते ही फ़ोटो ले लेता है। Gemini, Qwen और Fud AI कैमरा लगातार देखते हैं; OpenAI हर बार जब आप बोलते हैं; xAI और GPT-Live इसे नहीं देख सकते।</string>
+    <string name="voice_settings_confirm_saves">सहेजने से पहले पुष्टि</string>
+    <string name="voice_settings_confirm_saves_footer">हर लॉग या बदलाव की मंज़ूरी के लिए एक कार्ड दिखाएँ। इसे बंद करने पर बदलाव तुरंत सेव होते हैं और 8 सेकंड तक वापस किए जा सकते हैं।</string>
+    <string name="voice_settings_save_to_coach">बातचीत कोच में सहेजें</string>
+    <string name="voice_settings_save_to_coach_footer">आप और असिस्टेंट जो कहते हैं, उसे आपकी कोच चैट में जोड़ता है।</string>
+    <string name="voice_settings_minutes_left">प्लान के बचे मिनट</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + क्रेडिट से %2$s</string>
+    <string name="voice_settings_minutes_footer">Plus में हर महीने 20 मिनट और Pro में 100 मिनट शामिल हैं (UTC)। उसके बाद वॉइस क्रेडिट इस्तेमाल करता है: हर 15 सेकंड पर 1 क्रेडिट।</string>
+    <string name="voice_settings_open_title">इसे और जल्दी खोलें</string>
+    <string name="voice_settings_open_body">होम पर गोले को टैप करें, तुरंत सेटिंग में Fud AI से बात करें टाइल जोड़ें, ऐप आइकन को दबाकर रखें और Fud AI से बात करें चुनें, या होम स्क्रीन पर विजेट जोड़ें। हर विकल्प तुरंत सुनना शुरू कर देता है।</string>
+    <string name="voice_settings_add_tile">तुरंत सेटिंग में टाइल जोड़ें</string>
+    <string name="voice_settings_add_widget">होम स्क्रीन पर विजेट जोड़ें</string>
+    <string name="voice_settings_privacy_footer">आपकी आवाज़, कैप्शन, असिस्टेंट को दिखने वाले कैमरा फ़्रेम और उसकी कार्रवाइयों के नतीजे आपके चुने प्रदाता को भेजे जाते हैं (Fud AI Plus/Pro के लिए Google)। Fud AI का सर्वर उपयोग की गणना और बिलिंग रसीदें रखता है, बातचीत की सामग्री नहीं।</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">आवाज़ सुनें</string>
+    <string name="voice_preview_stop">नमूना बंद करें</string>
+    <string name="voice_preview_preparing">नमूना तैयार हो रहा है…</string>
+    <string name="voice_preview_sample">नमस्ते, मैं आपका Fud AI सहायक हूँ। मेरी आवाज़ ऐसी है।</string>
+    <string name="voice_preview_failed">आवाज़ का यह नमूना चलाया नहीं जा सका। कृपया फिर कोशिश करें।</string>
+    <string name="voice_preview_busy">आवाज़ का नमूना सुनने से पहले अपनी मौजूदा वॉइस बातचीत समाप्त करें।</string>
+    <string name="voice_preview_usage">आपके माइक्रोफ़ोन का इस्तेमाल किए बिना एक छोटा नमूना सुनाता है। इसमें API क्रेडिट या Fud AI के वॉइस मिनट खर्च होते हैं।</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">강도</string>
+    <string name="workout_effort_value">강도: %1$s</string>
+    <string name="workout_effort_light">가벼움</string>
+    <string name="workout_effort_moderate">보통</string>
+    <string name="workout_effort_vigorous">격렬함</string>
+</resources>

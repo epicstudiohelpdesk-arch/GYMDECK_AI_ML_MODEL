@@ -1,0 +1,44 @@
+<resources>
+    <string name="returning_entry">Fud AI al eerder gebruikt?</string>
+    <string name="returning_title">Welkom terug</string>
+    <string name="returning_subtitle">Haal je maaltijden, gewicht en trainingen terug, of begin opnieuw.</string>
+    <string name="returning_pick_hint">Kies er een of allebei.</string>
+    <string name="returning_drive_title">Terugzetten vanuit Google Drive</string>
+    <string name="returning_drive_detail">Je volledige back-up: dagboek, foto’s, trainingen en instellingen, als je eerder de back-up via Drive had ingeschakeld.</string>
+    <string name="returning_drive_note">Inloggen dient alleen om je back-up te vinden. Google kan een extra waarschuwing tonen totdat de app is geverifieerd.</string>
+    <string name="returning_health_title">Importeren uit Health Connect</string>
+    <string name="returning_health_detail">Maaltijden, gewicht, vetpercentage en trainingscalorieën die Fud AI in Health Connect heeft opgeslagen. Met een back-up wordt alleen toegevoegd wat daarin ontbreekt.</string>
+    <string name="returning_health_update">Installeer of update Health Connect eerst via de Play Store.</string>
+    <string name="returning_start_fresh">Opnieuw beginnen</string>
+    <string name="returning_continue_setup">Installatie voortzetten</string>
+    <string name="returning_step_waiting">Hierna</string>
+    <string name="returning_step_drive_done">Back-up teruggezet.</string>
+    <string name="returning_step_drive_cancelled">Terugzetten geannuleerd.</string>
+    <string name="returning_step_failed">Niet voltooid</string>
+    <string name="returning_drive_checking">Google Drive controleren…</string>
+    <string name="returning_drive_confirm_title">Je back-up terugzetten?</string>
+    <string name="returning_drive_confirm_message_dated">Je back-up van %1$s vervangt alles op deze telefoon. API-sleutels zitten niet in back-ups, dus misschien moet je de jouwe opnieuw toevoegen.</string>
+    <string name="returning_drive_confirm_message">Je back-up vervangt alles op deze telefoon. API-sleutels zitten niet in back-ups, dus misschien moet je de jouwe opnieuw toevoegen.</string>
+    <string name="returning_drive_restoring">Terugzetten…</string>
+    <string name="returning_drive_no_backup">Geen Google Drive-back-up gevonden voor dit account.</string>
+    <string name="returning_drive_unreachable">Kan Google Drive niet bereiken. Controleer je verbinding en probeer het opnieuw.</string>
+    <string name="returning_drive_not_a_backup">Dit bestand is geen Fud AI-back-up.</string>
+    <string name="returning_drive_needs_update">Deze back-up komt van een nieuwere versie van Fud AI. Werk de app bij en probeer het opnieuw.</string>
+    <string name="returning_drive_setup_missing">Deze back-up bevat geen afgeronde installatie, dus die ronden we nu af.</string>
+    <string name="returning_health_importing">Importeren uit Health Connect…</string>
+    <string name="returning_health_nothing">Nog niets om te importeren uit Health Connect.</string>
+    <string name="returning_health_nothing_new">Je back-up bevatte al alles uit Health Connect.</string>
+    <string name="returning_health_denied">Health Connect heeft geen gegevens gedeeld. Je kunt het later koppelen in Instellingen.</string>
+    <string name="returning_health_read_failed">Niet alles kon uit Health Connect worden gelezen. Probeer het opnieuw.</string>
+    <string name="returning_health_imported_both">%1$s en %2$s geïmporteerd.</string>
+    <string name="returning_health_imported_one">%1$s geïmporteerd.</string>
+    <string name="returning_health_imported_other">Je Health Connect-gegevens zijn geïmporteerd.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d maaltijd</item>
+        <item quantity="other">%1$d maaltijden</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d weging</item>
+        <item quantity="other">%1$d wegingen</item>
+    </plurals>
+</resources>

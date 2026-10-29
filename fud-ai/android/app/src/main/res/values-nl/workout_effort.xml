@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">Inspanning</string>
+    <string name="workout_effort_value">Inspanning: %1$s</string>
+    <string name="workout_effort_light">Licht</string>
+    <string name="workout_effort_moderate">Gemiddeld</string>
+    <string name="workout_effort_vigorous">Intensief</string>
+</resources>

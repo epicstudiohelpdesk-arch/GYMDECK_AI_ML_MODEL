@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Məşqi təsvir edin</string>
+    <string name="workout_text_intro">Nə etdiyinizi təsvir edin. Məşq gündəliyinə əlavə etməzdən əvvəl təfərrüatları yoxlayın.</string>
+    <string name="workout_text_description">Məşqin təsviri</string>
+    <string name="workout_text_example">20 dəqiqə ip atlama, sonra 40 kq ilə 10 təkrarlı 3 set bench press</string>
+    <string name="workout_text_voice">Səs</string>
+    <string name="workout_text_preparing">Hərəkətlər axtarılır…</string>
+    <string name="workout_text_preview">Təhlil Et</string>
+    <string name="workout_text_retry">Yenidən cəhd et</string>
+    <string name="workout_text_review">Məşqi yoxla</string>
+    <string name="workout_text_date">Tarix (YYYY-MM-DD)</string>
+    <string name="workout_text_custom">Fərdi vaxtlı fəaliyyət · kalori təxmini ümumi fəaliyyət dərəcəsindən istifadə edir</string>
+    <string name="workout_text_minutes">Dəqiqə</string>
+    <string name="workout_text_reps">Təkrarlar</string>
+    <string name="workout_text_remove">Hərəkəti sil</string>
+    <string name="workout_text_calories_note">Kalorilər təxminidir. Məşqi əlavə etdikdən sonra gündəlikdə Hesabla düyməsindən istifadə edin.</string>
+    <string name="workout_text_edit">Təsviri redaktə et</string>
+    <string name="workout_text_adding">Əlavə edilir…</string>
+    <string name="workout_text_add">Gündəliyə əlavə et</string>
+    <string name="workout_text_menu">Mətn</string>
+    <string name="workout_text_set_weight">Set %1$d · %2$s</string>
+    <string name="workout_text_estimate">Təxmini sərf: %1$d kkal</string>
+    <string name="workout_text_effort">Səy (göstərilməyibsə, orta)</string>
+    <string name="workout_text_light">Yüngül</string>
+    <string name="workout_text_moderate">Orta</string>
+    <string name="workout_text_vigorous">İntensiv</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

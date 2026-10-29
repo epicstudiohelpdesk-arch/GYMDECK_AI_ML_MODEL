@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">Нагрузка</string>
+    <string name="workout_effort_value">Нагрузка: %1$s</string>
+    <string name="workout_effort_light">Лёгкая</string>
+    <string name="workout_effort_moderate">Умеренная</string>
+    <string name="workout_effort_vigorous">Высокая</string>
+</resources>

@@ -1,0 +1,1219 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Calories today in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "سعرات اليوم في ${applicationName}",
+              "كم سعرة حرارية في ${applicationName}",
+              "تغذية اليوم في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} tətbiqində bugünkü kalorilər",
+              "${applicationName} tətbiqində neçə kalori",
+              "${applicationName} tətbiqində bugünkü qidalanma"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Dnešní kalorie v ${applicationName}",
+              "Kolik kalorií v ${applicationName}",
+              "Dnešní výživa v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Kalorien heute in ${applicationName}",
+              "Wie viele Kalorien in ${applicationName}",
+              "Heutige Ernährung in ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Calories today in ${applicationName}",
+              "How many calories in ${applicationName}",
+              "Today's nutrition in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Calorías de hoy en ${applicationName}",
+              "Cuántas calorías en ${applicationName}",
+              "Nutrición de hoy en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Calories du jour dans ${applicationName}",
+              "Combien de calories dans ${applicationName}",
+              "Nutrition du jour dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} में आज की कैलोरी",
+              "${applicationName} में कितनी कैलोरी",
+              "${applicationName} में आज का पोषण"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Calorie di oggi in ${applicationName}",
+              "Quante calorie in ${applicationName}",
+              "Nutrizione di oggi in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}で今日のカロリー",
+              "${applicationName}で摂取カロリーを確認",
+              "${applicationName}で今日の栄養"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}에서 오늘 칼로리",
+              "${applicationName}에서 섭취 칼로리 확인",
+              "${applicationName}에서 오늘 영양"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Calorieën vandaag in ${applicationName}",
+              "Hoeveel calorieën in ${applicationName}",
+              "Voeding vandaag in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Dzisiejsze kalorie w ${applicationName}",
+              "Ile kalorii w ${applicationName}",
+              "Dzisiejsze odżywianie w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Calorias de hoje no ${applicationName}",
+              "Quantas calorias no ${applicationName}",
+              "Nutrição de hoje no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Caloriile de azi în ${applicationName}",
+              "Câte calorii în ${applicationName}",
+              "Nutriția de azi în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Калории за сегодня в ${applicationName}",
+              "Сколько калорий в ${applicationName}",
+              "Питание за сегодня в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} içinde bugünkü kaloriler",
+              "${applicationName} içinde kaç kalori",
+              "${applicationName} içinde bugünkü beslenme"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Калорії за сьогодні в ${applicationName}",
+              "Скільки калорій в ${applicationName}",
+              "Харчування за сьогодні в ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "在${applicationName}中查看今天的卡路里",
+              "在${applicationName}中查看摄入了多少卡路里",
+              "在${applicationName}中查看今天的营养"
+            ]
+          }
+        }
+      }
+    },
+    "Log food in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "سجّل الطعام في ${applicationName}",
+              "أضف طعامًا في ${applicationName}",
+              "تتبّع الطعام في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} tətbiqində yemək qeyd et",
+              "${applicationName} tətbiqində yemək əlavə et",
+              "${applicationName} tətbiqində yeməyi izlə"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Zapsat jídlo v ${applicationName}",
+              "Přidat jídlo v ${applicationName}",
+              "Sledovat jídlo v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Essen in ${applicationName} eintragen",
+              "Essen in ${applicationName} hinzufügen",
+              "Essen in ${applicationName} erfassen"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Log food in ${applicationName}",
+              "Add food in ${applicationName}",
+              "Track food in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Registrar comida en ${applicationName}",
+              "Añadir comida en ${applicationName}",
+              "Anotar comida en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Enregistrer un repas dans ${applicationName}",
+              "Ajouter un aliment dans ${applicationName}",
+              "Suivre un repas dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} में खाना लॉग करो",
+              "${applicationName} में खाना जोड़ो",
+              "${applicationName} में खाना ट्रैक करो"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Registra un pasto in ${applicationName}",
+              "Aggiungi cibo in ${applicationName}",
+              "Monitora il cibo in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}で食事を記録",
+              "${applicationName}で食べ物を追加",
+              "${applicationName}で食事を管理"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}에서 음식 기록",
+              "${applicationName}에서 음식 추가",
+              "${applicationName}에서 식단 추적"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Log eten in ${applicationName}",
+              "Voeg eten toe in ${applicationName}",
+              "Houd eten bij in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Dodaj posiłek w ${applicationName}",
+              "Zapisz jedzenie w ${applicationName}",
+              "Śledź jedzenie w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Registrar comida no ${applicationName}",
+              "Adicionar comida no ${applicationName}",
+              "Anotar comida no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Înregistrează mâncare în ${applicationName}",
+              "Adaugă mâncare în ${applicationName}",
+              "Urmărește mâncarea în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Записать еду в ${applicationName}",
+              "Добавить еду в ${applicationName}",
+              "Отследить еду в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} içinde yemek kaydet",
+              "${applicationName} içinde yemek ekle",
+              "${applicationName} içinde yemek takip et"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Записати їжу в ${applicationName}",
+              "Додати їжу в ${applicationName}",
+              "Відстежити їжу в ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "在${applicationName}中记录食物",
+              "在${applicationName}中添加食物",
+              "在${applicationName}中追踪饮食"
+            ]
+          }
+        }
+      }
+    },
+    "Log my weight in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "سجّل وزني في ${applicationName}",
+              "دوّن الوزن في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} tətbiqində çəkimi qeyd et",
+              "${applicationName} tətbiqində çəkini yaz"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Zapsat moji váhu v ${applicationName}",
+              "Zaznamenat váhu v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Mein Gewicht in ${applicationName} eintragen",
+              "Gewicht in ${applicationName} erfassen"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Log my weight in ${applicationName}",
+              "Record weight in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Registrar mi peso en ${applicationName}",
+              "Anotar peso en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Enregistrer mon poids dans ${applicationName}",
+              "Noter le poids dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} में मेरा वज़न लॉग करो",
+              "${applicationName} में वज़न दर्ज करो"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Registra il mio peso in ${applicationName}",
+              "Annota il peso in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}で体重を記録",
+              "${applicationName}に体重を入力"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}에서 내 체중 기록",
+              "${applicationName}에서 체중 입력"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Log mijn gewicht in ${applicationName}",
+              "Noteer gewicht in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Zapisz moją wagę w ${applicationName}",
+              "Dodaj wagę w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Registrar meu peso no ${applicationName}",
+              "Anotar peso no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Înregistrează-mi greutatea în ${applicationName}",
+              "Notează greutatea în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Записать мой вес в ${applicationName}",
+              "Внести вес в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} içinde kilomu kaydet",
+              "${applicationName} içinde kilo gir"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Записати мою вагу в ${applicationName}",
+              "Внести вагу в ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "在${applicationName}中记录我的体重",
+              "在${applicationName}中录入体重"
+            ]
+          }
+        }
+      }
+    },
+    "Quick action one in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "الإجراء السريع الأول في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} tətbiqində birinci sürətli əməliyyat"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "První rychlá akce v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Schnellaktion eins in ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Quick action one in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Acción rápida uno en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Action rapide un dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} में क्विक एक्शन एक"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Azione rapida uno in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}でクイックアクション1"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}에서 빠른 실행 1"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Snelle actie één in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Szybka akcja jeden w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Ação rápida um no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Acțiunea rapidă unu în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Быстрое действие один в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} içinde hızlı işlem bir"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Швидка дія один у ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "在${applicationName}中执行快捷操作一"
+            ]
+          }
+        }
+      }
+    },
+    "Quick action three in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "الإجراء السريع الثالث في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} tətbiqində üçüncü sürətli əməliyyat"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Třetí rychlá akce v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Schnellaktion drei in ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Quick action three in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Acción rápida tres en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Action rapide trois dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} में क्विक एक्शन तीन"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Azione rapida tre in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}でクイックアクション3"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}에서 빠른 실행 3"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Snelle actie drie in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Szybka akcja trzy w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Ação rápida três no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Acțiunea rapidă trei în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Быстрое действие три в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} içinde hızlı işlem üç"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Швидка дія три у ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "在${applicationName}中执行快捷操作三"
+            ]
+          }
+        }
+      }
+    },
+    "Quick action two in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "الإجراء السريع الثاني في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} tətbiqində ikinci sürətli əməliyyat"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Druhá rychlá akce v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Schnellaktion zwei in ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Quick action two in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Acción rápida dos en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Action rapide deux dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} में क्विक एक्शन दो"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Azione rapida due in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}でクイックアクション2"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}에서 빠른 실행 2"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Snelle actie twee in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Szybka akcja dwa w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Ação rápida dois no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Acțiunea rapidă doi în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Быстрое действие два в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} içinde hızlı işlem iki"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Швидка дія два у ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "在${applicationName}中执行快捷操作二"
+            ]
+          }
+        }
+      }
+    },
+    "Talk to ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "تحدث إلى ${applicationName}",
+              "ابدأ دردشة صوتية في ${applicationName}"
+            ]
+          }
+        },
+        "az" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ilə danış",
+              "${applicationName} ilə səsli söhbət başlat"
+            ]
+          }
+        },
+        "cs" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Mluvit s ${applicationName}",
+              "Spustit hlasový chat v ${applicationName}"
+            ]
+          }
+        },
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Mit ${applicationName} sprechen",
+              "Sprachchat in ${applicationName} starten"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Talk to ${applicationName}",
+              "Start a voice chat in ${applicationName}"
+            ]
+          }
+        },
+        "es" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Hablar con ${applicationName}",
+              "Iniciar un chat de voz en ${applicationName}"
+            ]
+          }
+        },
+        "fr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Parler à ${applicationName}",
+              "Démarrer une conversation vocale dans ${applicationName}"
+            ]
+          }
+        },
+        "hi" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} से बात करो",
+              "${applicationName} में वॉइस चैट शुरू करो"
+            ]
+          }
+        },
+        "it" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Parla con ${applicationName}",
+              "Avvia una chat vocale in ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}と話す",
+              "${applicationName}で音声チャットを開始"
+            ]
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}와 대화하기",
+              "${applicationName}에서 음성 채팅 시작"
+            ]
+          }
+        },
+        "nl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Praat met ${applicationName}",
+              "Start een spraakgesprek in ${applicationName}"
+            ]
+          }
+        },
+        "pl" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Porozmawiaj z ${applicationName}",
+              "Rozpocznij czat głosowy w ${applicationName}"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Falar com o ${applicationName}",
+              "Iniciar um chat de voz no ${applicationName}"
+            ]
+          }
+        },
+        "ro" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Vorbește cu ${applicationName}",
+              "Pornește un chat vocal în ${applicationName}"
+            ]
+          }
+        },
+        "ru" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Поговорить с ${applicationName}",
+              "Начать голосовой чат в ${applicationName}"
+            ]
+          }
+        },
+        "tr" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ile konuş",
+              "${applicationName} içinde sesli sohbet başlat"
+            ]
+          }
+        },
+        "uk" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Поговорити з ${applicationName}",
+              "Почати голосовий чат у ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "与${applicationName}对话",
+              "在${applicationName}中开始语音聊天"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Neu: Live Voice</string>
+    <string name="whats_new_body">Sprich mit Fud AI, um Mahlzeiten zu erfassen, Barcodes zu scannen und deinen Fortschritt zu prüfen.</string>
+    <string name="whats_new_tap_orb">Tippe auf die Kugel auf der Startseite, um loszulegen.</string>
+    <string name="whats_new_access_line">In Plus und Pro enthalten – oder nutze deinen eigenen KI-Schlüssel.</string>
+    <string name="whats_new_video_cd">Demovideo zu Live Voice</string>
+    <string name="whats_new_sound_on">Ton einschalten</string>
+    <string name="whats_new_sound_off">Ton ausschalten</string>
+    <string name="whats_new_access_title_setup">Hol dir Live Voice</string>
+    <string name="whats_new_access_title_plans">Wechsle zu Plus oder Pro</string>
+    <string name="whats_new_access_body_setup">Wähle Plus oder Pro, dann betreiben wir die KI für dich – oder füge deinen eigenen API-Schlüssel von Gemini, OpenAI, xAI oder Qwen hinzu.</string>
+    <string name="whats_new_access_body_key_only">Füge deinen eigenen API-Schlüssel von Gemini, OpenAI, xAI oder Qwen hinzu, um Live Voice zu nutzen.</string>
+    <string name="whats_new_access_body_plans">Plus und Pro betreiben die KI für dich – mit Live Voice und ganz ohne API-Schlüssel. Mit eigenen Schlüsseln bleibt Fud AI kostenlos.</string>
+    <string name="whats_new_support_body">Fud AI ist kostenlos und wird von einem einzigen Entwickler gebaut. Eine Bewertung, eine Empfehlung oder ein kleines Trinkgeld hilft, dass es weitergeht.</string>
+    <string name="whats_new_community_title">Tritt der Fud AI-Community bei</string>
+    <string name="whats_new_community_body">Hol dir Hilfe, teile Ideen und triff andere Fud AI-Nutzer auf Discord.</string>
+    <string name="whats_new_next">Weiter</string>
+    <string name="whats_new_previous">Zurück</string>
+    <string name="notif_whats_new_title">Neu in Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Sprich, um Mahlzeiten zu erfassen, Barcodes zu scannen und deinen Fortschritt zu prüfen. Tippe, um die Neuheiten zu sehen.</string>
+</resources>

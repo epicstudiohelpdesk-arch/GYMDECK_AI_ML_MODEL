@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Zacznij od rutyny</string>
+    <string name="workout_routine_save">Zapisz jako rutynę</string>
+    <string name="workout_routine_save_title">Zapisz rutynę</string>
+    <string name="workout_routine_name">Nazwa rutyny</string>
+    <string name="workout_routine_save_message">Zapisuje ćwiczenia z tego dnia wraz z zaplanowanymi seriami, powtórzeniami i ciężarami.</string>
+    <string name="workout_routines_title">Rutyny</string>
+    <string name="workout_routines_empty_title">Brak rutyn</string>
+    <string name="workout_routines_empty_message">Zapisz trening, a potem wybierz Zapisz jako rutynę w menu +.</string>
+    <string name="workout_routines_footer">Dodaje ćwiczenia z rutyny do wybranego dnia. Już zapisane serie pozostają bez zmian.</string>
+    <string name="workout_routine_rename">Zmień nazwę</string>
+    <string name="workout_routine_rename_title">Zmień nazwę rutyny</string>
+    <string name="workout_routine_delete_title">Usunąć rutynę?</string>
+    <string name="workout_routine_delete_message">Już zapisane treningi zostaną zachowane.</string>
+</resources>

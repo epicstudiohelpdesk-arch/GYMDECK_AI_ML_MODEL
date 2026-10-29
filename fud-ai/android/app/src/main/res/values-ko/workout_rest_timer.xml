@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">휴식 타이머</string>
+    <string name="settings_rest_timer_footer">오늘 세트를 기록하면 카운트다운이 시작됩니다. 알림이 켜져 있으면 앱이 백그라운드에 있을 때도 휴식이 끝나면 Fud AI가 알려 드립니다.</string>
+    <string name="workout_rest_off">끔</string>
+    <string name="workout_rest_label">휴식</string>
+    <string name="workout_rest_add_15">+15초</string>
+    <string name="workout_rest_add_15_description">15초 추가</string>
+    <string name="workout_rest_skip">건너뛰기</string>
+    <string name="workout_rest_skip_description">휴식 건너뛰기</string>
+    <string name="workout_rest_start_after_set">세트 %1$d 후 휴식 시작</string>
+    <string name="notif_channel_workout_rest">휴식 타이머</string>
+    <string name="notif_channel_workout_rest_desc">운동 중 휴식 시간이 끝나면 알려 줍니다.</string>
+    <string name="notif_workout_rest_title">휴식 종료</string>
+    <string name="notif_workout_rest_text">%1$s 다음 세트를 시작할 시간입니다.</string>
+</resources>

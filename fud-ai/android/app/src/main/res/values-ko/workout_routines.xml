@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">루틴으로 시작</string>
+    <string name="workout_routine_save">루틴으로 저장</string>
+    <string name="workout_routine_save_title">루틴 저장</string>
+    <string name="workout_routine_name">루틴 이름</string>
+    <string name="workout_routine_save_message">이 날의 운동을 계획한 세트, 반복 횟수, 무게와 함께 저장합니다.</string>
+    <string name="workout_routines_title">루틴</string>
+    <string name="workout_routines_empty_title">아직 루틴이 없습니다</string>
+    <string name="workout_routines_empty_message">운동을 기록한 다음 + 메뉴에서 ‘루틴으로 저장’을 선택하세요.</string>
+    <string name="workout_routines_footer">루틴의 운동을 선택한 날에 추가합니다. 이미 기록한 세트는 그대로 유지됩니다.</string>
+    <string name="workout_routine_rename">이름 변경</string>
+    <string name="workout_routine_rename_title">루틴 이름 변경</string>
+    <string name="workout_routine_delete_title">루틴을 삭제할까요?</string>
+    <string name="workout_routine_delete_message">이미 기록한 운동은 유지됩니다.</string>
+</resources>

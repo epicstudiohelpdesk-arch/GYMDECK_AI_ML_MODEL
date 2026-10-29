@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">वर्कआउट का वर्णन करें</string>
+    <string name="workout_text_intro">बताएं कि आपने क्या किया। वर्कआउट डायरी में जोड़ने से पहले विवरण जाँच लें।</string>
+    <string name="workout_text_description">वर्कआउट का विवरण</string>
+    <string name="workout_text_example">20 मिनट रस्सी कूदना, फिर 40 kg पर 10 बेंच प्रेस के 3 सेट</string>
+    <string name="workout_text_voice">आवाज़</string>
+    <string name="workout_text_preparing">एक्सरसाइज़ खोजी जा रही हैं…</string>
+    <string name="workout_text_preview">विश्लेषण करें</string>
+    <string name="workout_text_retry">फिर से कोशिश करें</string>
+    <string name="workout_text_review">वर्कआउट की समीक्षा करें</string>
+    <string name="workout_text_date">तारीख (YYYY-MM-DD)</string>
+    <string name="workout_text_custom">कस्टम समयबद्ध गतिविधि · कैलोरी अनुमान सामान्य गतिविधि दर का उपयोग करता है</string>
+    <string name="workout_text_minutes">मिनट</string>
+    <string name="workout_text_reps">रेप्स</string>
+    <string name="workout_text_remove">एक्सरसाइज़ हटाएं</string>
+    <string name="workout_text_calories_note">कैलोरी अनुमानित हैं। वर्कआउट जोड़ने के बाद डायरी में गणना करें का उपयोग करें।</string>
+    <string name="workout_text_edit">विवरण संपादित करें</string>
+    <string name="workout_text_adding">जोड़ा जा रहा है…</string>
+    <string name="workout_text_add">डायरी में जोड़ें</string>
+    <string name="workout_text_menu">टेक्स्ट</string>
+    <string name="workout_text_set_weight">सेट %1$d · %2$s</string>
+    <string name="workout_text_estimate">अनुमानित बर्न: %1$d kcal</string>
+    <string name="workout_text_effort">प्रयास (न बताने पर मध्यम)</string>
+    <string name="workout_text_light">हल्का</string>
+    <string name="workout_text_moderate">मध्यम</string>
+    <string name="workout_text_vigorous">तीव्र</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Novidade: Live Voice</string>
+    <string name="whats_new_body">Fale com o Fud AI para registrar refeições, escanear códigos de barras e acompanhar seu progresso.</string>
+    <string name="whats_new_tap_orb">Toque na esfera no Início para começar.</string>
+    <string name="whats_new_access_line">Incluído no Plus e no Pro, ou use sua própria chave de IA.</string>
+    <string name="whats_new_video_cd">Vídeo de demonstração do Live Voice</string>
+    <string name="whats_new_sound_on">Ativar som</string>
+    <string name="whats_new_sound_off">Desativar som</string>
+    <string name="whats_new_access_title_setup">Tenha o Live Voice</string>
+    <string name="whats_new_access_title_plans">Mude para o Plus ou o Pro</string>
+    <string name="whats_new_access_body_setup">Escolha o Plus ou o Pro e nós rodamos a IA para você, ou adicione sua própria chave de API do Gemini, OpenAI, xAI ou Qwen.</string>
+    <string name="whats_new_access_body_key_only">Adicione sua própria chave de API do Gemini, OpenAI, xAI ou Qwen para começar a usar o Live Voice.</string>
+    <string name="whats_new_access_body_plans">O Plus e o Pro rodam a IA para você, com o Live Voice incluído e sem chaves de API para gerenciar. Com suas próprias chaves, o Fud AI continua gratuito.</string>
+    <string name="whats_new_support_body">O Fud AI é gratuito e feito por um único desenvolvedor. Uma avaliação, um compartilhamento ou uma pequena gorjeta ajudam a mantê-lo.</string>
+    <string name="whats_new_community_title">Entre na comunidade do Fud AI</string>
+    <string name="whats_new_community_body">Peça ajuda, compartilhe ideias e conheça outros usuários do Fud AI no Discord.</string>
+    <string name="whats_new_next">Próximo</string>
+    <string name="whats_new_previous">Anterior</string>
+    <string name="notif_whats_new_title">Novidade no Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Fale para registrar refeições, escanear códigos de barras e acompanhar seu progresso. Toque para ver as novidades.</string>
+</resources>

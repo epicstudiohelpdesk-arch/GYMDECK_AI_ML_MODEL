@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Começar de uma rotina</string>
+    <string name="workout_routine_save">Salvar como rotina</string>
+    <string name="workout_routine_save_title">Salvar rotina</string>
+    <string name="workout_routine_name">Nome da rotina</string>
+    <string name="workout_routine_save_message">Salva os exercícios deste dia com as séries, repetições e cargas planejadas.</string>
+    <string name="workout_routines_title">Rotinas</string>
+    <string name="workout_routines_empty_title">Nenhuma rotina ainda</string>
+    <string name="workout_routines_empty_message">Registre um treino e escolha Salvar como rotina no menu +.</string>
+    <string name="workout_routines_footer">Adiciona os exercícios da rotina ao dia selecionado. As séries que você já registrou continuam como estão.</string>
+    <string name="workout_routine_rename">Renomear</string>
+    <string name="workout_routine_rename_title">Renomear rotina</string>
+    <string name="workout_routine_delete_title">Apagar rotina?</string>
+    <string name="workout_routine_delete_message">Os treinos que você já registrou são mantidos.</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Почати за шаблоном</string>
+    <string name="workout_routine_save">Зберегти як шаблон</string>
+    <string name="workout_routine_save_title">Зберегти шаблон</string>
+    <string name="workout_routine_name">Назва шаблону</string>
+    <string name="workout_routine_save_message">Зберігає вправи цього дня із запланованими підходами, повтореннями та вагою.</string>
+    <string name="workout_routines_title">Шаблони</string>
+    <string name="workout_routines_empty_title">Шаблонів поки немає</string>
+    <string name="workout_routines_empty_message">Запишіть тренування, потім виберіть «Зберегти як шаблон» у меню +.</string>
+    <string name="workout_routines_footer">Додає вправи із шаблону до вибраного дня. Уже записані підходи не зміняться.</string>
+    <string name="workout_routine_rename">Перейменувати</string>
+    <string name="workout_routine_rename_title">Перейменувати шаблон</string>
+    <string name="workout_routine_delete_title">Видалити шаблон?</string>
+    <string name="workout_routine_delete_message">Уже записані тренування збережуться.</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Importovat historii výživy</string>
+    <string name="health_import_action">Importovat</string>
+    <string name="health_import_description">Přenes záznamy jídel z jiné aplikace do svého deníku. Zobraz náhled dostupných záznamů a pak vyber jednu zdrojovou aplikaci, aby se sdílené záznamy nepočítaly dvakrát.</string>
+    <string name="health_import_from">Od (YYYY-MM-DD)</string>
+    <string name="health_import_to">Do (YYYY-MM-DD)</string>
+    <string name="health_import_history_hint">Bez přístupu k historii vyber data z posledních 30 dnů. Starší záznamy vyžadují přístup k historii na podporovaném zařízení.</string>
+    <string name="health_import_grant">Udělit přístup k výživě a historii</string>
+    <string name="health_import_access_result">Nastavení přístupu bylo aktualizováno. Zobraz náhled znovu a zkontroluj dostupné záznamy.</string>
+    <string name="health_import_access_needed">Povol v Health Connect čtení výživy a pak znovu zobraz náhled.</string>
+    <string name="health_import_invalid_dates">Zadej platná data ve formátu YYYY-MM-DD. Datum konce musí být stejné jako datum začátku nebo pozdější a nejpozději dnešní.</string>
+    <string name="health_import_history_needed">Toto období vyžaduje přístup k historii. Uděl ho na podporovaném zařízení, nebo vyber data z posledních 30 dnů.</string>
+    <string name="health_import_preview">Zobrazit náhled dostupných záznamů</string>
+    <string name="health_import_failed">Import se nepodařilo dokončit. Zkontroluj přístup k Health Connect a zkus to znovu.</string>
+    <string name="health_import_empty">V tomto období nebyly nalezeny žádné nové záznamy výživy z jiných aplikací. Zkontroluj, zda zdrojová aplikace sdílí výživu s Health Connect. Dříve importované záznamy se přeskočí, včetně těch, které jsi z deníku odstranil.</string>
+    <string name="health_import_count">Nové záznamy: %1$d · %2$d kcal</string>
+    <string name="health_import_unnamed">Importované jídlo</string>
+    <string name="health_import_local_only">Jde o místní kopie. Úpravy a smazání zůstanou ve Fud AI. Opakovaný import přeskočí dříve importované záznamy; neaktualizuje je.</string>
+    <string name="health_import_done">Do deníku importováno záznamů: %1$d.</string>
+    <string name="health_import_close">Zavřít</string>
+</resources>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="returning_entry">Fud AI-dan əvvəl istifadə etmisiniz?</string>
+    <string name="returning_title">Yenidən xoş gəlmisiniz</string>
+    <string name="returning_subtitle">Yeməklərinizi, çəkinizi və məşqlərinizi geri qaytarın və ya sıfırdan başlayın.</string>
+    <string name="returning_pick_hint">Birini və ya hər ikisini seçin.</string>
+    <string name="returning_drive_title">Google Drive-dan bərpa et</string>
+    <string name="returning_drive_detail">Tam ehtiyat nüsxəniz: gündəlik, fotolar, məşqlər və ayarlar, əgər əvvəllər Drive ehtiyat nüsxəsini aktiv etmisinizsə.</string>
+    <string name="returning_drive_note">Giriş yalnız ehtiyat nüsxənizi tapmaq üçün istifadə olunur. Tətbiq təsdiqlənənə qədər Google əlavə xəbərdarlıq göstərə bilər.</string>
+    <string name="returning_health_title">Health Connect-dən idxal et</string>
+    <string name="returning_health_detail">Fud AI-ın Health Connect-ə saxladığı yeməklər, çəki, bədən yağı və məşq kaloriləri. Ehtiyat nüsxə ilə birlikdə yalnız onda çatışmayanlar əlavə olunur.</string>
+    <string name="returning_health_update">Əvvəlcə Health Connect-i Play Store-dan quraşdırın və ya yeniləyin.</string>
+    <string name="returning_start_fresh">Sıfırdan başla</string>
+    <string name="returning_continue_setup">Quraşdırmaya davam et</string>
+    <string name="returning_step_waiting">Növbəti</string>
+    <string name="returning_step_drive_done">Ehtiyat nüsxə bərpa edildi.</string>
+    <string name="returning_step_drive_cancelled">Bərpa ləğv edildi.</string>
+    <string name="returning_step_failed">Tamamlanmadı</string>
+    <string name="returning_drive_checking">Google Drive yoxlanılır…</string>
+    <string name="returning_drive_confirm_title">Ehtiyat nüsxəniz bərpa edilsin?</string>
+    <string name="returning_drive_confirm_message_dated">%1$s tarixli ehtiyat nüsxəniz bu telefondakı hər şeyi əvəz edəcək. API açarları ehtiyat nüsxələrə daxil deyil, ona görə açarınızı yenidən əlavə etməli ola bilərsiniz.</string>
+    <string name="returning_drive_confirm_message">Ehtiyat nüsxəniz bu telefondakı hər şeyi əvəz edəcək. API açarları ehtiyat nüsxələrə daxil deyil, ona görə açarınızı yenidən əlavə etməli ola bilərsiniz.</string>
+    <string name="returning_drive_restoring">Bərpa edilir…</string>
+    <string name="returning_drive_no_backup">Bu hesab üçün Google Drive ehtiyat nüsxəsi tapılmadı.</string>
+    <string name="returning_drive_unreachable">Google Drive-a qoşulmaq mümkün olmadı. Bağlantınızı yoxlayın və yenidən cəhd edin.</string>
+    <string name="returning_drive_not_a_backup">Bu fayl Fud AI ehtiyat nüsxəsi deyil.</string>
+    <string name="returning_drive_needs_update">Bu ehtiyat nüsxə Fud AI-ın daha yeni versiyasındandır. Tətbiqi yeniləyin, sonra yenidən cəhd edin.</string>
+    <string name="returning_drive_setup_missing">Bu ehtiyat nüsxədə tamamlanmış quraşdırma yoxdur, ona görə də indi onu tamamlayaq.</string>
+    <string name="returning_health_importing">Health Connect-dən idxal edilir…</string>
+    <string name="returning_health_nothing">Health Connect-də hələ idxal ediləcək heç nə yoxdur.</string>
+    <string name="returning_health_nothing_new">Ehtiyat nüsxənizdə Health Connect-dəki hər şey artıq var idi.</string>
+    <string name="returning_health_denied">Health Connect heç bir məlumat paylaşmadı. Onu sonra Parametrlər bölməsində qoşa bilərsiniz.</string>
+    <string name="returning_health_read_failed">Health Connect-dən bütün məlumatları oxumaq alınmadı. Yenidən cəhd edin.</string>
+    <string name="returning_health_imported_both">İdxal edildi: %1$s və %2$s.</string>
+    <string name="returning_health_imported_one">İdxal edildi: %1$s.</string>
+    <string name="returning_health_imported_other">Health Connect məlumatlarınız idxal edildi.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d yemək</item>
+        <item quantity="other">%1$d yemək</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d çəki ölçümü</item>
+        <item quantity="other">%1$d çəki ölçümü</item>
+    </plurals>
+</resources>

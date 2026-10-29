@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">क्रम बदलें</string>
+    <string name="workout_move_up">ऊपर ले जाएँ</string>
+    <string name="workout_move_down">नीचे ले जाएँ</string>
+    <string name="workout_move_up_named">%1$s को ऊपर ले जाएँ</string>
+    <string name="workout_move_down_named">%1$s को नीचे ले जाएँ</string>
+</resources>

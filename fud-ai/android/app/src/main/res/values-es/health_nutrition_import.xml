@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Importar historial de nutrición</string>
+    <string name="health_import_action">Importar</string>
+    <string name="health_import_description">Trae registros de comida de otra app a tu diario. Previsualiza los registros disponibles y luego elige una sola app de origen para no contar dos veces los registros compartidos.</string>
+    <string name="health_import_from">Desde (AAAA-MM-DD)</string>
+    <string name="health_import_to">Hasta (AAAA-MM-DD)</string>
+    <string name="health_import_history_hint">Sin acceso al historial, elige fechas de los últimos 30 días. Los registros más antiguos requieren acceso al historial en un dispositivo compatible.</string>
+    <string name="health_import_grant">Conceder acceso a nutrición e historial</string>
+    <string name="health_import_access_result">Ajustes de acceso actualizados. Vuelve a previsualizar para comprobar los registros disponibles.</string>
+    <string name="health_import_access_needed">Permite el acceso de lectura de nutrición en Health Connect y vuelve a previsualizar.</string>
+    <string name="health_import_invalid_dates">Introduce fechas válidas en formato AAAA-MM-DD. La fecha final debe ser igual o posterior a la inicial y no puede ser posterior a hoy.</string>
+    <string name="health_import_history_needed">Este intervalo necesita acceso al historial. Concédelo en un dispositivo compatible o elige fechas de los últimos 30 días.</string>
+    <string name="health_import_preview">Previsualizar registros disponibles</string>
+    <string name="health_import_failed">No se pudo completar la importación. Revisa el acceso a Health Connect y vuelve a intentarlo.</string>
+    <string name="health_import_empty">No se encontraron registros de nutrición nuevos de otras apps en este intervalo. Comprueba que tu app de origen comparte nutrición con Health Connect. Los registros importados antes se omiten, incluidos los que eliminaste de tu diario.</string>
+    <string name="health_import_count">%1$d registros nuevos · %2$d kcal</string>
+    <string name="health_import_unnamed">Comida importada</string>
+    <string name="health_import_local_only">Son copias locales. Las ediciones y eliminaciones se quedan en Fud AI. Repetir una importación omite los registros ya importados; no los actualiza.</string>
+    <string name="health_import_done">Se importaron %1$d registros a tu diario.</string>
+    <string name="health_import_close">Cerrar</string>
+</resources>

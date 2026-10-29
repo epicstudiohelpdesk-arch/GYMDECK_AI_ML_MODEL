@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">Reordonează</string>
+    <string name="workout_move_up">Mută în sus</string>
+    <string name="workout_move_down">Mută în jos</string>
+    <string name="workout_move_up_named">Mută %1$s în sus</string>
+    <string name="workout_move_down_named">Mută %1$s în jos</string>
+</resources>

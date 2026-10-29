@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Nieuw: Live Voice</string>
+    <string name="whats_new_body">Praat met Fud AI om maaltijden te loggen, barcodes te scannen en je voortgang te bekijken.</string>
+    <string name="whats_new_tap_orb">Tik op de bol op Home om te beginnen.</string>
+    <string name="whats_new_access_line">Inbegrepen bij Plus en Pro, of gebruik je eigen AI-sleutel.</string>
+    <string name="whats_new_video_cd">Demovideo van Live Voice</string>
+    <string name="whats_new_sound_on">Geluid aan</string>
+    <string name="whats_new_sound_off">Geluid uit</string>
+    <string name="whats_new_access_title_setup">Krijg Live Voice</string>
+    <string name="whats_new_access_title_plans">Stap over op Plus of Pro</string>
+    <string name="whats_new_access_body_setup">Kies Plus of Pro en wij draaien de AI voor je, of voeg je eigen API-sleutel van Gemini, OpenAI, xAI of Qwen toe.</string>
+    <string name="whats_new_access_body_key_only">Voeg je eigen API-sleutel van Gemini, OpenAI, xAI of Qwen toe om Live Voice te gebruiken.</string>
+    <string name="whats_new_access_body_plans">Plus en Pro draaien de AI voor je, inclusief Live Voice en zonder API-sleutels om te beheren. Met je eigen sleutels blijft Fud AI gratis.</string>
+    <string name="whats_new_support_body">Fud AI is gratis en wordt door één ontwikkelaar gemaakt. Een beoordeling, een deel of een kleine fooi helpt om het draaiende te houden.</string>
+    <string name="whats_new_community_title">Word lid van de Fud AI-community</string>
+    <string name="whats_new_community_body">Krijg hulp, deel ideeën en ontmoet andere Fud AI-gebruikers op Discord.</string>
+    <string name="whats_new_next">Volgende</string>
+    <string name="whats_new_previous">Vorige</string>
+    <string name="notif_whats_new_title">Nieuw in Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Praat om maaltijden te loggen, barcodes te scannen en je voortgang te bekijken. Tik om te zien wat er nieuw is.</string>
+</resources>

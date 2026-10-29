@@ -1,0 +1,117 @@
+name: iOS tests
+
+# Unit (calorietrackerTests) and UI (calorietrackerUITests) tests on an iOS
+# Simulator. Nothing here signs, archives, uploads, or touches App Store Connect.
+# ios-release.yml calls this workflow so a tagged release runs these tests before
+# anything is built. scripts/test-ios.sh fails when either bundle ran no tests
+# (skipped tests do not count).
+on:
+  pull_request:
+    paths:
+      - 'ios/**'
+      - 'shared/workout-vectors/**'
+      - 'local-models/legal/**'
+      - 'scripts/test-ios.sh'
+      - 'scripts/ci/ensure_metal_toolchain.sh'
+      - 'scripts/ci/check_ios_test_counts.py'
+      - 'scripts/ci/test_check_ios_test_counts.py'
+      - '.github/workflows/ios-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ios/**'
+      - 'shared/workout-vectors/**'
+      - 'local-models/legal/**'
+      - 'scripts/test-ios.sh'
+      - 'scripts/ci/ensure_metal_toolchain.sh'
+      - 'scripts/ci/check_ios_test_counts.py'
+      - 'scripts/ci/test_check_ios_test_counts.py'
+      - '.github/workflows/ios-tests.yml'
+  schedule:
+    - cron: '43 3 * * *'
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+# A newer push to a pull request supersedes its older run. Pushes to main,
+# schedules, manual runs and release callers each keep their own run.
+concurrency:
+  group: ios-tests-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  ios-tests:
+    # LiteRT-LM ships an arm64 simulator library, not an Intel simulator library.
+    runs-on: xcode-27
+    timeout-minutes: 60
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.app/Contents/Developer
+      IOS_TEST_PACKAGES: ${{ github.workspace }}/.ios-test-packages
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /ios/
+            /local-models/legal/
+            /scripts/test-ios.sh
+            /scripts/ci/ensure_metal_toolchain.sh
+            /scripts/ci/check_ios_test_counts.py
+            /scripts/ci/test_check_ios_test_counts.py
+            /shared/workout-vectors/sample-pack.txt
+            /shared/workout-vectors/exercise-visual-manifest.json
+      - name: Check out only the workout sample frames
+        # Keep the 1.2 GB full image corpus out of the runner checkout.
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, subprocess
+          patterns = []
+          for line in pathlib.Path('shared/workout-vectors/sample-pack.txt').read_text().splitlines():
+              exercise = line.split('#', 1)[0].strip()
+              if not exercise:
+                  continue
+              if not re.fullmatch(r'[A-Za-z0-9_-]+', exercise):
+                  raise SystemExit('Invalid exercise name in sample pack')
+              for gender in ('male', 'female'):
+                  for frame in range(4):
+                      patterns.append(f'/shared/workout-vectors/{exercise}_{gender}_v2_{frame}.png')
+          if not patterns:
+              raise SystemExit('Workout sample pack must not be empty')
+          subprocess.run(['git', 'sparse-checkout', 'add', '--stdin'],
+                         input='\n'.join(patterns) + '\n', text=True, check=True)
+          PY
+      - name: Test the zero-test guard (offline)
+        run: python3 -m unittest scripts/ci/test_check_ios_test_counts.py
+      - name: Ensure the Metal shader compiler is available
+        run: bash scripts/ci/ensure_metal_toolchain.sh
+      - name: Cache pinned Swift packages
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .ios-test-packages
+          key: ios-spm-${{ runner.os }}-${{ runner.arch }}-xcode27-${{ hashFiles('ios/**/Package.resolved', 'ios/Packages/**/Package.swift') }}
+      - name: Restore the compilation cache
+        # Compiler outputs only, reused for unchanged files; every test still runs.
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ runner.temp }}/ios-compilation-cache
+          key: ios-ccache-${{ runner.os }}-${{ runner.arch }}-xcode27-${{ github.sha }}
+          restore-keys: |
+            ios-ccache-${{ runner.os }}-${{ runner.arch }}-xcode27-
+      - name: Build and run unit and UI tests
+        env:
+          IOS_TEST_RESULTS: ${{ runner.temp }}/ios-test-results
+          IOS_TEST_DERIVED_DATA: ${{ runner.temp }}/ios-test-build
+          IOS_COMPILATION_CACHE: ${{ runner.temp }}/ios-compilation-cache
+        run: bash scripts/test-ios.sh
+      - name: Retain test results and failure screenshots
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ios-test-results
+          path: ${{ runner.temp }}/ios-test-results
+          if-no-files-found: warn
+          retention-days: 7

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Timer di recupero</string>
+    <string name="settings_rest_timer_footer">Avvia un conto alla rovescia quando registri una serie oggi. Con le notifiche attive, Fud AI ti avvisa quando il recupero finisce in background.</string>
+    <string name="workout_rest_off">Disattivo</string>
+    <string name="workout_rest_label">Recupero</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">Aggiungi 15 secondi</string>
+    <string name="workout_rest_skip">Salta</string>
+    <string name="workout_rest_skip_description">Salta recupero</string>
+    <string name="workout_rest_start_after_set">Avvia recupero dopo la serie %1$d</string>
+    <string name="notif_channel_workout_rest">Timer di recupero</string>
+    <string name="notif_channel_workout_rest_desc">Avvisa quando finisce un recupero dell’allenamento.</string>
+    <string name="notif_workout_rest_title">Recupero finito</string>
+    <string name="notif_workout_rest_text">È ora della prossima serie di %1$s.</string>
+</resources>

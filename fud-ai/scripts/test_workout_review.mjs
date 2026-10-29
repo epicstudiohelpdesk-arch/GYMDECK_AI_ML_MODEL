@@ -1,0 +1,99 @@
+#!/usr/bin/env node
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import test from 'node:test';
+const html=fs.readFileSync(new URL('./workout_review.html',import.meta.url),'utf8');
+const source=html.match(/<script>([\s\S]*?)<\/script>/i)[1].replace(/refresh\(\);clock\(\);watchResults\(\);\s*$/,'');
+function harness(){
+ const jobs=[],timers=new Map(),listeners={};let tid=0;
+ class Element{constructor(){this.children=[];this.value='';}append(...a){this.children.push(...a)}replaceChildren(...a){this.children=a}removeAttribute(k){delete this[k]}click(){}}
+ const ids=['previous','next','play','step','speed','refresh','export','approve','repair','keep','clear','notes','summary','error','position','name','status','findings','views','exercise','empty','load-state','decision-state','frame-label'];
+ const controls=Object.fromEntries(ids.map(k=>[k,new Element()]));
+ const document={hidden:false,getElementById:k=>controls[k],createElement:()=>new Element(),addEventListener:(k,v)=>listeners[k]=v};
+ class Image extends Element{constructor(){super();this.naturalWidth=1024}decode(){return new Promise((resolve,reject)=>jobs.push({image:this,resolve,reject}))}}
+ const context=vm.createContext({document,Image,matchMedia:()=>({matches:false}),fetch:async(url,options)=>({ok:true,json:async()=>({saved:JSON.parse(options.body)})}),localStorage:{getItem:()=>null,setItem(){}},setInterval:fn=>{timers.set(++tid,fn);return tid},clearInterval:id=>timers.delete(id),setTimeout(){},URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob});
+ vm.runInContext(source,context);
+ const run=s=>vm.runInContext(s,context);
+ run("data={batch:'batch-01',count:2,rows:['First','Second'].map(id=>({id,index:1,status:'Review',findings:[],available:8,humanApproved:false,sources:Array.from({length:8},(_,i)=>'/original/'+id+'/'+i),candidates:Array.from({length:8},(_,i)=>'/candidate/'+id+'/'+i),sourceHashes:Array.from({length:8},(_,i)=>'s'+i),hashes:Array.from({length:8},(_,i)=>'c'+i)}))};selectedId='First';");
+ const settle=async()=>{await new Promise(resolve=>setImmediate(resolve))};
+ return {run,jobs,controls,document,listeners,timers,settle};
+}
+test('one exercise has four simultaneous gender/background panels and no selectors',()=>{
+ const h=harness();h.run('renderExercise()');
+ assert.equal(h.run('panels.length'),4);assert.equal(h.jobs.length,4);
+ assert.deepEqual(h.jobs.map(j=>j.image.src),['/original/First/0','/candidate/First/0','/original/First/4','/candidate/First/4']);
+ assert.equal((html.match(/<select\b/g)||[]).length,0);
+ assert.match(html,/header\{background:#181c24/);assert.doesNotMatch(html,/position:sticky/);
+});
+test('previous approve and next appear once together in the right-aligned navigation',()=>{
+ const nav=html.match(/<nav class="exercise-navigation"[\s\S]*?<\/nav>/)[0];
+ for(const id of ['previous','approve','next']){
+  assert.equal((html.match(new RegExp('id="'+id+'"','g'))||[]).length,1);
+  assert.ok(nav.includes('id="'+id+'"'));
+ }
+ assert.ok(nav.indexOf('id="previous"')<nav.indexOf('id="approve"'));
+ assert.ok(nav.indexOf('id="approve"')<nav.indexOf('id="next"'));
+ assert.match(html,/\.exercise-navigation\{[^}]*justify-content:flex-end/);
+});
+test('all panels wait for the matched four-image frame set',async()=>{
+ const h=harness();h.run('renderExercise()');
+ for(const j of h.jobs.slice(0,3))j.resolve();await h.settle();
+ assert.equal(h.run('panels[0].before.src'),undefined);
+ h.jobs[3].resolve();await h.settle();
+ assert.equal(h.run('panels[0].before.src'),'/original/First/0');
+ assert.equal(h.run('panels[1].before.src'),'/original/First/0');
+ assert.equal(h.run('panels[2].before.src'),'/original/First/4');
+ assert.equal(h.run('seen.size'),2);
+});
+test('navigation discards a late frame from the previous exercise',async()=>{
+ const h=harness();h.run('renderExercise();move(1)');
+ for(const j of h.jobs.slice(0,4))j.resolve();await h.settle();
+ assert.equal(h.run('selectedId'),'Second');assert.equal(h.run('panels[0].before.src'),undefined);
+ assert.equal(h.jobs.length,8);for(const j of h.jobs.slice(4))j.resolve();await h.settle();
+ assert.equal(h.run('panels[0].before.src'),'/original/Second/0');
+});
+test('approval requires all eight frames, removes the decided set, and selects next',async()=>{
+ const h=harness();h.run('renderExercise();decide("approve_candidate")');
+ assert.equal(h.run('decisions.First'),undefined);
+ for(let f=0;f<4;f++){if(f)h.run('frame='+f+';draw()');const js=h.jobs.slice(-4);js.forEach(j=>j.resolve());await h.settle();}
+ await h.run('decide("approve_candidate")');assert.equal(h.run('decisions.First.decision'),'approve_candidate');
+ assert.equal(h.run('selectedId'),'Second');assert.equal(h.run('data.rows.length'),1);
+ h.jobs.at(-1).reject(Error('changed'));for(const j of h.jobs.slice(-4,-1))j.resolve();await h.settle();
+ assert.equal(h.run('seen.size'),0);assert.equal(h.controls.approve.disabled,true);
+});
+test('rejection saves to the coordinator and removes the set from judging',async()=>{
+ const h=harness();h.run('renderExercise()');await h.run('decide("needs_more_work")');
+ assert.equal(h.run('decisions.First.decision'),'needs_more_work');
+ assert.equal(h.run('data.rows.some(r=>r.id==="First")'),false);
+ assert.equal(h.run('selectedId'),'Second');
+});
+test('hidden tab releases all displayed images and pauses animation',async()=>{
+ const h=harness();h.run('renderExercise();clock()');h.jobs.forEach(j=>j.resolve());await h.settle();
+ assert.equal(h.timers.size,1);h.document.hidden=true;h.listeners.visibilitychange();
+ assert.equal(h.timers.size,0);assert.equal(h.run('panels.every(p=>!p.before.src&&!p.after.src)'),true);
+ const count=h.jobs.length;h.run('draw()');assert.equal(h.jobs.length,count);
+});
+test('export preserves chat approval and invalidates stale local approvals',()=>{
+ const h=harness();h.run("data.rows[0].humanApproved=true;decisions.Second={decision:'approve_candidate',signature:'old',notes:'keep note'}");
+ const out=JSON.parse(h.run('JSON.stringify(decisionPayload(data,decisions))'));
+ assert.equal(out.decisions.First.decision,'approve_candidate');
+ assert.equal(out.decisions.Second.decision,'pending');assert.equal(out.decisions.Second.notes,'keep note');
+ assert.equal(out.approvalDoesNotPromote,true);
+});
+test('automatic arrivals preserve current frame, review progress and unsaved notes',async()=>{
+ const h=harness();h.run("renderExercise();frame=2;seen=new Set([0,1,2,3,4,5,6,7]);$('notes').value='my draft';fetch=async()=>({ok:true,json:async()=>({...data,count:3,rows:[...data.rows,{...data.rows[1],id:'Third'}]})})");
+ const epoch=h.run('epoch');await h.run('refresh(true)');
+ assert.equal(h.run('selectedId'),'First');assert.equal(h.run('frame'),2);assert.equal(h.run('seen.size'),8);
+ assert.equal(h.run('epoch'),epoch);assert.equal(h.controls.notes.value,'my draft');assert.equal(h.run('data.rows.length'),3);
+});
+test('automatic polling does not fetch while hidden or saving',async()=>{
+ const h=harness();h.run("let calls=0;fetch=async()=>{calls++;return {ok:true,json:async()=>data}};watchResults()");
+ h.document.hidden=true;for(const tick of h.timers.values())tick();await h.settle();assert.equal(h.run('calls'),0);
+ h.document.hidden=false;h.run('saving=true');for(const tick of h.timers.values())tick();await h.settle();assert.equal(h.run('calls'),0);
+ h.run('saving=false');for(const tick of h.timers.values())tick();await h.settle();assert.equal(h.run('calls'),1);
+});
+test('an in-flight refresh cannot restore a just-decided exercise',async()=>{
+ const h=harness();h.run("let finish;fetch=()=>new Promise(resolve=>finish=resolve);let inflight=refresh(true);decisionRevision++;data.rows=data.rows.filter(r=>r.id!=='First');finish({ok:true,json:async()=>({batch:'batch-01',count:1,rows:[{id:'First'}]})})");
+ await h.run('inflight');assert.equal(h.run("data.rows.some(r=>r.id==='First')"),false);
+});

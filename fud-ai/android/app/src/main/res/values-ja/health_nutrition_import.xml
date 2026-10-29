@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">栄養の履歴を読み込む</string>
+    <string name="health_import_action">読み込む</string>
+    <string name="health_import_description">別のアプリの食事記録を日記に取り込みます。利用可能な記録をプレビューしてから、共有された記録を二重に数えないよう、取り込み元のアプリを1つ選んでください。</string>
+    <string name="health_import_from">開始日（YYYY-MM-DD）</string>
+    <string name="health_import_to">終了日（YYYY-MM-DD）</string>
+    <string name="health_import_history_hint">履歴へのアクセスがない場合は、過去30日以内の日付を選んでください。それより古い記録には、対応デバイスでの履歴アクセスが必要です。</string>
+    <string name="health_import_grant">栄養と履歴へのアクセスを許可</string>
+    <string name="health_import_access_result">アクセス設定を更新しました。もう一度プレビューして、利用可能な記録を確認してください。</string>
+    <string name="health_import_access_needed">Health Connectで栄養データの読み取りを許可してから、もう一度プレビューしてください。</string>
+    <string name="health_import_invalid_dates">有効な日付をYYYY-MM-DD形式で入力してください。終了日は開始日以降かつ今日以前である必要があります。</string>
+    <string name="health_import_history_needed">この期間には履歴へのアクセスが必要です。対応デバイスでアクセスを許可するか、過去30日以内の日付を選んでください。</string>
+    <string name="health_import_preview">利用可能な記録をプレビュー</string>
+    <string name="health_import_failed">読み込みを完了できませんでした。Health Connectへのアクセスを確認して、もう一度お試しください。</string>
+    <string name="health_import_empty">この期間に他のアプリからの新しい栄養記録は見つかりませんでした。取り込み元のアプリがHealth Connectと栄養データを共有しているか確認してください。以前に読み込んだ記録は、日記から削除したものも含めてスキップされます。</string>
+    <string name="health_import_count">新しい記録%1$d件 · %2$d kcal</string>
+    <string name="health_import_unnamed">読み込んだ食事</string>
+    <string name="health_import_local_only">これはローカルのコピーです。編集や削除はFud AI内にのみ反映されます。読み込みを繰り返すと以前に読み込んだ記録はスキップされ、更新はされません。</string>
+    <string name="health_import_done">%1$d件の記録を日記に読み込みました。</string>
+    <string name="health_import_close">閉じる</string>
+</resources>

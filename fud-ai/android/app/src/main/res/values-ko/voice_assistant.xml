@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Fud AI와 대화하기</string>
+    <string name="voice_shortcut_short">대화</string>
+    <string name="voice_shortcut_disabled">이 바로가기를 사용할 수 없습니다.</string>
+    <string name="voice_widget_description">Fud AI를 열고 어시스턴트와 음성 대화를 시작합니다.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">자동</string>
+    <string name="voice_provider_hosted">Fud AI(Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">종료</string>
+    <string name="voice_status_preparing">불러오는 중…</string>
+    <string name="voice_status_connecting">연결 중…</string>
+    <string name="voice_status_listening">듣는 중…</string>
+    <string name="voice_status_thinking">생각 중…</string>
+    <string name="voice_status_speaking">말하는 중…</string>
+    <string name="voice_listening_hint">말씀하세요. 듣고 있어요.</string>
+    <string name="voice_time_left">%1$s 남음</string>
+    <string name="voice_minutes_short">%1$d분</string>
+    <string name="voice_less_than_a_minute">1분 미만</string>
+    <string name="voice_minimize">최소화</string>
+    <string name="voice_expand">대화 열기</string>
+    <string name="voice_close">닫기</string>
+    <string name="voice_end">대화 종료</string>
+    <string name="voice_close_camera">카메라 닫기</string>
+    <string name="voice_take_photo">사진 찍기</string>
+    <string name="voice_barcode_hint">카메라를 바코드에 맞추세요</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">초안</string>
+    <string name="voice_card_workout_draft">운동 초안</string>
+    <string name="voice_card_dismiss">닫기</string>
+    <string name="voice_card_totals">%1$d kcal · 단백질: %2$dg · 탄수화물: %3$dg · 지방: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · 단백질: %2$dg · 탄수화물: %3$dg · 지방: %4$dg</string>
+    <string name="voice_card_log">기록하기</string>
+    <string name="voice_card_logged">기록됨</string>
+    <string name="voice_card_confirm_title">확인</string>
+    <string name="voice_card_delete_title">삭제</string>
+    <string name="voice_card_confirm">저장</string>
+    <string name="voice_card_saved">저장됨</string>
+    <string name="voice_card_undo">실행 취소</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">%1$s 기록 · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">%1$s 기록 · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">물 %1$s 기록</string>
+    <string name="voice_change_start_fast">%1$d시간 단식 시작</string>
+    <string name="voice_change_end_fast">단식 종료 · %1$s</string>
+    <string name="voice_change_weight">체중 기록 · %1$s</string>
+    <string name="voice_change_body_fat">체지방 기록 · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="other">운동 · 동작 %d개</item>
+    </plurals>
+    <string name="voice_change_cardio">%1$s 기록 · %2$d분</string>
+    <string name="voice_change_setting">%1$s을(를) %2$s(으)로 변경</string>
+    <string name="voice_setting_units">단위</string>
+    <string name="voice_units_metric">미터법</string>
+    <string name="voice_units_imperial">야드파운드법</string>
+    <string name="voice_on">켬</string>
+    <string name="voice_off">끔</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">다시 시도</string>
+    <string name="voice_action_talk_again">Fud AI와 대화하기</string>
+    <string name="voice_action_see_plans">Plus 및 Pro 요금제 보기</string>
+    <string name="voice_action_buy_credits">크레딧 구매</string>
+    <string name="voice_action_add_key">API 키 추가</string>
+    <string name="voice_action_open_ai_providers">AI 설정</string>
+    <string name="voice_action_voice_settings">음성 어시스턴트</string>
+    <string name="voice_action_open_settings">설정 열기</string>
+    <string name="voice_notice_setup_title">음성 어시스턴트</string>
+    <string name="voice_notice_setup_body">말로 식사를 기록하고, 음식과 바코드를 스캔하고, 진행 상황을 물어보세요. 음성 어시스턴트는 Fud AI Plus 또는 Pro 요금제나 본인의 Gemini, OpenAI, xAI, Qwen API 키로 작동합니다.</string>
+    <string name="voice_notice_missing_key_title">%1$s 키 추가</string>
+    <string name="voice_notice_missing_key_body">음성 어시스턴트가 %1$s로 설정되어 있어 API 키가 필요합니다. AI 제공업체에서 키를 추가하거나 음성 어시스턴트 설정에서 다른 제공업체를 선택하세요.</string>
+    <string name="voice_notice_subscription_title">Fud AI 음성은 Plus 또는 Pro 요금제가 필요합니다</string>
+    <string name="voice_notice_subscription_body">Fud AI에서 제공하는 음성 기능은 Plus(월 20분)와 Pro(월 100분)에 포함됩니다. 자신의 Gemini, OpenAI, xAI 또는 Qwen 키를 사용할 수도 있습니다.</string>
+    <string name="voice_notice_minutes_title">음성 시간을 모두 사용했습니다</string>
+    <string name="voice_notice_minutes_body">이번 달 요금제의 음성 시간을 모두 사용했습니다. 계속 대화하려면 크레딧을 구매하거나(1분당 4크레딧) 본인의 Gemini, OpenAI, xAI, Qwen 키를 사용하세요.</string>
+    <string name="voice_notice_limit_title">대화 한도에 도달했습니다</string>
+    <string name="voice_notice_limit_body">이 대화가 15분 한도에 도달했습니다. 계속하려면 새 대화를 시작하세요.</string>
+    <string name="voice_notice_mic_title">마이크 접근 권한이 필요합니다</string>
+    <string name="voice_notice_mic_body">어시스턴트와 대화하려면 시스템 설정에서 Fud AI의 마이크 사용을 허용하세요.</string>
+    <string name="voice_notice_mic_busy_title">마이크를 사용할 수 없습니다.</string>
+    <string name="voice_notice_mic_busy_body">다른 앱이 마이크를 사용 중일 수 있습니다. 해당 앱을 닫고 다시 시도하세요.</string>
+    <string name="voice_notice_key_rejected_title">%1$s에서 키를 거부했습니다</string>
+    <string name="voice_notice_key_rejected_body">AI 제공업체에서 %1$s API 키, 결제 상태, 실시간 음성 모델 접근 권한을 확인하세요.</string>
+    <string name="voice_notice_unauthorized_title">요금제를 확인하지 못했습니다</string>
+    <string name="voice_notice_unauthorized_body">Fud AI가 구독을 확인하지 못했습니다. 설정 → AI 접근에서 구입 내역 복원을 시도해 보세요.</string>
+    <string name="voice_notice_busy_title">요청이 너무 많습니다</string>
+    <string name="voice_notice_busy_body">지금은 음성 세션이 너무 많습니다. 1분 후 다시 시도하세요.</string>
+    <string name="voice_notice_unavailable_title">지금은 음성을 사용할 수 없습니다. 나중에 다시 시도하세요.</string>
+    <string name="voice_notice_unavailable_body">음성 서비스에 문제가 발생했습니다. 다시 시도하세요.</string>
+    <string name="voice_notice_connect_title">연결하지 못했습니다</string>
+    <string name="voice_notice_connect_body">음성 서비스에 연결하지 못했습니다. 연결 상태를 확인하고 다시 시도하세요.</string>
+    <string name="voice_notice_lost_title">음성 연결이 종료되었습니다.</string>
+    <string name="voice_notice_lost_body">음성 연결이 종료되었습니다. 인터넷 연결을 확인하고 다시 시도하세요.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">음성 어시스턴트</string>
+    <string name="voice_settings_provider">제공자</string>
+    <string name="voice_settings_model">모델</string>
+    <string name="voice_settings_voice">음성</string>
+    <string name="voice_settings_language">응답 언어</string>
+    <string name="voice_settings_language_auto">자동</string>
+    <string name="voice_settings_language_app">앱 언어</string>
+    <string name="voice_settings_using">%1$s 사용 중</string>
+    <string name="voice_settings_add_key">AI 제공업체에서 %1$s 키 추가</string>
+    <string name="voice_settings_key_missing">저장된 %1$s API 키가 없습니다</string>
+    <string name="voice_settings_needs_plan">Fud AI 음성은 Plus 또는 Pro 요금제가 필요합니다</string>
+    <string name="voice_settings_needs_setup">Plus나 Pro를 구독하거나 Gemini, OpenAI, xAI, Qwen API 키를 추가하세요</string>
+    <string name="voice_settings_automatic_footer">자동은 AI 제공업체에서 선택한 제공업체가 Gemini, OpenAI, xAI, Qwen 중 하나이고 키가 저장되어 있으면 그것을 사용하고, 그렇지 않으면 Plus 또는 Pro 요금제의 Fud AI를 사용합니다. 본인 키는 AI 제공업체에 저장된 키입니다.</string>
+    <string name="voice_settings_auto_capture">사진 자동 촬영</string>
+    <string name="voice_settings_auto_capture_footer">카메라가 열려 있으면 어시스턴트가 음식을 보는 즉시 사진을 찍습니다. Gemini, Qwen, Fud AI는 카메라를 계속 보고, OpenAI는 말할 때마다 보며, xAI와 GPT-Live는 볼 수 없습니다.</string>
+    <string name="voice_settings_confirm_saves">저장 전 확인</string>
+    <string name="voice_settings_confirm_saves_footer">기록이나 변경을 승인할 카드를 표시합니다. 끄면 변경 사항이 즉시 저장되며 8초 동안 실행 취소할 수 있습니다.</string>
+    <string name="voice_settings_save_to_coach">대화를 코치에 저장</string>
+    <string name="voice_settings_save_to_coach_footer">사용자와 어시스턴트가 한 말을 코치 채팅에 추가합니다.</string>
+    <string name="voice_settings_minutes_left">요금제 남은 시간</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + 크레딧으로 %2$s</string>
+    <string name="voice_settings_minutes_footer">Plus는 매월 20분, Pro는 매월 100분이 포함됩니다(UTC 기준). 이후에는 음성에 크레딧이 사용됩니다(15초당 1크레딧).</string>
+    <string name="voice_settings_open_title">더 빠르게 열기</string>
+    <string name="voice_settings_open_body">홈에서 구체를 누르거나, 빠른 설정에 Fud AI와 대화하기 타일을 추가하거나, 앱 아이콘을 길게 눌러 Fud AI와 대화하기를 선택하거나, 홈 화면에 위젯을 추가하세요. 어느 방법이든 바로 듣기를 시작합니다.</string>
+    <string name="voice_settings_add_tile">빠른 설정 타일 추가</string>
+    <string name="voice_settings_add_widget">홈 화면 위젯 추가</string>
+    <string name="voice_settings_privacy_footer">음성, 자막, 어시스턴트가 보는 카메라 화면, 작업 결과는 사용하는 제공업체로 전송됩니다(Fud AI Plus/Pro는 Google).  Fud AI 서버는 사용량 집계와 과금 기록을 보관하며 대화 내용은 저장하지 않습니다.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">목소리 미리 듣기</string>
+    <string name="voice_preview_stop">미리 듣기 중지</string>
+    <string name="voice_preview_preparing">미리 듣기 준비 중…</string>
+    <string name="voice_preview_sample">안녕하세요, 저는 Fud AI 도우미입니다. 제 목소리는 이렇게 들려요.</string>
+    <string name="voice_preview_failed">이 목소리 샘플을 재생할 수 없어요. 다시 시도해 주세요.</string>
+    <string name="voice_preview_busy">목소리를 미리 들으려면 현재 음성 대화를 먼저 종료해 주세요.</string>
+    <string name="voice_preview_usage">마이크를 사용하지 않고 짧은 샘플을 재생합니다. API 크레딧 또는 Fud AI 음성 이용 시간이 사용됩니다.</string>
+</resources>

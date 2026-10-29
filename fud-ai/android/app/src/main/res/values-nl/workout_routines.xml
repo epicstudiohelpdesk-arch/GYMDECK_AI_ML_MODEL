@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Starten vanuit routine</string>
+    <string name="workout_routine_save">Opslaan als routine</string>
+    <string name="workout_routine_save_title">Routine opslaan</string>
+    <string name="workout_routine_name">Naam van routine</string>
+    <string name="workout_routine_save_message">Slaat de oefeningen van deze dag op met hun geplande sets, herhalingen en gewichten.</string>
+    <string name="workout_routines_title">Routines</string>
+    <string name="workout_routines_empty_title">Nog geen routines</string>
+    <string name="workout_routines_empty_message">Log een training en kies daarna Opslaan als routine in het +-menu.</string>
+    <string name="workout_routines_footer">Voegt de oefeningen van de routine toe aan de geselecteerde dag. Sets die je al hebt gelogd blijven ongewijzigd.</string>
+    <string name="workout_routine_rename">Hernoemen</string>
+    <string name="workout_routine_rename_title">Routine hernoemen</string>
+    <string name="workout_routine_delete_title">Routine verwijderen?</string>
+    <string name="workout_routine_delete_message">Trainingen die je al hebt gelogd blijven bewaard.</string>
+</resources>

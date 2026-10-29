@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">休息计时器</string>
+    <string name="settings_rest_timer_footer">今天记录一组后开始倒计时。开启通知后，应用在后台时休息结束，Fud AI 也会提醒你。</string>
+    <string name="workout_rest_off">关闭</string>
+    <string name="workout_rest_label">休息</string>
+    <string name="workout_rest_add_15">+15秒</string>
+    <string name="workout_rest_add_15_description">增加 15 秒</string>
+    <string name="workout_rest_skip">跳过</string>
+    <string name="workout_rest_skip_description">跳过休息</string>
+    <string name="workout_rest_start_after_set">第 %1$d 组后开始休息</string>
+    <string name="notif_channel_workout_rest">休息计时器</string>
+    <string name="notif_channel_workout_rest_desc">训练休息时间结束时提醒你。</string>
+    <string name="notif_workout_rest_title">休息结束</string>
+    <string name="notif_workout_rest_text">该做下一组%1$s了。</string>
+</resources>

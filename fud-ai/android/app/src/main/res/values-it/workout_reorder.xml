@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">Riordina</string>
+    <string name="workout_move_up">Sposta su</string>
+    <string name="workout_move_down">Sposta giù</string>
+    <string name="workout_move_up_named">Sposta su %1$s</string>
+    <string name="workout_move_down_named">Sposta giù %1$s</string>
+</resources>

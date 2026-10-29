@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Popsat trénink</string>
+    <string name="workout_text_intro">Popiš, co jsi dělal. Před přidáním do deníku tréninků zkontroluj podrobnosti.</string>
+    <string name="workout_text_description">Popis tréninku</string>
+    <string name="workout_text_example">20 minut skákání přes švihadlo, pak 3 série po 10 opakováních bench pressu se 40 kg</string>
+    <string name="workout_text_voice">Hlasem</string>
+    <string name="workout_text_preparing">Hledám cviky…</string>
+    <string name="workout_text_preview">Analyzovat</string>
+    <string name="workout_text_retry">Zkusit znovu</string>
+    <string name="workout_text_review">Zkontrolovat trénink</string>
+    <string name="workout_text_date">Datum (YYYY-MM-DD)</string>
+    <string name="workout_text_custom">Vlastní aktivita na čas · odhad kalorií používá obecnou míru aktivity</string>
+    <string name="workout_text_minutes">Minuty</string>
+    <string name="workout_text_reps">Opakování</string>
+    <string name="workout_text_remove">Odebrat cvik</string>
+    <string name="workout_text_calories_note">Kalorie jsou odhad. Po přidání tréninku použij v deníku Vypočítat.</string>
+    <string name="workout_text_edit">Upravit popis</string>
+    <string name="workout_text_adding">Přidávám…</string>
+    <string name="workout_text_add">Přidat do deníku</string>
+    <string name="workout_text_menu">Text</string>
+    <string name="workout_text_set_weight">Série %1$d · %2$s</string>
+    <string name="workout_text_estimate">Odhadovaný výdej: %1$d kcal</string>
+    <string name="workout_text_effort">Námaha (střední, pokud není uvedeno)</string>
+    <string name="workout_text_light">Lehce aktivní</string>
+    <string name="workout_text_moderate">Středně aktivní</string>
+    <string name="workout_text_vigorous">Vysoká</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

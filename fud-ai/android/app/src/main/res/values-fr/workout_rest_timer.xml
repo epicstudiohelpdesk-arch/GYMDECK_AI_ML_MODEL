@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Minuteur de repos</string>
+    <string name="settings_rest_timer_footer">Lance un compte à rebours quand vous enregistrez une série aujourd’hui. Avec les notifications activées, Fud AI vous prévient de la fin du repos en arrière-plan.</string>
+    <string name="workout_rest_off">Désactivé</string>
+    <string name="workout_rest_label">Repos</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">Ajouter 15 secondes</string>
+    <string name="workout_rest_skip">Ignorer</string>
+    <string name="workout_rest_skip_description">Passer le repos</string>
+    <string name="workout_rest_start_after_set">Lancer le repos après la série %1$d</string>
+    <string name="notif_channel_workout_rest">Minuteur de repos</string>
+    <string name="notif_channel_workout_rest_desc">Prévient quand une période de repos se termine.</string>
+    <string name="notif_workout_rest_title">Repos terminé</string>
+    <string name="notif_workout_rest_text">C’est l’heure de votre prochaine série de %1$s.</string>
+</resources>

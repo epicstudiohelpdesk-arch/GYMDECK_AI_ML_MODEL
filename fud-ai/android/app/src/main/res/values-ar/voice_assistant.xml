@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">تحدث إلى Fud AI</string>
+    <string name="voice_shortcut_short">تحدث</string>
+    <string name="voice_shortcut_disabled">هذا الاختصار غير متاح.</string>
+    <string name="voice_widget_description">يفتح Fud AI ويبدأ محادثة صوتية مع المساعد.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">تلقائي</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">انتهى</string>
+    <string name="voice_status_preparing">جارٍ التحميل…</string>
+    <string name="voice_status_connecting">جارٍ الاتصال…</string>
+    <string name="voice_status_listening">يستمع…</string>
+    <string name="voice_status_thinking">يفكّر…</string>
+    <string name="voice_status_speaking">يتحدث…</string>
+    <string name="voice_listening_hint">تفضل، أنا أستمع.</string>
+    <string name="voice_time_left">متبقٍ %1$s</string>
+    <string name="voice_minutes_short">%1$d د</string>
+    <string name="voice_less_than_a_minute">أقل من دقيقة</string>
+    <string name="voice_minimize">تصغير</string>
+    <string name="voice_expand">فتح المحادثة</string>
+    <string name="voice_close">إغلاق</string>
+    <string name="voice_end">إنهاء المحادثة</string>
+    <string name="voice_close_camera">إغلاق الكاميرا</string>
+    <string name="voice_take_photo">التقاط صورة</string>
+    <string name="voice_barcode_hint">وجّه الكاميرا نحو الرمز الشريطي</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">مسودة</string>
+    <string name="voice_card_workout_draft">مسودة تمرين</string>
+    <string name="voice_card_dismiss">إغلاق</string>
+    <string name="voice_card_totals">%1$d kcal · البروتين: %2$dg · الكربوهيدرات: %3$dg · الدهون: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · البروتين: %2$dg · الكربوهيدرات: %3$dg · الدهون: %4$dg</string>
+    <string name="voice_card_log">سجّله</string>
+    <string name="voice_card_logged">تم التسجيل</string>
+    <string name="voice_card_confirm_title">تأكيد</string>
+    <string name="voice_card_delete_title">حذف</string>
+    <string name="voice_card_confirm">حفظ</string>
+    <string name="voice_card_saved">تم الحفظ</string>
+    <string name="voice_card_undo">تراجع</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">تسجيل %1$s · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">تسجيل %1$s · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">تسجيل %1$s من الماء</string>
+    <string name="voice_change_start_fast">بدء الصيام · المدة بالساعات: %1$d</string>
+    <string name="voice_change_end_fast">إنهاء صيامك · %1$s</string>
+    <string name="voice_change_weight">تسجيل الوزن · %1$s</string>
+    <string name="voice_change_body_fat">تسجيل نسبة الدهون · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="zero">تمرين · عدد التمارين: %d</item>
+        <item quantity="one">تمرين · عدد التمارين: %d</item>
+        <item quantity="two">تمرين · عدد التمارين: %d</item>
+        <item quantity="few">تمرين · عدد التمارين: %d</item>
+        <item quantity="many">تمرين · عدد التمارين: %d</item>
+        <item quantity="other">تمرين · عدد التمارين: %d</item>
+    </plurals>
+    <string name="voice_change_cardio">تسجيل %1$s · %2$d د</string>
+    <string name="voice_change_setting">تغيير %1$s إلى %2$s</string>
+    <string name="voice_setting_units">الوحدات</string>
+    <string name="voice_units_metric">متري</string>
+    <string name="voice_units_imperial">إمبراطوري</string>
+    <string name="voice_on">تشغيل</string>
+    <string name="voice_off">إيقاف</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">أعد المحاولة</string>
+    <string name="voice_action_talk_again">تحدث إلى Fud AI</string>
+    <string name="voice_action_see_plans">عرض خطط Plus وPro</string>
+    <string name="voice_action_buy_credits">شراء أرصدة</string>
+    <string name="voice_action_add_key">إضافة مفتاح API</string>
+    <string name="voice_action_open_ai_providers">إعدادات الذكاء الاصطناعي</string>
+    <string name="voice_action_voice_settings">المساعد الصوتي</string>
+    <string name="voice_action_open_settings">فتح الإعدادات</string>
+    <string name="voice_notice_setup_title">المساعد الصوتي</string>
+    <string name="voice_notice_setup_body">تحدّث لتسجيل الوجبات ومسح الطعام والرموز الشريطية والسؤال عن تقدّمك. يعمل المساعد الصوتي مع خطة Fud AI Plus أو Pro، أو بمفتاح API الخاص بك من Gemini أو OpenAI أو xAI أو Qwen.</string>
+    <string name="voice_notice_missing_key_title">أضف مفتاح %1$s الخاص بك</string>
+    <string name="voice_notice_missing_key_body">المساعد الصوتي مضبوط على %1$s، ويحتاج إلى مفتاح API الخاص بك. أضفه في موفري الذكاء الاصطناعي، أو اختر موفرًا آخر في إعدادات المساعد الصوتي.</string>
+    <string name="voice_notice_subscription_title">يتطلب صوت Fud AI خطة Plus أو Pro</string>
+    <string name="voice_notice_subscription_body">تتوفر الخدمة الصوتية المستضافة لدى Fud AI ضمن Plus (20 دقيقة شهريًا) وPro (100 دقيقة شهريًا). يمكنك أيضًا استخدام مفتاح Gemini أو OpenAI أو xAI أو Qwen الخاص بك.</string>
+    <string name="voice_notice_minutes_title">نفدت دقائقك الصوتية</string>
+    <string name="voice_notice_minutes_body">استُهلكت دقائق الصوت في خطتك لهذا الشهر. اشترِ أرصدة لمواصلة الحديث (4 أرصدة للدقيقة)، أو استخدم مفتاحك الخاص من Gemini أو OpenAI أو xAI أو Qwen.</string>
+    <string name="voice_notice_limit_title">تم بلوغ حد المحادثة</string>
+    <string name="voice_notice_limit_body">بلغت هذه المحادثة حد الـ 15 دقيقة. ابدأ محادثة جديدة لتتابع.</string>
+    <string name="voice_notice_mic_title">يلزم السماح بالوصول إلى الميكروفون</string>
+    <string name="voice_notice_mic_body">اسمح لـ Fud AI باستخدام الميكروفون في إعدادات النظام للتحدث مع المساعد.</string>
+    <string name="voice_notice_mic_busy_title">الميكروفون غير متاح.</string>
+    <string name="voice_notice_mic_busy_body">قد يكون تطبيق آخر يستخدم الميكروفون. أغلقه وحاول مجددًا.</string>
+    <string name="voice_notice_key_rejected_title">رفض %1$s المفتاح</string>
+    <string name="voice_notice_key_rejected_body">تحقق من مفتاح API الخاص بك لدى %1$s، وإعدادات الفوترة وإمكانية الوصول إلى النماذج الصوتية المباشرة في موفري الذكاء الاصطناعي.</string>
+    <string name="voice_notice_unauthorized_title">تعذر التحقق من خطتك</string>
+    <string name="voice_notice_unauthorized_body">تعذّر على Fud AI التحقق من اشتراكك. جرّب استعادة المشتريات في الإعدادات ← الوصول إلى الذكاء الاصطناعي.</string>
+    <string name="voice_notice_busy_title">طلبات كثيرة جدًا</string>
+    <string name="voice_notice_busy_body">هناك عدد كبير جدًا من الجلسات الصوتية الآن. حاول مرة أخرى بعد دقيقة.</string>
+    <string name="voice_notice_unavailable_title">الصوت غير متاح الآن. حاول مرة أخرى لاحقًا.</string>
+    <string name="voice_notice_unavailable_body">حدثت مشكلة في الخدمة الصوتية. حاول مرة أخرى.</string>
+    <string name="voice_notice_connect_title">تعذر الاتصال</string>
+    <string name="voice_notice_connect_body">تعذّر الاتصال بالخدمة الصوتية. تحقّق من اتصالك وحاول مرة أخرى.</string>
+    <string name="voice_notice_lost_title">انتهى الاتصال الصوتي.</string>
+    <string name="voice_notice_lost_body">انتهى الاتصال الصوتي. تحقّق من اتصالك بالإنترنت وحاول مرة أخرى.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">المساعد الصوتي</string>
+    <string name="voice_settings_provider">المزود</string>
+    <string name="voice_settings_model">النموذج</string>
+    <string name="voice_settings_voice">الصوت</string>
+    <string name="voice_settings_language">لغة الرد</string>
+    <string name="voice_settings_language_auto">تلقائي</string>
+    <string name="voice_settings_language_app">لغة التطبيق</string>
+    <string name="voice_settings_using">يُستخدم %1$s</string>
+    <string name="voice_settings_add_key">أضف مفتاح %1$s الخاص بك في موفري الذكاء الاصطناعي</string>
+    <string name="voice_settings_key_missing">لا يوجد مفتاح API محفوظ لـ %1$s</string>
+    <string name="voice_settings_needs_plan">يتطلب صوت Fud AI خطة Plus أو Pro</string>
+    <string name="voice_settings_needs_setup">اشترك في Plus أو Pro، أو أضف مفتاح API من Gemini أو OpenAI أو xAI أو Qwen</string>
+    <string name="voice_settings_automatic_footer">يستخدم الخيار التلقائي المزوّد المحدد في موفري الذكاء الاصطناعي إذا كان Gemini أو OpenAI أو xAI أو Qwen ومفتاحه محفوظ؛ وإلا فيستخدم Fud AI مع خطة Plus أو Pro. المفاتيح الخاصة هي تلك المحفوظة في موفري الذكاء الاصطناعي.</string>
+    <string name="voice_settings_auto_capture">الالتقاط التلقائي للصور</string>
+    <string name="voice_settings_auto_capture_footer">عندما تكون الكاميرا مفتوحة، يلتقط المساعد الصورة فور رؤية الطعام. يرى Gemini وQwen وFud AI الكاميرا باستمرار، ويراها OpenAI في كل مرة تتحدث فيها، ولا يستطيع xAI وGPT-Live رؤيتها.</string>
+    <string name="voice_settings_confirm_saves">التأكيد قبل الحفظ</string>
+    <string name="voice_settings_confirm_saves_footer">عرض بطاقة للموافقة على كل تسجيل أو تغيير. عند إيقاف هذا الخيار، تُحفظ التغييرات فورًا ويمكن التراجع عنها لمدة 8 ثوانٍ.</string>
+    <string name="voice_settings_save_to_coach">حفظ المحادثات في المدرب</string>
+    <string name="voice_settings_save_to_coach_footer">يضيف ما تقوله أنت والمساعد إلى محادثتك مع المدرب.</string>
+    <string name="voice_settings_minutes_left">دقائق الخطة المتبقية</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + %2$s من الرصيد</string>
+    <string name="voice_settings_minutes_footer">يشمل Plus ‏20 دقيقة وPro ‏100 دقيقة شهريًا (بتوقيت UTC). بعد ذلك يستخدم الصوت الأرصدة: رصيد واحد لكل 15 ثانية.</string>
+    <string name="voice_settings_open_title">افتحه بشكل أسرع</string>
+    <string name="voice_settings_open_body">اضغط على الكرة في الصفحة الرئيسية، أو أضف مربع تحدث إلى Fud AI إلى الإعدادات السريعة، أو اضغط مطولًا على أيقونة التطبيق واختر تحدث إلى Fud AI، أو أضف الأداة إلى شاشتك الرئيسية. يبدأ الاستماع فورًا في كل حالة.</string>
+    <string name="voice_settings_add_tile">إضافة مربع إلى الإعدادات السريعة</string>
+    <string name="voice_settings_add_widget">إضافة أداة إلى الشاشة الرئيسية</string>
+    <string name="voice_settings_privacy_footer">يُرسل صوتك والنصوص المصاحبة وإطارات الكاميرا التي يراها المساعد ونتائج إجراءاته إلى الموفر الذي تستخدمه (Google لخدمة Fud AI Plus/Pro).  يحتفظ خادم Fud AI بعدادات الاستخدام وإيصالات الفوترة، دون محتوى المحادثات.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">معاينة الصوت</string>
+    <string name="voice_preview_stop">إيقاف المعاينة</string>
+    <string name="voice_preview_preparing">جارٍ تحضير المعاينة…</string>
+    <string name="voice_preview_sample">مرحبًا، أنا مساعدك في Fud AI. هكذا يبدو صوتي.</string>
+    <string name="voice_preview_failed">تعذّر تشغيل معاينة هذا الصوت. يُرجى المحاولة مرة أخرى.</string>
+    <string name="voice_preview_busy">أنهِ محادثتك الصوتية الحالية قبل معاينة صوت.</string>
+    <string name="voice_preview_usage">يشغّل عيّنة قصيرة دون استخدام الميكروفون. يستهلك رصيد API أو دقائق الصوت في Fud AI.</string>
+</resources>

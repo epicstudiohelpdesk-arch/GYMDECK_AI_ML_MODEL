@@ -1,0 +1,44 @@
+<resources>
+    <string name="returning_entry">क्या आपने पहले Fud AI इस्तेमाल किया है?</string>
+    <string name="returning_title">फिर से स्वागत है</string>
+    <string name="returning_subtitle">अपने भोजन, वज़न और वर्कआउट वापस लाएँ, या नए सिरे से शुरू करें।</string>
+    <string name="returning_pick_hint">एक या दोनों चुनें।</string>
+    <string name="returning_drive_title">Google Drive से पुनर्स्थापित करें</string>
+    <string name="returning_drive_detail">आपका पूरा बैकअप: डायरी, फ़ोटो, वर्कआउट और सेटिंग्स, अगर आपने पहले Drive बैकअप चालू किया था।</string>
+    <string name="returning_drive_note">साइन-इन केवल आपका बैकअप ढूँढने के लिए है। ऐप सत्यापित होने तक Google एक अतिरिक्त चेतावनी दिखा सकता है।</string>
+    <string name="returning_health_title">Health Connect से इंपोर्ट करें</string>
+    <string name="returning_health_detail">भोजन, वज़न, बॉडी फ़ैट और वर्कआउट कैलोरी, जो Fud AI ने Health Connect में सेव की थीं। बैकअप के साथ चुनने पर सिर्फ़ वही जोड़ा जाता है जो बैकअप में नहीं है।</string>
+    <string name="returning_health_update">पहले Play Store से Health Connect इंस्टॉल या अपडेट करें।</string>
+    <string name="returning_start_fresh">नए सिरे से शुरू करें</string>
+    <string name="returning_continue_setup">सेटअप जारी रखें</string>
+    <string name="returning_step_waiting">अगला</string>
+    <string name="returning_step_drive_done">बैकअप पुनर्स्थापित हो गया।</string>
+    <string name="returning_step_drive_cancelled">पुनर्स्थापना रद्द की गई।</string>
+    <string name="returning_step_failed">पूरा नहीं हुआ</string>
+    <string name="returning_drive_checking">Google Drive जाँचा जा रहा है…</string>
+    <string name="returning_drive_confirm_title">अपना बैकअप पुनर्स्थापित करें?</string>
+    <string name="returning_drive_confirm_message_dated">%1$s का आपका बैकअप इस फ़ोन पर मौजूद सब कुछ बदल देगा। API कुंजियाँ बैकअप में नहीं होतीं, इसलिए आपको अपनी कुंजी फिर से जोड़नी पड़ सकती है।</string>
+    <string name="returning_drive_confirm_message">आपका बैकअप इस फ़ोन पर मौजूद सब कुछ बदल देगा। API कुंजियाँ बैकअप में नहीं होतीं, इसलिए आपको अपनी कुंजी फिर से जोड़नी पड़ सकती है।</string>
+    <string name="returning_drive_restoring">पुनर्स्थापित किया जा रहा है…</string>
+    <string name="returning_drive_no_backup">इस खाते के लिए कोई Google Drive बैकअप नहीं मिला।</string>
+    <string name="returning_drive_unreachable">Google Drive तक नहीं पहुँच सके। अपना कनेक्शन जाँचें और फिर से कोशिश करें।</string>
+    <string name="returning_drive_not_a_backup">यह फ़ाइल Fud AI बैकअप नहीं है।</string>
+    <string name="returning_drive_needs_update">यह बैकअप Fud AI के नए वर्शन का है। ऐप अपडेट करें, फिर दोबारा कोशिश करें।</string>
+    <string name="returning_drive_setup_missing">इस बैकअप में पूरा किया गया सेटअप नहीं है, तो चलिए इसे अभी पूरा करते हैं।</string>
+    <string name="returning_health_importing">Health Connect से इंपोर्ट किया जा रहा है…</string>
+    <string name="returning_health_nothing">Health Connect में अभी इंपोर्ट करने के लिए कुछ नहीं है।</string>
+    <string name="returning_health_nothing_new">आपके बैकअप में Health Connect की हर चीज़ पहले से थी।</string>
+    <string name="returning_health_denied">Health Connect ने कोई डेटा साझा नहीं किया। आप इसे बाद में सेटिंग्स में कनेक्ट कर सकते हैं।</string>
+    <string name="returning_health_read_failed">Health Connect से सारा डेटा नहीं पढ़ा जा सका। फिर से कोशिश करें।</string>
+    <string name="returning_health_imported_both">इंपोर्ट किया गया: %1$s और %2$s।</string>
+    <string name="returning_health_imported_one">इंपोर्ट किया गया: %1$s।</string>
+    <string name="returning_health_imported_other">आपका Health Connect डेटा इंपोर्ट हो गया।</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d भोजन</item>
+        <item quantity="other">%1$d भोजन</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d वज़न रिकॉर्ड</item>
+        <item quantity="other">%1$d वज़न रिकॉर्ड</item>
+    </plurals>
+</resources>

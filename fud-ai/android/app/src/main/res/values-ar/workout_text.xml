@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">صف التمرين</string>
+    <string name="workout_text_intro">صف ما فعلته. راجع التفاصيل قبل إضافتها إلى يوميات التمارين.</string>
+    <string name="workout_text_description">وصف التمرين</string>
+    <string name="workout_text_example">20 دقيقة من نط الحبل، ثم 3 مجموعات من 10 تكرارات ضغط بنش بوزن 40 كغ</string>
+    <string name="workout_text_voice">الصوت</string>
+    <string name="workout_text_preparing">جارٍ العثور على التمارين…</string>
+    <string name="workout_text_preview">تحليل</string>
+    <string name="workout_text_retry">إعادة المحاولة</string>
+    <string name="workout_text_review">مراجعة التمرين</string>
+    <string name="workout_text_date">التاريخ (YYYY-MM-DD)</string>
+    <string name="workout_text_custom">نشاط مخصص محدد بالوقت · يستخدم تقدير السعرات معدل نشاط عامًا</string>
+    <string name="workout_text_minutes">الدقائق</string>
+    <string name="workout_text_reps">التكرارات</string>
+    <string name="workout_text_remove">إزالة التمرين</string>
+    <string name="workout_text_calories_note">السعرات تقديرية. استخدم «احسب» في اليوميات بعد إضافة تمرينك.</string>
+    <string name="workout_text_edit">تعديل الوصف</string>
+    <string name="workout_text_adding">جارٍ الإضافة…</string>
+    <string name="workout_text_add">إضافة إلى اليوميات</string>
+    <string name="workout_text_menu">نص</string>
+    <string name="workout_text_set_weight">المجموعة %1$d · %2$s</string>
+    <string name="workout_text_estimate">الحرق التقديري: %1$d سعرة</string>
+    <string name="workout_text_effort">الجهد (متوسط إن لم يُحدَّد)</string>
+    <string name="workout_text_light">خفيف</string>
+    <string name="workout_text_moderate">معتدل</string>
+    <string name="workout_text_vigorous">شديد</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

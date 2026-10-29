@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">新機能：Live Voice</string>
+    <string name="whats_new_body">Fud AIに話しかけるだけで、食事の記録、バーコードのスキャン、進捗の確認ができます。</string>
+    <string name="whats_new_tap_orb">ホームのオーブをタップして始めましょう。</string>
+    <string name="whats_new_access_line">PlusとProに含まれています。ご自身のAIキーでも使えます。</string>
+    <string name="whats_new_video_cd">Live Voiceのデモ動画</string>
+    <string name="whats_new_sound_on">サウンドをオン</string>
+    <string name="whats_new_sound_off">サウンドをオフ</string>
+    <string name="whats_new_access_title_setup">Live Voiceを使う</string>
+    <string name="whats_new_access_title_plans">PlusまたはProに切り替える</string>
+    <string name="whats_new_access_body_setup">PlusかProを選べばAIはこちらで動かします。または、Gemini、OpenAI、xAI、QwenのAPIキーを追加してください。</string>
+    <string name="whats_new_access_body_key_only">Live Voiceを使うには、Gemini、OpenAI、xAI、QwenのAPIキーを追加してください。</string>
+    <string name="whats_new_access_body_plans">PlusとProならAIをこちらで動かすので、APIキーの管理は不要。Live Voiceも使えます。自分のキーを使えば、Fud AIはこれからも無料です。</string>
+    <string name="whats_new_support_body">Fud AIは無料で、1人の開発者が作っています。評価やシェア、ちょっとしたチップが開発の支えになります。</string>
+    <string name="whats_new_community_title">Fud AIコミュニティに参加</string>
+    <string name="whats_new_community_body">Discordで質問したり、アイデアを共有したり、ほかのFud AIユーザーと交流したりできます。</string>
+    <string name="whats_new_next">次へ</string>
+    <string name="whats_new_previous">前へ</string>
+    <string name="notif_whats_new_title">Fud AIの新機能：Live Voice</string>
+    <string name="notif_whats_new_text">話しかけて食事の記録、バーコードのスキャン、進捗の確認。タップして新機能を見る。</string>
+</resources>

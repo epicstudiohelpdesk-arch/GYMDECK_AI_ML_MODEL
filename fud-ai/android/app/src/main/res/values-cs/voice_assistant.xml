@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Mluvit s Fud AI</string>
+    <string name="voice_shortcut_short">Mluvit</string>
+    <string name="voice_shortcut_disabled">Tato zkratka není dostupná.</string>
+    <string name="voice_widget_description">Otevře Fud AI a zahájí hlasovou konverzaci s asistentem.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">Automaticky</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">Konec</string>
+    <string name="voice_status_preparing">Načítání…</string>
+    <string name="voice_status_connecting">Připojování…</string>
+    <string name="voice_status_listening">Poslouchám…</string>
+    <string name="voice_status_thinking">Přemýšlím…</string>
+    <string name="voice_status_speaking">Mluvím…</string>
+    <string name="voice_listening_hint">Můžete mluvit, poslouchám.</string>
+    <string name="voice_time_left">Zbývá %1$s</string>
+    <string name="voice_minutes_short">%1$d min</string>
+    <string name="voice_less_than_a_minute">Méně než 1 min</string>
+    <string name="voice_minimize">Minimalizovat</string>
+    <string name="voice_expand">Otevřít konverzaci</string>
+    <string name="voice_close">Zavřít</string>
+    <string name="voice_end">Ukončit konverzaci</string>
+    <string name="voice_close_camera">Zavřít kameru</string>
+    <string name="voice_take_photo">Pořídit fotku</string>
+    <string name="voice_barcode_hint">Namiř kameru na čárový kód</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">Návrh</string>
+    <string name="voice_card_workout_draft">Návrh tréninku</string>
+    <string name="voice_card_dismiss">Zavřít</string>
+    <string name="voice_card_totals">%1$d kcal · Bílkoviny: %2$d g · Sacharidy: %3$d g · Tuky: %4$d g</string>
+    <string name="voice_card_totals_kj">%1$d kJ · Bílkoviny: %2$d g · Sacharidy: %3$d g · Tuky: %4$d g</string>
+    <string name="voice_card_log">Zapsat</string>
+    <string name="voice_card_logged">Zapsáno</string>
+    <string name="voice_card_confirm_title">Potvrdit</string>
+    <string name="voice_card_delete_title">Smazat</string>
+    <string name="voice_card_confirm">Uložit</string>
+    <string name="voice_card_saved">Uloženo</string>
+    <string name="voice_card_undo">Zpět</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">Zapsat %1$s · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">Zapsat %1$s · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">Zapsat %1$s vody</string>
+    <string name="voice_change_start_fast">Zahájit půst na %1$d h</string>
+    <string name="voice_change_end_fast">Ukončit půst · %1$s</string>
+    <string name="voice_change_weight">Zapsat váhu · %1$s</string>
+    <string name="voice_change_body_fat">Zapsat tělesný tuk · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">Trénink · %d cvik</item>
+        <item quantity="few">Trénink · %d cviky</item>
+        <item quantity="many">Trénink · %d cviku</item>
+        <item quantity="other">Trénink · %d cviků</item>
+    </plurals>
+    <string name="voice_change_cardio">Zapsat %1$s · %2$d min</string>
+    <string name="voice_change_setting">Změnit %1$s na %2$s</string>
+    <string name="voice_setting_units">Jednotky</string>
+    <string name="voice_units_metric">Metrické</string>
+    <string name="voice_units_imperial">Imperiální</string>
+    <string name="voice_on">Zapnuto</string>
+    <string name="voice_off">Vypnuto</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">Zkusit znovu</string>
+    <string name="voice_action_talk_again">Mluvit s Fud AI</string>
+    <string name="voice_action_see_plans">Zobrazit plány Plus a Pro</string>
+    <string name="voice_action_buy_credits">Koupit kredity</string>
+    <string name="voice_action_add_key">Přidat klíč API</string>
+    <string name="voice_action_open_ai_providers">Nastavení AI</string>
+    <string name="voice_action_voice_settings">Hlasový asistent</string>
+    <string name="voice_action_open_settings">Otevřít Nastavení</string>
+    <string name="voice_notice_setup_title">Hlasový asistent</string>
+    <string name="voice_notice_setup_body">Mluv a zapisuj jídla, skenuj jídlo i čárové kódy a ptej se na svůj pokrok. Hlasový asistent běží s plánem Fud AI Plus nebo Pro, nebo s tvým vlastním klíčem API od Gemini, OpenAI, xAI či Qwen.</string>
+    <string name="voice_notice_missing_key_title">Přidejte klíč pro %1$s</string>
+    <string name="voice_notice_missing_key_body">Hlasový asistent používá %1$s, což vyžaduje váš klíč API. Přidejte ho v části Poskytovatelé AI nebo zvolte jiného poskytovatele v nastavení hlasového asistenta.</string>
+    <string name="voice_notice_subscription_title">Hlas Fud AI vyžaduje plán Plus nebo Pro</string>
+    <string name="voice_notice_subscription_body">Hlasové konverzace hostované službou Fud AI jsou součástí plánů Plus (20 minut měsíčně) a Pro (100 minut měsíčně). Můžete také použít vlastní klíč Gemini, OpenAI, xAI nebo Qwen.</string>
+    <string name="voice_notice_minutes_title">Došly ti hlasové minuty</string>
+    <string name="voice_notice_minutes_body">Hlasové minuty tvého plánu na tento měsíc jsou vyčerpané. Kup si kredity a mluv dál (4 kredity za minutu), nebo použij vlastní klíč od Gemini, OpenAI, xAI či Qwen.</string>
+    <string name="voice_notice_limit_title">Byl dosažen limit konverzace</string>
+    <string name="voice_notice_limit_body">Tahle konverzace dosáhla limitu 15 minut. Pokračuj tím, že začneš novou.</string>
+    <string name="voice_notice_mic_title">Je potřeba přístup k mikrofonu</string>
+    <string name="voice_notice_mic_body">Chcete-li mluvit s asistentem, povolte aplikaci Fud AI přístup k mikrofonu v nastavení systému.</string>
+    <string name="voice_notice_mic_busy_title">Mikrofon není k dispozici.</string>
+    <string name="voice_notice_mic_busy_body">Mikrofon možná používá jiná aplikace. Zavřete ji a zkuste to znovu.</string>
+    <string name="voice_notice_key_rejected_title">%1$s odmítl klíč</string>
+    <string name="voice_notice_key_rejected_body">V části Poskytovatelé AI zkontrolujte klíč API pro %1$s, jeho fakturaci a přístup k modelům pro hlasové konverzace v reálném čase.</string>
+    <string name="voice_notice_unauthorized_title">Váš plán se nepodařilo ověřit</string>
+    <string name="voice_notice_unauthorized_body">Fud AI nemohlo ověřit tvé předplatné. Zkus Obnovit nákupy v Nastavení → Přístup k AI.</string>
+    <string name="voice_notice_busy_title">Příliš mnoho požadavků</string>
+    <string name="voice_notice_busy_body">Teď probíhá příliš mnoho hlasových relací. Zkus to znovu za minutu.</string>
+    <string name="voice_notice_unavailable_title">Hlas teď není k dispozici. Zkus to znovu později.</string>
+    <string name="voice_notice_unavailable_body">Hlasová služba narazila na problém. Zkus to znovu.</string>
+    <string name="voice_notice_connect_title">Nepodařilo se připojit</string>
+    <string name="voice_notice_connect_body">Nepodařilo se připojit k hlasové službě. Zkontroluj připojení a zkus to znovu.</string>
+    <string name="voice_notice_lost_title">Hlasové spojení skončilo.</string>
+    <string name="voice_notice_lost_body">Hlasové spojení skončilo. Zkontroluj připojení k internetu a zkus to znovu.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">Hlasový asistent</string>
+    <string name="voice_settings_provider">Poskytovatel</string>
+    <string name="voice_settings_model">Model</string>
+    <string name="voice_settings_voice">Hlas</string>
+    <string name="voice_settings_language">Jazyk odpovědí</string>
+    <string name="voice_settings_language_auto">Automaticky</string>
+    <string name="voice_settings_language_app">Jazyk aplikace</string>
+    <string name="voice_settings_using">Používá se %1$s</string>
+    <string name="voice_settings_add_key">Přidejte klíč pro %1$s v části Poskytovatelé AI</string>
+    <string name="voice_settings_key_missing">Není uložen klíč API pro %1$s</string>
+    <string name="voice_settings_needs_plan">Hlas Fud AI vyžaduje plán Plus nebo Pro</string>
+    <string name="voice_settings_needs_setup">Předplať si Plus nebo Pro, nebo přidej klíč API od Gemini, OpenAI, xAI či Qwen</string>
+    <string name="voice_settings_automatic_footer">Automaticky používá poskytovatele vybraného v Poskytovatelích AI, pokud je to Gemini, OpenAI, xAI nebo Qwen a má uložený klíč; jinak Fud AI s plánem Plus nebo Pro. Vlastní klíče jsou ty uložené v Poskytovatelích AI.</string>
+    <string name="voice_settings_auto_capture">Automatické focení</string>
+    <string name="voice_settings_auto_capture_footer">Když je kamera otevřená, asistent vyfotí jídlo, jakmile ho uvidí. Gemini, Qwen a Fud AI vidí kameru nepřetržitě, OpenAI pokaždé, když mluvíš, a xAI ani GPT-Live ji nevidí.</string>
+    <string name="voice_settings_confirm_saves">Potvrzení před uložením</string>
+    <string name="voice_settings_confirm_saves_footer">Zobrazí kartu pro schválení každého záznamu nebo změny. Když je tato volba vypnutá, změny se uloží ihned a po dobu 8 sekund je můžete vrátit zpět.</string>
+    <string name="voice_settings_save_to_coach">Ukládat konverzace do Kouče</string>
+    <string name="voice_settings_save_to_coach_footer">Přidá, co ty a asistent řeknete, do tvého chatu s Koučem.</string>
+    <string name="voice_settings_minutes_left">Zbývající minuty plánu</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + %2$s z kreditů</string>
+    <string name="voice_settings_minutes_footer">Plus obsahuje 20 minut a Pro 100 minut měsíčně (UTC). Potom hlas čerpá kredity: 1 kredit za 15 sekund.</string>
+    <string name="voice_settings_open_title">Otevři ho rychleji</string>
+    <string name="voice_settings_open_body">Klepněte na kouli na hlavní obrazovce, přidejte dlaždici Mluvit s Fud AI do Rychlého nastavení, podržte ikonu aplikace a zvolte Mluvit s Fud AI nebo přidejte widget na plochu. Každá z těchto možností ihned spustí naslouchání.</string>
+    <string name="voice_settings_add_tile">Přidat dlaždici do Rychlého nastavení</string>
+    <string name="voice_settings_add_widget">Přidat widget na plochu</string>
+    <string name="voice_settings_privacy_footer">Váš hlas, titulky, záběry z kamery, které asistent vidí, a výsledky jeho akcí se odesílají zvolenému poskytovateli (u Fud AI Plus/Pro společnosti Google). Server Fud AI uchovává počítadla využití a záznamy účtování, nikoli obsah konverzací.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">Poslechnout hlas</string>
+    <string name="voice_preview_stop">Zastavit ukázku</string>
+    <string name="voice_preview_preparing">Připravuji ukázku…</string>
+    <string name="voice_preview_sample">Ahoj, jsem váš asistent Fud AI. Takhle zní můj hlas.</string>
+    <string name="voice_preview_failed">Tuto hlasovou ukázku se nepodařilo přehrát. Zkuste to prosím znovu.</string>
+    <string name="voice_preview_busy">Před poslechem hlasové ukázky ukončete aktuální hlasovou konverzaci.</string>
+    <string name="voice_preview_usage">Přehraje krátkou ukázku bez použití mikrofonu. Čerpá kredity API nebo hlasové minuty Fud AI.</string>
+</resources>

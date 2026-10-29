@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Описати тренування</string>
+    <string name="workout_text_intro">Опишіть, що ви робили. Перевірте деталі, перш ніж додати їх до щоденника тренувань.</string>
+    <string name="workout_text_description">Опис тренування</string>
+    <string name="workout_text_example">20 хвилин стрибків зі скакалкою, потім 3 підходи по 10 жимів лежачи з 40 кг</string>
+    <string name="workout_text_voice">Голос</string>
+    <string name="workout_text_preparing">Пошук вправ…</string>
+    <string name="workout_text_preview">Проаналізувати</string>
+    <string name="workout_text_retry">Повторити</string>
+    <string name="workout_text_review">Перевірити тренування</string>
+    <string name="workout_text_date">Дата (РРРР-ММ-ДД)</string>
+    <string name="workout_text_custom">Власна активність за часом · оцінка калорій використовує загальний рівень активності</string>
+    <string name="workout_text_minutes">Хвилини</string>
+    <string name="workout_text_reps">Повторення</string>
+    <string name="workout_text_remove">Прибрати вправу</string>
+    <string name="workout_text_calories_note">Калорії — це оцінка. Після додавання тренування скористайтеся «Розрахувати» в щоденнику.</string>
+    <string name="workout_text_edit">Редагувати опис</string>
+    <string name="workout_text_adding">Додавання…</string>
+    <string name="workout_text_add">Додати до щоденника</string>
+    <string name="workout_text_menu">Текст</string>
+    <string name="workout_text_set_weight">Підхід %1$d · %2$s</string>
+    <string name="workout_text_estimate">Розрахункові витрати: %1$d ккал</string>
+    <string name="workout_text_effort">Зусилля (помірне, якщо не вказано)</string>
+    <string name="workout_text_light">Легка активність</string>
+    <string name="workout_text_moderate">Помірна активність</string>
+    <string name="workout_text_vigorous">Високе</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

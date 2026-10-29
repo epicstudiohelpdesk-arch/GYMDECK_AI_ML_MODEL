@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">新功能：Live Voice</string>
+    <string name="whats_new_body">和 Fud AI 说话，即可记录饮食、扫描条形码并查看进度。</string>
+    <string name="whats_new_tap_orb">点按主页上的光球即可开始。</string>
+    <string name="whats_new_access_line">Plus 和 Pro 已包含，也可以使用你自己的 AI 密钥。</string>
+    <string name="whats_new_video_cd">Live Voice 演示视频</string>
+    <string name="whats_new_sound_on">打开声音</string>
+    <string name="whats_new_sound_off">关闭声音</string>
+    <string name="whats_new_access_title_setup">开通 Live Voice</string>
+    <string name="whats_new_access_title_plans">升级到 Plus 或 Pro</string>
+    <string name="whats_new_access_body_setup">选择 Plus 或 Pro，由我们为你运行 AI；或者添加你自己的 Gemini、OpenAI、xAI 或 Qwen API 密钥。</string>
+    <string name="whats_new_access_body_key_only">添加你自己的 Gemini、OpenAI、xAI 或 Qwen API 密钥，即可开始使用 Live Voice。</string>
+    <string name="whats_new_access_body_plans">Plus 和 Pro 为你运行 AI，包含 Live Voice，无需管理 API 密钥。使用你自己的密钥，Fud AI 依然免费。</string>
+    <string name="whats_new_support_body">Fud AI 免费，由一位开发者独立打造。评分、分享或一点小费，都能帮助它持续更新。</string>
+    <string name="whats_new_community_title">加入 Fud AI 社区</string>
+    <string name="whats_new_community_body">在 Discord 上获取帮助、分享想法，认识其他 Fud AI 用户。</string>
+    <string name="whats_new_next">下一步</string>
+    <string name="whats_new_previous">上一步</string>
+    <string name="notif_whats_new_title">Fud AI 新功能：Live Voice</string>
+    <string name="notif_whats_new_text">开口即可记录饮食、扫描条形码并查看进度。点按查看新功能。</string>
+</resources>

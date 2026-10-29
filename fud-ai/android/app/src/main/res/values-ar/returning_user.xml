@@ -1,0 +1,52 @@
+<resources>
+    <string name="returning_entry">هل استخدمت Fud AI من قبل؟</string>
+    <string name="returning_title">مرحبًا بعودتك</string>
+    <string name="returning_subtitle">استعد وجباتك ووزنك وتمارينك، أو ابدأ من جديد.</string>
+    <string name="returning_pick_hint">اختر خيارًا واحدًا أو كليهما.</string>
+    <string name="returning_drive_title">الاستعادة من Google Drive</string>
+    <string name="returning_drive_detail">نسختك الاحتياطية الكاملة: اليوميات والصور والتمارين والإعدادات، إذا كنت قد شغّلت النسخ الاحتياطي على Drive من قبل.</string>
+    <string name="returning_drive_note">يُستخدم تسجيل الدخول فقط للعثور على نسختك الاحتياطية. قد تعرض Google تحذيرًا إضافيًا حتى يتم التحقق من التطبيق.</string>
+    <string name="returning_health_title">الاستيراد من Health Connect</string>
+    <string name="returning_health_detail">الوجبات والوزن ودهون الجسم وسعرات التمارين التي حفظها Fud AI في Health Connect. مع النسخة الاحتياطية، لا يُضاف إلا ما ينقصها.</string>
+    <string name="returning_health_update">ثبّت Health Connect أو حدّثه من Play Store أولًا.</string>
+    <string name="returning_start_fresh">البدء من جديد</string>
+    <string name="returning_continue_setup">متابعة الإعداد</string>
+    <string name="returning_step_waiting">التالي</string>
+    <string name="returning_step_drive_done">تمت استعادة النسخة الاحتياطية.</string>
+    <string name="returning_step_drive_cancelled">تم إلغاء الاستعادة.</string>
+    <string name="returning_step_failed">لم يكتمل</string>
+    <string name="returning_drive_checking">جارٍ التحقق من Google Drive…</string>
+    <string name="returning_drive_confirm_title">استعادة نسختك الاحتياطية؟</string>
+    <string name="returning_drive_confirm_message_dated">ستحل نسختك الاحتياطية من %1$s محل كل ما على هذا الهاتف. مفاتيح API غير مضمّنة في النسخ الاحتياطية، لذا قد تحتاج إلى إضافة مفتاحك مجددًا.</string>
+    <string name="returning_drive_confirm_message">ستحل نسختك الاحتياطية محل كل ما على هذا الهاتف. مفاتيح API غير مضمّنة في النسخ الاحتياطية، لذا قد تحتاج إلى إضافة مفتاحك مجددًا.</string>
+    <string name="returning_drive_restoring">جارٍ الاستعادة…</string>
+    <string name="returning_drive_no_backup">لم يتم العثور على نسخة احتياطية على Google Drive لهذا الحساب.</string>
+    <string name="returning_drive_unreachable">تعذّر الوصول إلى Google Drive. تحقّق من اتصالك وحاول مرة أخرى.</string>
+    <string name="returning_drive_not_a_backup">هذا الملف ليس نسخة احتياطية من Fud AI.</string>
+    <string name="returning_drive_needs_update">هذه النسخة الاحتياطية من إصدار أحدث من Fud AI. حدّث التطبيق ثم حاول مرة أخرى.</string>
+    <string name="returning_drive_setup_missing">لا تتضمن هذه النسخة الاحتياطية إعدادًا مكتملًا، لذا لنكمله الآن.</string>
+    <string name="returning_health_importing">جارٍ الاستيراد من Health Connect…</string>
+    <string name="returning_health_nothing">لا يوجد ما يمكن استيراده من Health Connect بعد.</string>
+    <string name="returning_health_nothing_new">كانت نسختك الاحتياطية تحتوي بالفعل على كل ما في Health Connect.</string>
+    <string name="returning_health_denied">لم يشارك Health Connect أي بيانات. يمكنك ربطه لاحقًا من الإعدادات.</string>
+    <string name="returning_health_read_failed">تعذّرت قراءة كل البيانات من Health Connect. حاول مرة أخرى.</string>
+    <string name="returning_health_imported_both">تم استيراد %1$s و%2$s.</string>
+    <string name="returning_health_imported_one">تم استيراد %1$s.</string>
+    <string name="returning_health_imported_other">تم استيراد بيانات Health Connect.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="zero">%1$d وجبة</item>
+        <item quantity="one">%1$d وجبة</item>
+        <item quantity="two">%1$d وجبتان</item>
+        <item quantity="few">%1$d وجبات</item>
+        <item quantity="many">%1$d وجبة</item>
+        <item quantity="other">%1$d وجبة</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="zero">%1$d عملية وزن</item>
+        <item quantity="one">%1$d عملية وزن</item>
+        <item quantity="two">%1$d عمليتا وزن</item>
+        <item quantity="few">%1$d عمليات وزن</item>
+        <item quantity="many">%1$d عملية وزن</item>
+        <item quantity="other">%1$d عملية وزن</item>
+    </plurals>
+</resources>

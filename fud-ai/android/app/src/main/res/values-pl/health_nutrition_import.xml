@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Importuj historię odżywiania</string>
+    <string name="health_import_action">Importuj</string>
+    <string name="health_import_description">Przenieś zapisy jedzenia z innej aplikacji do dziennika. Wyświetl podgląd dostępnych zapisów, a potem wybierz jedną aplikację źródłową, aby nie liczyć udostępnionych zapisów dwa razy.</string>
+    <string name="health_import_from">Od (RRRR-MM-DD)</string>
+    <string name="health_import_to">Do (RRRR-MM-DD)</string>
+    <string name="health_import_history_hint">Bez dostępu do historii wybierz daty z ostatnich 30 dni. Starsze zapisy wymagają dostępu do historii na obsługiwanym urządzeniu.</string>
+    <string name="health_import_grant">Przyznaj dostęp do odżywiania i historii</string>
+    <string name="health_import_access_result">Ustawienia dostępu zaktualizowane. Wyświetl podgląd ponownie, aby sprawdzić dostępne zapisy.</string>
+    <string name="health_import_access_needed">Zezwól na odczyt danych o odżywianiu w Health Connect, a następnie ponownie wyświetl podgląd.</string>
+    <string name="health_import_invalid_dates">Wpisz prawidłowe daty w formacie RRRR-MM-DD. Data końcowa musi być taka sama jak początkowa lub późniejsza i nie może być późniejsza niż dziś.</string>
+    <string name="health_import_history_needed">Ten zakres wymaga dostępu do historii. Przyznaj dostęp na obsługiwanym urządzeniu lub wybierz daty z ostatnich 30 dni.</string>
+    <string name="health_import_preview">Podgląd dostępnych zapisów</string>
+    <string name="health_import_failed">Nie udało się ukończyć importu. Sprawdź dostęp do Health Connect i spróbuj ponownie.</string>
+    <string name="health_import_empty">W tym zakresie nie znaleziono nowych zapisów odżywiania z innych aplikacji. Sprawdź, czy aplikacja źródłowa udostępnia odżywianie w Health Connect. Wcześniej zaimportowane zapisy są pomijane, także te usunięte z dziennika.</string>
+    <string name="health_import_count">Nowe zapisy: %1$d · %2$d kcal</string>
+    <string name="health_import_unnamed">Zaimportowany posiłek</string>
+    <string name="health_import_local_only">To lokalne kopie. Edycje i usunięcia pozostają w Fud AI. Ponowny import pomija wcześniej zaimportowane zapisy; nie aktualizuje ich.</string>
+    <string name="health_import_done">Zaimportowano zapisy do dziennika: %1$d.</string>
+    <string name="health_import_close">Zamknij</string>
+</resources>

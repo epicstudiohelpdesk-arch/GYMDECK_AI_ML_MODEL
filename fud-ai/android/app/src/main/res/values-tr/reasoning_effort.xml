@@ -1,0 +1,12 @@
+<resources>
+    <string name="settings_reasoning_effort">OpenRouter Akıl Yürütme Düzeyi</string>
+    <string name="settings_reasoning_effort_help">Tüm OpenRouter isteklerine uygulanır. Desteklenen seviyeler modele göre değişir. Daha yüksek çaba daha uzun sürebilir ve daha pahalı olabilir. Otomatik, modelin varsayılanını korur; eksik yanıtlar Düşük ile yeniden denenir.</string>
+    <string name="reasoning_effort_auto">Varsayılan / Otomatik</string>
+    <string name="reasoning_effort_none">Yok</string>
+    <string name="reasoning_effort_minimal">Minimum</string>
+    <string name="reasoning_effort_low">Düşük</string>
+    <string name="reasoning_effort_medium">Orta</string>
+    <string name="reasoning_effort_high">Yüksek</string>
+    <string name="reasoning_effort_xhigh">Ekstra Yüksek</string>
+    <string name="reasoning_effort_max">Maks.</string>
+</resources>

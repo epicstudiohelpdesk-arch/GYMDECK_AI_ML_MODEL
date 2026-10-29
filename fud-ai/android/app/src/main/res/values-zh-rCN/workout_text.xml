@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">描述训练</string>
+    <string name="workout_text_intro">描述你做了什么。添加到训练日记前请先检查详情。</string>
+    <string name="workout_text_description">训练描述</string>
+    <string name="workout_text_example">跳绳 20 分钟，然后以 40 公斤做卧推 3 组，每组 10 次</string>
+    <string name="workout_text_voice">语音</string>
+    <string name="workout_text_preparing">正在查找动作…</string>
+    <string name="workout_text_preview">分析</string>
+    <string name="workout_text_retry">重试</string>
+    <string name="workout_text_review">检查训练</string>
+    <string name="workout_text_date">日期（YYYY-MM-DD）</string>
+    <string name="workout_text_custom">自定义计时活动 · 热量估算采用一般活动消耗率</string>
+    <string name="workout_text_minutes">分钟</string>
+    <string name="workout_text_reps">次数</string>
+    <string name="workout_text_remove">移除动作</string>
+    <string name="workout_text_calories_note">热量为估算值。添加训练后，请在日记中使用“计算”。</string>
+    <string name="workout_text_edit">编辑描述</string>
+    <string name="workout_text_adding">正在添加…</string>
+    <string name="workout_text_add">添加到日记</string>
+    <string name="workout_text_menu">文本</string>
+    <string name="workout_text_set_weight">第 %1$d 组 · %2$s</string>
+    <string name="workout_text_estimate">估计消耗：%1$d 千卡</string>
+    <string name="workout_text_effort">强度（未指定则为中等）</string>
+    <string name="workout_text_light">轻度</string>
+    <string name="workout_text_moderate">中等</string>
+    <string name="workout_text_vigorous">高强度</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

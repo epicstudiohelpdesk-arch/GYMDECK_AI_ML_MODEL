@@ -1,0 +1,944 @@
+import { readFileSync } from "node:fs";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { measureAudioDurationSeconds } from "../hosted-ai-audio";
+import { MAX_TRANSCRIBE_AUDIO_SECONDS, summarizeUpstreamErrorBody } from "../hosted-ai-api";
+import {
+  D1LedgerStore,
+  ENTITLEMENT_TTL_MS,
+  HOSTED_AI_CREDIT_PRODUCTS,
+  LEDGER_RETENTION_MS,
+  REFUND_MARKER_RETENTION_MS,
+  cleanupHostedAILedger,
+  loadVerifiedLedger,
+  parseRevenueCatSubscriber,
+  spendFromLedger,
+  type EntitlementSnapshot,
+  type LedgerStore,
+  type SpendReceipt,
+} from "../hosted-ai-ledger";
+import { BASE, MemoryLedgerStore, USER_ID, call, captureLogs, createHarness } from "./hosted-ai-harness";
+
+/** 16 kHz mono 16-bit PCM WAV, the format Android records. */
+function wavBytes(seconds: number, dataSizeOverride?: number): Uint8Array {
+  const byteRate = 16_000 * 2;
+  const dataSize = Math.round(seconds * byteRate);
+  const bytes = new Uint8Array(44 + dataSize);
+  const view = new DataView(bytes.buffer);
+  const ascii = (offset: number, text: string) => {
+    for (let i = 0; i < text.length; i += 1) bytes[offset + i] = text.charCodeAt(i);
+  };
+  ascii(0, "RIFF");
+  view.setUint32(4, 36 + dataSize, true);
+  ascii(8, "WAVE");
+  ascii(12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, 16_000, true);
+  view.setUint32(28, byteRate, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  ascii(36, "data");
+  view.setUint32(40, dataSizeOverride ?? dataSize, true);
+  return bytes;
+}
+
+function toBase64(bytes: Uint8Array): string {
+  let binary = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  }
+  return btoa(binary);
+}
+
+function wavBase64(seconds: number): string {
+  return toBase64(wavBytes(seconds));
+}
+
+/** Minimal MPEG-4 file: `ftyp` + `moov/mvhd` with the given duration (timescale 1000). */
+function mp4Bytes(seconds: number, version: 0 | 1 = 0): Uint8Array {
+  const box = (type: string, payload: Uint8Array): Uint8Array => {
+    const out = new Uint8Array(8 + payload.length);
+    new DataView(out.buffer).setUint32(0, out.length);
+    for (let i = 0; i < 4; i += 1) out[4 + i] = type.charCodeAt(i);
+    out.set(payload, 8);
+    return out;
+  };
+  const mvhd = new Uint8Array(version === 0 ? 100 : 112);
+  const view = new DataView(mvhd.buffer);
+  view.setUint8(0, version);
+  if (version === 0) {
+    view.setUint32(12, 1000);
+    view.setUint32(16, Math.round(seconds * 1000));
+  } else {
+    view.setUint32(20, 1000);
+    view.setUint32(28, Math.round(seconds * 1000));
+  }
+  const ftyp = box("ftyp", new Uint8Array([0x4d, 0x34, 0x41, 0x20, 0, 0, 0, 0]));
+  const mdat = box("mdat", new Uint8Array(16));
+  const moov = box("moov", box("mvhd", mvhd));
+  const out = new Uint8Array(ftyp.length + mdat.length + moov.length);
+  out.set(ftyp, 0);
+  out.set(mdat, ftyp.length);
+  out.set(moov, ftyp.length + mdat.length);
+  return out;
+}
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
+function post(path: string, body: unknown, headers: Record<string, string> = {}): Request {
+  return new Request(`${BASE}${path}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Fud-User-Id": USER_ID, ...headers },
+    body: JSON.stringify(body),
+  });
+}
+
+function geminiBody(extra: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    requestBody: {
+      contents: [{ role: "user", parts: [{ text: "hello" }] }],
+      ...extra,
+    },
+  };
+}
+
+describe("hosted-ai identity and auth", () => {
+  it("rejects requests without a RevenueCat user id", async () => {
+    const harness = createHarness();
+    const response = await call(
+      harness,
+      new Request(`${BASE}/generate`, { method: "POST", body: JSON.stringify({ prompt: "hi" }) })
+    );
+    expect(response.status).toBe(401);
+    await expect(response.json()).resolves.toEqual({ error: "invalid_user_id" });
+    expect(harness.calls).toHaveLength(0);
+  });
+
+  it("rejects malformed user ids before touching RevenueCat", async () => {
+    const harness = createHarness();
+    const response = await call(
+      harness,
+      post("/generate", { prompt: "hi" }, { "X-Fud-User-Id": "../etc/passwd; drop" })
+    );
+    expect(response.status).toBe(401);
+    expect(harness.calls).toHaveLength(0);
+  });
+
+  it.each([
+    ["a guessable custom id", "alice@example.com"],
+    ["an upper-case anonymous id", "$RCAnonymousID:0123456789ABCDEF0123456789ABCDEF"],
+    ["a short anonymous id", "$RCAnonymousID:0123456789abcdef"],
+    ["a numeric id", "12345678"],
+  ])("rejects %s — only RevenueCat anonymous ids are unguessable credentials", async (_label, id) => {
+    const harness = createHarness();
+    const response = await call(harness, post("/generate", { prompt: "hi" }, { "X-Fud-User-Id": id }));
+    expect(response.status).toBe(401);
+    await expect(response.json()).resolves.toEqual({ error: "invalid_user_id" });
+    expect(harness.calls).toHaveLength(0);
+  });
+
+  it("ignores the legacy shared-secret and client-asserted plan headers", async () => {
+    const harness = createHarness({ revenueCat: { plan: "none" } });
+    const response = await call(
+      harness,
+      post("/generate", { prompt: "hi" }, { Authorization: "Bearer anything", "X-Fud-Plan": "pro" })
+    );
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toMatchObject({ error: "subscription_required" });
+    expect(harness.calls.some((c) => c.url.includes("generativelanguage"))).toBe(false);
+  });
+
+  it("verifies entitlements with RevenueCat using the server-side secret", async () => {
+    const harness = createHarness();
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(200);
+    const rcCall = harness.calls.find((c) => c.url.startsWith("https://api.revenuecat.com/"));
+    expect(rcCall?.url).toBe(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(USER_ID)}`);
+    expect(new Headers(rcCall?.init?.headers).get("Authorization")).toBe("Bearer sk_test");
+    expect(response.headers.get("X-Fud-Quota-Plan")).toBe("plus");
+    expect(response.headers.get("X-Fud-Quota-Daily-Used")).toBe("1");
+    expect(response.headers.get("X-Fud-Quota-Daily-Limit")).toBe("30");
+  });
+
+  it("looks up subscribers without an X-Platform header (store-agnostic, read-only)", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "hi" }));
+    const lookup = harness.calls.find((c) => c.url.startsWith("https://api.revenuecat.com/"));
+    expect(new Headers(lookup?.init?.headers).get("X-Platform")).toBeNull();
+  });
+
+  it("caches the verified entitlement and re-verifies after the TTL", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "one" }));
+    await call(harness, post("/generate", { prompt: "two" }));
+    const rcCalls = () => harness.calls.filter((c) => c.url.startsWith("https://api.revenuecat.com/")).length;
+    expect(rcCalls()).toBe(1);
+
+    harness.clock.now = new Date(harness.clock.now.getTime() + ENTITLEMENT_TTL_MS.plus + 1);
+    await call(harness, post("/generate", { prompt: "three" }));
+    expect(rcCalls()).toBe(2);
+  });
+
+  it("returns 503 when RevenueCat is unavailable and nothing is cached", async () => {
+    const harness = createHarness({ revenueCat: { plan: "plus", status: 500 } });
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({ error: "entitlement_unavailable" });
+  });
+
+  it("serves a stale cached entitlement while RevenueCat is down", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "warm" }));
+    harness.revenueCat.status = 503;
+    harness.clock.now = new Date(harness.clock.now.getTime() + ENTITLEMENT_TTL_MS.plus + 1);
+    const response = await call(harness, post("/generate", { prompt: "stale" }));
+    expect(response.status).toBe(200);
+  });
+
+  it("returns 503 when the RevenueCat key is not configured", async () => {
+    const harness = createHarness();
+    harness.env = { ...harness.env, REVENUECAT_API_KEY: "" };
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({ error: "entitlements_not_configured" });
+  });
+
+  it("enforces the per-user and per-address rate limiters", async () => {
+    const harness = createHarness();
+    harness.rateLimit.user = false;
+    let response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(429);
+    expect(response.headers.get("Retry-After")).toBe("60");
+
+    harness.rateLimit.user = true;
+    harness.rateLimit.address = false;
+    response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(429);
+    expect(harness.calls).toHaveLength(0);
+  });
+
+  it("rejects non-POST on proxy routes and non-GET on quota", async () => {
+    const harness = createHarness();
+    let response = await call(harness, new Request(`${BASE}/generate`, { method: "GET" }));
+    expect(response.status).toBe(405);
+    response = await call(harness, post("/quota", {}));
+    expect(response.status).toBe(405);
+  });
+});
+
+describe("hosted-ai server-side ledger", () => {
+  it("meters each round-trip and rejects with 402 once daily pool and credits are gone", async () => {
+    const harness = createHarness({
+      revenueCat: {
+        plan: "plus",
+        credits: [{ product: "com.apoorvdarshan.calorietracker.credits.50", id: "txn-1" }],
+      },
+    });
+    const first = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(first.headers.get("X-Fud-Quota-Credits")).toBe("50");
+
+    const row = harness.store.only();
+    row.daily_used = 30;
+    row.credits_spent = 50;
+
+    const exhausted = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(exhausted.status).toBe(402);
+    await expect(exhausted.json()).resolves.toMatchObject({
+      error: "quota_exceeded",
+      quota: { plan: "plus", dailyUsed: 30, dailyLimit: 30, creditBank: 0 },
+    });
+    expect(harness.calls.filter((c) => c.url.includes("generativelanguage"))).toHaveLength(1);
+  });
+
+  it("spends from the daily pool before the credit bank", async () => {
+    const harness = createHarness({
+      revenueCat: {
+        plan: "plus",
+        credits: [{ product: "com.apoorvdarshan.calorietracker.credits.150", id: "txn-a" }],
+      },
+    });
+    await call(harness, post("/generate", { prompt: "warm" }));
+    const row = harness.store.only();
+    row.daily_used = 30;
+
+    const response = await call(harness, post("/generate", { prompt: "credit" }));
+    expect(response.status).toBe(200);
+    expect(response.headers.get("X-Fud-Quota-Daily-Used")).toBe("30");
+    expect(response.headers.get("X-Fud-Quota-Credits")).toBe("149");
+  });
+
+  it("resets the daily pool on the UTC day boundary", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "warm" }));
+    harness.store.only().daily_used = 30;
+
+    harness.clock.now = new Date("2026-09-14T00:00:01.000Z");
+    const response = await call(harness, post("/generate", { prompt: "new day" }));
+    expect(response.status).toBe(200);
+    expect(response.headers.get("X-Fud-Quota-Day")).toBe("2026-09-14");
+    expect(response.headers.get("X-Fud-Quota-Daily-Used")).toBe("1");
+  });
+
+  it("reconciles credits idempotently by transaction id across re-verifications", async () => {
+    const harness = createHarness({
+      revenueCat: {
+        plan: "plus",
+        credits: [
+          { product: "com.apoorvdarshan.calorietracker.credits.50", id: "txn-1" },
+          { product: "com.apoorvdarshan.calorietracker.credits.50", id: "txn-1" },
+          { product: "com.apoorvdarshan.calorietracker.credits.400", id: "txn-2" },
+          { product: "com.apoorvdarshan.calorietracker.tip.snack", id: "txn-3" },
+        ],
+      },
+    });
+    const first = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(first.headers.get("X-Fud-Quota-Credits")).toBe("450");
+
+    harness.clock.now = new Date(harness.clock.now.getTime() + ENTITLEMENT_TTL_MS.plus + 1);
+    const second = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(second.headers.get("X-Fud-Quota-Credits")).toBe("450");
+    expect(harness.store.only().credits_granted).toBe(450);
+  });
+
+  it("refunds the metered action when the upstream call fails", async () => {
+    const harness = createHarness({ gemini: { status: 500, body: { error: { message: "secret detail" } } } });
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(503);
+    const body = await response.json();
+    expect(body).toEqual({ error: "upstream_unavailable" });
+    expect(JSON.stringify(body)).not.toContain("secret detail");
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("keeps the action when the provider may still bill: timeouts and empty 200s", async () => {
+    const timeout = createHarness({ gemini: { throwName: "TimeoutError" } });
+    const timedOut = await call(timeout, post("/generate", { prompt: "hi" }));
+    expect(timedOut.status).toBe(504);
+    expect(timeout.store.only().daily_used).toBe(1);
+    expect(timeout.store.refundAttempts).toBe(0);
+
+    const empty = createHarness({ gemini: { body: { candidates: [{ finishReason: "SAFETY" }] } } });
+    const blocked = await call(empty, post("/generate", { prompt: "hi" }));
+    expect(blocked.status).toBe(502);
+    expect(empty.store.only().daily_used).toBe(1);
+    expect(empty.store.refundAttempts).toBe(0);
+  });
+
+  it("refunds a request that never reached the provider", async () => {
+    const harness = createHarness({ gemini: { throwName: "TypeError" } });
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(500);
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("caps output tokens on /generate and forwards an allowed response mime type", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "hi", responseMimeType: "application/json" }));
+    const upstream = harness.calls.find((c) => c.url.includes("generativelanguage"));
+    const forwarded = JSON.parse(String(upstream?.init?.body)) as { generationConfig: Record<string, unknown> };
+    expect(forwarded.generationConfig).toEqual({ maxOutputTokens: 8192, responseMimeType: "application/json" });
+
+    const response = await call(harness, post("/generate", { prompt: "hi", responseMimeType: "text/x-python" }));
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toEqual({ error: "unsupported_response_mime_type" });
+    expect(harness.store.only().daily_used).toBe(1);
+  });
+
+  it("injects an output cap into /gemini bodies that omit one", async () => {
+    const harness = createHarness();
+    await call(harness, post("/gemini", geminiBody()));
+    await call(harness, post("/gemini", geminiBody({ generationConfig: { temperature: 0.2, maxOutputTokens: 512 } })));
+    const bodies = harness.calls
+      .filter((c) => c.url.includes("generativelanguage"))
+      .map((c) => JSON.parse(String(c.init?.body)) as { generationConfig: Record<string, unknown> });
+    expect(bodies[0]!.generationConfig).toEqual({ maxOutputTokens: 8192 });
+    expect(bodies[1]!.generationConfig).toEqual({ temperature: 0.2, maxOutputTokens: 512 });
+  });
+
+  it("grants Google Play credit packs and dedups transactions across stores", async () => {
+    const harness = createHarness({
+      revenueCat: {
+        plan: "pro",
+        credits: [
+          { product: "credits_50", id: "gpa-1" },
+          { product: "credits_400", id: "gpa-2" },
+          { product: "com.apoorvdarshan.calorietracker.credits.150", id: "ios-1" },
+          { product: "credits_150", id: "ios-1" },
+          { product: "tip_snack", id: "gpa-3" },
+        ],
+      },
+    });
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.headers.get("X-Fud-Quota-Credits")).toBe("600");
+  });
+
+  it("does not charge the ledger for invalid requests or unconfigured providers", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "warm" }));
+    harness.store.spendAttempts = 0;
+
+    await call(harness, post("/generate", {}));
+    await call(harness, post("/transcribe", { audio: "%%%not-base64%%%" }));
+    await call(harness, post("/gemini", geminiBody({ tools: [{ googleSearch: {} }] })));
+    harness.env = { ...harness.env, GEMINI_API_KEY: "" };
+    await call(harness, post("/generate", { prompt: "hi" }));
+
+    expect(harness.store.spendAttempts).toBe(0);
+    expect(harness.store.refundAttempts).toBe(0);
+    expect(harness.store.only().daily_used).toBe(1);
+  });
+
+  it("retries a failed refund in the background instead of losing the action", async () => {
+    const harness = createHarness({ gemini: { status: 500, body: {} } });
+    harness.store.refundFailures = 2;
+    const logs = captureLogs();
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(503);
+    expect(harness.background).toHaveLength(1);
+    await Promise.all(harness.background);
+    logs.restore();
+
+    expect(harness.store.refundAttempts).toBe(3);
+    expect(harness.store.only().daily_used).toBe(0);
+    expect(logs.lines.some((line) => line.includes("hosted_ai_refund_recovered"))).toBe(true);
+  });
+
+  it("logs the full receipt for reconciliation when every refund attempt fails", async () => {
+    const harness = createHarness({ gemini: { status: 500, body: {} } });
+    harness.store.refundFailures = 99;
+    const logs = captureLogs();
+    await call(harness, post("/generate", { prompt: "hi" }));
+    await Promise.all(harness.background);
+    logs.restore();
+
+    expect(harness.store.refundAttempts).toBe(4);
+    const failure = logs.lines.map((line) => JSON.parse(line) as Record<string, unknown>).find(
+      (entry) => entry.event === "hosted_ai_refund_failed"
+    );
+    expect(failure).toMatchObject({
+      attempts: 4,
+      userIdHash: harness.store.only().user_id_hash,
+      receipt: { id: expect.stringMatching(/^[0-9a-f-]{36}$/), fromDaily: 1, fromCredits: 0, day: "2026-09-13" },
+    });
+  });
+
+  it("does not double-credit when a refund committed but D1 reported an error", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "one" }));
+    await call(harness, post("/generate", { prompt: "two" }));
+    expect(harness.store.only().daily_used).toBe(2);
+
+    harness.gemini = { status: 500, body: {} };
+    harness.store.refundCommitThenFail = 1;
+    const logs = captureLogs();
+    const response = await call(harness, post("/generate", { prompt: "three" }));
+    expect(response.status).toBe(503);
+    expect(harness.background).toHaveLength(1);
+    await Promise.all(harness.background);
+    logs.restore();
+
+    expect(harness.store.refundAttempts).toBe(2);
+    expect(harness.store.only().daily_used).toBe(2);
+    expect(harness.store.refunded.size).toBe(1);
+  });
+
+  it("issues a distinct receipt id per spend so refunds cannot collide", async () => {
+    const harness = createHarness({ gemini: { status: 500, body: {} } });
+    await call(harness, post("/generate", { prompt: "a" }));
+    await call(harness, post("/generate", { prompt: "b" }));
+    await Promise.all(harness.background);
+    expect(harness.store.refundAttempts).toBe(2);
+    expect(harness.store.refunded.size).toBe(2);
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("never lets an older RevenueCat verification overwrite a newer plan", async () => {
+    const store = new MemoryLedgerStore();
+    const hash = "h".repeat(64);
+    const pending: Array<{ resolve: (snapshot: EntitlementSnapshot) => void }> = [];
+    let now = new Date("2026-09-13T10:00:00.000Z");
+    const context = {
+      store,
+      now: () => now,
+      verify: () => new Promise<EntitlementSnapshot>((resolve) => pending.push({ resolve })),
+    };
+
+    const tick = () => new Promise<void>((resolve) => setTimeout(resolve, 0));
+    const older = loadVerifiedLedger(context, USER_ID, hash);
+    await tick();
+    now = new Date(now.getTime() + 1_000);
+    const newer = loadVerifiedLedger(context, USER_ID, hash);
+    await tick();
+    expect(pending).toHaveLength(2);
+
+    pending[1]!.resolve({ plan: "pro", creditsGranted: 50 });
+    await expect(newer).resolves.toMatchObject({ plan: "pro", credits_granted: 50 });
+    pending[0]!.resolve({ plan: "plus", creditsGranted: 0 });
+    const losing = await older;
+
+    expect(losing.plan).toBe("pro");
+    expect(losing.credits_granted).toBe(50);
+    expect(losing.entitlement_verified_at).toBe("2026-09-13T10:00:01.000Z");
+    expect(store.only()).toMatchObject({ plan: "pro", entitlement_verified_at: "2026-09-13T10:00:01.000Z" });
+  });
+
+  it("retention cleanup keeps rows that have spent purchased credits", async () => {
+    const statements: Array<{ sql: string; binds: unknown[] }> = [];
+    const database = {
+      prepare: (sql: string) => ({
+        bind: (...binds: unknown[]) => ({
+          run: async () => {
+            statements.push({ sql, binds });
+            return { success: true, meta: {} };
+          },
+        }),
+      }),
+    } as unknown as D1Database;
+
+    const now = new Date("2026-09-13T01:00:00.000Z");
+    await cleanupHostedAILedger(database, now);
+    expect(statements).toHaveLength(3);
+    expect(statements[0]!.sql).toMatch(/DELETE FROM hosted_ai_ledger/);
+    expect(statements[0]!.sql).toMatch(/credits_spent = 0/);
+    expect(statements[0]!.binds).toEqual([new Date(now.getTime() - LEDGER_RETENTION_MS).toISOString()]);
+    expect(statements[1]!.sql).toMatch(/DELETE FROM hosted_ai_refunds/);
+    expect(statements[1]!.binds).toEqual([new Date(now.getTime() - REFUND_MARKER_RETENTION_MS).toISOString()]);
+    expect(statements[2]!.sql).toMatch(/DELETE FROM hosted_ai_voice_spends/);
+    expect(statements[2]!.binds).toEqual(statements[1]!.binds);
+  });
+
+  it("D1 refund is a single transaction whose ledger update is gated on the receipt marker", async () => {
+    const batches: Array<Array<{ sql: string; binds: unknown[] }>> = [];
+    const database = {
+      prepare: (sql: string) => ({ bind: (...binds: unknown[]) => ({ sql, binds }) }),
+      batch: async (statements: Array<{ sql: string; binds: unknown[] }>) => {
+        batches.push(statements);
+        return statements.map(() => ({ success: true, meta: {} }));
+      },
+    } as unknown as D1Database;
+
+    const store = new D1LedgerStore(database);
+    const hash = "a".repeat(64);
+    const receipt: SpendReceipt = { id: "11111111-2222-4333-8444-555555555555", fromDaily: 1, fromCredits: 0, day: "2026-09-13" };
+    await store.refund(hash, receipt, "2026-09-13T01:00:00.000Z");
+
+    expect(batches).toHaveLength(1);
+    const [update, marker] = batches[0]!;
+    expect(update!.sql).toMatch(/UPDATE hosted_ai_ledger/);
+    expect(update!.sql).toMatch(/NOT EXISTS \(SELECT 1 FROM hosted_ai_refunds WHERE receipt_id = \?6\)/);
+    expect(update!.binds).toEqual(["2026-09-13", 1, 0, "2026-09-13T01:00:00.000Z", hash, receipt.id]);
+    expect(marker!.sql).toMatch(/INSERT OR IGNORE INTO hosted_ai_refunds/);
+    expect(marker!.binds).toEqual([receipt.id, hash, "2026-09-13T01:00:00.000Z"]);
+  });
+
+  it("retries the compare-and-swap when a concurrent writer bumps the version", async () => {
+    const harness = createHarness();
+    await call(harness, post("/generate", { prompt: "warm" }));
+    harness.store.conflictOnce = true;
+    harness.store.spendAttempts = 0;
+    const response = await call(harness, post("/generate", { prompt: "race" }));
+    expect(response.status).toBe(200);
+    expect(harness.store.spendAttempts).toBe(2);
+    expect(harness.store.only().daily_used).toBe(2);
+  });
+
+  it("exposes the quota snapshot on GET /quota and forces a refresh with ?refresh=1", async () => {
+    const harness = createHarness();
+    const request = (query = "") =>
+      new Request(`${BASE}/quota${query}`, { method: "GET", headers: { "X-Fud-User-Id": USER_ID } });
+
+    const response = await call(harness, request());
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toEqual({
+      quota: { plan: "plus", day: "2026-09-13", dailyUsed: 0, dailyLimit: 30, creditBank: 0 },
+      voice: { month: "2026-09", secondsUsed: 0, secondsLimit: 1200, creditBank: 0 },
+    });
+
+    harness.revenueCat.plan = "pro";
+    await call(harness, request());
+    expect(harness.calls.filter((c) => c.url.includes("revenuecat"))).toHaveLength(1);
+    const refreshed = await call(harness, request("?refresh=1"));
+    await expect(refreshed.json()).resolves.toMatchObject({
+      quota: { plan: "pro", dailyLimit: 60 },
+      voice: { month: "2026-09", secondsLimit: 6000 },
+    });
+    expect(harness.calls.filter((c) => c.url.includes("revenuecat"))).toHaveLength(2);
+  });
+
+  it("does not spend when the ledger is exhausted (pure spend helper)", async () => {
+    const store = new MemoryLedgerStore();
+    const row = await store.upsertEntitlement("h".repeat(64), { plan: "pro", creditsGranted: 0 }, "2026-09-13T00:00:00.000Z");
+    row.daily_used = 60;
+    store.rows.set(row.user_id_hash, row);
+    const outcome = await spendFromLedger(
+      { store, now: () => new Date("2026-09-13T12:00:00.000Z"), verify: async () => ({ plan: "pro", creditsGranted: 0 }) },
+      row.user_id_hash,
+      row,
+      1
+    );
+    expect(outcome.status).toBe("quota_exceeded");
+  });
+});
+
+describe("hosted-ai /gemini body allow-list", () => {
+  it("forwards only allow-listed fields", async () => {
+    const harness = createHarness();
+    const response = await call(
+      harness,
+      post(
+        "/gemini",
+        geminiBody({
+          systemInstruction: { parts: [{ text: "You are a coach." }] },
+          generationConfig: { temperature: 0.4, maxOutputTokens: 1024 },
+          tools: [
+            {
+              functionDeclarations: [
+                { name: "get_weights", description: "Recent weights", parameters: { type: "object", properties: {} } },
+              ],
+            },
+          ],
+        })
+      )
+    );
+    expect(response.status).toBe(200);
+    const upstream = harness.calls.find((c) => c.url.includes("generativelanguage"));
+    const forwarded = JSON.parse(String(upstream?.init?.body)) as Record<string, unknown>;
+    expect(Object.keys(forwarded).sort()).toEqual(["contents", "generationConfig", "systemInstruction", "tools"]);
+    expect(forwarded.tools).toEqual([
+      {
+        functionDeclarations: [
+          { name: "get_weights", description: "Recent weights", parameters: { type: "object", properties: {} } },
+        ],
+      },
+    ]);
+  });
+
+  it.each([
+    ["googleSearch tool", { tools: [{ googleSearch: {} }] }, "unsupported_field:tools[0].googleSearch"],
+    ["codeExecution tool", { tools: [{ codeExecution: {} }] }, "unsupported_field:tools[0].codeExecution"],
+    ["safetySettings", { safetySettings: [] }, "unsupported_field:requestBody.safetySettings"],
+    ["cachedContent", { cachedContent: "x" }, "unsupported_field:requestBody.cachedContent"],
+    ["candidateCount > 1", { generationConfig: { candidateCount: 4 } }, "out_of_range:generationConfig.candidateCount"],
+    ["huge maxOutputTokens", { generationConfig: { maxOutputTokens: 65_536 } }, "out_of_range:generationConfig.maxOutputTokens"],
+    ["responseSchema", { generationConfig: { responseSchema: {} } }, "unsupported_field:generationConfig.responseSchema"],
+    ["fileData part", { contents: [{ parts: [{ fileData: { fileUri: "gs://x" } }] }] }, "unsupported_field:contents[0].parts[0].fileData"],
+    ["system role", { contents: [{ role: "system", parts: [{ text: "x" }] }] }, "invalid_role:contents[0].role"],
+    ["toolConfig without tools", { toolConfig: { functionCallingConfig: { mode: "ANY" } } }, "requires_tools:toolConfig"],
+  ])("rejects %s", async (_label, extra, detail) => {
+    const harness = createHarness();
+    const response = await call(harness, post("/gemini", geminiBody(extra as Record<string, unknown>)));
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toEqual({ error: "invalid_request_body", detail });
+    expect(harness.calls.some((c) => c.url.includes("generativelanguage"))).toBe(false);
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("caps inline images and mime types", async () => {
+    const harness = createHarness();
+    const image = { inlineData: { mimeType: "image/jpeg", data: "AAAA" } };
+    let response = await call(
+      harness,
+      post("/gemini", geminiBody({ contents: [{ parts: [image, image, image, image] }] }))
+    );
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toMatchObject({ detail: "too_many_images:contents[0].parts[3]" });
+
+    response = await call(
+      harness,
+      post("/gemini", geminiBody({ contents: [{ parts: [{ inlineData: { mimeType: "application/pdf", data: "AAAA" } }] }] }))
+    );
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toMatchObject({
+      detail: "unsupported_mime_type:contents[0].parts[0].inlineData.mimeType",
+    });
+  });
+
+  it("accepts the coach tool-calling round-trip shape", async () => {
+    const harness = createHarness();
+    const response = await call(
+      harness,
+      post(
+        "/gemini",
+        geminiBody({
+          contents: [
+            { role: "user", parts: [{ text: "How much did I lift?" }] },
+            {
+              role: "model",
+              parts: [
+                { text: "Let me check.", thought: true, thoughtSignature: "sig-1" },
+                { functionCall: { name: "get_workouts", args: { days: 7 } }, thoughtSignature: "sig-2" },
+              ],
+            },
+            { role: "user", parts: [{ functionResponse: { name: "get_workouts", response: { sessions: [] } } }] },
+          ],
+          tools: [{ functionDeclarations: [{ name: "get_workouts" }] }],
+          toolConfig: { functionCallingConfig: { mode: "AUTO" } },
+        })
+      )
+    );
+    expect(response.status).toBe(200);
+    const upstream = harness.calls.find((c) => c.url.includes("generativelanguage"));
+    const forwarded = JSON.parse(String(upstream?.init?.body)) as { contents: Array<{ parts: unknown[] }> };
+    expect(forwarded.contents[1]!.parts).toEqual([
+      { text: "Let me check.", thought: true, thoughtSignature: "sig-1" },
+      { functionCall: { name: "get_workouts", args: { days: 7 } }, thoughtSignature: "sig-2" },
+    ]);
+  });
+
+  it("rejects non-boolean thought metadata and metadata-only parts", async () => {
+    const harness = createHarness();
+    let response = await call(
+      harness,
+      post("/gemini", geminiBody({ contents: [{ role: "model", parts: [{ text: "x", thought: "yes" }] }] }))
+    );
+    await expect(response.json()).resolves.toMatchObject({ detail: "invalid_type:contents[0].parts[0].thought" });
+    response = await call(
+      harness,
+      post("/gemini", geminiBody({ contents: [{ role: "model", parts: [{ thought: true, thoughtSignature: "s" }] }] }))
+    );
+    await expect(response.json()).resolves.toMatchObject({
+      detail: "part_must_have_one_payload:contents[0].parts[0]",
+    });
+  });
+
+  it.each([
+    ["null", null],
+    ["an array", [1, 2]],
+    ["a string", "prompt"],
+    ["a number", 42],
+  ])("returns 400 invalid_body when the JSON body is %s", async (_label, body) => {
+    const harness = createHarness();
+    for (const path of ["/generate", "/transcribe", "/gemini"]) {
+      const response = await call(harness, post(path, body));
+      expect(response.status).toBe(400);
+      await expect(response.json()).resolves.toEqual({ error: "invalid_body" });
+    }
+    expect(harness.calls.filter((c) => !c.url.includes("revenuecat"))).toHaveLength(0);
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("returns 400 for a missing requestBody", async () => {
+    const harness = createHarness();
+    const response = await call(harness, post("/gemini", {}));
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toEqual({ error: "missing_request_body" });
+  });
+});
+
+describe("hosted-ai upstream error hygiene", () => {
+  it("never echoes Gemini error bodies", async () => {
+    const harness = createHarness({
+      gemini: { status: 400, body: { error: { message: "API key not valid. Please pass a valid API key." } } },
+    });
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(502);
+    const text = await response.text();
+    expect(text).toBe(JSON.stringify({ error: "upstream_error" }));
+  });
+
+  it("never echoes Deepgram error bodies and refunds the action", async () => {
+    const harness = createHarness({ deepgram: { status: 401, body: { err_msg: "Invalid credentials: token dg-key" } } });
+    const response = await call(harness, post("/transcribe", { audio: wavBase64(2), mimeType: "audio/wav" }));
+    expect(response.status).toBe(502);
+    expect(await response.text()).not.toContain("dg-key");
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("logs only structured provider fields — never the raw body, tokens, or user content", async () => {
+    const harness = createHarness({
+      deepgram: {
+        status: 401,
+        body: { err_code: "INVALID_AUTH", err_msg: "Invalid credentials: token dg-key", request_id: "req-1" },
+      },
+    });
+    const logs = captureLogs();
+    await call(harness, post("/transcribe", { audio: wavBase64(2), mimeType: "audio/wav" }));
+
+    harness.gemini = {
+      status: 400,
+      body: { error: { code: 400, status: "INVALID_ARGUMENT", message: `API key gemini-key not valid for "my secret prompt"` } },
+    };
+    await call(harness, post("/generate", { prompt: "my secret prompt" }));
+    logs.restore();
+
+    const joined = logs.lines.join("\n");
+    expect(joined).toContain("hosted_ai_upstream_error");
+    expect(joined).toContain("err_code=INVALID_AUTH");
+    expect(joined).toContain("status=INVALID_ARGUMENT");
+    for (const leak of ["dg-key", "gemini-key", "Invalid credentials", "my secret prompt", "not valid"]) {
+      expect(joined).not.toContain(leak);
+    }
+  });
+
+  it("summarizes upstream error bodies without free text", () => {
+    expect(summarizeUpstreamErrorBody('{"error":{"code":429,"status":"RESOURCE_EXHAUSTED","message":"quota"}}')).toBe(
+      "status=RESOURCE_EXHAUSTED code=429"
+    );
+    expect(summarizeUpstreamErrorBody('{"err_code":"Bad Request<script>","err_msg":"token abc"}')).toBe(
+      "err_code=BadRequestscript"
+    );
+    expect(summarizeUpstreamErrorBody("<html>gateway timeout</html>")).toBe("non_json_body bytes=28");
+    expect(summarizeUpstreamErrorBody('{"message":"free text only"}')).toBe("unrecognized_body bytes=28");
+  });
+
+  it("redacts configured provider secrets from generic error logs", async () => {
+    const harness = createHarness();
+    harness.deps.store = {
+      ...harness.store,
+      get: async () => {
+        throw new Error("D1 rejected query with key gemini-key in it");
+      },
+    } as unknown as LedgerStore;
+    const logs = captureLogs();
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    logs.restore();
+    expect(response.status).toBe(500);
+    const joined = logs.lines.join("\n");
+    expect(joined).toContain("[redacted]");
+    expect(joined).not.toContain("gemini-key");
+  });
+
+  it("maps upstream 429 to 503 with Retry-After", async () => {
+    const harness = createHarness({ gemini: { status: 429, body: {} } });
+    const response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(503);
+    expect(response.headers.get("Retry-After")).toBe("30");
+  });
+
+  it("transcribes audio and meters it as one action", async () => {
+    const harness = createHarness();
+    const m4a = toBase64(readFileSync("tests/fixtures/speech.m4a"));
+    const response = await call(harness, post("/transcribe", { audio: m4a, mimeType: "audio/mp4", language: "en" }));
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toEqual({ text: "two eggs" });
+    expect(response.headers.get("X-Fud-Quota-Daily-Used")).toBe("1");
+    const upstream = harness.calls.find((c) => c.url.includes("deepgram"));
+    expect(upstream?.url).toContain("language=en");
+  });
+
+  it("rejects unsupported audio mime types and languages", async () => {
+    const harness = createHarness();
+    let response = await call(harness, post("/transcribe", { audio: btoa("a"), mimeType: "application/octet-stream" }));
+    expect(response.status).toBe(400);
+    // Containers whose duration cannot be measured are not accepted.
+    response = await call(harness, post("/transcribe", { audio: btoa("a"), mimeType: "audio/ogg" }));
+    await expect(response.json()).resolves.toEqual({ error: "unsupported_audio_type" });
+    response = await call(harness, post("/transcribe", { audio: btoa("a"), language: "en; DROP" }));
+    expect(response.status).toBe(400);
+  });
+
+  it("bounds transcription by measured duration before charging", async () => {
+    const harness = createHarness();
+    await call(harness, post("/transcribe", { audio: wavBase64(1), mimeType: "audio/wav" }));
+    expect(harness.store.only().daily_used).toBe(1);
+
+    let response = await call(
+      harness,
+      post("/transcribe", { audio: wavBase64(MAX_TRANSCRIBE_AUDIO_SECONDS + 1), mimeType: "audio/wav" })
+    );
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toEqual({ error: "audio_too_long", maxSeconds: MAX_TRANSCRIBE_AUDIO_SECONDS });
+
+    response = await call(harness, post("/transcribe", { audio: toBase64(mp4Bytes(600)), mimeType: "audio/mp4" }));
+    await expect(response.json()).resolves.toMatchObject({ error: "audio_too_long" });
+
+    response = await call(harness, post("/transcribe", { audio: btoa("not a wav header"), mimeType: "audio/wav" }));
+    await expect(response.json()).resolves.toEqual({ error: "unreadable_audio" });
+
+    expect(harness.calls.filter((c) => c.url.includes("deepgram"))).toHaveLength(1);
+    expect(harness.store.only().daily_used).toBe(1);
+  });
+
+  it("returns 503 when provider keys are not configured (mock-friendly deploys)", async () => {
+    const harness = createHarness();
+    harness.env = { ...harness.env, GEMINI_API_KEY: "", DEEPGRAM_API_KEY: "" };
+    let response = await call(harness, post("/generate", { prompt: "hi" }));
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({ error: "gemini_not_configured" });
+    response = await call(harness, post("/transcribe", { audio: btoa("a") }));
+    expect(response.status).toBe(503);
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+
+  it("returns 400 on missing prompt and 413 on oversized bodies", async () => {
+    const harness = createHarness();
+    let response = await call(harness, post("/generate", {}));
+    expect(response.status).toBe(400);
+    response = await call(
+      harness,
+      new Request(`${BASE}/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Fud-User-Id": USER_ID, "Content-Length": String(32 * 1024 * 1024) },
+        body: JSON.stringify({ prompt: "hi" }),
+      })
+    );
+    expect(response.status).toBe(413);
+    expect(harness.store.only().daily_used).toBe(0);
+  });
+});
+
+describe("parseRevenueCatSubscriber", () => {
+  const now = new Date("2026-09-13T00:00:00.000Z");
+
+  it("prefers pro over plus and ignores expired entitlements", () => {
+    expect(
+      parseRevenueCatSubscriber(
+        {
+          subscriber: {
+            entitlements: {
+              pro: { expires_date: "2026-01-01T00:00:00Z" },
+              plus: { expires_date: "2027-01-01T00:00:00Z" },
+            },
+          },
+        },
+        now
+      )
+    ).toEqual({ plan: "plus", creditsGranted: 0 });
+    expect(
+      parseRevenueCatSubscriber({ subscriber: { entitlements: { pro: { expires_date: null } } } }, now)
+    ).toEqual({ plan: "pro", creditsGranted: 0 });
+  });
+
+  it("returns none for unknown subscribers", () => {
+    expect(parseRevenueCatSubscriber({ subscriber: {} }, now)).toEqual({ plan: "none", creditsGranted: 0 });
+  });
+
+  it("throws on malformed payloads", () => {
+    expect(() => parseRevenueCatSubscriber({}, now)).toThrow("revenuecat_invalid_payload");
+  });
+});
+
+describe("hosted-ai audio duration probe", () => {
+  it("reads WAV durations, including streaming headers with an unset data size", () => {
+    expect(measureAudioDurationSeconds(wavBytes(2.5), "wav")).toBeCloseTo(2.5, 3);
+    expect(measureAudioDurationSeconds(wavBytes(3, 0), "wav")).toBeCloseTo(3, 3);
+    expect(measureAudioDurationSeconds(wavBytes(3, 0xffffffff), "wav")).toBeCloseTo(3, 3);
+    expect(measureAudioDurationSeconds(new Uint8Array(8), "wav")).toBeNull();
+  });
+
+  it("reads MPEG-4 mvhd durations (v0, v1, and a real AAC .m4a)", () => {
+    expect(measureAudioDurationSeconds(mp4Bytes(42), "mp4")).toBeCloseTo(42, 3);
+    expect(measureAudioDurationSeconds(mp4Bytes(42, 1), "mp4")).toBeCloseTo(42, 3);
+    const real = measureAudioDurationSeconds(readFileSync("tests/fixtures/speech.m4a"), "mp4");
+    expect(real).toBeGreaterThan(0.5);
+    expect(real).toBeLessThan(3);
+    expect(measureAudioDurationSeconds(new Uint8Array(32), "mp4")).toBeNull();
+  });
+});
+
+describe("hosted-ai credit catalog parity", () => {
+  it("grants exactly the credit packs listed in store/catalog/products.json", () => {
+    const catalog = JSON.parse(readFileSync("../store/catalog/products.json", "utf8")) as {
+      consumables: Array<{ id: string; credits: number; play?: { product_id: string } }>;
+    };
+    const expected: Record<string, number> = {};
+    for (const pack of catalog.consumables) {
+      expected[pack.id] = pack.credits;
+      if (pack.play) expected[pack.play.product_id] = pack.credits;
+    }
+    expect({ ...HOSTED_AI_CREDIT_PRODUCTS }).toEqual(expected);
+  });
+});

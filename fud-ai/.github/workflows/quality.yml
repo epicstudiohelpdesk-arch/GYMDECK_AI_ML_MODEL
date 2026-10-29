@@ -1,0 +1,340 @@
+name: Quality checks
+
+on:
+  # PR branches are checked by pull_request; push covers main only, so a PR's
+  # checks do not run twice.
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '23 3 * * *'
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+# A newer push to a pull request supersedes its older run. Pushes to main,
+# schedules and release callers each keep their own run.
+concurrency:
+  group: quality-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  # Pull requests run only the jobs their files can affect (skipped jobs still
+  # satisfy the required checks). Pushes, schedules, and callers run everything.
+  changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      android: ${{ steps.filter.outputs.android }}
+      web: ${{ steps.filter.outputs.web }}
+    steps:
+      # Trees only (no file contents): enough for git diff --name-only.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: github.event_name == 'pull_request'
+        with:
+          fetch-depth: 2
+          filter: blob:none
+          sparse-checkout: .github
+          persist-credentials: false
+      - id: filter
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          all() { echo "android=true" >> "$GITHUB_OUTPUT"; echo "web=true" >> "$GITHUB_OUTPUT"; }
+          [ "$EVENT" = "pull_request" ] || { all; exit 0; }
+          # pull_request checks out the PR merged into its base, so parent 1 is the base.
+          # --no-renames: a moved file counts for both its old and new folder.
+          # quotePath=false keeps accented names raw; names git still quotes (tabs,
+          # newlines) start with a quote, which the patterns below allow.
+          files=$(git -c core.quotePath=false diff --no-renames --name-only HEAD^1 HEAD) || { all; exit 0; }
+          printf '%s\n' "$files"
+          match() { printf '%s\n' "$files" | grep -qE "$1" && echo true || echo false; }
+          # The Android build also packages these as assets (see android/app/build.gradle.kts).
+          # Only this workflow (and its checkout helper) can change how these jobs run;
+          # other workflows (e.g. iOS release) do not affect Android or web results.
+          echo "android=$(match '^"?(android/|shared/|\.github/workflows/quality\.yml|scripts/ci/|scripts/check_voice_assistant_tools\.py|ios/calorietracker/Resources/FreeExerciseDB/dist/|ios/calorietracker/VoiceAssistant/VoiceAssistantTools\.json|local-models/legal/)')" >> "$GITHUB_OUTPUT"
+          echo "web=$(match '^"?(web/|store/catalog/|\.github/workflows/quality\.yml)')" >> "$GITHUB_OUTPUT"
+
+  web:
+    needs: changes
+    # Runs if the filter failed, so a broken filter can never skip the check.
+    if: ${{ !cancelled() && (needs.changes.result != 'success' || needs.changes.outputs.web == 'true') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # store/catalog: the hosted AI tests check the Worker's credit packs against it.
+          sparse-checkout: |
+            web
+            store/catalog
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run check
+        working-directory: web
+
+  android:
+    needs: changes
+    if: ${{ !cancelled() && (needs.changes.result != 'success' || needs.changes.outputs.android == 'true') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          # Everything the Android build reads except the 1.2 GB workout frame corpus.
+          sparse-checkout: |
+            /android/
+            /ios/calorietracker/Resources/FreeExerciseDB/dist/
+            /local-models/legal/
+            /scripts/ci/
+            /scripts/check_voice_assistant_tools.py
+            /shared/voice-assistant/
+            /ios/calorietracker/VoiceAssistant/VoiceAssistantTools.json
+            /shared/workout-vectors/
+            !/shared/workout-vectors/*_v2_*.png
+          persist-credentials: false
+      # Both apps bundle a copy of the voice assistant's tool catalog.
+      - name: Check the voice assistant tool catalog copies
+        run: python3 scripts/check_voice_assistant_tools.py
+      # Unit tests and Debug builds use only the small sample pack.
+      - name: Add the workout sample frames
+        run: python3 scripts/ci/add_workout_sample_frames.py
+      # Verifies the checksum of android/gradle/wrapper/gradle-wrapper.jar against
+      # Gradle's published releases, so a tampered wrapper binary fails CI.
+      - uses: gradle/actions/wrapper-validation@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+      # Default packages include obsolete `tools`, which sdkmanager no longer ships.
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+        with:
+          packages: platform-tools
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          # Lets main-branch runs save the configuration cache for later runs to reuse.
+          cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+      # -PworkoutVectors=none: release parity (manifest only). Store builds never bundle
+      # the ~7,000-frame / 1.2 GB workout corpus (shared/workout-vectors); frames come
+      # from the CDN at runtime. Debug builds default to the small sample pack, which
+      # tests and lint do not need, so skip copying it here.
+      - name: Unit tests, release lint, and unsigned Release APK
+        working-directory: android
+        # No signing or store credentials are available in this job. Assemble the
+        # minified Release variant so packaging/R8 regressions fail before tagging.
+        run: ./gradlew :app:testDebugUnitTest :app:lintRelease :app:assembleRelease -PworkoutVectors=none
+      - name: Retain test and lint reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: android-quality-reports
+          path: |
+            android/app/build/reports/tests/
+            android/app/build/reports/lint-results-release.*
+
+  android-instrumentation:
+    needs: changes
+    if: ${{ !cancelled() && (needs.changes.result != 'success' || needs.changes.outputs.android == 'true') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    # Every test still runs: AndroidJUnitRunner splits them across two emulators.
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1]
+    env:
+      TEST_SHARDS: 2
+      TEST_SHARD: ${{ matrix.shard }}
+      # The emulator, used by both emulator steps and the snapshot cache key.
+      AVD_API_LEVEL: 36
+      AVD_TARGET: google_apis
+      AVD_ARCH: x86_64
+      AVD_PROFILE: pixel_2
+      AVD_CORES: 4
+      AVD_RAM_SIZE: 4096M
+      AVD_OPTIONS: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          # Everything the Android build reads except the 1.2 GB workout frame corpus.
+          sparse-checkout: |
+            /android/
+            /ios/calorietracker/Resources/FreeExerciseDB/dist/
+            /local-models/legal/
+            /scripts/ci/
+            /shared/workout-vectors/
+            !/shared/workout-vectors/*_v2_*.png
+          persist-credentials: false
+      # Unit tests and Debug builds use only the small sample pack.
+      - name: Add the workout sample frames
+        run: python3 scripts/ci/add_workout_sample_frames.py
+      - uses: gradle/actions/wrapper-validation@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+        with:
+          packages: platform-tools
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          # Lets main-branch runs save the configuration cache for later runs to reuse.
+          cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+      - name: Enable emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Build Debug app and instrumentation APKs
+        working-directory: android
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/android-test-logs"
+          ./gradlew :app:assembleDebug :app:assembleDebugAndroidTest -PworkoutVectors=sample --stacktrace 2>&1 | tee "$RUNNER_TEMP/android-test-logs/build.log"
+      - name: Prepare test command and diagnostics
+        run: |
+          cat > "$RUNNER_TEMP/run-android-instrumentation.sh" <<'SH'
+          #!/bin/bash
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/android-test-logs"
+          capture_diagnostics() {
+            adb logcat -d > "$RUNNER_TEMP/android-test-logs/logcat.txt" 2>&1 || true
+            adb shell dumpsys activity activities > "$RUNNER_TEMP/android-test-logs/activities.txt" 2>&1 || true
+            adb pull /sdcard/Android/data/com.apoorvdarshan.calorietracker.debug/files/screenshots "$RUNNER_TEMP/android-test-logs/screenshots" >/dev/null 2>&1 || true
+          }
+          trap capture_diagnostics EXIT
+          # The restored snapshot catches up on the time it was saved; let that settle.
+          bash "$GITHUB_WORKSPACE/scripts/ci/wait_for_emulator_idle.sh"
+          adb logcat -c
+          ./gradlew :app:connectedDebugAndroidTest -PworkoutVectors=sample --stacktrace \
+            -Pandroid.testInstrumentationRunnerArguments.numShards="$TEST_SHARDS" \
+            -Pandroid.testInstrumentationRunnerArguments.shardIndex="$TEST_SHARD" \
+            2>&1 | tee "$RUNNER_TEMP/android-test-logs/instrumentation.log"
+          # A shard that ran nothing would hide a broken split; fail instead.
+          ran=$(find app/build/outputs/androidTest-results/connected -name '*.xml' -exec grep -ho '<testcase ' {} + 2>/dev/null | wc -l | tr -d ' ')
+          echo "shard $TEST_SHARD of $TEST_SHARDS ran $ran test(s)"
+          [ "$ran" -gt 0 ] || { echo "error: shard $TEST_SHARD ran no tests" >&2; exit 1; }
+          SH
+      # A booted emulator snapshot taken before any app is installed: tests still
+      # start from a device with no Fud AI data, without a cold boot each run. It is
+      # saved only once start-up work is done, so restored runs don't resume into it.
+      #
+      # The snapshot only loads in the emulator and system image that created it,
+      # and android-emulator-runner installs the newest of both on every run. So the
+      # key names those versions, the runner image, the emulator settings and the
+      # settle script: any change creates a fresh snapshot instead of the emulator
+      # silently cold-booting.
+      - name: Test the emulator snapshot key (offline)
+        run: python3 -m unittest scripts/ci/test_emulator_cache_key.py
+      - name: Pick the emulator snapshot key
+        id: avd-key
+        run: |
+          set -euo pipefail
+          sdkmanager --list --channel=0 > "$RUNNER_TEMP/sdk-packages.txt" 2> /dev/null
+          versions=$(python3 scripts/ci/emulator_cache_key.py \
+            --image "system-images;android-${AVD_API_LEVEL};${AVD_TARGET};${AVD_ARCH}" < "$RUNNER_TEMP/sdk-packages.txt")
+          emulator=$(sed -n 's/^emulator=//p' <<< "$versions")
+          image=$(sed -n 's/^system_image=//p' <<< "$versions")
+          setup=$({ printf '%s\n' "$AVD_OPTIONS"; cat scripts/ci/wait_for_emulator_idle.sh; } | sha256sum | cut -c1-16)
+          key="avd-v4-api${AVD_API_LEVEL}-${AVD_TARGET}-${AVD_ARCH}-${AVD_PROFILE}-${AVD_CORES}cpu-${AVD_RAM_SIZE}"
+          key="${key}-emu${emulator}-img${image}-${ImageOS:?}-${setup}"
+          echo "key=$key" | tee -a "$GITHUB_OUTPUT"
+      - name: Restore the clean emulator snapshot
+        id: avd-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: ${{ steps.avd-key.outputs.key }}
+      - name: Create the emulator and save a clean boot snapshot
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2.38.0
+        with:
+          api-level: ${{ env.AVD_API_LEVEL }}
+          target: ${{ env.AVD_TARGET }}
+          arch: ${{ env.AVD_ARCH }}
+          profile: ${{ env.AVD_PROFILE }}
+          cores: ${{ env.AVD_CORES }}
+          ram-size: ${{ env.AVD_RAM_SIZE }}
+          force-avd-creation: false
+          emulator-boot-timeout: 300
+          emulator-options: ${{ env.AVD_OPTIONS }}
+          disable-animations: false
+          script: bash scripts/ci/wait_for_emulator_idle.sh --compile
+      # emulator-runner sends `adb emu kill` and returns at once; the emulator writes
+      # the boot snapshot while it shuts down. Wait for it to exit and check the
+      # snapshot exists, so neither the cache nor the test run sees a half-written one.
+      - name: Wait for the snapshot to be written
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        run: |
+          set -euo pipefail
+          for second in $(seq 1 300); do
+            if ! pgrep -f 'qemu-system' > /dev/null; then
+              echo "emulator exited after ${second}s"
+              break
+            fi
+            if [ "$second" -eq 300 ]; then
+              echo "error: the emulator was still running 5 minutes after it was told to shut down" >&2
+              pgrep -fl 'qemu-system' >&2 || true
+              exit 1
+            fi
+            sleep 1
+          done
+          if ! compgen -G "$HOME/.android/avd/*.avd/snapshots/default_boot/snapshot.pb" > /dev/null; then
+            echo "error: the emulator exited without saving its default_boot snapshot" >&2
+            find "$HOME/.android/avd" -maxdepth 4 -path '*snapshots*' 2>&1 | head -40 >&2 || true
+            exit 1
+          fi
+          du -sh "$HOME"/.android/avd/*.avd/snapshots/default_boot
+      # Cached right after creation, before any app is installed, so the cache holds
+      # exactly the clean snapshot. Only main saves: pull requests reuse main's copy
+      # (or create one for that run) and never add their own 4 GB cache entry.
+      - name: Save the clean emulator snapshot
+        if: steps.avd-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: ${{ steps.avd-key.outputs.key }}
+      - name: Run instrumentation and app UI tests
+        uses: reactivecircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2.38.0
+        with:
+          api-level: ${{ env.AVD_API_LEVEL }}
+          target: ${{ env.AVD_TARGET }}
+          arch: ${{ env.AVD_ARCH }}
+          profile: ${{ env.AVD_PROFILE }}
+          cores: ${{ env.AVD_CORES }}
+          ram-size: ${{ env.AVD_RAM_SIZE }}
+          force-avd-creation: false
+          emulator-boot-timeout: 300
+          # -no-snapshot-save: the clean snapshot is reused, never overwritten by a test run.
+          emulator-options: -no-snapshot-save ${{ env.AVD_OPTIONS }}
+          disable-animations: true
+          working-directory: android
+          # The custom AndroidJUnitRunner isolates accounts/background work.
+          script: bash "$RUNNER_TEMP/run-android-instrumentation.sh"
+      - name: Retain instrumentation results and emulator logs
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: android-instrumentation-reports-${{ matrix.shard }}
+          path: |
+            android/app/build/reports/androidTests/
+            android/app/build/outputs/androidTest-results/
+            ${{ runner.temp }}/android-test-logs/
+          if-no-files-found: warn
+          retention-days: 7

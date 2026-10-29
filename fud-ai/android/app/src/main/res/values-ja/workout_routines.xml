@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">ルーティンから開始</string>
+    <string name="workout_routine_save">ルーティンとして保存</string>
+    <string name="workout_routine_save_title">ルーティンを保存</string>
+    <string name="workout_routine_name">ルーティン名</string>
+    <string name="workout_routine_save_message">この日の種目を、予定のセット・回数・重量とともに保存します。</string>
+    <string name="workout_routines_title">ルーティン</string>
+    <string name="workout_routines_empty_title">ルーティンはまだありません</string>
+    <string name="workout_routines_empty_message">ワークアウトを記録してから、＋メニューの「ルーティンとして保存」を選んでください。</string>
+    <string name="workout_routines_footer">ルーティンの種目を選択した日に追加します。記録済みのセットはそのまま残ります。</string>
+    <string name="workout_routine_rename">名前を変更</string>
+    <string name="workout_routine_rename_title">ルーティン名を変更</string>
+    <string name="workout_routine_delete_title">ルーティンを削除しますか？</string>
+    <string name="workout_routine_delete_message">記録済みのワークアウトは残ります。</string>
+</resources>

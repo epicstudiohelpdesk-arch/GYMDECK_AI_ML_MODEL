@@ -1,0 +1,48 @@
+<resources>
+    <string name="returning_entry">Уже користувалися Fud AI?</string>
+    <string name="returning_title">З поверненням</string>
+    <string name="returning_subtitle">Поверніть свої прийоми їжі, вагу й тренування або почніть з чистого аркуша.</string>
+    <string name="returning_pick_hint">Виберіть один варіант або обидва.</string>
+    <string name="returning_drive_title">Відновити з Google Drive</string>
+    <string name="returning_drive_detail">Повна резервна копія: щоденник, фото, тренування й налаштування, якщо раніше ви вмикали резервне копіювання в Google Drive.</string>
+    <string name="returning_drive_note">Вхід потрібен лише для пошуку вашої копії. Поки застосунок не перевірено, Google може показувати додаткове попередження.</string>
+    <string name="returning_health_title">Імпорт із Health Connect</string>
+    <string name="returning_health_detail">Прийоми їжі, вага, відсоток жиру й калорії тренувань, які Fud AI зберіг у Health Connect. Разом із резервною копією додасться лише те, чого в ній бракує.</string>
+    <string name="returning_health_update">Спочатку встановіть або оновіть Health Connect із Play Store.</string>
+    <string name="returning_start_fresh">Почати заново</string>
+    <string name="returning_continue_setup">Продовжити налаштування</string>
+    <string name="returning_step_waiting">Далі</string>
+    <string name="returning_step_drive_done">Резервну копію відновлено.</string>
+    <string name="returning_step_drive_cancelled">Відновлення скасовано.</string>
+    <string name="returning_step_failed">Не завершено</string>
+    <string name="returning_drive_checking">Перевіряємо Google Drive…</string>
+    <string name="returning_drive_confirm_title">Відновити резервну копію?</string>
+    <string name="returning_drive_confirm_message_dated">Резервна копія від %1$s замінить усе, що є на цьому телефоні. Ключів API в копіях немає, тож, можливо, ваш ключ доведеться додати знову.</string>
+    <string name="returning_drive_confirm_message">Резервна копія замінить усе, що є на цьому телефоні. Ключів API в копіях немає, тож, можливо, ваш ключ доведеться додати знову.</string>
+    <string name="returning_drive_restoring">Відновлюємо…</string>
+    <string name="returning_drive_no_backup">Для цього облікового запису не знайдено резервної копії в Google Drive.</string>
+    <string name="returning_drive_unreachable">Не вдалося під’єднатися до Google Drive. Перевірте з’єднання й спробуйте ще раз.</string>
+    <string name="returning_drive_not_a_backup">Цей файл не є резервною копією Fud AI.</string>
+    <string name="returning_drive_needs_update">Цю копію створено новішою версією Fud AI. Оновіть застосунок і спробуйте ще раз.</string>
+    <string name="returning_drive_setup_missing">У цій копії немає завершеного налаштування, тож завершімо його зараз.</string>
+    <string name="returning_health_importing">Імпортуємо з Health Connect…</string>
+    <string name="returning_health_nothing">У Health Connect поки нічого імпортувати.</string>
+    <string name="returning_health_nothing_new">У резервній копії вже було все з Health Connect.</string>
+    <string name="returning_health_denied">Health Connect не надав жодних даних. Підключити його можна пізніше в налаштуваннях.</string>
+    <string name="returning_health_read_failed">Не вдалося прочитати всі дані з Health Connect. Спробуйте ще раз.</string>
+    <string name="returning_health_imported_both">Імпортовано: %1$s і %2$s.</string>
+    <string name="returning_health_imported_one">Імпортовано: %1$s.</string>
+    <string name="returning_health_imported_other">Дані з Health Connect імпортовано.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d прийом їжі</item>
+        <item quantity="few">%1$d прийоми їжі</item>
+        <item quantity="many">%1$d прийомів їжі</item>
+        <item quantity="other">%1$d прийому їжі</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d зважування</item>
+        <item quantity="few">%1$d зважування</item>
+        <item quantity="many">%1$d зважувань</item>
+        <item quantity="other">%1$d зважування</item>
+    </plurals>
+</resources>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="returning_entry">Schon mal Fud AI genutzt?</string>
+    <string name="returning_title">Willkommen zurück</string>
+    <string name="returning_subtitle">Hol deine Mahlzeiten, dein Gewicht und deine Trainings zurück oder fang neu an.</string>
+    <string name="returning_pick_hint">Wähle eins oder beides.</string>
+    <string name="returning_drive_title">Aus Google Drive wiederherstellen</string>
+    <string name="returning_drive_detail">Dein komplettes Backup: Tagebuch, Fotos, Trainings und Einstellungen, falls du das Drive-Backup früher eingeschaltet hattest.</string>
+    <string name="returning_drive_note">Die Anmeldung dient nur dazu, dein Backup zu finden. Google zeigt eventuell eine zusätzliche Warnung, bis die App verifiziert ist.</string>
+    <string name="returning_health_title">Aus Health Connect importieren</string>
+    <string name="returning_health_detail">Mahlzeiten, Gewicht, Körperfett und Trainingskalorien, die Fud AI in Health Connect gespeichert hat. Mit einem Backup kommt nur hinzu, was darin fehlt.</string>
+    <string name="returning_health_update">Installiere oder aktualisiere Health Connect zuerst über den Play Store.</string>
+    <string name="returning_start_fresh">Neu anfangen</string>
+    <string name="returning_continue_setup">Einrichtung fortsetzen</string>
+    <string name="returning_step_waiting">Als Nächstes</string>
+    <string name="returning_step_drive_done">Backup wiederhergestellt.</string>
+    <string name="returning_step_drive_cancelled">Wiederherstellung abgebrochen.</string>
+    <string name="returning_step_failed">Nicht abgeschlossen</string>
+    <string name="returning_drive_checking">Google Drive wird geprüft…</string>
+    <string name="returning_drive_confirm_title">Dein Backup wiederherstellen?</string>
+    <string name="returning_drive_confirm_message_dated">Dein Backup vom %1$s ersetzt alles auf diesem Telefon. API-Schlüssel sind nicht im Backup, deshalb musst du deinen eventuell erneut hinzufügen.</string>
+    <string name="returning_drive_confirm_message">Dein Backup ersetzt alles auf diesem Telefon. API-Schlüssel sind nicht im Backup, deshalb musst du deinen eventuell erneut hinzufügen.</string>
+    <string name="returning_drive_restoring">Wird wiederhergestellt…</string>
+    <string name="returning_drive_no_backup">Für dieses Konto wurde kein Google Drive-Backup gefunden.</string>
+    <string name="returning_drive_unreachable">Google Drive ist nicht erreichbar. Prüfe deine Verbindung und versuche es erneut.</string>
+    <string name="returning_drive_not_a_backup">Diese Datei ist kein Fud AI-Backup.</string>
+    <string name="returning_drive_needs_update">Dieses Backup stammt von einer neueren Fud AI-Version. Aktualisiere die App und versuche es dann erneut.</string>
+    <string name="returning_drive_setup_missing">Dieses Backup enthält keine abgeschlossene Einrichtung, also schließen wir sie jetzt ab.</string>
+    <string name="returning_health_importing">Import aus Health Connect…</string>
+    <string name="returning_health_nothing">In Health Connect gibt es noch nichts zu importieren.</string>
+    <string name="returning_health_nothing_new">Dein Backup enthielt schon alles aus Health Connect.</string>
+    <string name="returning_health_denied">Health Connect hat keine Daten freigegeben. Du kannst es später in den Einstellungen verbinden.</string>
+    <string name="returning_health_read_failed">Nicht alles konnte aus Health Connect gelesen werden. Versuch es erneut.</string>
+    <string name="returning_health_imported_both">%1$s und %2$s importiert.</string>
+    <string name="returning_health_imported_one">%1$s importiert.</string>
+    <string name="returning_health_imported_other">Deine Health Connect-Daten wurden importiert.</string>
+    <plurals name="returning_health_meals">
+        <item quantity="one">%1$d Mahlzeit</item>
+        <item quantity="other">%1$d Mahlzeiten</item>
+    </plurals>
+    <plurals name="returning_health_weigh_ins">
+        <item quantity="one">%1$d Gewichtseintrag</item>
+        <item quantity="other">%1$d Gewichtseinträge</item>
+    </plurals>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Vorbește cu Fud AI</string>
+    <string name="voice_shortcut_short">Vorbește</string>
+    <string name="voice_shortcut_disabled">Această comandă rapidă nu este disponibilă.</string>
+    <string name="voice_widget_description">Deschide Fud AI și pornește o conversație vocală cu asistentul.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">Automat</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">Încheiat</string>
+    <string name="voice_status_preparing">Se încarcă…</string>
+    <string name="voice_status_connecting">Se conectează…</string>
+    <string name="voice_status_listening">Ascultă…</string>
+    <string name="voice_status_thinking">Se gândește…</string>
+    <string name="voice_status_speaking">Vorbește…</string>
+    <string name="voice_listening_hint">Spune, te ascult.</string>
+    <string name="voice_time_left">%1$s rămase</string>
+    <string name="voice_minutes_short">%1$d min</string>
+    <string name="voice_less_than_a_minute">Sub 1 min</string>
+    <string name="voice_minimize">Minimizează</string>
+    <string name="voice_expand">Deschide conversația</string>
+    <string name="voice_close">Închide</string>
+    <string name="voice_end">Încheie conversația</string>
+    <string name="voice_close_camera">Închide camera</string>
+    <string name="voice_take_photo">Fă o fotografie</string>
+    <string name="voice_barcode_hint">Îndreaptă camera spre codul de bare</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">Ciornă</string>
+    <string name="voice_card_workout_draft">Ciornă de antrenament</string>
+    <string name="voice_card_dismiss">Închide</string>
+    <string name="voice_card_totals">%1$d kcal · Proteine: %2$dg · Carbohidrați: %3$dg · Grăsimi: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · Proteine: %2$dg · Carbohidrați: %3$dg · Grăsimi: %4$dg</string>
+    <string name="voice_card_log">Înregistrează</string>
+    <string name="voice_card_logged">Înregistrat</string>
+    <string name="voice_card_confirm_title">Confirmă</string>
+    <string name="voice_card_delete_title">Șterge</string>
+    <string name="voice_card_confirm">Salvează</string>
+    <string name="voice_card_saved">Salvat</string>
+    <string name="voice_card_undo">Anulează</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">Înregistrează %1$s · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">Înregistrează %1$s · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">Înregistrează %1$s de apă</string>
+    <string name="voice_change_start_fast">Începe un post de %1$d h</string>
+    <string name="voice_change_end_fast">Încheie postul · %1$s</string>
+    <string name="voice_change_weight">Înregistrează greutatea · %1$s</string>
+    <string name="voice_change_body_fat">Înregistrează grăsimea corporală · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">Antrenament · %d exercițiu</item>
+        <item quantity="few">Antrenament · %d exerciții</item>
+        <item quantity="other">Antrenament · %d de exerciții</item>
+    </plurals>
+    <string name="voice_change_cardio">Înregistrează %1$s · %2$d min</string>
+    <string name="voice_change_setting">Schimbă %1$s în %2$s</string>
+    <string name="voice_setting_units">Unități</string>
+    <string name="voice_units_metric">Metric</string>
+    <string name="voice_units_imperial">Imperial</string>
+    <string name="voice_on">Activat</string>
+    <string name="voice_off">Dezactivat</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">Încearcă din nou</string>
+    <string name="voice_action_talk_again">Vorbește cu Fud AI</string>
+    <string name="voice_action_see_plans">Vezi planurile Plus și Pro</string>
+    <string name="voice_action_buy_credits">Cumpără credite</string>
+    <string name="voice_action_add_key">Adaugă o cheie API</string>
+    <string name="voice_action_open_ai_providers">Setări AI</string>
+    <string name="voice_action_voice_settings">Asistent vocal</string>
+    <string name="voice_action_open_settings">Deschide Configurări</string>
+    <string name="voice_notice_setup_title">Asistent vocal</string>
+    <string name="voice_notice_setup_body">Vorbește ca să înregistrezi mese, să scanezi alimente și coduri de bare și să întrebi despre progresul tău. Asistentul vocal funcționează cu un plan Fud AI Plus sau Pro ori cu propria ta cheie API Gemini, OpenAI, xAI sau Qwen.</string>
+    <string name="voice_notice_missing_key_title">Adaugă cheia ta %1$s</string>
+    <string name="voice_notice_missing_key_body">Asistentul vocal este setat pe %1$s, care necesită cheia ta API. Adaug-o la Furnizori AI sau alege alt furnizor în setările asistentului vocal.</string>
+    <string name="voice_notice_subscription_title">Vocea Fud AI necesită un plan Plus sau Pro</string>
+    <string name="voice_notice_subscription_body">Vocea găzduită de Fud AI este inclusă în Plus (20 de minute pe lună) și Pro (100 de minute pe lună). Poți folosi și propria cheie Gemini, OpenAI, xAI sau Qwen.</string>
+    <string name="voice_notice_minutes_title">Ai rămas fără minute vocale</string>
+    <string name="voice_notice_minutes_body">Minutele vocale ale planului tău pentru luna aceasta s-au terminat. Cumpără credite ca să vorbești în continuare (4 credite pe minut) sau folosește-ți propria cheie Gemini, OpenAI, xAI ori Qwen.</string>
+    <string name="voice_notice_limit_title">Limita conversației a fost atinsă</string>
+    <string name="voice_notice_limit_body">Această conversație a atins limita de 15 minute. Începe una nouă ca să continui.</string>
+    <string name="voice_notice_mic_title">Este necesar accesul la microfon</string>
+    <string name="voice_notice_mic_body">Permite Fud AI să folosească microfonul din setările sistemului pentru a vorbi cu asistentul.</string>
+    <string name="voice_notice_mic_busy_title">Microfonul nu este disponibil.</string>
+    <string name="voice_notice_mic_busy_body">Este posibil ca altă aplicație să folosească microfonul. Închide-o și încearcă din nou.</string>
+    <string name="voice_notice_key_rejected_title">%1$s a respins cheia</string>
+    <string name="voice_notice_key_rejected_body">Verifică cheia API %1$s, facturarea și accesul la modelele vocale în timp real în Furnizori AI.</string>
+    <string name="voice_notice_unauthorized_title">Planul tău nu a putut fi verificat</string>
+    <string name="voice_notice_unauthorized_body">Fud AI nu ți-a putut confirma abonamentul. Încearcă Restaurează achizițiile în Setări → Acces AI.</string>
+    <string name="voice_notice_busy_title">Prea multe cereri</string>
+    <string name="voice_notice_busy_body">Sunt prea multe sesiuni vocale acum. Încearcă din nou peste un minut.</string>
+    <string name="voice_notice_unavailable_title">Vocea nu este disponibilă acum. Încearcă din nou mai târziu.</string>
+    <string name="voice_notice_unavailable_body">Serviciul vocal a întâmpinat o problemă. Încearcă din nou.</string>
+    <string name="voice_notice_connect_title">Conectarea nu a reușit</string>
+    <string name="voice_notice_connect_body">Nu s-a putut face conexiunea la serviciul vocal. Verifică-ți conexiunea și încearcă din nou.</string>
+    <string name="voice_notice_lost_title">Conexiunea vocală s-a încheiat.</string>
+    <string name="voice_notice_lost_body">Conexiunea vocală s-a încheiat. Verifică-ți conexiunea la internet și încearcă din nou.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">Asistent vocal</string>
+    <string name="voice_settings_provider">Furnizor</string>
+    <string name="voice_settings_model">Model</string>
+    <string name="voice_settings_voice">Voce</string>
+    <string name="voice_settings_language">Limba răspunsurilor</string>
+    <string name="voice_settings_language_auto">Automat</string>
+    <string name="voice_settings_language_app">Limba aplicației</string>
+    <string name="voice_settings_using">Se folosește %1$s</string>
+    <string name="voice_settings_add_key">Adaugă cheia ta %1$s la Furnizori AI</string>
+    <string name="voice_settings_key_missing">Nicio cheie API %1$s salvată</string>
+    <string name="voice_settings_needs_plan">Vocea Fud AI necesită un plan Plus sau Pro</string>
+    <string name="voice_settings_needs_setup">Abonează-te la Plus sau Pro ori adaugă o cheie API Gemini, OpenAI, xAI sau Qwen</string>
+    <string name="voice_settings_automatic_footer">Automat folosește furnizorul ales în Furnizori AI dacă este Gemini, OpenAI, xAI sau Qwen și are cheia salvată; altfel, Fud AI cu un plan Plus sau Pro. Cheile proprii sunt cele salvate în Furnizori AI.</string>
+    <string name="voice_settings_auto_capture">Fotografiere automată</string>
+    <string name="voice_settings_auto_capture_footer">Când camera este deschisă, asistentul face fotografia imediat ce vede mâncarea. Gemini, Qwen și Fud AI văd camera continuu, OpenAI de fiecare dată când vorbești, iar xAI și GPT-Live nu o pot vedea.</string>
+    <string name="voice_settings_confirm_saves">Confirmare înainte de salvare</string>
+    <string name="voice_settings_confirm_saves_footer">Afișează un card pentru aprobarea fiecărei înregistrări sau modificări. Dacă este dezactivat, modificările se salvează imediat și pot fi anulate timp de 8 secunde.</string>
+    <string name="voice_settings_save_to_coach">Salvează conversațiile în Antrenor</string>
+    <string name="voice_settings_save_to_coach_footer">Adaugă ce spuneți tu și asistentul în chatul tău cu Antrenorul.</string>
+    <string name="voice_settings_minutes_left">Minute rămase din plan</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + %2$s din credite</string>
+    <string name="voice_settings_minutes_footer">Plus include 20 de minute, iar Pro 100 de minute pe lună (UTC). După aceea, vocea folosește credite: 1 credit la fiecare 15 secunde.</string>
+    <string name="voice_settings_open_title">Deschide-l mai repede</string>
+    <string name="voice_settings_open_body">Atinge sfera de pe pagina principală, adaugă dala Vorbește cu Fud AI în Setări rapide, ține apăsată pictograma aplicației și alege Vorbește cu Fud AI sau adaugă widgetul pe ecranul de pornire. Fiecare opțiune începe să asculte imediat.</string>
+    <string name="voice_settings_add_tile">Adaugă dală în Setări rapide</string>
+    <string name="voice_settings_add_widget">Adaugă widget pe ecranul de pornire</string>
+    <string name="voice_settings_privacy_footer">Vocea, subtitrările, cadrele camerei văzute de asistent și rezultatele acțiunilor sale sunt trimise furnizorului folosit (Google pentru Fud AI Plus/Pro).  Serverul Fud AI păstrează contoarele de utilizare și înregistrările de facturare, nu conținutul conversațiilor.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">Ascultă vocea</string>
+    <string name="voice_preview_stop">Oprește mostra</string>
+    <string name="voice_preview_preparing">Se pregătește mostra…</string>
+    <string name="voice_preview_sample">Bună, sunt asistentul tău Fud AI. Așa sună vocea mea.</string>
+    <string name="voice_preview_failed">Nu s-a putut reda această mostră de voce. Încearcă din nou.</string>
+    <string name="voice_preview_busy">Încheie conversația vocală curentă înainte de a asculta o mostră de voce.</string>
+    <string name="voice_preview_usage">Redă o mostră scurtă fără a folosi microfonul. Consumă credite API sau minute de voce Fud AI.</string>
+</resources>

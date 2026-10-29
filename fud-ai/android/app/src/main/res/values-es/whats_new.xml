@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Novedad: Live Voice</string>
+    <string name="whats_new_body">Habla con Fud AI para registrar comidas, escanear códigos de barras y ver tu progreso.</string>
+    <string name="whats_new_tap_orb">Toca la esfera en Inicio para empezar.</string>
+    <string name="whats_new_access_line">Incluido en Plus y Pro, o usa tu propia clave de IA.</string>
+    <string name="whats_new_video_cd">Vídeo de demostración de Live Voice</string>
+    <string name="whats_new_sound_on">Activar sonido</string>
+    <string name="whats_new_sound_off">Desactivar sonido</string>
+    <string name="whats_new_access_title_setup">Consigue Live Voice</string>
+    <string name="whats_new_access_title_plans">Cámbiate a Plus o Pro</string>
+    <string name="whats_new_access_body_setup">Elige Plus o Pro y nosotros ejecutamos la IA por ti, o añade tu propia clave de API de Gemini, OpenAI, xAI o Qwen.</string>
+    <string name="whats_new_access_body_key_only">Añade tu propia clave de API de Gemini, OpenAI, xAI o Qwen para empezar a usar Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus y Pro ejecutan la IA por ti, con Live Voice incluido y sin claves de API que gestionar. Con tus propias claves, Fud AI sigue siendo gratis.</string>
+    <string name="whats_new_support_body">Fud AI es gratis y lo crea un solo desarrollador. Una valoración, compartirlo o una pequeña propina ayudan a que siga adelante.</string>
+    <string name="whats_new_community_title">Únete a la comunidad de Fud AI</string>
+    <string name="whats_new_community_body">Pide ayuda, comparte ideas y conoce a otros usuarios de Fud AI en Discord.</string>
+    <string name="whats_new_next">Siguiente</string>
+    <string name="whats_new_previous">Anterior</string>
+    <string name="notif_whats_new_title">Novedad en Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">Habla para registrar comidas, escanear códigos de barras y ver tu progreso. Toca para ver las novedades.</string>
+</resources>

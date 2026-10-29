@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Inizia da una routine</string>
+    <string name="workout_routine_save">Salva come routine</string>
+    <string name="workout_routine_save_title">Salva routine</string>
+    <string name="workout_routine_name">Nome della routine</string>
+    <string name="workout_routine_save_message">Salva gli esercizi di questo giorno con serie, ripetizioni e carichi pianificati.</string>
+    <string name="workout_routines_title">Routine</string>
+    <string name="workout_routines_empty_title">Ancora nessuna routine</string>
+    <string name="workout_routines_empty_message">Registra un allenamento, poi scegli Salva come routine dal menu +.</string>
+    <string name="workout_routines_footer">Aggiunge gli esercizi della routine al giorno selezionato. Le serie già registrate restano invariate.</string>
+    <string name="workout_routine_rename">Rinomina</string>
+    <string name="workout_routine_rename_title">Rinomina routine</string>
+    <string name="workout_routine_delete_title">Eliminare la routine?</string>
+    <string name="workout_routine_delete_message">Gli allenamenti già registrati vengono mantenuti.</string>
+</resources>

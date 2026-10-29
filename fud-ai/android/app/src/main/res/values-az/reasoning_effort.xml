@@ -1,0 +1,12 @@
+<resources>
+    <string name="settings_reasoning_effort">OpenRouter mühakimə səviyyəsi</string>
+    <string name="settings_reasoning_effort_help">Bütün OpenRouter sorğularına tətbiq olunur. Dəstəklənən səviyyələr modeldən asılıdır. Yüksək səy daha uzun çəkə və daha baha başa gələ bilər. \"Avto\" modelin defolt ayarını saxlayır; natamam cavablar \"Aşağı\" ilə təkrarlanır.</string>
+    <string name="reasoning_effort_auto">Defolt / Avto</string>
+    <string name="reasoning_effort_none">Yoxdur</string>
+    <string name="reasoning_effort_minimal">Minimal</string>
+    <string name="reasoning_effort_low">Aşağı</string>
+    <string name="reasoning_effort_medium">Orta</string>
+    <string name="reasoning_effort_high">Yüksək</string>
+    <string name="reasoning_effort_xhigh">Çox yüksək</string>
+    <string name="reasoning_effort_max">Maksimum</string>
+</resources>

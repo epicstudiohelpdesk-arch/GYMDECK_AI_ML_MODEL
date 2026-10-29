@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Minutnik przerwy</string>
+    <string name="settings_rest_timer_footer">Odlicza czas po zapisaniu serii w dzisiejszym dzienniku. Przy włączonych powiadomieniach Fud AI da znać o końcu przerwy, gdy aplikacja działa w tle.</string>
+    <string name="workout_rest_off">Wyłączone</string>
+    <string name="workout_rest_label">Przerwa</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">Dodaj 15 sekund</string>
+    <string name="workout_rest_skip">Pomiń</string>
+    <string name="workout_rest_skip_description">Pomiń przerwę</string>
+    <string name="workout_rest_start_after_set">Rozpocznij przerwę po serii %1$d</string>
+    <string name="notif_channel_workout_rest">Minutnik przerwy</string>
+    <string name="notif_channel_workout_rest_desc">Powiadamia o końcu przerwy podczas treningu.</string>
+    <string name="notif_workout_rest_title">Koniec przerwy</string>
+    <string name="notif_workout_rest_text">Czas na kolejną serię: %1$s.</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="health_import_title">Beslenme geçmişini içe aktar</string>
+    <string name="health_import_action">İçe aktar</string>
+    <string name="health_import_description">Başka bir uygulamadaki yiyecek kayıtlarını günlüğünüze aktarın. Mevcut kayıtları önizleyin, ardından paylaşılan kayıtların iki kez sayılmaması için tek bir kaynak uygulama seçin.</string>
+    <string name="health_import_from">Başlangıç (YYYY-AA-GG)</string>
+    <string name="health_import_to">Bitiş (YYYY-AA-GG)</string>
+    <string name="health_import_history_hint">Geçmiş erişimi olmadan son 30 gün içindeki tarihleri seçin. Daha eski kayıtlar, desteklenen bir cihazda geçmiş erişimi gerektirir.</string>
+    <string name="health_import_grant">Beslenme ve geçmiş erişimi ver</string>
+    <string name="health_import_access_result">Erişim ayarları güncellendi. Mevcut kayıtları kontrol etmek için yeniden önizleyin.</string>
+    <string name="health_import_access_needed">Health Connect\'te beslenme okuma erişimine izin verin, ardından yeniden önizleyin.</string>
+    <string name="health_import_invalid_dates">Geçerli tarihleri YYYY-AA-GG biçiminde girin. Bitiş tarihi başlangıç tarihiyle aynı veya sonra olmalı ve bugünden sonra olmamalıdır.</string>
+    <string name="health_import_history_needed">Bu aralık geçmiş erişimi gerektirir. Desteklenen bir cihazda erişim verin veya son 30 gün içindeki tarihleri seçin.</string>
+    <string name="health_import_preview">Mevcut kayıtları önizle</string>
+    <string name="health_import_failed">İçe aktarma tamamlanamadı. Health Connect erişimini kontrol edip tekrar deneyin.</string>
+    <string name="health_import_empty">Bu aralıkta diğer uygulamalardan yeni beslenme kaydı bulunamadı. Kaynak uygulamanızın beslenme verilerini Health Connect ile paylaştığını kontrol edin. Daha önce içe aktarılan kayıtlar, günlüğünüzden kaldırılanlar dahil, atlanır.</string>
+    <string name="health_import_count">%1$d yeni kayıt · %2$d kcal</string>
+    <string name="health_import_unnamed">İçe aktarılan öğün</string>
+    <string name="health_import_local_only">Bunlar yerel kopyalardır. Düzenlemeler ve silmeler Fud AI\'da kalır. İçe aktarmayı tekrarlamak daha önce içe aktarılan kayıtları atlar; onları güncellemez.</string>
+    <string name="health_import_done">Günlüğünüze %1$d kayıt içe aktarıldı.</string>
+    <string name="health_import_close">Kapat</string>
+</resources>

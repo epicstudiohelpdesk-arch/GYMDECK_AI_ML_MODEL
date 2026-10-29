@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_effort">Námaha</string>
+    <string name="workout_effort_value">Námaha: %1$s</string>
+    <string name="workout_effort_light">Lehká</string>
+    <string name="workout_effort_moderate">Střední</string>
+    <string name="workout_effort_vigorous">Vysoká</string>
+</resources>

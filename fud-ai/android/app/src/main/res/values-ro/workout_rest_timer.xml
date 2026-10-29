@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Cronometru de pauză</string>
+    <string name="settings_rest_timer_footer">Pornește o numărătoare inversă după ce înregistrezi o serie azi. Cu notificările activate, Fud AI te anunță când pauza se termină în fundal.</string>
+    <string name="workout_rest_off">Dezactivat</string>
+    <string name="workout_rest_label">Pauză</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">Adaugă 15 secunde</string>
+    <string name="workout_rest_skip">Omite</string>
+    <string name="workout_rest_skip_description">Omite pauza</string>
+    <string name="workout_rest_start_after_set">Pornește pauza după seria %1$d</string>
+    <string name="notif_channel_workout_rest">Cronometru de pauză</string>
+    <string name="notif_channel_workout_rest_desc">Te anunță când se termină o pauză din antrenament.</string>
+    <string name="notif_workout_rest_title">Pauză încheiată</string>
+    <string name="notif_workout_rest_text">E timpul pentru următoarea serie de %1$s.</string>
+</resources>

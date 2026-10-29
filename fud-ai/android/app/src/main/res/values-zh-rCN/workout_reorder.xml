@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">调整顺序</string>
+    <string name="workout_move_up">上移</string>
+    <string name="workout_move_down">下移</string>
+    <string name="workout_move_up_named">将%1$s上移</string>
+    <string name="workout_move_down_named">将%1$s下移</string>
+</resources>

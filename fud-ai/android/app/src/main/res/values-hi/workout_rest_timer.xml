@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">आराम टाइमर</string>
+    <string name="settings_rest_timer_footer">आज कोई सेट लॉग करने के बाद उलटी गिनती शुरू होती है। सूचनाएं चालू होने पर, ऐप बैकग्राउंड में हो तब भी आराम खत्म होने पर Fud AI आपको सूचित करता है।</string>
+    <string name="workout_rest_off">बंद</string>
+    <string name="workout_rest_label">आराम</string>
+    <string name="workout_rest_add_15">+15 से.</string>
+    <string name="workout_rest_add_15_description">15 सेकंड जोड़ें</string>
+    <string name="workout_rest_skip">छोड़ें</string>
+    <string name="workout_rest_skip_description">आराम छोड़ें</string>
+    <string name="workout_rest_start_after_set">सेट %1$d के बाद आराम शुरू करें</string>
+    <string name="notif_channel_workout_rest">आराम टाइमर</string>
+    <string name="notif_channel_workout_rest_desc">वर्कआउट में आराम का समय खत्म होने पर सूचित करता है।</string>
+    <string name="notif_workout_rest_title">आराम पूरा हुआ</string>
+    <string name="notif_workout_rest_text">%1$s के अगले सेट का समय हो गया है।</string>
+</resources>

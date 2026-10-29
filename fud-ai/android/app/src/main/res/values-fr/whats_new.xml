@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Nouveau : Live Voice</string>
+    <string name="whats_new_body">Parlez à Fud AI pour enregistrer vos repas, scanner des codes-barres et suivre vos progrès.</string>
+    <string name="whats_new_tap_orb">Touchez la sphère sur l’accueil pour commencer.</string>
+    <string name="whats_new_access_line">Inclus avec Plus et Pro, ou utilisez votre propre clé d’IA.</string>
+    <string name="whats_new_video_cd">Vidéo de démonstration de Live Voice</string>
+    <string name="whats_new_sound_on">Activer le son</string>
+    <string name="whats_new_sound_off">Couper le son</string>
+    <string name="whats_new_access_title_setup">Obtenez Live Voice</string>
+    <string name="whats_new_access_title_plans">Passez à Plus ou Pro</string>
+    <string name="whats_new_access_body_setup">Choisissez Plus ou Pro et nous faisons tourner l’IA pour vous, ou ajoutez votre propre clé d’API Gemini, OpenAI, xAI ou Qwen.</string>
+    <string name="whats_new_access_body_key_only">Ajoutez votre propre clé d’API Gemini, OpenAI, xAI ou Qwen pour commencer à utiliser Live Voice.</string>
+    <string name="whats_new_access_body_plans">Plus et Pro font tourner l’IA pour vous, Live Voice compris, sans clé d’API à gérer. Avec vos propres clés, Fud AI reste gratuit.</string>
+    <string name="whats_new_support_body">Fud AI est gratuit et développé par une seule personne. Une note, un partage ou un petit pourboire l’aident à continuer.</string>
+    <string name="whats_new_community_title">Rejoignez la communauté Fud AI</string>
+    <string name="whats_new_community_body">Obtenez de l’aide, partagez vos idées et rencontrez d’autres utilisateurs de Fud AI sur Discord.</string>
+    <string name="whats_new_next">Suivant</string>
+    <string name="whats_new_previous">Précédent</string>
+    <string name="notif_whats_new_title">Nouveau dans Fud AI : Live Voice</string>
+    <string name="notif_whats_new_text">Parlez pour enregistrer vos repas, scanner des codes-barres et suivre vos progrès. Touchez pour découvrir les nouveautés.</string>
+</resources>

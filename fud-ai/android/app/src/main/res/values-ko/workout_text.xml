@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">운동 설명하기</string>
+    <string name="workout_text_intro">한 운동을 설명하세요. 운동 일기에 추가하기 전에 세부 정보를 검토하세요.</string>
+    <string name="workout_text_description">운동 설명</string>
+    <string name="workout_text_example">줄넘기 20분, 그다음 40kg 벤치프레스 10회 3세트</string>
+    <string name="workout_text_voice">음성</string>
+    <string name="workout_text_preparing">운동을 찾는 중…</string>
+    <string name="workout_text_preview">분석</string>
+    <string name="workout_text_retry">다시 시도</string>
+    <string name="workout_text_review">운동 검토</string>
+    <string name="workout_text_date">날짜(YYYY-MM-DD)</string>
+    <string name="workout_text_custom">사용자 지정 시간 활동 · 칼로리 추정에 일반 활동률 사용</string>
+    <string name="workout_text_minutes">분</string>
+    <string name="workout_text_reps">반복 횟수</string>
+    <string name="workout_text_remove">운동 제거</string>
+    <string name="workout_text_calories_note">칼로리는 추정치입니다. 운동을 추가한 후 일기에서 계산을 사용하세요.</string>
+    <string name="workout_text_edit">설명 편집</string>
+    <string name="workout_text_adding">추가하는 중…</string>
+    <string name="workout_text_add">일기에 추가</string>
+    <string name="workout_text_menu">텍스트</string>
+    <string name="workout_text_set_weight">세트 %1$d · %2$s</string>
+    <string name="workout_text_estimate">예상 소모량: %1$dkcal</string>
+    <string name="workout_text_effort">강도(지정하지 않으면 보통)</string>
+    <string name="workout_text_light">라이트</string>
+    <string name="workout_text_moderate">보통</string>
+    <string name="workout_text_vigorous">격렬함</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>

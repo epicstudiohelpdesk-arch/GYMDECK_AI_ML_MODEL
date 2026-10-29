@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Таймер відпочинку</string>
+    <string name="settings_rest_timer_footer">Запускає зворотний відлік після запису підходу за сьогодні. Якщо сповіщення ввімкнено, Fud AI повідомить про кінець відпочинку, навіть коли застосунок у фоні.</string>
+    <string name="workout_rest_off">Вимк.</string>
+    <string name="workout_rest_label">Відпочинок</string>
+    <string name="workout_rest_add_15">+15 с</string>
+    <string name="workout_rest_add_15_description">Додати 15 секунд</string>
+    <string name="workout_rest_skip">Пропустити</string>
+    <string name="workout_rest_skip_description">Пропустити відпочинок</string>
+    <string name="workout_rest_start_after_set">Почати відпочинок після підходу %1$d</string>
+    <string name="notif_channel_workout_rest">Таймер відпочинку</string>
+    <string name="notif_channel_workout_rest_desc">Повідомляє про завершення відпочинку між підходами.</string>
+    <string name="notif_workout_rest_title">Відпочинок завершено</string>
+    <string name="notif_workout_rest_text">Час для наступного підходу: %1$s.</string>
+</resources>

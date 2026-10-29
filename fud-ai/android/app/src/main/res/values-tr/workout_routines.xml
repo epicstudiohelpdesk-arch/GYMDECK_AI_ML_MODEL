@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_routine_start">Rutinden başla</string>
+    <string name="workout_routine_save">Rutin olarak kaydet</string>
+    <string name="workout_routine_save_title">Rutini kaydet</string>
+    <string name="workout_routine_name">Rutin adı</string>
+    <string name="workout_routine_save_message">Bu günün egzersizlerini planlanan set, tekrar ve ağırlıklarıyla kaydeder.</string>
+    <string name="workout_routines_title">Rutinler</string>
+    <string name="workout_routines_empty_title">Henüz rutin yok</string>
+    <string name="workout_routines_empty_message">Bir antrenman kaydedin, ardından + menüsünden Rutin olarak kaydet’i seçin.</string>
+    <string name="workout_routines_footer">Rutinin egzersizlerini seçili güne ekler. Daha önce kaydettiğiniz setler olduğu gibi kalır.</string>
+    <string name="workout_routine_rename">Yeniden adlandır</string>
+    <string name="workout_routine_rename_title">Rutini yeniden adlandır</string>
+    <string name="workout_routine_delete_title">Rutin silinsin mi?</string>
+    <string name="workout_routine_delete_message">Daha önce kaydettiğiniz antrenmanlar korunur.</string>
+</resources>

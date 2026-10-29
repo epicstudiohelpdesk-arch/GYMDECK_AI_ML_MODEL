@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_reorder">Herschikken</string>
+    <string name="workout_move_up">Omhoog verplaatsen</string>
+    <string name="workout_move_down">Omlaag verplaatsen</string>
+    <string name="workout_move_up_named">%1$s omhoog verplaatsen</string>
+    <string name="workout_move_down_named">%1$s omlaag verplaatsen</string>
+</resources>

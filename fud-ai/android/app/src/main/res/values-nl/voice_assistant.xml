@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Praat met Fud AI</string>
+    <string name="voice_shortcut_short">Praten</string>
+    <string name="voice_shortcut_disabled">Deze snelkoppeling is niet beschikbaar.</string>
+    <string name="voice_widget_description">Opent Fud AI en start een spraakgesprek met de assistent.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">Automatisch</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">Beëindigd</string>
+    <string name="voice_status_preparing">Laden…</string>
+    <string name="voice_status_connecting">Verbinden…</string>
+    <string name="voice_status_listening">Luistert…</string>
+    <string name="voice_status_thinking">Denkt na…</string>
+    <string name="voice_status_speaking">Spreekt…</string>
+    <string name="voice_listening_hint">Ga je gang, ik luister.</string>
+    <string name="voice_time_left">%1$s over</string>
+    <string name="voice_minutes_short">%1$d min</string>
+    <string name="voice_less_than_a_minute">Minder dan 1 min</string>
+    <string name="voice_minimize">Minimaliseer</string>
+    <string name="voice_expand">Gesprek openen</string>
+    <string name="voice_close">Sluit</string>
+    <string name="voice_end">Beëindig gesprek</string>
+    <string name="voice_close_camera">Sluit camera</string>
+    <string name="voice_take_photo">Maak foto</string>
+    <string name="voice_barcode_hint">Richt de camera op de barcode</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">Concept</string>
+    <string name="voice_card_workout_draft">Trainingsconcept</string>
+    <string name="voice_card_dismiss">Sluit</string>
+    <string name="voice_card_totals">%1$d kcal · Eiwit: %2$dg · Koolhydraten: %3$dg · Vet: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · Eiwit: %2$dg · Koolhydraten: %3$dg · Vet: %4$dg</string>
+    <string name="voice_card_log">Log dit</string>
+    <string name="voice_card_logged">Gelogd</string>
+    <string name="voice_card_confirm_title">Bevestig</string>
+    <string name="voice_card_delete_title">Verwijder</string>
+    <string name="voice_card_confirm">Bewaar</string>
+    <string name="voice_card_saved">Opgeslagen</string>
+    <string name="voice_card_undo">Herstel</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">%1$s loggen · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">%1$s loggen · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">%1$s water loggen</string>
+    <string name="voice_change_start_fast">Een vastenperiode van %1$d uur starten</string>
+    <string name="voice_change_end_fast">Stop met vasten · %1$s</string>
+    <string name="voice_change_weight">Gewicht loggen · %1$s</string>
+    <string name="voice_change_body_fat">Vetpercentage loggen · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">Training · %d oefening</item>
+        <item quantity="other">Training · %d oefeningen</item>
+    </plurals>
+    <string name="voice_change_cardio">%1$s loggen · %2$d min</string>
+    <string name="voice_change_setting">%1$s wijzigen in %2$s</string>
+    <string name="voice_setting_units">Eenheden</string>
+    <string name="voice_units_metric">Metrisch</string>
+    <string name="voice_units_imperial">Imperiaal</string>
+    <string name="voice_on">Aan</string>
+    <string name="voice_off">Uit</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">Opnieuw proberen</string>
+    <string name="voice_action_talk_again">Praat met Fud AI</string>
+    <string name="voice_action_see_plans">Bekijk Plus- en Pro-abonnementen</string>
+    <string name="voice_action_buy_credits">Koop credits</string>
+    <string name="voice_action_add_key">Voeg een API-sleutel toe</string>
+    <string name="voice_action_open_ai_providers">AI-instellingen</string>
+    <string name="voice_action_voice_settings">Spraakassistent</string>
+    <string name="voice_action_open_settings">Open Instellingen</string>
+    <string name="voice_notice_setup_title">Spraakassistent</string>
+    <string name="voice_notice_setup_body">Praat om maaltijden te loggen, eten en barcodes te scannen en naar je voortgang te vragen. De spraakassistent werkt met een Fud AI Plus- of Pro-abonnement, of met je eigen API-sleutel van Gemini, OpenAI, xAI of Qwen.</string>
+    <string name="voice_notice_missing_key_title">Voeg je %1$s-sleutel toe</string>
+    <string name="voice_notice_missing_key_body">De spraakassistent is ingesteld op %1$s. Daarvoor is je API-sleutel nodig. Voeg die toe bij AI-providers of kies een andere provider in de instellingen van de spraakassistent.</string>
+    <string name="voice_notice_subscription_title">Fud AI-spraak vereist een Plus- of Pro-abonnement</string>
+    <string name="voice_notice_subscription_body">Spraakgesprekken die door Fud AI worden gehost, zijn inbegrepen bij Plus (20 minuten per maand) en Pro (100 minuten per maand). Je kunt ook je eigen Gemini-, OpenAI-, xAI- of Qwen-sleutel gebruiken.</string>
+    <string name="voice_notice_minutes_title">Je spraakminuten zijn op</string>
+    <string name="voice_notice_minutes_body">De spraakminuten van je abonnement voor deze maand zijn op. Koop credits om door te praten (4 credits per minuut), of gebruik je eigen sleutel van Gemini, OpenAI, xAI of Qwen.</string>
+    <string name="voice_notice_limit_title">Gesprekslimiet bereikt</string>
+    <string name="voice_notice_limit_body">Dit gesprek heeft de limiet van 15 minuten bereikt. Begin een nieuw gesprek om door te gaan.</string>
+    <string name="voice_notice_mic_title">Toegang tot de microfoon nodig</string>
+    <string name="voice_notice_mic_body">Geef Fud AI in de systeeminstellingen toegang tot de microfoon om met de assistent te praten.</string>
+    <string name="voice_notice_mic_busy_title">De microfoon is niet beschikbaar.</string>
+    <string name="voice_notice_mic_busy_body">Mogelijk gebruikt een andere app de microfoon. Sluit die app en probeer het opnieuw.</string>
+    <string name="voice_notice_key_rejected_title">%1$s heeft de sleutel geweigerd</string>
+    <string name="voice_notice_key_rejected_body">Controleer bij AI-providers je API-sleutel voor %1$s, de facturering en de toegang tot modellen voor live spraakgesprekken.</string>
+    <string name="voice_notice_unauthorized_title">Je abonnement kon niet worden geverifieerd</string>
+    <string name="voice_notice_unauthorized_body">Fud AI kon je abonnement niet bevestigen. Probeer Aankopen herstellen in Instellingen → AI-toegang.</string>
+    <string name="voice_notice_busy_title">Te veel verzoeken</string>
+    <string name="voice_notice_busy_body">Er zijn nu te veel spraaksessies. Probeer het over een minuut opnieuw.</string>
+    <string name="voice_notice_unavailable_title">Spraak is nu niet beschikbaar. Probeer het later opnieuw.</string>
+    <string name="voice_notice_unavailable_body">Er ging iets mis bij de spraakdienst. Probeer het opnieuw.</string>
+    <string name="voice_notice_connect_title">Verbinden is mislukt</string>
+    <string name="voice_notice_connect_body">Kan geen verbinding maken met de spraakdienst. Controleer je verbinding en probeer het opnieuw.</string>
+    <string name="voice_notice_lost_title">De spraakverbinding is beëindigd.</string>
+    <string name="voice_notice_lost_body">De spraakverbinding is beëindigd. Controleer je internetverbinding en probeer het opnieuw.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">Spraakassistent</string>
+    <string name="voice_settings_provider">Provider</string>
+    <string name="voice_settings_model">Model</string>
+    <string name="voice_settings_voice">Stem</string>
+    <string name="voice_settings_language">Antwoordtaal</string>
+    <string name="voice_settings_language_auto">Automatisch</string>
+    <string name="voice_settings_language_app">Taal van de app</string>
+    <string name="voice_settings_using">%1$s wordt gebruikt</string>
+    <string name="voice_settings_add_key">Voeg je %1$s-sleutel toe bij AI-providers</string>
+    <string name="voice_settings_key_missing">Geen API-sleutel voor %1$s bewaard</string>
+    <string name="voice_settings_needs_plan">Fud AI-spraak vereist een Plus- of Pro-abonnement</string>
+    <string name="voice_settings_needs_setup">Neem Plus of Pro, of voeg een API-sleutel van Gemini, OpenAI, xAI of Qwen toe</string>
+    <string name="voice_settings_automatic_footer">Automatisch gebruikt de provider die bij AI-providers is gekozen als dat Gemini, OpenAI, xAI of Qwen is en de sleutel is bewaard; anders Fud AI met een Plus- of Pro-abonnement. Eigen sleutels zijn de sleutels die bij AI-providers zijn bewaard.</string>
+    <string name="voice_settings_auto_capture">Foto’s automatisch maken</string>
+    <string name="voice_settings_auto_capture_footer">Als de camera open is, maakt de assistent de foto zodra hij het eten ziet. Gemini, Qwen en Fud AI zien de camera doorlopend, OpenAI telkens als je praat, xAI en GPT-Live kunnen hem niet zien.</string>
+    <string name="voice_settings_confirm_saves">Bevestigen vóór bewaren</string>
+    <string name="voice_settings_confirm_saves_footer">Toon een kaart om elke registratie of wijziging goed te keuren. Als dit uitstaat, worden wijzigingen meteen opgeslagen en kun je ze 8 seconden lang ongedaan maken.</string>
+    <string name="voice_settings_save_to_coach">Bewaar gesprekken in Coach</string>
+    <string name="voice_settings_save_to_coach_footer">Voegt toe wat jij en de assistent zeggen aan je Coach-chat.</string>
+    <string name="voice_settings_minutes_left">Resterende abonnementsminuten</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + %2$s uit credits</string>
+    <string name="voice_settings_minutes_footer">Plus bevat 20 minuten en Pro 100 minuten per maand (UTC). Daarna gebruikt spraak credits: 1 credit per 15 seconden.</string>
+    <string name="voice_settings_open_title">Sneller openen</string>
+    <string name="voice_settings_open_body">Tik op de bol op het beginscherm van de app, voeg de tegel Praat met Fud AI toe aan Snelle instellingen, houd het app-pictogram ingedrukt en kies Praat met Fud AI, of voeg de widget toe aan je startscherm. Elke optie begint meteen met luisteren.</string>
+    <string name="voice_settings_add_tile">Tegel toevoegen aan Snelle instellingen</string>
+    <string name="voice_settings_add_widget">Widget toevoegen aan startscherm</string>
+    <string name="voice_settings_privacy_footer">Je stem, ondertiteling, de camerabeelden die de assistent ziet en de resultaten van zijn acties gaan naar de provider die je gebruikt (Google voor Fud AI Plus/Pro). De server van Fud AI bewaart gebruikstellers en factureringsbewijzen, geen gespreksinhoud.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">Stem beluisteren</string>
+    <string name="voice_preview_stop">Voorbeeld stoppen</string>
+    <string name="voice_preview_preparing">Voorbeeld voorbereiden…</string>
+    <string name="voice_preview_sample">Hoi, ik ben je Fud AI-assistent. Zo klinkt mijn stem.</string>
+    <string name="voice_preview_failed">Dit stemvoorbeeld kon niet worden afgespeeld. Probeer het opnieuw.</string>
+    <string name="voice_preview_busy">Beëindig je huidige spraakgesprek voordat je een stem beluistert.</string>
+    <string name="voice_preview_usage">Speelt een kort voorbeeld af zonder je microfoon te gebruiken. Verbruikt API-tegoed of Fud AI-spraakminuten.</string>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Fud AI ilə danış</string>
+    <string name="voice_shortcut_short">Danış</string>
+    <string name="voice_shortcut_disabled">Bu qısayol əlçatan deyil.</string>
+    <string name="voice_widget_description">Fud AI-ı açır və köməkçi ilə səsli söhbət başladır.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">Avtomatik</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">Bitdi</string>
+    <string name="voice_status_preparing">Yüklənir…</string>
+    <string name="voice_status_connecting">Qoşulur…</string>
+    <string name="voice_status_listening">Dinləyir…</string>
+    <string name="voice_status_thinking">Düşünür…</string>
+    <string name="voice_status_speaking">Danışır…</string>
+    <string name="voice_listening_hint">Buyur, səni dinləyirəm.</string>
+    <string name="voice_time_left">%1$s qalıb</string>
+    <string name="voice_minutes_short">%1$d dəq</string>
+    <string name="voice_less_than_a_minute">1 dəqiqədən az</string>
+    <string name="voice_minimize">Kiçilt</string>
+    <string name="voice_expand">Söhbəti aç</string>
+    <string name="voice_close">Bağla</string>
+    <string name="voice_end">Söhbəti bitir</string>
+    <string name="voice_close_camera">Kameranı bağla</string>
+    <string name="voice_take_photo">Şəkil çək</string>
+    <string name="voice_barcode_hint">Kameranı ştrix-koda tutun</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">Qaralama</string>
+    <string name="voice_card_workout_draft">Məşq qaralaması</string>
+    <string name="voice_card_dismiss">Bağla</string>
+    <string name="voice_card_totals">%1$d kcal · Protein: %2$dg · Karbohidrat: %3$dg · Yağ: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · Protein: %2$dg · Karbohidrat: %3$dg · Yağ: %4$dg</string>
+    <string name="voice_card_log">Qeyd et</string>
+    <string name="voice_card_logged">Qeyd edildi</string>
+    <string name="voice_card_confirm_title">Təsdiqlə</string>
+    <string name="voice_card_delete_title">Sil</string>
+    <string name="voice_card_confirm">Yadda Saxla</string>
+    <string name="voice_card_saved">Yadda saxlanıldı</string>
+    <string name="voice_card_undo">Geri al</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">%1$s qeyd et · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">%1$s qeyd et · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">%1$s su qeyd et</string>
+    <string name="voice_change_start_fast">%1$d saatlıq aclığa başla</string>
+    <string name="voice_change_end_fast">Orucunuzu bitirin · %1$s</string>
+    <string name="voice_change_weight">Çəkini qeyd et · %1$s</string>
+    <string name="voice_change_body_fat">Bədən yağını qeyd et · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">Məşq · %d hərəkət</item>
+        <item quantity="other">Məşq · %d hərəkət</item>
+    </plurals>
+    <string name="voice_change_cardio">%1$s qeyd et · %2$d dəq</string>
+    <string name="voice_change_setting">%1$s dəyərini %2$s et</string>
+    <string name="voice_setting_units">Vahidlər</string>
+    <string name="voice_units_metric">Metrik</string>
+    <string name="voice_units_imperial">İmperial</string>
+    <string name="voice_on">Aktiv</string>
+    <string name="voice_off">Deaktiv</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">Yenidən cəhd et</string>
+    <string name="voice_action_talk_again">Fud AI ilə danış</string>
+    <string name="voice_action_see_plans">Plus və Pro planlarına bax</string>
+    <string name="voice_action_buy_credits">Kredit al</string>
+    <string name="voice_action_add_key">API açarı əlavə et</string>
+    <string name="voice_action_open_ai_providers">Süni İntellekt Ayarları</string>
+    <string name="voice_action_voice_settings">Səsli köməkçi</string>
+    <string name="voice_action_open_settings">Ayarları aç</string>
+    <string name="voice_notice_setup_title">Səsli köməkçi</string>
+    <string name="voice_notice_setup_body">Yeməkləri qeyd etmək, qidanı və ştrix-kodları skan etmək, irəliləyişiniz barədə soruşmaq üçün danışın. Səsli köməkçi Fud AI Plus və ya Pro planı ilə, yaxud öz Gemini, OpenAI, xAI və ya Qwen API açarınızla işləyir.</string>
+    <string name="voice_notice_missing_key_title">%1$s açarını əlavə et</string>
+    <string name="voice_notice_missing_key_body">Səsli köməkçi %1$s üçün qurulub və API açarına ehtiyacı var. Onu Süni intellekt provayderləri bölməsində əlavə et və ya Səsli köməkçi ayarlarında başqa provayder seç.</string>
+    <string name="voice_notice_subscription_title">Fud AI səsi üçün Plus və ya Pro planı lazımdır</string>
+    <string name="voice_notice_subscription_body">Fud AI tərəfindən təmin edilən səs xidməti Plus (ayda 20 dəqiqə) və Pro (ayda 100 dəqiqə) planlarına daxildir. Öz Gemini, OpenAI, xAI və ya Qwen açarından da istifadə edə bilərsən.</string>
+    <string name="voice_notice_minutes_title">Səs dəqiqələriniz bitdi</string>
+    <string name="voice_notice_minutes_body">Planınızın bu ay üçün səs dəqiqələri bitib. Danışmağa davam etmək üçün kredit alın (dəqiqəsi 4 kredit) və ya öz Gemini, OpenAI, xAI ya da Qwen açarınızdan istifadə edin.</string>
+    <string name="voice_notice_limit_title">Söhbət limitinə çatılıb</string>
+    <string name="voice_notice_limit_body">Bu söhbət 15 dəqiqəlik limitə çatdı. Davam etmək üçün yenisini başladın.</string>
+    <string name="voice_notice_mic_title">Mikrofona giriş lazımdır</string>
+    <string name="voice_notice_mic_body">Köməkçi ilə danışmaq üçün sistem ayarlarında Fud AI tətbiqinə mikrofondan istifadə icazəsi ver.</string>
+    <string name="voice_notice_mic_busy_title">Mikrofon əlçatan deyil.</string>
+    <string name="voice_notice_mic_busy_body">Mikrofondan başqa tətbiq istifadə edə bilər. Onu bağla və yenidən cəhd et.</string>
+    <string name="voice_notice_key_rejected_title">%1$s açarı rədd etdi</string>
+    <string name="voice_notice_key_rejected_body">Süni intellekt provayderləri bölməsində %1$s API açarını, ödəniş vəziyyətini və canlı səs modellərinə girişini yoxla.</string>
+    <string name="voice_notice_unauthorized_title">Planını yoxlamaq mümkün olmadı</string>
+    <string name="voice_notice_unauthorized_body">Fud AI abunəliyinizi təsdiqləyə bilmədi. Ayarlar → Süni İntellektə Giriş bölməsində Alışları Bərpa Et seçimini sınayın.</string>
+    <string name="voice_notice_busy_title">Həddən artıq sorğu</string>
+    <string name="voice_notice_busy_body">Hazırda çox sayda səsli sessiya var. Bir dəqiqədən sonra yenidən cəhd edin.</string>
+    <string name="voice_notice_unavailable_title">Səs funksiyası hazırda əlçatan deyil. Sonra yenidən cəhd edin.</string>
+    <string name="voice_notice_unavailable_body">Səs xidmətində problem yarandı. Yenidən cəhd edin.</string>
+    <string name="voice_notice_connect_title">Qoşulmaq mümkün olmadı</string>
+    <string name="voice_notice_connect_body">Səs xidmətinə qoşulmaq mümkün olmadı. Bağlantınızı yoxlayıb yenidən cəhd edin.</string>
+    <string name="voice_notice_lost_title">Səs bağlantısı sona çatdı.</string>
+    <string name="voice_notice_lost_body">Səs bağlantısı sona çatdı. İnternet bağlantınızı yoxlayıb yenidən cəhd edin.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">Səsli köməkçi</string>
+    <string name="voice_settings_provider">Təminatçı</string>
+    <string name="voice_settings_model">Model</string>
+    <string name="voice_settings_voice">Səs</string>
+    <string name="voice_settings_language">Cavab dili</string>
+    <string name="voice_settings_language_auto">Avtomatik</string>
+    <string name="voice_settings_language_app">Tətbiq dili</string>
+    <string name="voice_settings_using">%1$s istifadə olunur</string>
+    <string name="voice_settings_add_key">Süni intellekt provayderləri bölməsində %1$s açarını əlavə et</string>
+    <string name="voice_settings_key_missing">Saxlanmış %1$s API açarı yoxdur</string>
+    <string name="voice_settings_needs_plan">Fud AI səsi üçün Plus və ya Pro planı lazımdır</string>
+    <string name="voice_settings_needs_setup">Plus və ya Pro-ya abunə olun, ya da Gemini, OpenAI, xAI və ya Qwen API açarı əlavə edin</string>
+    <string name="voice_settings_automatic_footer">Avtomatik rejim Süni İntellekt Təminatçılarında seçilmiş təminatçını istifadə edir, əgər o Gemini, OpenAI, xAI və ya Qwen-dirsə və açarı saxlanıbsa; əks halda Plus və ya Pro planı ilə Fud AI istifadə olunur. Öz açarlarınız Süni İntellekt Təminatçılarında saxlanmış açarlardır.</string>
+    <string name="voice_settings_auto_capture">Şəkilləri avtomatik çəkmə</string>
+    <string name="voice_settings_auto_capture_footer">Kamera açıq olanda köməkçi qidanı görən kimi şəkli çəkir. Gemini, Qwen və Fud AI kameranı daim görür; OpenAI hər dəfə danışanda; xAI və GPT-Live isə onu görə bilmir.</string>
+    <string name="voice_settings_confirm_saves">Saxlamazdan əvvəl təsdiq</string>
+    <string name="voice_settings_confirm_saves_footer">Hər qeydi və ya dəyişikliyi təsdiqləmək üçün kart göstərir. Söndürüldükdə dəyişikliklər dərhal yadda saxlanılır və 8 saniyə ərzində geri qaytarıla bilər.</string>
+    <string name="voice_settings_save_to_coach">Söhbətləri Məşqçiyə saxla</string>
+    <string name="voice_settings_save_to_coach_footer">Sizin və köməkçinin dediklərini Məşqçi söhbətinizə əlavə edir.</string>
+    <string name="voice_settings_minutes_left">Planda qalan dəqiqələr</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + kreditlərdən %2$s</string>
+    <string name="voice_settings_minutes_footer">Plus ayda 20 dəqiqə, Pro isə 100 dəqiqə daxil edir (UTC). Bundan sonra səs kredit istifadə edir: hər 15 saniyəyə 1 kredit.</string>
+    <string name="voice_settings_open_title">Daha tez açın</string>
+    <string name="voice_settings_open_body">Əsas səhifədə kürəyə toxun, Sürətli ayarlara Fud AI ilə danış düyməsini əlavə et, tətbiqin nişanını basılı saxlayıb Fud AI ilə danış seç və ya vidceti ana ekrana əlavə et. Hər biri dərhal dinləməyə başlayır.</string>
+    <string name="voice_settings_add_tile">Sürətli ayarlara düymə əlavə et</string>
+    <string name="voice_settings_add_widget">Ana ekrana vidcet əlavə et</string>
+    <string name="voice_settings_privacy_footer">Səsin, altyazılar, köməkçinin gördüyü kamera kadrları və əməliyyatlarının nəticələri istifadə etdiyin provayderə göndərilir (Fud AI Plus/Pro üçün Google).  Fud AI serveri istifadə sayğaclarını və ödəniş qeydlərini saxlayır, söhbətin məzmununu deyil.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">Səsi dinlə</string>
+    <string name="voice_preview_stop">Səs nümunəsini dayandır</string>
+    <string name="voice_preview_preparing">Səs nümunəsi hazırlanır…</string>
+    <string name="voice_preview_sample">Salam, mən sizin Fud AI köməkçinizəm. Səsim belə səslənir.</string>
+    <string name="voice_preview_failed">Bu səs nümunəsini səsləndirmək mümkün olmadı. Yenidən cəhd edin.</string>
+    <string name="voice_preview_busy">Səs nümunəsini dinləməzdən əvvəl cari səsli söhbətinizi bitirin.</string>
+    <string name="voice_preview_usage">Mikrofondan istifadə etmədən qısa səs nümunəsi səsləndirir. API kreditləri və ya Fud AI səs dəqiqələrindən istifadə edir.</string>
+</resources>

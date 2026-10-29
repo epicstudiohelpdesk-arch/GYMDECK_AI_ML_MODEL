@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_rest_timer">Temporizador de descanso</string>
+    <string name="settings_rest_timer_footer">Inicia una cuenta atrás cuando registras una serie hoy. Con las notificaciones activadas, Fud AI te avisa cuando termina el descanso en segundo plano.</string>
+    <string name="workout_rest_off">Desactivado</string>
+    <string name="workout_rest_label">Descanso</string>
+    <string name="workout_rest_add_15">+15 s</string>
+    <string name="workout_rest_add_15_description">Añadir 15 segundos</string>
+    <string name="workout_rest_skip">Omitir</string>
+    <string name="workout_rest_skip_description">Omitir descanso</string>
+    <string name="workout_rest_start_after_set">Iniciar descanso tras la serie %1$d</string>
+    <string name="notif_channel_workout_rest">Temporizador de descanso</string>
+    <string name="notif_channel_workout_rest_desc">Avisa cuando termina un descanso del entrenamiento.</string>
+    <string name="notif_workout_rest_title">Descanso terminado</string>
+    <string name="notif_workout_rest_text">Es hora de tu siguiente serie de %1$s.</string>
+</resources>

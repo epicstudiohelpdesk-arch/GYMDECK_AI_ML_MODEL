@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">Yeni: Live Voice</string>
+    <string name="whats_new_body">Öğün kaydetmek, barkod taramak ve ilerlemenizi görmek için Fud AI ile konuşun.</string>
+    <string name="whats_new_tap_orb">Başlamak için Ana Sayfa’daki küreye dokunun.</string>
+    <string name="whats_new_access_line">Plus ve Pro’ya dahildir ya da kendi yapay zekâ anahtarınızı kullanın.</string>
+    <string name="whats_new_video_cd">Live Voice tanıtım videosu</string>
+    <string name="whats_new_sound_on">Sesi aç</string>
+    <string name="whats_new_sound_off">Sesi kapat</string>
+    <string name="whats_new_access_title_setup">Live Voice’u edinin</string>
+    <string name="whats_new_access_title_plans">Plus veya Pro’ya geçin</string>
+    <string name="whats_new_access_body_setup">Plus veya Pro’yu seçin, yapay zekâyı sizin için biz çalıştıralım ya da kendi Gemini, OpenAI, xAI veya Qwen API anahtarınızı ekleyin.</string>
+    <string name="whats_new_access_body_key_only">Live Voice’u kullanmaya başlamak için kendi Gemini, OpenAI, xAI veya Qwen API anahtarınızı ekleyin.</string>
+    <string name="whats_new_access_body_plans">Plus ve Pro yapay zekâyı sizin için çalıştırır; Live Voice dahildir ve yönetmeniz gereken API anahtarı yoktur. Kendi anahtarlarınızla Fud AI ücretsiz kalır.</string>
+    <string name="whats_new_support_body">Fud AI ücretsiz ve tek bir geliştirici tarafından yapılıyor. Bir puan, paylaşım ya da küçük bir bahşiş devam etmesine yardımcı olur.</string>
+    <string name="whats_new_community_title">Fud AI topluluğuna katılın</string>
+    <string name="whats_new_community_body">Discord’da yardım alın, fikirlerinizi paylaşın ve diğer Fud AI kullanıcılarıyla tanışın.</string>
+    <string name="whats_new_next">İleri</string>
+    <string name="whats_new_previous">Geri</string>
+    <string name="notif_whats_new_title">Fud AI’da yeni: Live Voice</string>
+    <string name="notif_whats_new_text">Konuşarak öğün kaydedin, barkod tarayın ve ilerlemenizi görün. Yenilikleri görmek için dokunun.</string>
+</resources>

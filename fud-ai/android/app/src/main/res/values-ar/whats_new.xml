@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Live Voice "What's new" pop-up and its update notification. -->
+<resources>
+    <string name="whats_new_title">جديد: Live Voice</string>
+    <string name="whats_new_body">تحدّث إلى Fud AI لتسجيل الوجبات ومسح الباركود ومتابعة تقدّمك.</string>
+    <string name="whats_new_tap_orb">اضغط على الكرة في الصفحة الرئيسية للبدء.</string>
+    <string name="whats_new_access_line">مضمَّن في Plus وPro، أو استخدم مفتاح الذكاء الاصطناعي الخاص بك.</string>
+    <string name="whats_new_video_cd">فيديو توضيحي لـ Live Voice</string>
+    <string name="whats_new_sound_on">تشغيل الصوت</string>
+    <string name="whats_new_sound_off">إيقاف الصوت</string>
+    <string name="whats_new_access_title_setup">احصل على Live Voice</string>
+    <string name="whats_new_access_title_plans">انتقل إلى Plus أو Pro</string>
+    <string name="whats_new_access_body_setup">اختر Plus أو Pro لنشغّل الذكاء الاصطناعي نيابةً عنك، أو أضف مفتاح API خاصًا بك من Gemini أو OpenAI أو xAI أو Qwen.</string>
+    <string name="whats_new_access_body_key_only">أضف مفتاح API خاصًا بك من Gemini أو OpenAI أو xAI أو Qwen لبدء استخدام Live Voice.</string>
+    <string name="whats_new_access_body_plans">مع Plus وPro نشغّل الذكاء الاصطناعي نيابةً عنك، مع Live Voice ومن دون مفاتيح API لإدارتها. ويبقى Fud AI مجانيًا مع مفاتيحك الخاصة.</string>
+    <string name="whats_new_support_body">Fud AI مجاني ويطوّره مطوّر واحد. تقييم أو مشاركة أو إكرامية صغيرة تساعد على استمراره.</string>
+    <string name="whats_new_community_title">انضم إلى مجتمع Fud AI</string>
+    <string name="whats_new_community_body">احصل على المساعدة وشارك أفكارك وتعرّف على مستخدمي Fud AI الآخرين على Discord.</string>
+    <string name="whats_new_next">التالي</string>
+    <string name="whats_new_previous">السابق</string>
+    <string name="notif_whats_new_title">جديد في Fud AI: Live Voice</string>
+    <string name="notif_whats_new_text">تحدّث لتسجيل الوجبات ومسح الباركود ومتابعة تقدّمك. اضغط لترى الجديد.</string>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Voice assistant: the orb, its overlay and cards, Settings → Voice Assistant,
+     and the Quick Settings tile, launcher shortcut and widget. -->
+<resources>
+    <string name="voice_talk_to_fud_ai">Porozmawiaj z Fud AI</string>
+    <string name="voice_shortcut_short">Rozmawiaj</string>
+    <string name="voice_shortcut_disabled">Ten skrót jest niedostępny.</string>
+    <string name="voice_widget_description">Otwiera Fud AI i rozpoczyna rozmowę głosową z asystentem.</string>
+
+    <!-- Providers -->
+    <string name="voice_provider_automatic">Automatycznie</string>
+    <string name="voice_provider_hosted">Fud AI (Plus/Pro)</string>
+    <string name="voice_provider_gemini">Google Gemini</string>
+    <string name="voice_provider_openai">OpenAI</string>
+    <string name="voice_provider_xai">xAI Grok</string>
+    <string name="voice_provider_qwen">Alibaba Qwen</string>
+    <string name="voice_provider_gpt_live">OpenAI GPT-Live</string>
+
+    <!-- Overlay -->
+    <string name="voice_status_ended">Zakończono</string>
+    <string name="voice_status_preparing">Wczytywanie…</string>
+    <string name="voice_status_connecting">Łączenie…</string>
+    <string name="voice_status_listening">Słucham…</string>
+    <string name="voice_status_thinking">Myślę…</string>
+    <string name="voice_status_speaking">Mówię…</string>
+    <string name="voice_listening_hint">Śmiało, słucham.</string>
+    <string name="voice_time_left">Pozostało: %1$s</string>
+    <string name="voice_minutes_short">%1$d min</string>
+    <string name="voice_less_than_a_minute">Poniżej 1 min</string>
+    <string name="voice_minimize">Minimalizuj</string>
+    <string name="voice_expand">Otwórz rozmowę</string>
+    <string name="voice_close">Zamknij</string>
+    <string name="voice_end">Zakończ rozmowę</string>
+    <string name="voice_close_camera">Zamknij aparat</string>
+    <string name="voice_take_photo">Zrób zdjęcie</string>
+    <string name="voice_barcode_hint">Skieruj aparat na kod kreskowy</string>
+
+    <!-- Cards -->
+    <string name="voice_card_draft">Wersja robocza</string>
+    <string name="voice_card_workout_draft">Wersja robocza treningu</string>
+    <string name="voice_card_dismiss">Zamknij</string>
+    <string name="voice_card_totals">%1$d kcal · Białko: %2$dg · Węglowodany: %3$dg · Tłuszcz: %4$dg</string>
+    <string name="voice_card_totals_kj">%1$d kJ · Białko: %2$dg · Węglowodany: %3$dg · Tłuszcz: %4$dg</string>
+    <string name="voice_card_log">Zapisz</string>
+    <string name="voice_card_logged">Zapisano</string>
+    <string name="voice_card_confirm_title">Potwierdź</string>
+    <string name="voice_card_delete_title">Usuń</string>
+    <string name="voice_card_confirm">Zapisz</string>
+    <string name="voice_card_saved">Zapisano</string>
+    <string name="voice_card_undo">Cofnij</string>
+    <string name="voice_kcal">%1$d kcal</string>
+    <string name="voice_kj">%1$d kJ</string>
+    <string name="voice_change_log_food">Zapisz %1$s · %2$d kcal · %3$s</string>
+    <string name="voice_change_log_food_kj">Zapisz %1$s · %2$d kJ · %3$s</string>
+    <string name="voice_change_food">%1$s · %2$d kcal</string>
+    <string name="voice_change_food_kj">%1$s · %2$d kJ</string>
+    <string name="voice_change_water">Zapisz %1$s wody</string>
+    <string name="voice_change_start_fast">Rozpocznij post na %1$d godz.</string>
+    <string name="voice_change_end_fast">Zakończ post · %1$s</string>
+    <string name="voice_change_weight">Zapisz wagę · %1$s</string>
+    <string name="voice_change_body_fat">Zapisz tkankę tłuszczową · %1$s</string>
+    <plurals name="voice_change_workout">
+        <item quantity="one">Trening · %d ćwiczenie</item>
+        <item quantity="few">Trening · %d ćwiczenia</item>
+        <item quantity="many">Trening · %d ćwiczeń</item>
+        <item quantity="other">Trening · %d ćwiczenia</item>
+    </plurals>
+    <string name="voice_change_cardio">Zapisz %1$s · %2$d min</string>
+    <string name="voice_change_setting">Zmień %1$s na %2$s</string>
+    <string name="voice_setting_units">Jednostki</string>
+    <string name="voice_units_metric">Metryczne</string>
+    <string name="voice_units_imperial">Imperialne</string>
+    <string name="voice_on">Włączone</string>
+    <string name="voice_off">Wyłączone</string>
+
+    <!-- Notices -->
+    <string name="voice_action_try_again">Spróbuj ponownie</string>
+    <string name="voice_action_talk_again">Porozmawiaj z Fud AI</string>
+    <string name="voice_action_see_plans">Zobacz plany Plus i Pro</string>
+    <string name="voice_action_buy_credits">Kup kredyty</string>
+    <string name="voice_action_add_key">Dodaj klucz API</string>
+    <string name="voice_action_open_ai_providers">Ustawienia AI</string>
+    <string name="voice_action_voice_settings">Asystent głosowy</string>
+    <string name="voice_action_open_settings">Otwórz Ustawienia</string>
+    <string name="voice_notice_setup_title">Asystent głosowy</string>
+    <string name="voice_notice_setup_body">Mów, aby zapisywać posiłki, skanować jedzenie i kody kreskowe oraz pytać o postępy. Asystent głosowy działa w planie Fud AI Plus lub Pro albo z twoim własnym kluczem API Gemini, OpenAI, xAI lub Qwen.</string>
+    <string name="voice_notice_missing_key_title">Dodaj klucz %1$s</string>
+    <string name="voice_notice_missing_key_body">Asystent głosowy korzysta z %1$s, co wymaga Twojego klucza API. Dodaj go w sekcji Dostawcy AI lub wybierz innego dostawcę w ustawieniach asystenta głosowego.</string>
+    <string name="voice_notice_subscription_title">Głos Fud AI wymaga planu Plus lub Pro</string>
+    <string name="voice_notice_subscription_body">Rozmowy głosowe obsługiwane przez Fud AI są dostępne w planach Plus (20 minut miesięcznie) i Pro (100 minut miesięcznie). Możesz też użyć własnego klucza Gemini, OpenAI, xAI lub Qwen.</string>
+    <string name="voice_notice_minutes_title">Skończyły ci się minuty głosowe</string>
+    <string name="voice_notice_minutes_body">Minuty głosowe twojego planu na ten miesiąc się wyczerpały. Kup kredyty, aby rozmawiać dalej (4 kredyty za minutę), albo użyj własnego klucza Gemini, OpenAI, xAI lub Qwen.</string>
+    <string name="voice_notice_limit_title">Osiągnięto limit rozmowy</string>
+    <string name="voice_notice_limit_body">Ta rozmowa osiągnęła limit 15 minut. Zacznij nową, aby kontynuować.</string>
+    <string name="voice_notice_mic_title">Potrzebny dostęp do mikrofonu</string>
+    <string name="voice_notice_mic_body">Aby rozmawiać z asystentem, zezwól Fud AI na korzystanie z mikrofonu w ustawieniach systemowych.</string>
+    <string name="voice_notice_mic_busy_title">Mikrofon jest niedostępny.</string>
+    <string name="voice_notice_mic_busy_body">Inna aplikacja może korzystać z mikrofonu. Zamknij ją i spróbuj ponownie.</string>
+    <string name="voice_notice_key_rejected_title">%1$s odrzucił klucz</string>
+    <string name="voice_notice_key_rejected_body">W sekcji Dostawcy AI sprawdź klucz API %1$s, jego rozliczenia i dostęp do modeli rozmów głosowych na żywo.</string>
+    <string name="voice_notice_unauthorized_title">Nie udało się zweryfikować planu</string>
+    <string name="voice_notice_unauthorized_body">Fud AI nie mogło potwierdzić twojej subskrypcji. Spróbuj opcji Przywróć zakupy w Ustawienia → Dostęp AI.</string>
+    <string name="voice_notice_busy_title">Zbyt wiele żądań</string>
+    <string name="voice_notice_busy_body">Za dużo sesji głosowych w tej chwili. Spróbuj ponownie za minutę.</string>
+    <string name="voice_notice_unavailable_title">Głos jest teraz niedostępny. Spróbuj ponownie później.</string>
+    <string name="voice_notice_unavailable_body">Usługa głosowa napotkała problem. Spróbuj ponownie.</string>
+    <string name="voice_notice_connect_title">Nie udało się połączyć</string>
+    <string name="voice_notice_connect_body">Nie udało się połączyć z usługą głosową. Sprawdź połączenie i spróbuj ponownie.</string>
+    <string name="voice_notice_lost_title">Połączenie głosowe zostało zakończone.</string>
+    <string name="voice_notice_lost_body">Połączenie głosowe zostało zakończone. Sprawdź połączenie z internetem i spróbuj ponownie.</string>
+
+    <!-- Settings → Voice Assistant -->
+    <string name="settings_category_voice_assistant">Asystent głosowy</string>
+    <string name="voice_settings_provider">Dostawca</string>
+    <string name="voice_settings_model">Model</string>
+    <string name="voice_settings_voice">Głos</string>
+    <string name="voice_settings_language">Język odpowiedzi</string>
+    <string name="voice_settings_language_auto">Automatycznie</string>
+    <string name="voice_settings_language_app">Język aplikacji</string>
+    <string name="voice_settings_using">Korzystasz z %1$s</string>
+    <string name="voice_settings_add_key">Dodaj klucz %1$s w sekcji Dostawcy AI</string>
+    <string name="voice_settings_key_missing">Brak zapisanego klucza API %1$s</string>
+    <string name="voice_settings_needs_plan">Głos Fud AI wymaga planu Plus lub Pro</string>
+    <string name="voice_settings_needs_setup">Wykup Plus lub Pro albo dodaj klucz API Gemini, OpenAI, xAI lub Qwen</string>
+    <string name="voice_settings_automatic_footer">Tryb automatyczny używa dostawcy wybranego w Dostawcach AI, jeśli to Gemini, OpenAI, xAI lub Qwen i ma zapisany klucz; w przeciwnym razie Fud AI z planem Plus lub Pro. Własne klucze to te zapisane w Dostawcach AI.</string>
+    <string name="voice_settings_auto_capture">Automatyczne zdjęcia</string>
+    <string name="voice_settings_auto_capture_footer">Gdy aparat jest otwarty, asystent robi zdjęcie, gdy tylko zobaczy jedzenie. Gemini, Qwen i Fud AI widzą obraz z aparatu stale, OpenAI za każdym razem, gdy mówisz, a xAI i GPT-Live go nie widzą.</string>
+    <string name="voice_settings_confirm_saves">Potwierdzanie przed zapisaniem</string>
+    <string name="voice_settings_confirm_saves_footer">Pokaż kartę do zatwierdzenia każdego wpisu lub zmiany. Gdy ta opcja jest wyłączona, zmiany zapisują się od razu i można je cofnąć w ciągu 8 sekund.</string>
+    <string name="voice_settings_save_to_coach">Zapisuj rozmowy w Trenerze</string>
+    <string name="voice_settings_save_to_coach_footer">Dodaje to, co mówisz ty i asystent, do twojego czatu z Trenerem.</string>
+    <string name="voice_settings_minutes_left">Pozostałe minuty planu</string>
+    <string name="voice_settings_minutes_with_credits">%1$s + %2$s z kredytów</string>
+    <string name="voice_settings_minutes_footer">Plus obejmuje 20 minut, a Pro 100 minut miesięcznie (UTC). Potem głos zużywa kredyty: 1 kredyt za 15 sekund.</string>
+    <string name="voice_settings_open_title">Otwieraj szybciej</string>
+    <string name="voice_settings_open_body">Dotknij kuli na ekranie głównym aplikacji, dodaj kafelek Porozmawiaj z Fud AI do Szybkich ustawień, przytrzymaj ikonę aplikacji i wybierz Porozmawiaj z Fud AI lub dodaj widżet na ekranie głównym telefonu. Każda z tych opcji od razu włącza nasłuchiwanie.</string>
+    <string name="voice_settings_add_tile">Dodaj kafelek do Szybkich ustawień</string>
+    <string name="voice_settings_add_widget">Dodaj widżet na ekran główny</string>
+    <string name="voice_settings_privacy_footer">Twój głos, napisy, obrazy z kamery widoczne dla asystenta i wyniki jego działań trafiają do wybranego dostawcy (Google w planach Fud AI Plus/Pro). Serwer Fud AI przechowuje liczniki użycia i zapisy rozliczeń, a nie treść rozmów.</string>
+
+    <!-- Voice preview -->
+    <string name="voice_preview_start">Posłuchaj głosu</string>
+    <string name="voice_preview_stop">Zatrzymaj próbkę</string>
+    <string name="voice_preview_preparing">Przygotowywanie próbki…</string>
+    <string name="voice_preview_sample">Cześć, jestem Twoim asystentem Fud AI. Tak brzmi mój głos.</string>
+    <string name="voice_preview_failed">Nie udało się odtworzyć tej próbki głosu. Spróbuj ponownie.</string>
+    <string name="voice_preview_busy">Zakończ bieżącą rozmowę głosową, zanim odsłuchasz próbkę głosu.</string>
+    <string name="voice_preview_usage">Odtwarza krótką próbkę bez użycia mikrofonu. Wykorzystuje kredyty API lub minuty rozmów głosowych Fud AI.</string>
+</resources>

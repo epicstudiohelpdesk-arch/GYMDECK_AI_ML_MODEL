@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_error_no_key">Yapılandırılmış API anahtarı yok. Anahtarınızı Ayarlar → Yapay Zekâ Sağlayıcısı bölümünden ekleyin.</string>
+    <string name="ai_error_image_conversion">Görsel işlenemedi. Başka bir fotoğraf deneyin.</string>
+    <string name="ai_error_invalid_response">Yapay zekâ yanıtı anlaşılamadı. Lütfen tekrar deneyin.</string>
+    <string name="ai_error_invalid_url">Geçersiz API URL\'si. Sağlayıcı ayarlarınızı kontrol edin.</string>
+    <string name="ai_error_offline">Çevrimdışı görünüyorsunuz. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="ai_error_connection">Yapay zeka sağlayıcısına bağlanılamadı. Bağlantınızı ve sağlayıcı URL\'nizi kontrol edip tekrar deneyin.</string>
+    <string name="ai_error_timeout">Yapay zeka yanıt vermek için çok uzun sürdü. Tekrar deneyin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan istek zaman aşımını artırın.</string>
+    <string name="ai_error_credits">Yapay zeka hesabınızın kredisi bitti. Kredi yükleyin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan sağlayıcı değiştirin.</string>
+    <string name="ai_error_daily_quota">Yapay zeka hesabınızın günlük kotası doldu. Yarın tekrar deneyin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan sağlayıcı değiştirin.</string>
+    <string name="ai_error_quota">Yapay zeka hesabınızın kullanım kotası aşıldı. Sağlayıcınızın sınırlarını kontrol edin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan sağlayıcı değiştirin.</string>
+    <string name="ai_error_model">Seçilen model veya API uç noktası kullanılamıyor. Ayarlar → Yapay Zeka Sağlayıcısı\'ndan modeli ve API URL\'sini kontrol edin.</string>
+    <string name="ai_error_rate_limit">API anahtarınızda hız sınırına ulaşıldı. Bir dakika bekleyin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan sağlayıcı değiştirin. Ücretsiz katman kullanıyorsanız günlük kotasının dolup dolmadığını kontrol edin.</string>
+    <string name="ai_error_key_rejected">API anahtarınız reddedildi. Ayarlar → Yapay Zeka Sağlayıcısı\'nı açın ve geçerli bir anahtarı yeniden yapıştırın.</string>
+    <string name="ai_error_overloaded">Yapay zeka sağlayıcısı şu anda aşırı yüklü. Birkaç kez yeniden denedik — bir dakika sonra tekrar deneyin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan sağlayıcı/model değiştirin.</string>
+    <string name="ai_error_generic">Yapay zeka isteği başarısız oldu. Tekrar deneyin veya Ayarlar → Yapay Zeka Sağlayıcısı\'ndan sağlayıcı değiştirin.</string>
+    <string name="ai_error_local_unavailable">Cihaz üzerindeki yapay zeka çalışma zamanı kullanılamıyor. Ayarlar → Yapay Zeka Sağlayıcısı\'ndan indirilen modeli kontrol edin.</string>
+    <string name="ai_error_truncated">Yapay zeka yanıtı iki kez kesildi. Daha kısa bir girdi veya başka bir model deneyin.</string>
+    <string name="ai_error_both_failed">%1$s ve yedek %2$s ikisi de başarısız oldu. %3$s</string>
+</resources>

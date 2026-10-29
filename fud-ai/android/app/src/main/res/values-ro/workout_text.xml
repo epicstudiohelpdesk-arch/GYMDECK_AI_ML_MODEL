@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workout_text_title">Descrie antrenamentul</string>
+    <string name="workout_text_intro">Descrie ce ai făcut. Verifică detaliile înainte de a le adăuga în jurnalul de antrenamente.</string>
+    <string name="workout_text_description">Descrierea antrenamentului</string>
+    <string name="workout_text_example">20 de minute de sărit coarda, apoi 3 serii a câte 10 împinsături la piept cu 40 kg</string>
+    <string name="workout_text_voice">Voce</string>
+    <string name="workout_text_preparing">Se caută exercițiile…</string>
+    <string name="workout_text_preview">Analizează</string>
+    <string name="workout_text_retry">Reîncearcă</string>
+    <string name="workout_text_review">Verifică antrenamentul</string>
+    <string name="workout_text_date">Data (AAAA-LL-ZZ)</string>
+    <string name="workout_text_custom">Activitate personalizată cronometrată · estimarea caloriilor folosește o rată generală de activitate</string>
+    <string name="workout_text_minutes">Minute</string>
+    <string name="workout_text_reps">Repetări</string>
+    <string name="workout_text_remove">Elimină exercițiul</string>
+    <string name="workout_text_calories_note">Caloriile sunt estimări. Folosește Calculează în jurnal după ce adaugi antrenamentul.</string>
+    <string name="workout_text_edit">Editează descrierea</string>
+    <string name="workout_text_adding">Se adaugă…</string>
+    <string name="workout_text_add">Adaugă în jurnal</string>
+    <string name="workout_text_menu">Text</string>
+    <string name="workout_text_set_weight">Seria %1$d · %2$s</string>
+    <string name="workout_text_estimate">Ardere estimată: %1$d kcal</string>
+    <string name="workout_text_effort">Efort (moderat dacă nu e specificat)</string>
+    <string name="workout_text_light">Ușor</string>
+    <string name="workout_text_moderate">Moderat</string>
+    <string name="workout_text_vigorous">Intens</string>
+    <string name="workout_text_rpe">RPE 1–10</string>
+</resources>
