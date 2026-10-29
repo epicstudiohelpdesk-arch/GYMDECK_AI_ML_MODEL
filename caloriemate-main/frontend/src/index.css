@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 37 20% 95%;
+    --foreground: 23 23% 19%;
+    --card: 37 20% 95%;
+    --card-foreground: 23 23% 19%;
+    --popover: 37 20% 95%;
+    --popover-foreground: 23 23% 19%;
+    --primary: 122 46% 34%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 122 30% 93%;
+    --secondary-foreground: 128 55% 24%;
+    --muted: 30 30% 93%;
+    --muted-foreground: 25 24% 34%;
+    --accent: 122 35% 84%;
+    --accent-foreground: 128 55% 24%;
+    --destructive: 0 67% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 24% 84%;
+    --input: 30 24% 84%;
+    --ring: 122 46% 34%;
+    --chart-1: 122 45% 50%;
+    --chart-2: 122 43% 42%;
+    --chart-3: 122 46% 34%;
+    --chart-4: 128 55% 24%;
+    --chart-5: 137 52% 8%;
+    --sidebar: 30 30% 93%;
+    --sidebar-foreground: 23 23% 19%;
+    --sidebar-primary: 122 46% 34%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 122 35% 84%;
+    --sidebar-accent-foreground: 128 55% 24%;
+    --sidebar-border: 30 24% 84%;
+    --sidebar-ring: 122 46% 34%;
+    --font-sans: Montserrat, sans-serif;
+    --font-serif: Merriweather, serif;
+    --font-mono: Source Code Pro, monospace;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 150 24% 10%;
+    --foreground: 42 24% 92%;
+    --card: 148 18% 17%;
+    --card-foreground: 42 24% 92%;
+    --popover: 148 18% 17%;
+    --popover-foreground: 42 24% 92%;
+    --primary: 126 55% 54%;
+    --primary-foreground: 146 42% 7%;
+    --secondary: 148 14% 23%;
+    --secondary-foreground: 120 18% 86%;
+    --muted: 148 15% 19%;
+    --muted-foreground: 42 12% 76%;
+    --accent: 126 42% 39%;
+    --accent-foreground: 42 24% 92%;
+    --destructive: 0 67% 47%;
+    --destructive-foreground: 42 24% 92%;
+    --border: 148 12% 27%;
+    --input: 148 12% 27%;
+    --ring: 126 55% 54%;
+    --chart-1: 122 35% 65%;
+    --chart-2: 122 37% 57%;
+    --chart-3: 122 45% 50%;
+    --chart-4: 122 41% 45%;
+    --chart-5: 122 43% 39%;
+    --sidebar: 148 20% 14%;
+    --sidebar-foreground: 37 20% 93%;
+    --sidebar-primary: 122 45% 50%;
+    --sidebar-primary-foreground: 137 52% 8%;
+    --sidebar-accent: 122 43% 39%;
+    --sidebar-accent-foreground: 37 20% 93%;
+    --sidebar-border: 148 10% 26%;
+    --sidebar-ring: 122 45% 50%;
+    --font-sans: Montserrat, sans-serif;
+    --font-serif: Merriweather, serif;
+    --font-mono: Source Code Pro, monospace;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    background:
+      radial-gradient(circle at 50% -12%, hsl(var(--primary) / 0.24), transparent 34rem),
+      radial-gradient(circle at 12% 35%, hsl(var(--primary) / 0.10), transparent 26rem),
+      hsl(var(--background));
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background:
+      radial-gradient(circle at 50% -12%, hsl(var(--primary) / 0.24), transparent 34rem),
+      radial-gradient(circle at 12% 35%, hsl(var(--primary) / 0.10), transparent 26rem),
+      hsl(var(--background));
+    background-attachment: fixed;
+  }
+
+  /* Remove spinner buttons from number inputs */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Fix mobile touch responsiveness */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
